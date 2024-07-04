@@ -1,0 +1,32 @@
+%ic {
+	font-family: "icons";
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+[class*="_icon-"] {
+	&:before {
+		@extend %ic;
+		display: block;
+	}
+}
+
+.icon {
+	display: block;
+	width: rem(24);
+	height: rem(24);
+
+	&_location {
+		height: rem(14);
+		width: rem(14);
+	}
+
+	&_select {
+		height: rem(14);
+		width: rem(14);
+	}
+}

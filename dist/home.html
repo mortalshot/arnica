@@ -1,0 +1,1910 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Главная</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240704172138" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20240704172138">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header header-top">
+			<div class="header-top__container">
+				<div class="header-top__location location">
+					<button type="button" class="location__button">
+						<svg class="icon icon_location">
+							<use xlink:href="img/sprite.svg#svg-location"></use>
+						</svg>
+						<span>Москва</span>
+						<svg class="icon icon_select">
+							<use xlink:href="img/sprite.svg#svg-select"></use>
+						</svg>
+					</button>
+				</div>
+
+				<div class="header-top__right">
+					<nav class="header-top__menu menu">
+						<ul class="menu__list">
+							<li class="menu__item menu__item_has-children">
+								<a href="" class="link-hover">Покупателям</a>
+
+								<button type="button" class="menu__arrow" tabindex="-1">
+									<svg class="icon icon_select">
+										<use xlink:href="img/sprite.svg#svg-select"></use>
+									</svg>
+								</button>
+
+								<ul class="menu__sub-list">
+									<li><a href="">Доставка</a></li>
+									<li><a href="">Бонусная программа</a></li>
+									<li><a href="">Узнать статус заказа</a></li>
+									<li><a href="">Обмен, возврат, гарантия</a></li>
+									<li><a href="">Кредиты</a></li>
+									<li><a href="">Сервисные центры</a></li>
+								</ul>
+							</li>
+
+							<li class="menu__item">
+								<a href="" class="link-hover">FAQ</a>
+							</li>
+						</ul>
+					</nav>
+
+					<div class="header-top__contacts contacts">
+						<div class="contacts__item contacts__item_phone">
+							<a href="tel:88005555261" class="link-hover">8 800 5555-261</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<header class="header header-bottom">
+			<div class="header-bottom__container">
+				<div class="header-bottom__row">
+					<div class="header-bottom__left">
+						<button type="button" class="menu__icon icon-menu"><span></span></button>
+
+						<div class="header__logo logo">
+							<a href="">
+								<img src="img/logo.svg" alt="" loading="lazy">
+							</a>
+						</div>
+
+						<div class="header__catalog header-catalog" data-da=".menu__body, 991.98, 0">
+							<div class="header-catalog__button">
+								<button type="button" class="btn btn_bg-red">
+									<svg class="icon icon_catalog">
+										<use xlink:href="img/sprite.svg#svg-catalog"></use>
+									</svg>
+
+									<svg class="icon icon_close">
+										<use xlink:href="img/sprite.svg#svg-close"></use>
+									</svg>
+
+									<span>Каталог товаров</span>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="header-bottom__right">
+						<div class="header__menu menu">
+							<nav class="menu__body">
+								<ul class="menu__list">
+									<li class="menu__item"><a href="" class="link-hover">Новинки</a></li>
+									<li class="menu__item"><a href="" class="link-hover">Акции</a></li>
+									<li class="menu__item"><a href="" class="link-hover">Доставка и оплата</a></li>
+									<li class="menu__item"><a href="" class="link-hover">О компании</a></li>
+									<li class="menu__item"><a href="" class="link-hover">Партнерам</a></li>
+									<li class="menu__item"><a href="" class="link-hover">Статьи</a></li>
+									<li class="menu__item"><a href="" class="link-hover">Контакты</a></li>
+								</ul>
+							</nav>
+						</div>
+
+						<div class="header__search search">
+							<form action="#" class="search__form search-form">
+								<div class="search-form__wrapper">
+									<div class="search-form__input">
+										<input autocomplete="off" type="text" name="form[]" placeholder="Поиск">
+
+										<button type="reset" class="search-form__reset">
+											<svg class="icon icon_close">
+												<use xlink:href="img/sprite.svg#svg-close"></use>
+											</svg>
+										</button>
+									</div>
+
+									<button type="submit" class="search-form__submit">
+										<svg class="icon icon_search">
+											<use xlink:href="img/sprite.svg#svg-search"></use>
+										</svg>
+									</button>
+								</div>
+
+								<button type="button" class="search-form__btn shake-animation">
+									<svg class="icon icon_search">
+										<use xlink:href="img/sprite.svg#svg-search"></use>
+									</svg>
+								</button>
+							</form>
+
+							<div class="search__results search-results">
+							</div>
+						</div>
+
+						<div class="header__actions">
+							<div class="header__action action-item">
+								<a href="" class="action-item__link shake-animation">
+									<svg class="icon icon_compare">
+										<use xlink:href="img/sprite.svg#svg-compare"></use>
+									</svg>
+								</a>
+							</div>
+
+							<div class="header__action action-item">
+								<a href="" class="action-item__link shake-animation">
+									<svg class="icon icon_wishlist">
+										<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+									</svg>
+								</a>
+							</div>
+
+							<div class="header__action action-item">
+								<a href="" class="action-item__link shake-animation">
+									<svg class="icon icon_cart">
+										<use xlink:href="img/sprite.svg#svg-cart"></use>
+									</svg>
+
+									<div class="action-item__amount">4</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+		<main class="page">
+			<section class="main-banner">
+				<div class="main-banner__container">
+					<div class="main-banner__slider swiper">
+						<div class="main-banner__wrapper swiper-wrapper">
+							<a href="" class="main-banner__slide swiper-slide">
+								<picture>
+									<source srcset="img/main-banner/main-banner-slide1-image360.png" media="(max-width: 574.98px)">
+									<source srcset="img/main-banner/main-banner-slide1-image768.png" media="(max-width: 991.98px)">
+									<img src="img/main-banner/main-banner-slide1-image1440.png" alt="" loading="lazy">
+								</picture>
+								<div class="swiper-lazy-preloader"></div>
+							</a>
+
+							<a href="" class="main-banner__slide swiper-slide">
+								<picture>
+									<source srcset="img/main-banner/main-banner-slide1-image360.png" media="(max-width: 574.98px)">
+									<source srcset="img/main-banner/main-banner-slide1-image768.png" media="(max-width: 991.98px)">
+									<img src="img/main-banner/main-banner-slide2-image1440.png" alt="" loading="lazy">
+								</picture>
+								<div class="swiper-lazy-preloader"></div>
+							</a>
+
+							<a href="" class="main-banner__slide swiper-slide">
+								<picture>
+									<source srcset="img/main-banner/main-banner-slide1-image360.png" media="(max-width: 574.98px)">
+									<source srcset="img/main-banner/main-banner-slide1-image768.png" media="(max-width: 991.98px)">
+									<img src="img/main-banner/main-banner-slide3-image1440.png" alt="" loading="lazy">
+								</picture>
+								<div class="swiper-lazy-preloader"></div>
+							</a>
+
+							<a href="" class="main-banner__slide swiper-slide">
+								<picture>
+									<source srcset="img/main-banner/main-banner-slide1-image360.png" media="(max-width: 574.98px)">
+									<source srcset="img/main-banner/main-banner-slide1-image768.png" media="(max-width: 991.98px)">
+									<img src="img/main-banner/main-banner-slide4-image1440.png" alt="" loading="lazy">
+								</picture>
+								<div class="swiper-lazy-preloader"></div>
+							</a>
+						</div>
+
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+
+			<section class="widget-category">
+				<div class="widget-category__container">
+					<div class="widget-category__items">
+						<article class="widget-category__item category-card">
+							<a href="" class="category-card__link"></a>
+
+							<div class="category-card__bg">
+								<picture>
+									<source srcset="img/widget-category/category-card1-bg768.png" media="(max-width: 1279.98px)">
+									<img src="img/widget-category/category-card1-bg1440.png" alt="" loading="lazy">
+								</picture>
+							</div>
+
+							<div class="category-card__main">
+								<div class="category-card__head">
+									<h3 class="category-card__title">Все пылесосы</h3>
+									<div class="category-card__amount"><span>140</span> Товаров</div>
+								</div>
+
+								<div class="category-card__footer">
+									<div class="text-link link-underline">
+										<span>Подробнее</span>
+
+										<svg class="icon">
+											<use xlink:href="img/sprite.svg#svg-text-link"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="widget-category__item category-card">
+							<a href="" class="category-card__link"></a>
+
+							<div class="category-card__bg">
+								<picture>
+									<source srcset="img/widget-category/category-card2-bg768.png" media="(max-width: 991.98px)">
+									<img src="img/widget-category/category-card2-bg1440.png" alt="" loading="lazy">
+								</picture>
+							</div>
+
+							<div class="category-card__main">
+								<div class="category-card__head">
+									<h3 class="category-card__title">Пылесосы <br> с аквафильтром</h3>
+									<div class="category-card__amount"><span>16</span> Товаров</div>
+								</div>
+
+								<div class="category-card__footer">
+									<div class="text-link link-underline">
+										<span>Подробнее</span>
+
+										<svg class="icon">
+											<use xlink:href="img/sprite.svg#svg-text-link"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="widget-category__item category-card">
+							<a href="" class="category-card__link"></a>
+
+							<div class="category-card__bg">
+								<picture>
+									<!-- <source srcset="img/widget-category/category-card3-bg768.png" media="(max-width: 1279.98px)"> -->
+									<img src="img/widget-category/category-card3-bg1440.png" alt="" loading="lazy">
+								</picture>
+							</div>
+
+							<div class="category-card__main">
+								<div class="category-card__head">
+									<h3 class="category-card__title">Вертикальные <br> пылесосы </h3>
+									<div class="category-card__amount"><span>26</span> Товаров</div>
+								</div>
+
+								<div class="category-card__footer">
+									<div class="text-link link-underline">
+										<span>Подробнее</span>
+
+										<svg class="icon">
+											<use xlink:href="img/sprite.svg#svg-text-link"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="widget-category__item category-card">
+							<a href="" class="category-card__link"></a>
+
+							<div class="category-card__bg">
+								<picture>
+									<!-- <source srcset="img/widget-category/category-card3-bg768.png" media="(max-width: 1279.98px)"> -->
+									<img src="img/widget-category/category-card4-bg1440.png" alt="" loading="lazy">
+								</picture>
+							</div>
+
+							<div class="category-card__main">
+								<div class="category-card__head">
+									<h3 class="category-card__title">Пылесосы с мешком / колбой </h3>
+									<div class="category-card__amount"><span>26</span> Товаров</div>
+								</div>
+
+								<div class="category-card__footer">
+									<div class="text-link link-underline">
+										<span>Подробнее</span>
+
+										<svg class="icon">
+											<use xlink:href="img/sprite.svg#svg-text-link"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</article>
+
+						<article class="widget-category__item category-card">
+							<a href="" class="category-card__link"></a>
+
+							<div class="category-card__bg">
+								<picture>
+									<!-- <source srcset="img/widget-category/category-card3-bg768.png" media="(max-width: 1279.98px)"> -->
+									<img src="img/widget-category/category-card5-bg1440.png" alt="" loading="lazy">
+								</picture>
+							</div>
+
+							<div class="category-card__main">
+								<div class="category-card__head">
+									<h3 class="category-card__title">Моющие <br> пылесосы </h3>
+									<div class="category-card__amount"><span>26</span> Товаров</div>
+								</div>
+
+								<div class="category-card__footer">
+									<div class="text-link link-underline">
+										<span>Подробнее</span>
+
+										<svg class="icon">
+											<use xlink:href="img/sprite.svg#svg-text-link"></use>
+										</svg>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="widget-products">
+				<div class="widget-products__container">
+					<div class="widget-products__heading _heading">
+						<h2 class="widget-products__title">Наши новинки</h2>
+
+						<div class="widget-products__actions">
+							<div class="widget-products__link">
+								<a href="" class="link-underline">Все товары</a>
+							</div>
+
+							<div class="swiper-arrows">
+								<button type="button" class="swiper-arrows__arrow swiper-arrows__arrow_prev">
+									<svg class="icon">
+										<use xlink:href="img/sprite.svg#svg-select"></use>
+									</svg>
+								</button>
+
+								<button type="button" class="swiper-arrows__arrow swiper-arrows__arrow_next">
+									<svg class="icon">
+										<use xlink:href="img/sprite.svg#svg-select"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="widget-products__slider swiper">
+						<div class="widget-products__wrapper swiper-wrapper">
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+											<div class="product-card__label product-card__label_sale">sale</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">1 119 990 ₽</div>
+												<div class="price price_old">1 132 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/main-banner/main-banner-slide1-image768.webp"type="image/webp"><img src="img/main-banner/main-banner-slide1-image768.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+												<div class="price price_old">32 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="widget-sales">
+				<div class="widget-sales__container">
+					<div class="widget-products__heading _heading">
+						<h2 class="widget-products__title">Рекомендуем сегодня</h2>
+
+						<div class="widget-products__actions">
+							<div class="widget-products__link">
+								<a href="" class="link-underline">Все товары</a>
+							</div>
+
+							<div class="swiper-arrows">
+								<button type="button" class="swiper-arrows__arrow swiper-arrows__arrow_prev">
+									<svg class="icon">
+										<use xlink:href="img/sprite.svg#svg-select"></use>
+									</svg>
+								</button>
+
+								<button type="button" class="swiper-arrows__arrow swiper-arrows__arrow_next">
+									<svg class="icon">
+										<use xlink:href="img/sprite.svg#svg-select"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="widget-sales__slider swiper">
+						<div class="widget-sales__wrapper swiper-wrapper">
+							<div class="widget-sales__slide swiper-slide">
+								<div class="sale-card">
+									<a href="" class="sale-card__link"></a>
+
+									<div class="sale-card__bg">
+										<picture><source srcset="img/widget-sales/sale-card1-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card1-bg1440.png" alt="" loading="lazy"></picture>
+									</div>
+
+									<div class="sale-card__wrapper">
+										<div class="sale-card__labels">
+											<div class="sale-card__label">с 20 апреля - 20 мая</div>
+										</div>
+
+										<div class="sale-card__text _content">
+											<h3>-15% на пылесосы ARNICA Lotus Trend</h3>
+											<p>Выгодные ценны на пылесосы ARNICA Lotus Trend </p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="widget-sales__slide swiper-slide">
+								<div class="sale-card">
+									<a href="" class="sale-card__link"></a>
+
+									<div class="sale-card__bg">
+										<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
+									</div>
+
+									<div class="sale-card__wrapper">
+										<div class="sale-card__labels">
+											<div class="sale-card__label">с 31 сентября - 1 декабря</div>
+										</div>
+
+										<div class="sale-card__text _content">
+											<h3>Мощность и удобство в использовании с Tria Pro</h3>
+											<p>Tria Pro пылесосы со скидкой целую неделю</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="widget-sales__slide swiper-slide">
+								<div class="sale-card">
+									<a href="" class="sale-card__link"></a>
+
+									<div class="sale-card__bg">
+										<picture><source srcset="img/widget-sales/sale-card3-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card3-bg1440.png" alt="" loading="lazy"></picture>
+									</div>
+
+									<div class="sale-card__wrapper">
+										<div class="sale-card__labels">
+											<div class="sale-card__label">с 31 сентября - 1 декабря</div>
+										</div>
+
+										<div class="sale-card__text _content">
+											<h3>Мощность и удобство в использовании с Tria Pro</h3>
+											<p>Tria Pro пылесосы со скидкой целую неделю</p>
+											<p>Tria Pro целую неделю</p>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="widget-sales__slide swiper-slide">
+								<div class="sale-card">
+									<a href="" class="sale-card__link"></a>
+
+									<div class="sale-card__bg">
+										<picture><source srcset="img/widget-sales/sale-card4-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card4-bg1440.png" alt="" loading="lazy"></picture>
+									</div>
+
+									<div class="sale-card__wrapper">
+										<div class="sale-card__labels">
+											<div class="sale-card__label">с 31 сентября - 1 декабря</div>
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="sale-card__text _content">
+											<h3>-15% на пылесосы ARNICA Lotus Trend</h3>
+											<p>Выгодные ценны на пылесосы ARNICA Lotus Trend </p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="widget-products">
+				<div class="widget-products__container">
+					<div class="widget-products__heading _heading">
+						<h2 class="widget-products__title">Наши новинки</h2>
+
+						<div class="widget-products__actions">
+							<div class="widget-products__link">
+								<a href="" class="link-underline">Все товары</a>
+							</div>
+
+							<div class="swiper-arrows">
+								<button type="button" class="swiper-arrows__arrow swiper-arrows__arrow_prev">
+									<svg class="icon">
+										<use xlink:href="img/sprite.svg#svg-select"></use>
+									</svg>
+								</button>
+
+								<button type="button" class="swiper-arrows__arrow swiper-arrows__arrow_next">
+									<svg class="icon">
+										<use xlink:href="img/sprite.svg#svg-select"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="widget-products__slider swiper">
+						<div class="widget-products__wrapper swiper-wrapper">
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+											<div class="product-card__label product-card__label_sale">sale</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">1 119 990 ₽</div>
+												<div class="price price_old">1 132 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/main-banner/main-banner-slide1-image768.webp"type="image/webp"><img src="img/main-banner/main-banner-slide1-image768.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+												<div class="price price_old">32 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+										</div>
+
+										<div class="product-card__preview">
+											<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="widget-partners">
+				<div class="widget-partners__container">
+					<div class="widget-partners__items">
+						<div class="widget-partners__heading _content">
+							<h2>Наши партнеры</h2>
+							<p style="color: #7A7A7A;">Где можно преобрести нашу продукцию</p>
+						</div>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #E6F3FA;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card1-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card1-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #FDF0E7;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card2-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card2-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #E9E2EE;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card3-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card3-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #FBE1E5;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card4-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card4-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #E0EDFF;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card5-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card5-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #FEF9E5;">
+							<div class="partner-card__img">
+								<img src="img/widget-partners/partner-card6-logo.svg" alt="" loading="lazy">
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #FAE4E8;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card7-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card7-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #E4F3E7;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card8-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card8-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #FCE5E5;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card9-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card9-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #FFEAE0;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card10-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card10-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #FAE4EC;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card11-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card11-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #FCEDE3;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card12-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card12-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+
+						<a href="" class="widget-partners__card partner-card" style="background-color: #FAE0E0;">
+							<div class="partner-card__img">
+								<picture><source srcset="img/widget-partners/partner-card13-logo.webp"type="image/webp"><img src="img/widget-partners/partner-card13-logo.png" alt="" loading="lazy"></picture>
+							</div>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="widget-about _section-bg">
+				<div class="widget-about__container">
+					<div class="widget-about__video" data-popup="#video" data-popup-youtube="nBWznETVrOs">
+						<picture><source srcset="img/widget-about/widget-about1-preview.webp"type="image/webp"><img src="img/widget-about/widget-about1-preview.png" alt="" loading="lazy"></picture>
+					</div>
+
+					<div class="widget-about__body">
+						<div class="widget-about__text _content" data-da=".widget-about__container, 991.98, 0">
+							<h2>О компании</h2>
+							<p>Наша миссия Предоставлять уникальные, практичные и инновационные решения, производя высококачественную продукцию для улучшения жизни людей.</p>
+							<p>Компания SENUR является пионером в производстве электробытовых приборов в Турции. Основанная в 1962 году, SENUR стала известна тем, что занималась производством первых в Турции кухонных комбайнов, первых в мире пылесосов с шампунем 3 в 1, а также первой компанией в Турции, создавшей отечественную мясорубку. Штаб-квартира компании находится в Стамбуле и на настоящий момент производит продукцию в столице.</p>
+						</div>
+
+						<div class="widget-about__features">
+							<div class="features-item">
+								<div class="features-item__title title-h1">1962</div>
+								<div class="features-item__text">Более 60 лет на рынке</div>
+							</div>
+							<div class="features-item">
+								<div class="features-item__title title-h1">1000+</div>
+								<div class="features-item__text">Тысячи довольных клиентов</div>
+							</div>
+							<div class="features-item">
+								<div class="features-item__title title-h1">400+</div>
+								<div class="features-item__text">Какой то текст</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="widget-news">
+				<div class="widget-news__container">
+					<div class="widget-news__grid">
+						<div class="widget-news__card news-card">
+							<div class="widget-news__heading" data-da=".widget-news__container, 991.98, 0">
+								<div class="widget-news__text _content">
+									<h2>Будьте в курсе новостей</h2>
+									<p>Новости, советы и полезные статьи</p>
+								</div>
+
+								<div class="widget-news__button" data-da=".widget-news__container, 991.98, last">
+									<a href="" class="btn btn_border-main">Все новости</a>
+								</div>
+							</div>
+
+							<div class="news-card__wrapper">
+								<a href="single-news.html" class="news-card__preview">
+									<picture><source srcset="img/news/news1-card-preview1440.webp"type="image/webp"><img src="img/news/news1-card-preview1440.png" alt="" loading="lazy"></picture>
+								</a>
+
+								<div class="news-card__body">
+									<a href="single-news.html" class="news-card__title title-h4">Бренд Arnica представил новинки</a>
+									<div class="news-card__excrpt _content">
+										<p>Новые пылесосы с циклонным фильтром теперь будут и в России. Продажа новинок уже стартовала. В этот раз турецкий бренд порадовал двумя новыми моделями Arnica Tesla и Arnica Pika.</p>
+									</div>
+									<div class="news-card__date">06.04.2023</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="widget-news__card news-card">
+							<div class="news-card__wrapper">
+								<a href="single-news.html" class="news-card__preview">
+									<picture><source srcset="img/news/news2-card-preview1440.webp"type="image/webp"><img src="img/news/news2-card-preview1440.png" alt="" loading="lazy"></picture>
+								</a>
+
+								<div class="news-card__body">
+									<a href="single-news.html" class="news-card__title title-h4">Arnica празднует четырехлетие в России</a>
+									<div class="news-card__excrpt _content">
+										<p>26 июля 2013 года был основан российский офис турецкого бренда Arnica. В этом году компания отмечает свой 4 день рождения в России, в то время, как в мировом масштабе компания существует более 50 лет. </p>
+									</div>
+									<div class="news-card__date">06.04.2023</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="widget-news__card news-card">
+							<div class="news-card__wrapper">
+								<a href="single-news.html" class="news-card__preview">
+									<picture><source srcset="img/news/news3-card-preview1440.webp"type="image/webp"><img src="img/news/news3-card-preview1440.png" alt="" loading="lazy"></picture>
+								</a>
+
+								<div class="news-card__body">
+									<a href="single-news.html" class="news-card__title title-h4">Пылесосы с аквафильтром DWS. Что это такое?</a>
+									<div class="news-card__excrpt _content">
+										<p>Существует несколько наиболее распространенных систем фильтрации у современных пылесосов или, другими словами, конструкций пылесборников.  </p>
+									</div>
+									<div class="news-card__date">06.04.2023</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__top footer-top">
+				<div class="footer-top__container">
+					<div class="footer-top__left">
+						<div class="footer-top__logo logo">
+							<a href="">
+								<img src="img/logo.svg" alt="" loading="lazy">
+							</a>
+						</div>
+
+						<div class="footer-top__contacts contacts">
+							<div class="contacts__item"> 198095, г.Санкт-Петербург, ул.Маршала Говорова, д.49, лит.А, оф.504 </div>
+
+							<div class="contacts__item contacts__item_phone">
+								<a href="tel:88005555261" class="link-hover">8 (800) 5555-261</a>
+							</div>
+
+							<div class="contacts__item">
+								<a href="mailto:info@arnica.ru" class="link-hover">info@arnica.ru</a>
+							</div>
+						</div>
+
+						<div class="footer-top__socials socials">
+							<div class="socials__item">
+								<a href="" class="shake-animation">
+									<svg class="icon icon_vk">
+										<use xlink:href="img/sprite.svg#svg-vk"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="socials__item">
+								<a href="" class="shake-animation">
+									<svg class="icon icon_ok">
+										<use xlink:href="img/sprite.svg#svg-ok"></use>
+									</svg>
+								</a>
+							</div>
+							<div class="socials__item">
+								<a href="" class="shake-animation">
+									<svg class="icon icon_youtube">
+										<use xlink:href="img/sprite.svg#svg-youtube"></use>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="footer-top__center">
+						<nav class="footer-top__menu">
+							<ul>
+								<li><a href="">Каталог</a></li>
+								<li><a href="">Пылесосы</a></li>
+								<li><a href="">Техника для кухни</a></li>
+								<li><a href="">Электрочайники</a></li>
+								<li><a href="">Фены</a></li>
+								<li><a href="">Весы</a></li>
+								<li><a href="">Утюги</a></li>
+								<li><a href="">Дезенфицирующие средства</a></li>
+								<li><a href="">Кофеварки</a></li>
+							</ul>
+
+							<ul>
+								<li><a href="">О компании</a></li>
+								<li><a href="">Доставка и оплата</a></li>
+								<li><a href="">История компании</a></li>
+								<li><a href="">Сертификаты</a></li>
+								<li><a href="">Отзывы</a></li>
+								<li><a href="">Статьи</a></li>
+								<li><a href="">Партнерство</a></li>
+								<li><a href="">Контакты</a></li>
+							</ul>
+
+							<ul>
+								<li><a href="">Покупателю</a></li>
+								<li><a href="">Гарантия и Сервис</a></li>
+								<li><a href="">Расширенная гарантия</a></li>
+								<li><a href="">Где купить</a></li>
+								<li><a href="">FAQ</a></li>
+								<li><a href="">Обзоры</a></li>
+								<li><a href="">Инструкции</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="footer-top__right">
+						<div class="footer-top__mailing subscribe">
+							<div class="subscribe__text _content">
+								<h5>Подписаться на рассылку</h5>
+								<p style="color: #8D8D8D;">Будь в курсе новостей, подпишитесь на нашу рассылку</p>
+							</div>
+
+							<form action="" class="subscribe__form">
+								<div class="subscribe__wrapper">
+									<input id="subscribe-email" type="email" class="form__input" name="email" placeholder="E-mail" required="">
+									<button type="submit" class="subscribe__btn btn btn-bg">
+										<svg class="icon icon_select">
+											<use xlink:href="img/sprite.svg#svg-select"></use>
+										</svg>
+									</button>
+								</div>
+							</form>
+						</div>
+
+						<nav class="footer-top__links">
+							<ul>
+								<li><a href="">Политика конфиденциальности</a></li>
+								<li><a href="">Публичные оферты</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer__bottom footer-bottom">
+				<div class="footer-bottom__container">
+					<div class="footer-bottom__left">
+						<div class="footer-bottom__text _content">
+							<p>© 2024 Официальный представитель бренда Arnica на территории России — компания OOO «РМС Трейд».</p>
+						</div>
+					</div>
+
+					<div class="footer-bottom__right">
+						<div class="footer-bottom__text _content">
+							<p>Сайт производителя: <a href="https://www.arnica.com.tr/" target="_blank">arnica.com.tr.</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- <div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">
+				<svg class="icon">
+					<use xlink:href="img/sprite.svg#svg-close"></use>
+				</svg>
+			</button>
+			<div class="popup__text">
+				Text
+			</div>
+		</div>
+	</div>
+</div> -->
+
+	<div id="video" aria-hidden="true" class="popup popup_video">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div data-youtube-place class="popup__text">
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240704172138"></script>
+	<script src="js/app.min.js?_v=20240704172138"></script>
+</body>
+
+</html>
