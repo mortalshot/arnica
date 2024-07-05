@@ -178,4 +178,23 @@ document.addEventListener('click', function (e) {
     document.querySelector('body').classList.remove('_search-active');
     bodyUnlock();
   }
+
+  // Показываем выбор города
+  if (targetElement.classList.contains('location__button') || targetElement.closest('.location__button')) {
+    targetElement.closest('body').classList.add('_location-active');
+    bodyLock();
+  }
+  if (!targetElement.closest('.location-dropdown') && document.querySelectorAll('body._location-active').length > 0 && !targetElement.closest('.location__button')) {
+    document.querySelector('body').classList.remove('_location-active');
+    document.querySelector('body').classList.remove('_location-select');
+    bodyUnlock();
+  }
+  if ((targetElement.classList.contains('location-close') || targetElement.closest('.location-close'))) {
+    document.querySelector('body').classList.remove('_location-active');
+    document.querySelector('body').classList.remove('_location-select');
+    bodyUnlock();
+  }
+  if ((targetElement.classList.contains('location-next') || targetElement.closest('.location-next'))) {
+    document.querySelector('body').classList.add('_location-select');
+  }
 })
