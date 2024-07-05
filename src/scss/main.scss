@@ -883,8 +883,10 @@ a.partner-card {
 
   // .widget-news__heading
   &__heading {
-    &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 92, 40, 1440, 992, 1);
+    @include adaptiveValue("padding-bottom", 92, 40, 1440, 992, 1);
+
+    @media (min-width: $tablet) {
+      @include adaptiveValue("min-height", 342, 173, 1920, 992, 1);
     }
   }
 

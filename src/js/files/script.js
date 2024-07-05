@@ -1,5 +1,5 @@
 // Подключение функционала 
-import { isMobile, _slideToggle, removeClasses } from "./functions.js";
+import { isMobile, _slideToggle, removeClasses, bodyLock, bodyUnlock } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
@@ -168,8 +168,14 @@ document.addEventListener('click', function (e) {
   // Показываем поиск
   if (targetElement.classList.contains('search-form__btn') || targetElement.closest('.search-form__btn')) {
     targetElement.closest('body').classList.add('_search-active');
+    bodyLock();
   }
-  if (!targetElement.closest('.search') && document.querySelectorAll('body._search-active').length > 0) {
+  if (!targetElement.closest('.search-results') && document.querySelectorAll('body._search-active').length > 0 && !targetElement.closest('.search-form')) {
     document.querySelector('body').classList.remove('_search-active');
+    bodyUnlock();
+  }
+  if ((targetElement.classList.contains('search-form__reset') || targetElement.closest('.search-form__reset')) && window.innerWidth <= 991.98) {
+    document.querySelector('body').classList.remove('_search-active');
+    bodyUnlock();
   }
 })

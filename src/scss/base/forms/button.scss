@@ -37,12 +37,21 @@
 		color: $mainColor;
 		text-transform: uppercase;
 
+		svg {
+			transition: $transition ease fill 0s;
+
+		}
+
 		@media (any-hover: hover) {
 			transition: $transition ease all 0s;
 			&:hover {
 				background-color: $Red;
 				border-color: $Red;
 				color: $White;
+
+				svg {
+					fill: $White;
+				}
 			}
 		}
 	}

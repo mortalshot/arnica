@@ -34,7 +34,7 @@ textarea {
 	display: block;
 	padding: rem(14) rem(16);
 	background-color: $White;
-	border: 1px solid #e3e3e3;
+	border: 1px solid $LGray;
 	box-sizing: border-box;
 	transition: $transition ease all 0s;
 }
