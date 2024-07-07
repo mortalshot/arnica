@@ -271,12 +271,14 @@
 }
 
 .product-card {
+  max-width: rem(420);
   height: 100%;
   @include adaptiveValue("border-radius", 40, 18, 1440, 768, 1);
   border: rem(1) solid transparent;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  position: relative;
 
   @media (any-hover: hover) {
     transition: $transition ease all 0s;
@@ -354,6 +356,8 @@
       height: 100%;
       object-fit: cover;
     }
+
+
   }
 
   // .product-card__main
@@ -490,19 +494,40 @@
   }
 }
 
+.product-preview__slide {
+  position: relative;
+  padding-bottom: percent(320, 330);
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 .price {
   white-space: nowrap;
+  font-weight: 500;
+  @include adaptiveValue("font-size", 28, 18, 1440, 768, 1);
+  line-height: math.div(30, 28);
+  color: $Green;
 
   // .price_current
   &_current {
-    font-weight: 500;
-    @include adaptiveValue("font-size", 28, 18, 1440, 768, 1);
-    line-height: math.div(30, 28);
     color: $Green;
+  }
+
+  // .price_new
+  &_new {
+    color: $Red;
   }
 
   // .price_old
   &_old {
+    font-weight: 400;
     @include adaptiveValue("font-size", 18, 14, 768, 360, 1);
     color: $Gray4;
     text-decoration: line-through;
