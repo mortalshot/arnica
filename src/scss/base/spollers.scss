@@ -3,12 +3,8 @@
 
 // Блок со спойлерами
 .spollers {
-	display: grid;
-	gap: 15px;
-
 	// .spollers__item
 	&__item {
-		font-size: rem(20);
 	}
 
 	// .spollers__title
@@ -16,78 +12,50 @@
 		width: 100%;
 		cursor: default;
 		text-align: left;
-		border: 1px solid #eee;
-		padding: rem(10) rem(15);
-		border-radius: rem(5);
 		position: relative;
+		padding-right: rem(24);
+
+		&[data-tippy-content] {
+			padding-right: rem(60);
+			
+			&::after {
+				content: "";
+				display: block;
+				width: rem(20);
+				height: rem(20);
+				position: absolute;
+				right: rem(32);
+				top: 50%;
+				transform: translateY(-50%);
+				background: url(../img/icons/info.svg) no-repeat center/contain;
+			}
+		}
 
 		._spoller-init & {
 			cursor: pointer;
-			&::before,
-			&::after {
+
+			&::before {
 				content: "";
 				position: absolute;
-				right: 10px;
+				right: 0;
 				top: 50%;
-				background-color: #000;
-				height: 2px;
-				width: 15px;
+				transform: translateY(-50%);
+				display: block;
+				width: rem(24);
+				height: rem(24);
+				flex: 0 0 rem(24);
+				background: url(../img/icons/select.svg) no-repeat center/contain;
 				transition: transform 0.5s ease 0s;
 			}
-			&::before {
-				transform: translate(-75%, -50%) rotate(40deg);
-			}
-			&::after {
-				transform: translate(0, -50%) rotate(-40deg);
-			}
 			&._spoller-active {
 				&::before {
-					transform: translateX(-75%) rotate(-40deg);
-				}
-				&::after {
-					transform: rotate(40deg);
+					transform: translateY(-50%) rotate(180deg);
 				}
 			}
-			/*
-			._spoller-init & {
-				position: relative;
-				width: 100%;
-				text-align: left;
-				&::before,
-				&::after {
-					content: "";
-					position: absolute;
-					right: 0;
-					top: rem(12);
-					height: rem(1);
-					transition: all 0.3s ease 0s;
-					width: rem(10);
-					background-color: #000;
-				}
-				&::before {
-					transform: rotate(40deg);
-					right: rem(7);
-				}
-				&::after {
-					transform: rotate(-40deg);
-				}
-			}
-			&._spoller-active {
-				&::before {
-					transform: rotate(-40deg);
-				}
-				&::after {
-					transform: rotate(40deg);
-				}
-			}
-			*/
 		}
 	}
 
 	// .spollers__body
 	&__body {
-		padding: rem(20);
-		border-radius: rem(5);
-		border: 1px solid #eee;
 	}
 }

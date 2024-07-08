@@ -204,6 +204,7 @@ section {
    @include adaptiveValue("border-top-right-radius", 40, 20, 768, 360, 1);
 
    & + section {
+      position: relative;
       margin-top: rem(-40);
       @include adaptiveValue("padding-top", 60, 50, 1440, 768, 1);
       background-color: $White;
@@ -815,14 +816,75 @@ ol {
 
 //.breadcrumbs     ====================================================================================================
 .breadcrumbs {
+   position: relative;
+
+   &._section-bg {
+      padding-top: rem(30);
+      min-height: rem(310);
+
+      &:first-child {
+         margin-top: 0;
+      }
+   }
+
+   // .breadcrumbs__bg
+   &__bg {
+      img {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         object-position: right;
+         pointer-events: none;
+      }
+   }
+
    // .breadcrumbs__container
    &__container {
+      position: relative;
+   }
+
+   // .breadcrumbs__wrapper
+   &__wrapper {
    }
 
    // .breadcrumbs__title
    &__title {
       &:not(:last-child) {
-         margin-bottom: rem(16);
+         @include adaptiveValue("margin-bottom", 16, 12, 1440, 360, 1);
+      }
+   }
+
+   // .breadcrumbs_row
+   &_row {
+      .breadcrumbs__wrapper {
+         @media (min-width: $mobile) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: rem(16);
+         }
+      }
+
+      .breadcrumbs__title {
+         @media (min-width: $mobile) {
+            &:not(:last-child) {
+               margin-bottom: 0;
+            }
+         }
+      }
+   }
+
+   // .breadcrumbs_border
+   &_border {
+      &:not(:last-child) {
+         .breadcrumbs__wrapper {
+            @include adaptiveValue("padding-bottom", 32, 24, 1440, 768, 1);
+            @include adaptiveValue("margin-bottom", 32, 24, 1440, 768, 1);
+            border-bottom: rem(1) solid $LGray;
+         }
       }
    }
 }
@@ -831,7 +893,7 @@ ol {
    display: flex;
    align-items: center;
    gap: rem(10);
-   @include adaptiveValue("font-size", 12, 8);
+   @include adaptiveValue("font-size", 12, 8, 1440, 360, 1);
    line-height: math.div(16, 12);
 
    // .site-breadcrumbs__link

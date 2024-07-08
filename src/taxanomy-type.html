@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Пылесосы с аквафильтром"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="breadcrumbs _section-bg" style="background-color: #E8F3F7;">
+        <div class="breadcrumbs__bg">
+          <picture>
+            <source srcset="@img/taxonomy-type/breadcrumbs1-bg360.png" media="(max-width: 574.98px)">
+            <source srcset="@img/taxonomy-type/breadcrumbs1-bg768.png" media="(max-width: 991.98px)">
+            <source srcset="@img/taxonomy-type/breadcrumbs1-bg1440.png" media="(max-width: 1639.98px)">
+            <img src="@img/taxonomy-type/breadcrumbs1-bg1920.png" alt="" loading="lazy">
+          </picture>
+        </div>
+
+        <div class="breadcrumbs__container">
+          <div class="breadcrumbs__wrapper">
+            <h1 class="breadcrumbs__title">Пылесосы с аквафильтром</h1>
+
+            <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+              <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="" itemprop="item">
+                  <span itemprop="name">Главная</span>
+                </a>
+              </span>
+              <span class="site-breadcrumbs__separator">/</span>
+              <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="" itemprop="item">
+                  <span itemprop="name">Каталог</span>
+                </a>
+              </span>
+              <span class="site-breadcrumbs__separator">/</span>
+              <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="" itemprop="item">
+                  <span itemprop="name">Пылесосы</span>
+                </a>
+              </span>
+              <span class="site-breadcrumbs__separator">/</span>
+              <span class="site-breadcrumbs__title">Пылесосы с аквафильтром</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="catalog">
+        <div class="catalog__container">
+          <div class="catalog__grid">
+            <aside class="catalog__sidebar catalog-sidebar">
+              <div class="catalog-sidebar__wrapper">
+                <form action="#" class="catalog__filter catalog-filter">
+                  <div class="catalog-filter__head">
+                    <div class="catalog-filter__found">Показано 486 товаров</div>
+                    <div class="catalog-filter__reset">
+                      <button type="reset" class="btn btn_border-main">Очистить</button>
+                    </div>
+                  </div>
+
+                  <div class="catalog-filter__heading">
+                    <div class="catalog-filter__caption">
+                      <svg class="icon">
+                        <use xlink:href="@img/sprite.svg#svg-filter"></use>
+                      </svg>
+
+                      <span>Фильтры</span>
+                    </div>
+
+                    <div class="catalog-filter__close">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <div data-spollers class="spollers">
+                    <div class="catalog-filter__item spollers__item">
+                      <div class="catalog-filter__body spollers__body">
+                        <div class="form__row">
+                          <div class="col-12">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="in-stock" value="Только в наличии" class="checkbox__input" checked>
+                                <span class="checkbox__label" style="font-weight: 500;">Только в наличии</span>
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <div class="range-slider">
+                              <div class="range-slider__caption">Цена</div>
+
+                              <div class="range-slider__inputs">
+                                <label class="range-slider__input">
+                                  <div class="range-slider__label">от</div>
+                                  <input type="text" id="range-slider1-min" class="range-slider__min" placeholder="">
+                                </label>
+
+                                <label class="range-slider__input">
+                                  <div class="range-slider__label">до</div>
+                                  <input type="text" id="range-slider1-max" class="range-slider__max" placeholder="">
+                                </label>
+                              </div>
+
+                              <div class="range-slider__range" data-min="6000" data-max="99999" data-start="6000, 30000" data-prefix=" ₽"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="catalog-filter__item spollers__item">
+                      <button type="button" data-spoller class="catalog-filter__title spollers__title _spoller-active">Тип уборки</button>
+                      <div class="catalog-filter__body spollers__body">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaning" value="Влажная" class="checkbox__input">
+                            <span class="checkbox__label">Влажная <span class="amount">18</span></span>
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaning" value="Сухая" class="checkbox__input">
+                            <span class="checkbox__label">Сухая <span class="amount">180</span></span>
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaning" value="Паровая" class="checkbox__input">
+                            <span class="checkbox__label">Паровая <span class="amount">2</span></span>
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaning" value="Сухая и влажная" class="checkbox__input">
+                            <span class="checkbox__label">Сухая и влажная <span class="amount">126</span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="catalog-filter__item spollers__item">
+                      <button type="button" data-spoller class="catalog-filter__title spollers__title _spoller-active">Тип пылесоса</button>
+                      <div class="catalog-filter__body spollers__body">
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaner" value="с аквафильтром" class="checkbox__input">
+                            <span class="checkbox__label">с аквафильтром <span class="amount">78</span></span>
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaner" value="моющие с аквафильтром" class="checkbox__input">
+                            <span class="checkbox__label">моющие с аквафильтром <span class="amount">180</span></span>
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaner" value="автомобильный" class="checkbox__input">
+                            <span class="checkbox__label">автомобильный <span class="amount">18</span></span>
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaner" value="вертикальные" class="checkbox__input">
+                            <span class="checkbox__label">вертикальные <span class="amount">23</span></span>
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaner" value="с контейнером" class="checkbox__input">
+                            <span class="checkbox__label">с контейнером <span class="amount">269</span></span>
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaner" value="с мешком" class="checkbox__input">
+                            <span class="checkbox__label">с мешком <span class="amount">688</span></span>
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaner" value="беспроводные" class="checkbox__input">
+                            <span class="checkbox__label">беспроводные <span class="amount">20</span></span>
+                          </label>
+                        </div>
+
+                        <div class="checkbox">
+                          <label>
+                            <input type="checkbox" name="type-cleaner" value="со скидкой" class="checkbox__input">
+                            <span class="checkbox__label">со скидкой <span class="amount">220</span></span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="catalog-filter__item spollers__item">
+                      <button type="button" data-spoller class="catalog-filter__title spollers__title _spoller-active">Мощность, Вт</button>
+                      <div class="catalog-filter__body spollers__body">
+                        <div class="range-slider">
+                          <div class="range-slider__inputs">
+                            <label class="range-slider__input">
+                              <div class="range-slider__label">от</div>
+                              <input type="text" id="range-slider2-min" class="range-slider__min" placeholder="">
+                            </label>
+
+                            <label class="range-slider__input">
+                              <div class="range-slider__label">от</div>
+                              <input type="text" id="range-slider2-max" class="range-slider__max" placeholder="">
+                            </label>
+                          </div>
+
+                          <div class="range-slider__range" data-min="0" data-max="2400" data-start="0, 2400" data-prefix=" Вт"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="catalog-filter__item spollers__item">
+                      <button type="button" data-spoller class="catalog-filter__title spollers__title" data-tippy-content="Источник питания - бла-бла-бла">Источник питания</button>
+                      <div class="catalog-filter__body spollers__body">
+                        <div class="form__row">
+                          <div class="col-12">
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="power-supply" value="сеть" class="checkbox__input">
+                                <span class="checkbox__label">сеть <span class="amount">463</span></span>
+                              </label>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox" name="power-supply" value="аккумулятор" class="checkbox__input">
+                                <span class="checkbox__label">аккумулятор <span class="amount">18</span></span>
+                              </label>
+                            </div>
+                          </div>
+
+                          <div class="col-12">
+                            <div class="range-slider">
+                              <div class="range-slider__text">Время работы аккумулятора, мин</div>
+
+                              <div class="range-slider__inputs">
+                                <label class="range-slider__input">
+                                  <div class="range-slider__label">от</div>
+                                  <input type="text" id="range-slider3-min" class="range-slider__min" placeholder="">
+                                </label>
+
+                                <label class="range-slider__input">
+                                  <div class="range-slider__label">от</div>
+                                  <input type="text" id="range-slider3-max" class="range-slider__max" placeholder="">
+                                </label>
+                              </div>
+
+                              <div class="range-slider__range" data-min="10" data-max="360" data-start="10, 360" data-prefix=" мин"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="catalog-filter__footer">
+                    <div class="catalog-filter__footer-row">
+                      <div class="catalog-filter__found">
+                        <button type="submit" class="btn btn_bg-green">Показать 1 486 товаров</button>
+                      </div>
+
+                      <div class="catalog-filter__reset">
+                        <button type="reset" class="btn btn_border-main">Очистить</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </aside>
+
+            <div class="catalog__body">
+              <div class="catalog__heading">
+                <button type="button" class="catalog-filter__caption">
+                  <svg class="icon">
+                    <use xlink:href="@img/sprite.svg#svg-filter"></use>
+                  </svg>
+
+                  <span>Фильтры</span>
+                </button>
+
+                <div class="catalog__selected-filters">
+                  <div class="selected-filter">
+                    <button type="button" class="selected-filter__wrapper">
+                      <span>Скидки</span>
+
+                      <svg class="icon">
+                        <use xlink:href="@img/sprite.svg#svg-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="selected-filter">
+                    <button type="button" class="selected-filter__wrapper">
+                      <span>С аквафильтром</span>
+
+                      <svg class="icon">
+                        <use xlink:href="@img/sprite.svg#svg-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="selected-filter selected-filter_disabled">
+                    <button type="button" class="selected-filter__wrapper">
+                      <span>Вертикальные</span>
+
+                      <svg class="icon">
+                        <use xlink:href="@img/sprite.svg#svg-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="selected-filter selected-filter_disabled">
+                    <button type="button" class="selected-filter__wrapper">
+                      <span>С мешком</span>
+
+                      <svg class="icon">
+                        <use xlink:href="@img/sprite.svg#svg-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="selected-filter selected-filter_disabled">
+                    <button type="button" class="selected-filter__wrapper">
+                      <span>С контейнером</span>
+
+                      <svg class="icon">
+                        <use xlink:href="@img/sprite.svg#svg-close"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="catalog__sorting">
+                  <select name="form[]" class="form">
+                    <option value="Сначала популярные" selected>Сначала популярные</option>
+                    <option value="Самые дешевые">Самые дешевые</option>
+                    <option value="Самые дорогие">Самые дорогие</option>
+                    <option value="Новое">Новое</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="catalog__products _row">
+                <div class="col-6 col-xl-4 col-xxl-3">
+                  @@include('html/product-card.htm',{})
+                </div>
+                <div class="col-6 col-xl-4 col-xxl-3">
+                  @@include('html/product-card.htm',{})
+                </div>
+                <div class="col-6 col-xl-4 col-xxl-3">
+                  @@include('html/product-card.htm',{})
+                </div>
+                <div class="col-6 col-xl-4 col-xxl-3">
+                  @@include('html/product-card.htm',{})
+                </div>
+                <div class="col-6 col-xl-4 col-xxl-3">
+                  @@include('html/product-card.htm',{})
+                </div>
+                <div class="col-6 col-xl-4 col-xxl-3">
+                  @@include('html/product-card.htm',{})
+                </div>
+                <div class="col-6 col-xl-4 col-xxl-3">
+                  @@include('html/product-card.htm',{})
+                </div>
+                <div class="col-6 col-xl-4 col-xxl-3">
+                  @@include('html/product-card.htm',{})
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

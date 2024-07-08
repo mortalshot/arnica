@@ -226,11 +226,58 @@ function initSliders() {
   }
 }
 
+// Работа с noUiSlider
+function noUiSliderInit() {
+  var sliders = document.querySelectorAll('.range-slider__range');
+  var minInputs = document.querySelectorAll('.range-slider__min');
+  var maxInputs = document.querySelectorAll('.range-slider__max');
+
+  if (sliders.length > 0) {
+    sliders.forEach(function (slider, index) {
+      var min = parseInt(slider.getAttribute('data-min'));
+      var max = parseInt(slider.getAttribute('data-max'));
+      var start = slider.getAttribute('data-start').split(',').map(Number);
+      var prefix = slider.getAttribute('data-prefix');
+
+      var rangeSlider = noUiSlider.create(slider, {
+        start: start,
+        connect: true,
+        range: {
+          'min': min,
+          'max': max
+        },
+      });
+
+      function formatValue(value, prefix) {
+        return Math.round(value) + prefix;
+      }
+
+      rangeSlider.on('update', function (values, handle) {
+        var value = values[handle];
+        if (handle === 0) {
+          minInputs[index].value = formatValue(value, prefix);
+        } else {
+          maxInputs[index].value = formatValue(value, prefix);
+        }
+      });
+
+      minInputs[index].addEventListener('change', function () {
+        rangeSlider.set([this.value.replace(prefix, ''), null]);
+      });
+
+      maxInputs[index].addEventListener('change', function () {
+        rangeSlider.set([null, this.value.replace(prefix, '')]);
+      });
+    });
+  }
+}
+
 window.addEventListener("load", function (e) {
   // Запуск инициализации слайдеров
   initSliders();
-  // Запуск инициализации скролла на базе слайдера (по классу swiper_scroll)
-  //initSlidersScroll();
+
+  // Запуск инициализации noUiSlider
+  noUiSliderInit();
 });
 
 document.addEventListener('click', function (e) {
@@ -292,4 +339,15 @@ document.addEventListener('click', function (e) {
   if ((targetElement.classList.contains('location-next') || targetElement.closest('.location-next'))) {
     document.querySelector('body').classList.add('_location-select');
   }
+
+  // Показываем фильтры на мобильном
+  if (targetElement.classList.contains('catalog-filter__caption') || targetElement.closest('.catalog-filter__caption')) {
+    targetElement.closest('body').classList.add('_filter-active');
+    bodyLock();
+  }
+  if (targetElement.closest('.catalog-filter__close') || targetElement.closest('.catalog-filter__found')) {
+    targetElement.closest('body').classList.remove('_filter-active');
+    bodyUnlock();
+  }
 })
+
