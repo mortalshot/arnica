@@ -271,7 +271,7 @@
 }
 
 .product-card {
-  max-width: rem(420);
+  max-width: rem(446);
   height: 100%;
   @include adaptiveValue("border-radius", 40, 18, 1440, 768, 1);
   border: rem(1) solid transparent;
@@ -356,8 +356,6 @@
       height: 100%;
       object-fit: cover;
     }
-
-
   }
 
   // .product-card__main
@@ -424,7 +422,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    @include adaptiveValue("gap", 20, 12, 1440, 768, 1);
+    gap: rem(12);
     position: relative;
     z-index: 3;
 
@@ -436,8 +434,9 @@
   // .product-card__add
   &__add {
     .btn {
-      @include adaptiveValue("padding-left", 46, 20, 1440, 1280, 1);
-      @include adaptiveValue("padding-right", 46, 20, 1440, 1280, 1);
+      @include adaptiveValue("font-size", 16, 14, 1440, 992, 1);
+      @include adaptiveValue("padding-left", 46, 16, 1440, 1280, 1);
+      @include adaptiveValue("padding-right", 46, 16, 1440, 1280, 1);
 
       @media (max-width: $tablet) {
         background-color: $Red;
@@ -1051,6 +1050,158 @@ a.partner-card {
   // .news-card__date
   &__date {
     color: #999999;
+  }
+}
+
+//.search-page     ====================================================================================================
+.search-page {
+  // .search-page__container
+  &__container {
+    min-height: 40svh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .search-page__heading
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(12);
+
+    &:not(:last-child) {
+      margin-bottom: rem(28);
+    }
+  }
+
+  // .search-page__title
+  &__title {
+    @include adaptiveValue("font-size", 24, 20);
+    line-height: math.div(30, 24);
+  }
+
+  // .search-page__link
+  &__link {
+    color: $Blue;
+  }
+
+  // .search-page__filters
+  &__filters {
+    &:not(:last-child) {
+      margin-bottom: rem(32);
+    }
+
+    .filter-button__name,
+    .filter-button__amount {
+      font-size: rem(14);
+      line-height: math.div(18, 14);
+    }
+  }
+
+  // .search-page__items
+  &__items {
+    margin-top: rem(-13);
+    margin-bottom: rem(-13);
+    @include adaptiveValue("margin-left", -9, -6, 1440, 360, 1);
+    @include adaptiveValue("margin-right", -9, -6, 1440, 360, 1);
+
+    & > * {
+      padding-top: rem(13);
+      padding-bottom: rem(13);
+      @include adaptiveValue("padding-left", 9, 6, 1440, 360, 1);
+      @include adaptiveValue("padding-right", 9, 6, 1440, 360, 1);
+    }
+
+    .product-card__add .btn {
+      @media (min-width: $pc) {
+        @include adaptiveValue("font-size", 16, 14, 1920, 1640, 1);
+        padding-left: rem(16);
+        padding-right: rem(16);
+      }
+    }
+  }
+
+  // .search-page__empty
+  &__empty {
+    align-content: center;
+    flex: 1;
+  }
+}
+
+.search-emty {
+  display: grid;
+  row-gap: rem(18);
+  text-align: center;
+  max-width: rem(340);
+  margin-left: auto;
+  margin-right: auto;
+
+  // .search-emty__image
+  &__image {
+    display: flex;
+    justify-content: center;
+  }
+
+  // .search-emty__title
+  &__title {
+  }
+
+  // .search-emty__link
+  &__link {
+    color: $Blue;
+  }
+}
+
+//.error-section     ====================================================================================================
+.error-section {
+  // .error-section__breadcrumbs
+  &__breadcrumbs {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 60, 40, 768, 360, 1);
+    }
+  }
+
+  // .error-section__container
+  &__container {
+    display: grid;
+    align-content: center;
+    align-items: center;
+    row-gap: rem(20);
+    @include adaptiveValue("column-gap", 92, 24, 1440, 992, 1);
+
+    @media (min-width: $tablet) {
+      grid-template-columns: percent(560, 1380) 1fr;
+      justify-content: space-between;
+    }
+    @media (min-width: $pc) {
+      grid-template-columns: rem(560) 1fr;
+    }
+  }
+
+  // .error-section__body
+  &__body {
+    font-size: rem(13);
+
+    @media (max-width: $tablet) {
+      max-width: rem(502);
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+
+      ol, ul {
+        justify-items: center;
+      }
+    }
+  }
+
+  // .error-section__image
+  &__image {
+    @media (max-width: $tablet) {
+      grid-row: 1/2;
+      max-width: rem(518);
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 

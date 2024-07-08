@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Результаты поиска"
+})
+
+<body class="_search-page">
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="search-page">
+        <div class="search-page__container">
+          <div class="search-page__heading">
+            <h1 class="search-page__title">Найдено 7 товаров</h1>
+            <a href="" class="search-page__link link-underline">Все товары</a>
+          </div>
+
+          <div class="search-page__filters search-results__categories">
+            <a href="" class="search-results__category filter-button">
+              <span class="filter-button__name">Вертикальные пылесосы </span>
+              <span class="filter-button__amount">6</span>
+            </a>
+            <a href="" class="search-results__category filter-button">
+              <span class="filter-button__name">Пылесосы с аквафильтром </span>
+              <span class="filter-button__amount">1</span>
+            </a>
+            <a href="" class="search-results__category filter-button">
+              <span class="filter-button__name">Пылесосы с мешком / колбой </span>
+              <span class="filter-button__amount">2</span>
+            </a>
+            <a href="" class="search-results__category filter-button">
+              <span class="filter-button__name">Аксессуары для пылесосов </span>
+              <span class="filter-button__amount">6</span>
+            </a>
+          </div>
+
+          <div class="search-page__items _row">
+            <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xxl-2">
+              @@include('html/product-card.htm',{})
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xxl-2">
+              @@include('html/product-card.htm',{})
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xxl-2">
+              @@include('html/product-card.htm',{})
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xxl-2">
+              @@include('html/product-card.htm',{})
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xxl-2">
+              @@include('html/product-card.htm',{})
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xxl-2">
+              @@include('html/product-card.htm',{})
+            </div>
+            <div class="col-6 col-sm-4 col-md-4 col-lg-3 col-xxl-2">
+              @@include('html/product-card.htm',{})
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

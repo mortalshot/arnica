@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Запрашиваемой Вами страницы не существует на нашем сайте."
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="error-section">
+        <div class="error-section__breadcrumbs breadcrumbs">
+          <div class="breadcrumbs__container">
+            <h1 class="breadcrumbs__title">Страница</h1>
+
+            <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+              <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="https://climatech.thekan.ru" itemprop="item">
+                  <span itemprop="name">Главная</span>
+                </a>
+              </span>
+              <span class="site-breadcrumbs__separator">/</span>
+              <span class="site-breadcrumbs__title">Страница</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="error-section__container">
+          <div class="error-section__body _content">
+            <h4>Запрашиваемой Вами страницы не существует на нашем сайте.</h4>
+            <p>Возможно, это случилось по одной из этих причин:</p>
+            <ol>
+              <li style="color: #3B8DE8;">Вы ошиблись при наборе адреса страницы (URL)</li>
+              <li style="color: #3B8DE8;">Перешли по «битой» (неработающей) ссылке</li>
+              <li style="color: #3B8DE8;">Запрашиваемой страницы никогда не было на сайте или она была удалена</li>
+            </ol>
+            <p></p>
+            <p style="color: #7A7A7A; font-size: 12px;">Если Вы уверены в правильности набранного адреса страницы, но она по какой-то причине не работает, то пожалуйста, сообщите об этом разработчикам сайта при помощи <a href="">контактной формы</a> или <a href="">электронной почты</a></p>
+          </div>
+          <div class="error-section__image">
+            <img src="@img/icons/error.png" alt="" loading="lazy">
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

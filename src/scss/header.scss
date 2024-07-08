@@ -465,7 +465,8 @@
 			flex: 1;
 			transition: $transition ease all 0s;
 
-			._search-active & {
+			._search-active &,
+			._search-page & {
 				opacity: 0;
 				pointer-events: none;
 			}
@@ -625,7 +626,7 @@
 				bottom: 0;
 				@include adaptiveValue("left", 30, 20, 768, 360, 1);
 				@include adaptiveValue("right", 30, 20, 768, 360, 1);
-				background: #acacac;
+				background: $Gray4;
 			}
 		}
 
@@ -634,6 +635,15 @@
 			visibility: visible;
 			pointer-events: all;
 			z-index: 150;
+		}
+
+		._search-page & {
+			@media (min-width: $tablet) {
+				opacity: 1;
+				visibility: visible;
+				pointer-events: all;
+				z-index: 150;
+			}
 		}
 	}
 

@@ -28,6 +28,7 @@ $LGray: #e3e3e3;
 $DGray: #7a7a7a;
 $Green: #0ab3a3;
 $Line: #f1f3f5;
+$Blue: #3b8de8;
 
 // Минимальная ширина страницы
 $minWidth: 360;
@@ -43,7 +44,7 @@ $containerPadding: 40;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поинты
-$pc: em($containerWidth); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$pc: em(1439.98); // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
 $tablet: em(991.98); // Планшеты, некоторые телефоны в горизонтальном положении
 $mobile: em(767.98); // Телефоны L
 $mobileM: em(574.98); // Телефоны M
@@ -104,7 +105,7 @@ body {
 	@include adaptiveValue("padding-left", 30, 20, 768, 360, 1);
 	@include adaptiveValue("padding-right", 30, 20, 768, 360, 1);
 
-	@media (min-width: em(1439.98)) {
+	@media (min-width: em($pc)) {
 		@include adaptiveValue("padding-left", 40, 32, 1920, 1440, 1);
 		@include adaptiveValue("padding-right", 40, 32, 1920, 1440, 1);
 	}

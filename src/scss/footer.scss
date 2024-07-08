@@ -28,7 +28,7 @@
       @include adaptiveValue("column-gap", 60, 20, 1440, 992, 1);
       justify-content: space-between;
     }
-    @media (min-width: em(1439.98)) {
+    @media (min-width: em($pc)) {
       grid-template-columns: rem(310) rem(664) rem(280);
     }
   }

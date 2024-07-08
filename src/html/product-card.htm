@@ -1,0 +1,78 @@
+<article class="product-card">
+  <a href="single-product.html" class="product-card__link"> </a>
+
+  <div class="product-card__head">
+    <div class="product-card__labels">
+      <div class="product-card__label product-card__label_new">NEW</div>
+      <div class="product-card__label product-card__label_sale">sale</div>
+    </div>
+
+    <div data-mousemove-swipe class="product-preview__slider swiper">
+      <div class="product-preview__wrapper swiper-wrapper">
+        <div class="product-preview__slide swiper-slide">
+          <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+
+        <div class="product-preview__slide swiper-slide">
+          <img src="@img/widget-sales/sale-card1-bg1440.png" alt="" loading="lazy">
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+
+        <div class="product-preview__slide swiper-slide">
+          <img src="@img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy">
+          <div class="swiper-lazy-preloader"></div>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <div class="product-card__main">
+    <div class="product-card__body">
+      <div class="product-card__top">
+        <a href="" class="product-card__title">Tesla Plus</a>
+
+        <div class="product-card__excrpt _content">
+          <p>Высокая мощность и расширенная комплектация для максимального результата
+            без лишних усилий</p>
+        </div>
+      </div>
+
+      <div class="product-card__price price">
+        <div class="price price_current">19 990 ₽</div>
+      </div>
+    </div>
+
+    <div class="product-card__footer">
+      <div class="product-card__add">
+        <button type="button" class="btn btn_border-main">
+          <span>В корзину</span>
+
+          <svg class="icon">
+            <use xlink:href="@img/sprite.svg#svg-cart"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div class="product-card__actions">
+        <div class="product-card__compare">
+          <button type="button" class="shake-animation">
+            <svg class="icon">
+              <use xlink:href="@img/sprite.svg#svg-compare"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="product-card__wishlist">
+          <button type="button" class="shake-animation">
+            <svg class="icon">
+              <use xlink:href="@img/sprite.svg#svg-wishlist"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
