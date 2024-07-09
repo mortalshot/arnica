@@ -358,7 +358,7 @@ function initSliders() {
         },
 
         on: {
-          init: function(e) {
+          init: function (e) {
             let currentSlide = ++e.realIndex;
             compareNewMainSliderCurrent.innerHTML = currentSlide;
           }
@@ -366,7 +366,7 @@ function initSliders() {
       });
 
       compareNewMainSliderTotal.innerHTML = newMainSlider.slides.length - 1;
-      
+
       newMainSlider.on('slideChange', function () {
         let currentSlide = ++newMainSlider.realIndex;
         compareNewMainSliderCurrent.innerHTML = currentSlide;
@@ -542,3 +542,48 @@ document.addEventListener('click', function (e) {
   }
 })
 
+// Скрываем строки с одинаковыми значениями
+const compareSwitch = document.querySelector('.compare__switch .switch__input');
+compareSwitch.addEventListener('change', function () {
+  const isChecked = this.checked;
+
+  const compareCards = document.querySelectorAll('.compare-table__products .compare-attributes');
+  const rows = [];
+
+  // Получаем строки из каждой карточки
+  compareCards.forEach(card => {
+    const cardRows = Array.from(card.querySelectorAll('.compare-attributes__item'));
+    rows.push(cardRows);
+  });
+
+
+  // Сравниваем строки между карточками
+  rows[0].forEach((row, index) => {
+    const rowValues = Array.from(row.children).map(child => child.textContent.trim());
+
+    const isSame = rows.every(cardRows => {
+      const currentRowValues = Array.from(cardRows[index].children).map(child => child.textContent.trim());
+      return currentRowValues.every((value, i) => value === rowValues[i]);
+    });
+
+    if (isSame) {
+      rows.forEach(cardRows => {
+        const rowToToggle = cardRows[index];
+        if (isChecked) {
+          rowToToggle.classList.add('d-none');
+        } else {
+          rowToToggle.classList.remove('d-none');
+        }
+      });
+
+      const compareAttributesRows = document.querySelectorAll('.compare-table__head .compare-attributes .compare-attributes__item');
+      const compareAttributesRow = compareAttributesRows[index];
+      compareAttributesRows[index].classList.add('d-none');
+      if (isChecked) {
+        compareAttributesRow.classList.add('d-none');
+      } else {
+        compareAttributesRow.classList.remove('d-none');
+      }
+    }
+  })
+});
