@@ -1584,4 +1584,424 @@ a.partner-card {
   }
 }
 
+// !Страница сравнения
+//.compare     ====================================================================================================
+.compare-breadcrumbs {
+  @include adaptiveValue("margin-bottom", 30, 24, 768, 360, 1);
+
+  .breadcrumbs__wrapper {
+    border: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+.compare {
+  @media (min-width: $mobile) {
+    background-color: $Line;
+    padding-top: rem(40);
+  }
+  @media (max-width: $mobile) {
+    padding-top: 0;
+  }
+
+  // .compare__container
+  &__container {
+  }
+
+  // .compare__top
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: rem(12);
+
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+
+      @media (max-width: $mobile) {
+        margin-bottom: rem(30);
+      }
+    }
+
+    .compare__add {
+      @media (min-width: $tablet) {
+        display: none;
+      }
+    }
+
+    .switch__label {
+      border: rem(1) solid $Gray4;
+    }
+  }
+
+  // .compare__categories
+  &__categories {
+    flex: 0 0 100%;
+
+    @media (max-width: $tablet) {
+      margin-bottom: rem(30);
+    }
+  }
+
+  // .compare__table
+  &__table {
+    @media (min-width: $mobile) {
+      display: grid;
+      gap: rem(4);
+    }
+  }
+
+  // .compare__switch
+  &__switch {
+  }
+
+  // .compare__main-slider
+  &__main-slider {
+    .swiper-pagination,
+    .swiper-fraction {
+      @media (min-width: $mobile) {
+        display: none;
+      }
+    }
+
+    .swiper-pagination {
+      @media (max-width: $mobile) {
+        padding: rem(6) 0;
+        bottom: initial !important;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      @media (max-width: $mobile) {
+        margin: 0 rem(6) !important;
+      }
+    }
+  }
+
+  // .compare__slide
+  &__slide {
+    height: auto;
+
+    .compare-table__cell {
+      height: 100%;
+    }
+  }
+
+  // .compare__product
+  &__product {
+    @media (min-width: $mobile) {
+      box-shadow: none !important;
+      border: 0 !important;
+      flex-direction: row;
+      align-items: center;
+      gap: rem(16);
+    }
+
+    .product-card {
+      // .product-card__head
+      &__head {
+        @media (min-width: $mobile) {
+          flex: 0 0 rem(126);
+          @include adaptiveValue("flex-basis", 126, 70, 1440, 768, 1);
+        }
+      }
+
+      // .product-card__labels
+      &__labels {
+        display: none;
+      }
+
+      // .product-card__main
+      &__main {
+        @media (min-width: $mobile) {
+          padding: 0;
+        }
+      }
+
+      // .product-card__title
+      &__title {
+        @media (min-width: $mobile) {
+          font-size: rem(14);
+        }
+      }
+
+      // .product-card__excrpt
+      &__excrpt {
+        @media (min-width: $mobile) {
+          display: none;
+        }
+      }
+
+      // .product-card__price
+      &__price {
+        @media (min-width: $mobile) {
+          &:not(:first-child) {
+            margin-top: rem(4);
+          }
+        }
+      }
+
+      // .product-card__footer
+      &__footer {
+        @media (min-width: $mobile) {
+          display: none;
+        }
+      }
+    }
+  }
+
+  // .compare__remove
+  &__remove {
+    position: absolute;
+    top: rem(10);
+    right: rem(12);
+    z-index: 2;
+
+    @media (any-hover: hover) {
+      transition: $transition ease transform 0s;
+      &:hover {
+        transform: rotate(90deg);
+      }
+    }
+
+    svg {
+      width: rem(20);
+      height: rem(20);
+      flex-basis: rem(20);
+    }
+  }
+
+  // .compare__add
+  &__add {
+    .btn {
+      @media (min-width: $tablet) {
+        display: grid;
+        justify-items: center;
+        row-gap: rem(12);
+        color: $Blue2;
+        text-align: center;
+        transition: $transition ease color 0s;
+
+        svg {
+          fill: $Blue2;
+          transition: $transition ease fill 0s;
+        }
+
+        span {
+          max-width: rem(148);
+        }
+
+        @media (any-hover: hover) {
+          &:hover {
+            color: $Blue;
+
+            svg {
+              fill: $Blue;
+            }
+          }
+        }
+      }
+      @media (max-width: $tablet) {
+        padding: rem(11) rem(28);
+        font-size: rem(14);
+        line-height: math.div(20, 14);
+        text-transform: none;
+        gap: rem(10);
+
+        svg {
+          width: rem(24);
+          height: rem(24);
+          flex: 0 0 rem(24);
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+}
+
+.compare-categories {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  // .compare-categories__items
+  &__items {
+    display: flex;
+    align-items: center;
+    margin: rem(-6);
+  }
+
+  // .compare-categories__item
+  &__item {
+    padding: rem(6);
+  }
+
+  // .compare-categories__wrapper
+  &__wrapper {
+    white-space: nowrap;
+    padding: rem(9) rem(16);
+    background-color: $White;
+    border-radius: rem(10);
+    border: rem(1) solid $White;
+    transition: $transition ease border-color 0s;
+
+    @media (max-width: $mobile) {
+      background-color: $Line;
+      border-color: $Line;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        border-color: $Gray4;
+      }
+    }
+  }
+}
+
+.compare-table {
+  // .compare-table__row
+  &__row {
+    display: flex;
+    min-width: 0;
+    gap: rem(10);
+
+    @media (min-width: $mobile) {
+      gap: rem(4);
+    }
+  }
+
+  // .compare-table__top
+  &__top {
+    @media (min-width: $mobile) {
+      position: sticky;
+      z-index: 2;
+      top: rem(70);
+    }
+    @media (min-width: $tablet) {
+      @include adaptiveValue("top", 88, 83, 1440, 992, 1);
+    }
+  }
+
+  // .compare-table__bottom
+  &__bottom {
+    @media (max-width: $mobile) {
+      margin-top: rem(16);
+    }
+  }
+
+  // .compare-table__cell
+  &__cell {
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: $mobile) {
+      background-color: $White;
+      border-radius: rem(16);
+      padding: rem(12) rem(16);
+    }
+
+    // .compare-table__cell_center
+    &_center {
+      display: grid;
+      align-content: center;
+    }
+  }
+
+  // .compare-table__head
+  &__head {
+    @media (min-width: $mobile) {
+      flex: 0 0 rem(215);
+    }
+    @media (min-width: $tablet) {
+      @include adaptiveValue("flex-basis", 340, 290, 1440, 992, 1);
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+
+    .compare-attributes__item {
+      font-weight: 500;
+      color: $mainColor;
+
+      @media (max-width: $tablet) {
+        font-size: rem(14);
+      }
+    }
+  }
+
+  // .compare-table__view
+  &__view {
+    .switch {
+      justify-content: initial;
+    }
+
+    .switch__label {
+      flex: 1;
+    }
+
+    .switch__slider span {
+      @media (min-width: $tablet) {
+        @include adaptiveValue("font-size", 14, 12, 1440, 992, 1);
+      }
+    }
+  }
+
+  // .compare-table__products
+  &__products {
+    min-width: 0;
+    flex: 1;
+
+    // .compare-table__products_dublicate
+    &_dublicate {
+      @media (min-width: $mobile) {
+        display: none;
+      }
+    }
+  }
+
+  // .compare-table__add
+  &__add {
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.compare-attributes {
+  // .compare-attributes__item
+  &__item {
+    padding-top: rem(16);
+    padding-bottom: rem(16);
+    font-size: rem(16);
+    line-height: math.div(26, 16);
+    color: $DGray;
+
+    &:not(:last-child) {
+      border-bottom: rem(1) solid $Line;
+    }
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue("font-size", 16, 13, 768, 360, 1);
+
+      &::before {
+        content: attr(data-title);
+        display: block;
+        font-weight: 500;
+        font-size: rem(16);
+        line-height: math.div(26, 16);
+        margin-bottom: rem(18);
+        color: $mainColor;
+      }
+    }
+  }
+}
+
 //====================================================================================================

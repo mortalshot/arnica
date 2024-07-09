@@ -585,6 +585,24 @@ ol {
    }
 }
 
+.swiper-fraction {
+   display: flex;
+   justify-content: center;
+   gap: rem(4);
+
+   // .swiper-fraction__current
+   &__current {
+   }
+
+   // .swiper-fraction__sepparator
+   &__sepparator {
+   }
+
+   // .swiper-fraction__total
+   &__total {
+   }
+}
+
 //.menu     ====================================================================================================
 .menu {
    // .menu__arrow

@@ -1,0 +1,76 @@
+.switch {
+  display: flex;
+  justify-content: flex-start;
+
+  // .switch__label
+  &__label {
+    display: inline-flex;
+    align-items: center;
+    background-color: $Line;
+    position: relative;
+    border-radius: rem(30);
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  // .switch__input
+  &__input {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+
+    &:checked {
+      & + .switch__slider {
+        &::before {
+          transform: translateX(100%);
+        }
+
+        span {
+          &:nth-child(1) {
+            color: $mainColor;
+          }
+          &:nth-child(2) {
+            color: $White;
+          }
+        }
+      }
+    }
+  }
+
+  // .switch__slider
+  &__slider {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    span {
+      display: block;
+      padding: rem(14) rem(12);
+      position: relative;
+      font-weight: 500;
+      font-size: rem(14);
+      line-height: math.div(20, 14);
+      text-align: center;
+      white-space: nowrap;
+      transition: $transition ease color 0.1s;
+
+      &:nth-child(1) {
+        color: $White;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 50%;
+      height: 100%;
+      background-color: $Green;
+      border-radius: rem(30);
+      pointer-events: none;
+      transition: $transition ease transform 0s;
+    }
+  }
+}

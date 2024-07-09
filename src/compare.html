@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Сравнение"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="compare-breadcrumbs product-categories__breadcrumbs breadcrumbs breadcrumbs_row breadcrumbs_border">
+        <div class="breadcrumbs__container">
+          <div class="breadcrumbs__wrapper">
+            <h1 class="breadcrumbs__title">Сравнение</h1>
+
+            <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+              <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="" itemprop="item">
+                  <span itemprop="name">Главная</span>
+                </a>
+              </span>
+              <span class="site-breadcrumbs__separator">/</span>
+              <span class="site-breadcrumbs__title">Сравнение</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="compare _section-bg">
+        <div class="compare__container">
+          <div class="compare__top">
+            <div class="compare__categories compare-categories">
+              <div class="compare-categories__items">
+                <div class="compare-categories__item">
+                  <button type="button" class="compare-categories__wrapper">
+                    <span>Пылесосы с контейнером/мешком</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="compare__add">
+              <a href="taxanomy-type.html" class="btn btn_border-main">
+                <svg class="icon">
+                  <use xlink:href="@img/sprite.svg#svg-close"></use>
+                </svg>
+
+                <span>Добавить еще товар</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="compare__table compare-table">
+            <div class="compare-table__row compare-table__top">
+              <div class="compare-table__head compare-table__view compare-table__cell compare-table__cell_center">
+                <div class="compare__switch switch" data-da=".compare__top, 991.98, 1">
+                  <label class="switch__label">
+                    <input type="checkbox" class="switch__input">
+                    <span class="switch__slider">
+                      <span>Все параметры</span>
+                      <span>Показать различия</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+
+              <div class="compare-table__products compare-table__products_main">
+                <div class="compare__main-slider swiper">
+                  <div class="swiper-fraction">
+                    <div class="swiper-fraction__current">1</div>
+                    <div class="swiper-fraction__sepparator"> из </div>
+                    <div class="swiper-fraction__total">2</div>
+                  </div>
+
+                  <div class="swiper-pagination"></div>
+
+                  <div class="compare__wrapper swiper-wrapper">
+                    <div class="compare__slide swiper-slide">
+                      <div class="compare-table__cell">
+                        <article class="compare__product product-card">
+                          <a href="single-product.html" class="product-card__link"> </a>
+
+                          <div class="product-card__head">
+                            <div class="product-card__preview">
+                              <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                            </div>
+                          </div>
+
+                          <div class="product-card__main">
+                            <div class="product-card__body">
+                              <div class="product-card__top">
+                                <a href="" class="product-card__title">Tesla Plus</a>
+
+                                <div class="product-card__excrpt _content">
+                                  <p>Высокая мощность и расширенная комплектация для максимального результата
+                                    без лишних усилий</p>
+                                </div>
+                              </div>
+
+                              <div class="product-card__price price">
+                                <div class="price price_current">19 990 ₽</div>
+                              </div>
+                            </div>
+
+                            <div class="product-card__footer">
+                              <div class="product-card__add">
+                                <button type="button" class="btn btn_border-main">
+                                  <span>В корзину</span>
+
+                                  <svg class="icon">
+                                    <use xlink:href="@img/sprite.svg#svg-cart"></use>
+                                  </svg>
+                                </button>
+                              </div>
+
+                              <div class="product-card__actions">
+                                <div class="product-card__compare">
+                                  <button type="button" class="shake-animation">
+                                    <svg class="icon">
+                                      <use xlink:href="@img/sprite.svg#svg-compare"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+
+                                <div class="product-card__wishlist">
+                                  <button type="button" class="shake-animation">
+                                    <svg class="icon">
+                                      <use xlink:href="@img/sprite.svg#svg-wishlist"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+
+                        <button type="button" class="compare__remove">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="compare__slide swiper-slide">
+                      <div class="compare-table__cell">
+                        <article class="compare__product product-card">
+                          <a href="single-product.html" class="product-card__link"> </a>
+
+                          <div class="product-card__head">
+                            <div class="product-card__preview">
+                              <img src="@img/widget-products/product2-preview.png" alt="" loading="lazy">
+                            </div>
+                          </div>
+
+                          <div class="product-card__main">
+                            <div class="product-card__body">
+                              <div class="product-card__top">
+                                <a href="" class="product-card__title">Tesla Plus</a>
+
+                                <div class="product-card__excrpt _content">
+                                  <p>Высокая мощность</p>
+                                </div>
+                              </div>
+
+                              <div class="product-card__price price">
+                                <div class="price price_current">219 990 ₽</div>
+                              </div>
+                            </div>
+
+                            <div class="product-card__footer">
+                              <div class="product-card__add">
+                                <button type="button" class="btn btn_border-main">
+                                  <span>В корзину</span>
+
+                                  <svg class="icon">
+                                    <use xlink:href="@img/sprite.svg#svg-cart"></use>
+                                  </svg>
+                                </button>
+                              </div>
+
+                              <div class="product-card__actions">
+                                <div class="product-card__compare">
+                                  <button type="button" class="shake-animation">
+                                    <svg class="icon">
+                                      <use xlink:href="@img/sprite.svg#svg-compare"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+
+                                <div class="product-card__wishlist">
+                                  <button type="button" class="shake-animation">
+                                    <svg class="icon">
+                                      <use xlink:href="@img/sprite.svg#svg-wishlist"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+
+                        <button type="button" class="compare__remove">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="compare__slide swiper-slide">
+                      <div class="compare-table__cell">
+                        <article class="compare__product product-card">
+                          <a href="single-product.html" class="product-card__link"> </a>
+
+                          <div class="product-card__head">
+                            <div class="product-card__preview">
+                              <img src="@img/widget-products/product3-preview.png" alt="" loading="lazy">
+                            </div>
+                          </div>
+
+                          <div class="product-card__main">
+                            <div class="product-card__body">
+                              <div class="product-card__top">
+                                <a href="" class="product-card__title">Tesla Plus</a>
+
+                                <div class="product-card__excrpt _content">
+                                  <p>Высокая мощность</p>
+                                </div>
+                              </div>
+
+                              <div class="product-card__price price">
+                                <div class="price price_current">219 990 ₽</div>
+                              </div>
+                            </div>
+
+                            <div class="product-card__footer">
+                              <div class="product-card__add">
+                                <button type="button" class="btn btn_border-main">
+                                  <span>В корзину</span>
+
+                                  <svg class="icon">
+                                    <use xlink:href="@img/sprite.svg#svg-cart"></use>
+                                  </svg>
+                                </button>
+                              </div>
+
+                              <div class="product-card__actions">
+                                <div class="product-card__compare">
+                                  <button type="button" class="shake-animation">
+                                    <svg class="icon">
+                                      <use xlink:href="@img/sprite.svg#svg-compare"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+
+                                <div class="product-card__wishlist">
+                                  <button type="button" class="shake-animation">
+                                    <svg class="icon">
+                                      <use xlink:href="@img/sprite.svg#svg-wishlist"></use>
+                                    </svg>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </article>
+
+                        <button type="button" class="compare__remove">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-close"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="compare__slide swiper-slide compare-table__cell compare-table__add compare-table__cell_center">
+                      <div class="compare__add">
+                        <a href="taxanomy-type.html" class="btn">
+                          <svg class="icon">
+                            <use xlink:href="@img/sprite.svg#svg-compare-plus"></use>
+                          </svg>
+
+                          <span>Добавить еще товары из данной категории</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="compare-table__row compare-table__bottom">
+              <div class="compare-table__head compare-table__cell">
+                <div class="compare-attributes">
+                  <div class="compare-attributes__item _content">
+                    <p>Артикул</p>
+                  </div>
+
+                  <div class="compare-attributes__item _content">
+                    <p>Мощность двигателя, макс</p>
+                  </div>
+
+                  <div class="compare-attributes__item _content">
+                    <p>Гарантия</p>
+                  </div>
+
+                  <div class="compare-attributes__item _content">
+                    <p>Мощность всасывания</p>
+                  </div>
+
+                  <div class="compare-attributes__item _content">
+                    <p>Длина сетевого кабеля</p>
+                  </div>
+
+                  <div class="compare-attributes__item _content">
+                    <p>Радиус действия</p>
+                  </div>
+
+                  <div class="compare-attributes__item _content">
+                    <p>Режимы</p>
+                  </div>
+
+                  <div class="compare-attributes__item _content">
+                    <p>Вес прибора</p>
+                  </div>
+
+                  <div class="compare-attributes__item _content">
+                    <p>Габариты</p>
+                  </div>
+
+                  <div class="compare-attributes__item _content">
+                    <p>Напряжение питания</p>
+                  </div>
+
+                  <div class="compare-attributes__item _content">
+                    <p>Комплектация</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="compare-table__products compare-table__products_attributes">
+                <div class="compare__attributes-slider swiper">
+                  <div class="compare__wrapper swiper-wrapper">
+                    <div class="compare__slide swiper-slide">
+                      <div class="compare-table__cell">
+                        <div class="compare-attributes">
+                          <div class="compare-attributes__item _content" data-title="Артикул">
+                            <p>ET14300</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Мощность двигателя, макс">
+                            <p>750 Вт</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Гарантия">
+                            <p>36 месяцев</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Мощность всасывания">
+                            <p>450 АэроВт</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Длина сетевого кабеля">
+                            <p>8 м</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Радиус действия">
+                            <p>11 м</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Режимы">
+                            <p>Сухая уборка помещений</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Вес прибора">
+                            <p>6,7 кг</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Габариты">
+                            <p>35*50*32 см</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Напряжение питания">
+                            <p>-</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Комплектация">
+                            <ul>
+                              <li>Телескопическая труба 58-92 см</li>
+                              <li>Шланг для сухой уборки стандартный с дистанционным управлением на ручке</li>
+                              <li>Универсальная щётка пол/ковёр с высокоэффективной мощностью всасывания Super Air Flow Brush</li>
+                              <li>Турбо-щётка для глубокой очистки ковровых покрытий</li>
+                              <li>Щетка для очистки чувствительных покрытий</li>
+                              <li>Удлиненная щелевая насадка</li>
+                              <li>Насадка для чистки текстиля, тканевых обивок мебели (прямоугольная)</li>
+                              <li>Круглая насадка для мебели с мягким ворсом</li>
+                              <li>Крепление для аксессуаров</li>
+                              <li>Моторный фильтр для пылесосов Arnica Tesla, Tesla Premium</li>
+                              <li>Поролоновый микрофильтр для пылесосов Arnica Tesla, Terra, Pika, Mila, Vesta, Lotus</li>
+                              <li>HEPA-фильтр для пылесосов Arnica Tesla, Terra, Pika, Mila, Vesta, Lotus</li>
+                              <li>LED Дисплей</li>
+                              <li>Батарейки в комплекте: ААА - 2 шт.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="compare__slide swiper-slide">
+                      <div class="compare-table__cell">
+                        <div class="compare-attributes">
+                          <div class="compare-attributes__item _content" data-title="Артикул">
+                            <p>ET14300</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Мощность двигателя, макс">
+                            <p>-</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Гарантия">
+                            <p>36 месяцев</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Мощность всасывания">
+                            <p>-</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Длина сетевого кабеля">
+                            <p>6 м</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Радиус действия">
+                            <p>-</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Режимы">
+                            <p>Сухая уборка</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Вес прибора">
+                            <p>6,7 кг</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Габариты">
+                            <p>-</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Напряжение питания">
+                            <p>220 В</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Комплектация">
+                            <ul>
+                              <li>Телескопическая труба 52-82 см</li>
+                              <li>Шланг для сухой уборки стандартный с эргономичной ручкой, с защелками</li>
+                              <li>Универсальная щётка пол/ковёр с высокоэффективной мощностью всасывания 2 in 1 Ergo Active Nozzle</li>
+                              <li>Турбо-щётка для глубокой очистки ковровых покрытий</li>
+                              <li>Удлиненная щелевая насадка</li>
+                              <li>Насадка для чистки текстиля, тканевых обивок мебели (прямоугольная)</li>
+                              <li>Насадка с мягким ворсом для мебели</li>
+                              <li>Крепление для аксессуаров</li>
+                              <li>Моющийся HEPA-13 фильтр</li>
+                              <li>Поролоновый защитный Моторный фильтр</li>
+                              <li>Выходной Поролоновый микрофильтр</li>
+                              <li>LED Дисплей на корпусе пылесоса</li>
+                              <li>контейнер 3 литра, Easy Smart Lock</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="compare__slide swiper-slide">
+                      <div class="compare-table__cell">
+                        <div class="compare-attributes">
+                          <div class="compare-attributes__item _content" data-title="Артикул">
+                            <p>ET14300</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Мощность двигателя, макс">
+                            <p>-</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Гарантия">
+                            <p>36 месяцев</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Мощность всасывания">
+                            <p>-</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Длина сетевого кабеля">
+                            <p>6 м</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Радиус действия">
+                            <p>-</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Режимы">
+                            <p>Сухая уборка</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Вес прибора">
+                            <p>6,7 кг</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Габариты">
+                            <p>-</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Напряжение питания">
+                            <p>220 В</p>
+                          </div>
+
+                          <div class="compare-attributes__item _content" data-title="Комплектация">
+                            <ul>
+                              <li>Телескопическая труба 52-82 см</li>
+                              <li>Шланг для сухой уборки стандартный с эргономичной ручкой, с защелками</li>
+                              <li>Универсальная щётка пол/ковёр с высокоэффективной мощностью всасывания 2 in 1 Ergo Active Nozzle</li>
+                              <li>Турбо-щётка для глубокой очистки ковровых покрытий</li>
+                              <li>Удлиненная щелевая насадка</li>
+                              <li>Насадка для чистки текстиля, тканевых обивок мебели (прямоугольная)</li>
+                              <li>Насадка с мягким ворсом для мебели</li>
+                              <li>Крепление для аксессуаров</li>
+                              <li>Моющийся HEPA-13 фильтр</li>
+                              <li>Поролоновый защитный Моторный фильтр</li>
+                              <li>Выходной Поролоновый микрофильтр</li>
+                              <li>LED Дисплей на корпусе пылесоса</li>
+                              <li>контейнер 3 литра, Easy Smart Lock</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="compare__slide swiper-slide compare-table__cell compare-table__add">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
