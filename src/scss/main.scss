@@ -1342,6 +1342,17 @@ a.partner-card {
     }
   }
 
+  // .catalog__products
+  &__products {
+    margin-top: rem(-16);
+    margin-bottom: rem(-16);
+
+    & > * {
+      padding-top: rem(16);
+      padding-bottom: rem(16);
+    }
+  }
+
   // .catalog__selected-filters
   &__selected-filters {
     display: flex;
@@ -1351,6 +1362,16 @@ a.partner-card {
 
     @media (max-width: $tablet) {
       display: none;
+    }
+  }
+
+  .catalog__sorting {
+    .select__value {
+      height: rem(32);
+    }
+
+    .select__options {
+      top: rem(31);
     }
   }
 }
@@ -2145,6 +2166,7 @@ a.partner-card {
 }
 
 // !Страница блога
+//.blog-section     ====================================================================================================
 .blog-section {
   // .blog-section__container
   &__container {
@@ -2198,6 +2220,7 @@ a.partner-card {
   }
 }
 
+//.single-article     ====================================================================================================
 .single-article {
   // .single-article__container
   &__container {
@@ -2350,6 +2373,95 @@ a.partner-card {
 
   // .article-sidebar__items
   &__items {
+  }
+}
+
+// !Страница контактов
+//.section-contacts     ====================================================================================================
+.section-contacts {
+  // .section-contacts__container
+  &__container {
+  }
+
+  // .section-contacts__grid
+  &__grid {
+    display: grid;
+    align-content: flex-start;
+
+    @media (min-width: $tablet) {
+      grid-template-columns: rem(293) 1fr;
+      @include adaptiveValue("column-gap", 40, 20, 1440, 992, 1);
+    }
+  }
+
+  // .section-contacts__main
+  &__main {
+    display: grid;
+    align-content: flex-start;
+    row-gap: rem(32);
+
+    @media (max-width: $tablet) {
+      @include adaptiveValue("padding-top", 36, 16, 768, 360, 1);
+    }
+  }
+
+  // .section-contacts__contacts
+  &__contacts {
+    row-gap: rem(24);
+
+    @media (max-width: $tablet) {
+      display: grid;
+      column-gap: rem(20);
+    }
+    @media (min-width: $mobileM) and (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacts__body {
+      font-size: rem(16);
+      line-height: math.div(26, 16);
+    }
+
+    .contacts__link {
+      color: $Blue;
+    }
+  }
+
+  // .section-contacts__button
+  &__button {
+    .btn {
+      width: 100%;
+      font-size: rem(16);
+      line-height: math.div(20, 16);
+    }
+  }
+
+  // .section-contacts__map
+  &__map {
+    position: relative;
+    padding-bottom: percent(310, 360);
+
+    @media (min-width: $mobile) {
+      padding-bottom: percent(480, 768);
+    }
+    @media (min-width: $tablet) {
+      border-radius: rem(30);
+      overflow: hidden;
+      padding-bottom: percent(540, 1040);
+    }
+    @media (max-width: $tablet) {
+      grid-row: 1/2;
+      margin-left: rem(-30);
+      margin-right: rem(-30);
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
   }
 }
 //====================================================================================================

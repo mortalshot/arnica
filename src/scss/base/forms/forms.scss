@@ -2,11 +2,12 @@
 .form {
   // .form__spacer
   &__spacer {
-    margin-bottom: rem(32);
+    margin-bottom: rem(16);
   }
 
   // .form__item
   &__item {
+    margin-bottom: rem(18);
   }
 
   // .form__privacy

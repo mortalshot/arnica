@@ -96,6 +96,13 @@ body::after {
 		padding: rem(5);
 		outline: 0;
 
+		@media (any-hover: hover) {
+			transition: $transition ease transform 0s;
+			&:hover {
+				transform: rotate(180deg);
+			}
+		}
+
 		svg {
 			width: rem(30);
 			height: rem(30);

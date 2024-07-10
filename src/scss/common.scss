@@ -375,7 +375,9 @@ ol {
 ._disabled {
   pointer-events: none;
 }
-
+._nowrap {
+  white-space: nowrap;
+}
 // Анимации при наведении
 [class*="link-"] {
   position: relative;
@@ -780,6 +782,43 @@ ol {
       white-space: nowrap;
     }
   }
+
+  // .contacts__row
+  &__row {
+    display: grid;
+    grid-template-columns: rem(24) 1fr;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: rem(12);
+  }
+
+  // .contacts__icon
+  &__icon {
+    position: relative;
+    padding-bottom: 100%;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  // .contacts__body
+  &__body {
+  }
+
+  // .contacts__caption
+  &__caption {
+    font-weight: 500;
+  }
+
+  // .contacts__link
+  &__link {
+  }
 }
 
 //.breadcrumbs     ====================================================================================================
@@ -867,6 +906,19 @@ main > .breadcrumbs {
         @include adaptiveValue("padding-bottom", 32, 24, 1440, 768, 1);
         @include adaptiveValue("margin-bottom", 32, 24, 1440, 768, 1);
         border-bottom: rem(1) solid $LGray;
+      }
+    }
+  }
+
+  // .breadcrumbs_border-desk
+  &_border-desk {
+    @media (min-width: $tablet) {
+      &:not(:last-child) {
+        .breadcrumbs__wrapper {
+          @include adaptiveValue("padding-bottom", 32, 24, 1440, 768, 1);
+          @include adaptiveValue("margin-bottom", 32, 24, 1440, 768, 1);
+          border-bottom: rem(1) solid $LGray;
+        }
       }
     }
   }

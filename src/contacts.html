@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <div class="breadcrumbs breadcrumbs_row breadcrumbs_border-desk">
+        <div class="breadcrumbs__container">
+          <div class="breadcrumbs__wrapper">
+            <h1 class="breadcrumbs__title">Контакты</h1>
+
+            <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+              <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                <a href="" itemprop="item">
+                  <span itemprop="name">Главная</span>
+                </a>
+              </span>
+              <span class="site-breadcrumbs__separator">/</span>
+              <span class="site-breadcrumbs__title">Контакты</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section-contacts">
+        <div class="section-contacts__container">
+          <div class="section-contacts__grid">
+            <div class="section-contacts__main">
+              <div class="section-contacts__city">
+                <div class="form__label">Город</div>
+
+                <select name="form[]" class="form select select_gray">
+                  <option value="Санкт-Петербург" selected>Санкт-Петербург</option>
+                  <option value="Москва">Москва</option>
+                  <option value="Тверь">Тверь</option>
+                  <option value="Ярославль">Ярославль</option>
+                </select>
+              </div>
+
+              <div class="section-contacts__contacts contacts">
+                <div class="contacts__item">
+                  <div class="contacts__row">
+                    <div class="contacts__icon">
+                      <img src="@img/icons/email.svg" alt="" loading="lazy">
+                    </div>
+                    <div class="contacts__body">
+                      <div class="contacts__caption">Электронная почта</div>
+                      <a href="mailto:info@arnica.ru" class="contacts__link link-hover">info@arnica.ru</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contacts__item">
+                  <div class="contacts__row">
+                    <div class="contacts__icon">
+                      <img src="@img/icons/phone.svg" alt="" loading="lazy">
+                    </div>
+                    <div class="contacts__body">
+                      <div class="contacts__caption">Телефон</div>
+                      <a href="tel:88005555261" class="contacts__link link-hover">8 800 5555-261</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contacts__item">
+                  <div class="contacts__row">
+                    <div class="contacts__icon">
+                      <img src="@img/icons/location.svg" alt="" loading="lazy">
+                    </div>
+                    <div class="contacts__body">
+                      <div class="contacts__caption">Центральный офис</div>
+                      <div class="contacts__link">198095, г.Санкт-Петербург, ул.Маршала Говорова, д.49, лит.А, оф.504</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contacts__item">
+                  <div class="contacts__row">
+                    <div class="contacts__icon">
+                      <img src="@img/icons/location.svg" alt="" loading="lazy">
+                    </div>
+                    <div class="contacts__body">
+                      <div class="contacts__caption">Сервисные-центры</div>
+                      <a href="" class="contacts__link link-hover">Просмотреть список</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="section-contacts__button">
+                <button type="button" class="btn btn_bg-green" data-popup="#feedback">Обратная связь</button>
+              </div>
+            </div>
+
+            <div class="section-contacts__map">
+              <iframe src="https://yandex.ru/map-widget/v1/?ll=30.290186%2C59.900918&mode=whatshere&whatshere%5Bpoint%5D=30.290185%2C59.900917&whatshere%5Bzoom%5D=17&z=17" frameborder="0" allowfullscreen="false"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

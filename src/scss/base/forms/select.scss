@@ -5,6 +5,7 @@
 
 	// .select__body
 	&__body {
+		font-size: rem(14);
 		position: relative;
 	}
 
@@ -16,13 +17,15 @@
 		cursor: pointer;
 		width: 100%;
 		border-radius: rem(10);
+		border: rem(1) solid transparent;
+		height: rem(48);
+		transition: $transition ease border-color 0s;
 	}
 
 	// .select__value
 	&__value {
 		display: flex;
 		align-items: center;
-		height: rem(32);
 		padding: 0 rem(16);
 		gap: rem(4);
 
@@ -71,13 +74,14 @@
 	&__options {
 		color: $mainColor;
 		position: absolute;
-		top: rem(31);
+		top: rem(45);
 		border-radius: 0 0 rem(10) rem(10);
 		min-width: 100%;
 		left: 0;
 		background-color: #fff;
 		padding: rem(9) rem(16) rem(9) rem(16);
 		box-shadow: 0 16px 16px 0 rgba(50, 50, 71, 0.08);
+		transition: $transition ease border-color 0s;
 	}
 
 	// .select__scroll
@@ -129,6 +133,50 @@
 	// Состояния селекта
 	&._select-open {
 		z-index: 5;
+	}
+}
+
+.select_gray {
+	& + .select__body {
+		@media (any-hover: hover) {
+			transition: $transition ease border-color 0s;
+
+			&:hover {
+				.select__title {
+					border-color: $Gray4;
+				}
+			}
+		}
+
+		.select__title {
+			background-color: $LGray2;
+			border: rem(1) solid $LGray;
+			transition: $transition ease all 0s;
+		}
+
+		.select__options {
+			background-color: $LGray2;
+			border: rem(1) solid $LGray;
+			border-top: 0;
+		}
+	}
+}
+
+._select-open {
+	.select_gray + .select__body {
+		.select__title,
+		.select__options {
+			border-color: $mainColor;
+		}
+	}
+}
+
+._select-open {
+	.select_gray + .select__body {
+		.select__title {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+		}
 	}
 }
 

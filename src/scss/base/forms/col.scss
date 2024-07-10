@@ -2,7 +2,8 @@
 ._row {
    display: flex;
    flex-wrap: wrap;
-   margin: rem(-8);
+   margin-left: rem(-8);
+   margin-right: rem(-8);
 }
 
 .col {
@@ -90,11 +91,11 @@
    &-xxl-12 {
       width: 100%;
       min-height: 1px;
-      padding: rem(8);
+      padding-left: rem(8);
+      padding-right: rem(8);
 
       & > [class^="col-"] {
-         padding-left: 0;
-         padding-right: 0;
+         padding: 0;
       }
    }
 

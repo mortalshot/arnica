@@ -99,3 +99,104 @@
 		</div>
 	</div>
 </div>
+
+<div id="feedback" aria-hidden="true" class="popup popup_right">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__heading">
+				<div class="popup__title title-h4">Обратная связь</div>
+
+				<button data-close type="button" class="popup__close">
+					<svg class="icon">
+						<use xlink:href="@img/sprite.svg#svg-close"></use>
+					</svg>
+				</button>
+			</div>
+
+			<div class="popup__text">
+				<form action="" class="form" data-one-select>
+					<div class="form__row">
+						<div class="col-12 col-sm-6 form__item">
+							<label for="feedback-name" class="form__label">Имя</label>
+							<input id="feedback-name" type="text" name="feedback-name" placeholder="Введите имя" class="form__input form__input_gray" />
+						</div>
+					</div>
+
+					<div class="form__row">
+						<div class="col-12 col-sm-6 form__item">
+							<label for="feedback-email" class="form__label">E-mail</label>
+							<input id="feedback-email" type="email" name="feedback-email" placeholder="Эл. почта" class="form__input form__input_gray" />
+						</div>
+
+						<div class="col-12 col-sm-6 form__item">
+							<label for="feedback-phone" class="form__label">Телефон</label>
+							<input id="feedback-phone" type="text" name="feedback-phone" placeholder="Эл. почта" class="form__input form__input_phone form__input_gray" />
+						</div>
+
+						<div class="col-12 col-sm-6 form__item">
+							<label for="feedback-org" class="form__label">Название организации</label>
+							<input id="feedback-org" type="text" name="feedback-org" placeholder="Введите название" class="form__input form__input_gray" />
+						</div>
+
+						<div class="col-12 col-sm-6 form__item">
+							<div class="form__label">Раздел</div>
+
+							<select name="form[]" class="form select select_gray">
+								<option value="" selected>Выбрать</option>
+								<option value="Сайт">Сайт</option>
+								<option value="Товар">Товар</option>
+								<option value="Сервис">Сервис</option>
+								<option value="Компания">Компания</option>
+								<option value="Другое">Другое</option>
+							</select>
+						</div>
+
+						<div class="col-12 col-sm-6 form__item">
+							<div class="form__label">Тема</div>
+
+							<select name="form[]" class="form select select_gray">
+								<option value="" selected>Выбрать</option>
+								<option value="Комплектация (инструкции, комплектующие, гарантийный талон)">Комплектация (инструкции, комплектующие, гарантийный талон)</option>
+								<option value="Качество обслуживания">Качество обслуживания</option>
+								<option value="Доставка">Доставка</option>
+								<option value="Проблемы с товаром">Проблемы с товаром</option>
+								<option value="Другое">Другое</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="form__spacer"></div>
+
+					<div class="form__row">
+						<div class="col-12 form__item">
+							<label for="feedback-text" class="form__label">Ваше сообщение</label>
+							<textarea id="feedback-text" name="feedback-text" placeholder="Сообщение..." class="form__input form__input_gray" rows="4"></textarea>
+						</div>
+
+						<div class="col-12 form__item">
+							<div class="form__privacy checkbox">
+								<label>
+									<input type="checkbox" name="in-stock" value="даю согласие" class="checkbox__input" checked>
+									<span class="checkbox__label">
+										<div>Я даю согласие на обработку персональных данных в соответствии
+											с указанными <a href="" class="link-underline">условиями</a></div>
+									</span>
+								</label>
+							</div>
+						</div>
+					</div>
+
+					<div class="form__spacer"></div>
+
+					<div class="form__row">
+						<div class="col-12">
+							<div class="form__submit">
+								<button type="submit" class="btn btn_bg-green">Отправить</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
