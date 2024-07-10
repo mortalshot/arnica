@@ -480,6 +480,7 @@
   &__add {
     .btn {
       @include adaptiveValue("font-size", 16, 14, 1440, 992, 1);
+      text-transform: uppercase;
       @include adaptiveValue("padding-left", 46, 16, 1440, 1280, 1);
       @include adaptiveValue("padding-right", 46, 16, 1440, 1280, 1);
 
@@ -989,6 +990,7 @@ a.partner-card {
     .btn {
       padding: rem(16) rem(46);
       font-size: rem(14);
+      text-transform: uppercase;
 
       @media (max-width: $tablet) {
         min-width: rem(320);
@@ -1395,7 +1397,6 @@ a.partner-card {
     .btn {
       @media (min-width: $tablet) {
         font-size: rem(14);
-        text-transform: none;
         line-height: math.div(18, 14);
         padding: rem(7) rem(10);
         min-height: rem(34);
@@ -1538,7 +1539,6 @@ a.partner-card {
         font-size: rem(12);
         line-height: math.div(20, 12);
         min-height: rem(40);
-        text-transform: none;
         padding-left: rem(28);
         padding-right: rem(28);
       }
@@ -1812,7 +1812,6 @@ a.partner-card {
         padding: rem(11) rem(28);
         font-size: rem(14);
         line-height: math.div(20, 14);
-        text-transform: none;
         gap: rem(10);
 
         svg {
@@ -2141,6 +2140,60 @@ a.partner-card {
     h6 {
       font-weight: 700;
       @include adaptiveValue("font-size", 18, 14, 768, 360, 1);
+    }
+  }
+}
+
+// !Страница блога
+.blog-section {
+  // .blog-section__container
+  &__container {
+  }
+
+  // .blog-section__items
+  &__items {
+    display: grid;
+    align-content: flex-start;
+    @include adaptiveValue("row-gap", 42, 36, 1440, 992, 1);
+    @include adaptiveValue("column-gap", 32, 18, 1440, 768, 1);
+
+    @media (min-width: $mobileM) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+    @media (min-width: em(1639.98)) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  // .blog-section__card
+  &__card {
+    @media (min-width: $tablet) and (max-width: em(1639.98)) {
+      grid-column: span 3;
+
+      &:nth-child(5n + 3) {
+        grid-column: span 2;
+      }
+      &:nth-child(5n + 4) {
+        grid-column: span 2;
+      }
+      &:nth-child(5n + 5) {
+        grid-column: span 2;
+      }
+    }
+    @media (min-width: em(1639.98)) {
+      &:nth-child(6n + 1) {
+        grid-column: span 2;
+      }
+      &:nth-child(6n + 2) {
+        grid-column: span 2;
+      }
+    }
+
+    .news-card__preview {
+      padding-bottom: percent(255, 444);
     }
   }
 }

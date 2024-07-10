@@ -957,3 +957,123 @@ main > .breadcrumbs {
     overflow: hidden;
   }
 }
+
+//.items-navigation     ====================================================================================================
+.items-navigation {
+  @media (min-width: $mobile) {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+  }
+  @media (max-width: $mobile) {
+    display: grid;
+    align-content: flex-start;
+    row-gap: rem(30);
+  }
+
+  &:not(:first-child) {
+    @include adaptiveValue("margin-top", 60, 42, 768, 360, 1);
+  }
+
+  .items-navigation__left,
+  .items-navigation__right {
+    @media (min-width: em(1179.98)) {
+      flex: 0 1 70%;
+    }
+  }
+
+  // .items-navigation__left
+  &__left {
+    @media (max-width: em(1179.98)) {
+      display: none;
+    }
+  }
+
+  // .items-navigation__center
+  &__center {
+    @media (min-width: em(1179.98)) {
+      flex: 1 0 30%;
+    }
+    @media (max-width: em(1179.98)) {
+      flex: 1;
+    }
+  }
+
+  // .items-navigation__button
+  &__button {
+    @media (min-width: em(1179.98)) {
+      display: flex;
+      justify-content: center;
+    }
+
+    .btn {
+      width: 100%;
+      @media (min-width: $mobileM) {
+        @include adaptiveValue("max-width", 432, 313, 1440, 768, 1);
+      }
+    }
+  }
+
+  // .items-navigation__right
+  &__right {
+    @media (min-width: $mobile) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  row-gap: rem(4);
+  font-size: rem(16);
+  line-height: math.div(20, 16);
+
+  // .pagination__label
+  &__label {
+    font-weight: 500;
+
+    &:not(:last-child) {
+      @include adaptiveValue("margin-right", 18, 0, 1440, 992, 1);
+    }
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+  }
+
+  .page-numbers {
+    display: inline-block;
+    padding: rem(14);
+    color: $Gray3;
+
+    &:not(:last-child) {
+      border-right: rem(1) solid $LGray;
+    }
+
+    &.current {
+      font-weight: 500;
+      color: $Blue;
+    }
+  }
+  a.page-numbers {
+    @media (any-hover: hover) {
+      transition: $transition ease color 0s;
+      &:hover {
+        color: $mainColor;
+      }
+    }
+  }
+
+  .page-prev {
+  }
+  .current {
+  }
+  .page-next {
+  }
+  .page-all {
+  }
+}

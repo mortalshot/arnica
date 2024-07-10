@@ -291,7 +291,6 @@
 				font-weight: 500;
 				font-size: 14px;
 				width: 100%;
-				text-transform: none;
 			}
 		}
 
@@ -843,6 +842,7 @@
 			padding: rem(8) rem(55);
 			font-weight: 400;
 			font-size: rem(14);
+			text-transform: uppercase;
 			gap: rem(10);
 
 			@media (max-width: $mobileM) {
