@@ -1829,101 +1829,88 @@ ol li > ol li::before {
   list-style-type: disc;
 }
 
-._content .table {
-  width: 100%;
-  overflow-x: auto;
-  scrollbar-width: thin;
-}
-
-._content .table table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-._content .wp-block-quote cite {
-  opacity: 0.6;
-}
-
-._content figure figcaption {
-  font-size: clamp( 0.75rem , 0.6907894737rem  +  0.2631578947vw , 1rem );
+._content iframe {
+  position: relative;
+  border-radius: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
   /* 	// Если поддерживается clamp();
-  	@supports (font-size: $propertyValue) {
-  		font-size: $propertyValue;
+  	@supports (border-radius: $propertyValue) {
+  		border-radius: $propertyValue;
   	}
   	// Если не поддерживается clamp();
-  	@supports not (font-size: $propertyValue) {
-  		font-size: calc(0.75rem + 0.25 * (100vw - 22.5rem) / 95);
+  	@supports not (border-radius: $propertyValue) {
+  		border-radius: calc(1.25rem + 0.625 * (100vw - 22.5rem) / 25.5);
   	} */
-  line-height: 1.5;
-  margin-top: clamp( 0.75rem , 0.6315789474rem  +  0.5263157895vw , 1.25rem );
+  margin-top: clamp( 1.25rem , 0.3676470588rem  +  3.9215686275vw , 2.25rem );
   /* 	// Если поддерживается clamp();
   	@supports (margin-top: $propertyValue) {
   		margin-top: $propertyValue;
   	}
   	// Если не поддерживается clamp();
   	@supports not (margin-top: $propertyValue) {
-  		margin-top: calc(0.75rem + 0.5 * (100vw - 22.5rem) / 95);
+  		margin-top: calc(1.25rem + 1 * (100vw - 22.5rem) / 25.5);
   	} */
-}
-
-._content .columns-1 {
-  display: -ms-grid;
-  display: grid;
-  gap: clamp( 0.625rem , 0.2549342105rem  +  1.6447368421vw , 2.1875rem );
+  margin-bottom: clamp( 1.25rem , 0.3676470588rem  +  3.9215686275vw , 2.25rem );
   /* 	// Если поддерживается clamp();
-  	@supports (gap: $propertyValue) {
-  		gap: $propertyValue;
+  	@supports (margin-bottom: $propertyValue) {
+  		margin-bottom: $propertyValue;
   	}
   	// Если не поддерживается clamp();
-  	@supports not (gap: $propertyValue) {
-  		gap: calc(0.625rem + 1.5625 * (100vw - 22.5rem) / 95);
+  	@supports not (margin-bottom: $propertyValue) {
+  		margin-bottom: calc(1.25rem + 1 * (100vw - 22.5rem) / 25.5);
   	} */
 }
 
-._content .columns-2 {
-  display: -ms-grid;
-  display: grid;
-  gap: clamp( 0.625rem , 0.2549342105rem  +  1.6447368421vw , 2.1875rem );
+._content div {
+  padding-top: clamp( 1rem , 0.5588235294rem  +  1.9607843137vw , 1.5rem );
   /* 	// Если поддерживается clamp();
-  	@supports (gap: $propertyValue) {
-  		gap: $propertyValue;
+  	@supports (padding-top: $propertyValue) {
+  		padding-top: $propertyValue;
   	}
   	// Если не поддерживается clamp();
-  	@supports not (gap: $propertyValue) {
-  		gap: calc(0.625rem + 1.5625 * (100vw - 22.5rem) / 95);
+  	@supports not (padding-top: $propertyValue) {
+  		padding-top: calc(1rem + 0.5 * (100vw - 22.5rem) / 25.5);
   	} */
-}
-
-._content .columns-3 {
-  display: -ms-grid;
-  display: grid;
-  gap: clamp( 0.625rem , 0.2549342105rem  +  1.6447368421vw , 2.1875rem );
+  padding-bottom: clamp( 1rem , 0.5588235294rem  +  1.9607843137vw , 1.5rem );
   /* 	// Если поддерживается clamp();
-  	@supports (gap: $propertyValue) {
-  		gap: $propertyValue;
+  	@supports (padding-bottom: $propertyValue) {
+  		padding-bottom: $propertyValue;
   	}
   	// Если не поддерживается clamp();
-  	@supports not (gap: $propertyValue) {
-  		gap: calc(0.625rem + 1.5625 * (100vw - 22.5rem) / 95);
+  	@supports not (padding-bottom: $propertyValue) {
+  		padding-bottom: calc(1rem + 0.5 * (100vw - 22.5rem) / 25.5);
   	} */
-}
-
-._content .columns-4 {
-  display: -ms-grid;
-  display: grid;
-  gap: clamp( 0.625rem , 0.2549342105rem  +  1.6447368421vw , 2.1875rem );
+  padding-left: clamp( 1.125rem , 0.7941176471rem  +  1.4705882353vw , 1.5rem );
   /* 	// Если поддерживается clamp();
-  	@supports (gap: $propertyValue) {
-  		gap: $propertyValue;
+  	@supports (padding-left: $propertyValue) {
+  		padding-left: $propertyValue;
   	}
   	// Если не поддерживается clamp();
-  	@supports not (gap: $propertyValue) {
-  		gap: calc(0.625rem + 1.5625 * (100vw - 22.5rem) / 95);
+  	@supports not (padding-left: $propertyValue) {
+  		padding-left: calc(1.125rem + 0.375 * (100vw - 22.5rem) / 25.5);
   	} */
+  padding-right: clamp( 1.125rem , 0.7941176471rem  +  1.4705882353vw , 1.5rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (padding-right: $propertyValue) {
+  		padding-right: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (padding-right: $propertyValue) {
+  		padding-right: calc(1.125rem + 0.375 * (100vw - 22.5rem) / 25.5);
+  	} */
+  border-radius: 1.25rem;
+  background-color: #e8f3f7;
 }
 
-._content .wp-block-gallery figure {
-  margin: 0;
+._content img {
+  border-radius: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (border-radius: $propertyValue) {
+  		border-radius: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (border-radius: $propertyValue) {
+  		border-radius: calc(1.25rem + 0.625 * (100vw - 22.5rem) / 25.5);
+  	} */
 }
 
 ._content :first-child {
@@ -4935,6 +4922,93 @@ main > .breadcrumbs {
   padding-bottom: 57.4324324324%;
 }
 
+.single-article__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  row-gap: 3.75rem;
+}
+
+.single-article__breadcrumbs {
+  margin-bottom: 1.875rem;
+}
+
+.single-article__preview {
+  border-radius: clamp( 1.25rem , 0.1470588235rem  +  4.9019607843vw , 2.5rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (border-radius: $propertyValue) {
+  		border-radius: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (border-radius: $propertyValue) {
+  		border-radius: calc(1.25rem + 1.25 * (100vw - 22.5rem) / 25.5);
+  	} */
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 68.0746561886%;
+}
+
+.single-article__preview:not(:last-child) {
+  margin-bottom: clamp( 1rem , -0.1029411765rem  +  4.9019607843vw , 2.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (margin-bottom: $propertyValue) {
+  		margin-bottom: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (margin-bottom: $propertyValue) {
+  		margin-bottom: calc(1rem + 1.25 * (100vw - 22.5rem) / 25.5);
+  	} */
+}
+
+.single-article__preview img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.single-article__text {
+  max-width: 100%;
+  font-size: clamp( 0.75rem , 0.5294117647rem  +  0.9803921569vw , 1rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(0.75rem + 0.25 * (100vw - 22.5rem) / 25.5);
+  	} */
+  line-height: 1.625;
+}
+
+.single-article__suggest .news-card__preview {
+  padding-bottom: 65.5405405405%;
+  border-radius: 1.875rem;
+}
+
+.single-article__suggest .news-card__title {
+  font-family: "CeraPro";
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.single-article__suggest .news-card__excrpt {
+  font-size: 0.8125rem;
+}
+
+.single-article__suggest .news-card__date {
+  font-size: 0.875rem;
+}
+
+.article-sidebar__caption:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0;
 }
@@ -5040,36 +5114,6 @@ main > .breadcrumbs {
 @media (min-width: 29.99875em) {
   .form__submit .btn {
     min-width: 18.375rem;
-  }
-
-  ._content .columns-4 {
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  ._content .columns-3 {
-    -ms-grid-columns: (1fr)[3];
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  ._content .columns-2 {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  ._content .wp-block-gallery figure {
-    position: relative;
-    padding-bottom: 100%;
-  }
-
-  ._content .wp-block-gallery figure img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
   }
 }
 
@@ -5443,11 +5487,6 @@ main > .breadcrumbs {
     	} */
   }
 
-  ._content .columns-4 {
-    -ms-grid-columns: (1fr)[4];
-    grid-template-columns: repeat(4, 1fr);
-  }
-
   .menu__item_has-children > ul {
     background-color: #fff;
     position: absolute;
@@ -5629,6 +5668,14 @@ main > .breadcrumbs {
 
   .compare-table__products_dublicate {
     display: none;
+  }
+
+  .single-article__cards {
+    display: -ms-grid;
+    display: grid;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    gap: 0.75rem;
   }
 }
 
@@ -6495,6 +6542,19 @@ main > .breadcrumbs {
     -ms-grid-columns: (1fr)[6];
     grid-template-columns: repeat(6, 1fr);
   }
+
+  .single-article__grid {
+    -ms-grid-columns: 1fr 18.5rem;
+    grid-template-columns: 1fr 18.5rem;
+  }
+
+  .single-article__cards {
+    row-gap: 1.5rem;
+  }
+
+  .single-article__button .btn {
+    width: 100%;
+  }
 }
 
 @media (min-width: 61.99875em) and (any-hover: hover) {
@@ -6709,6 +6769,22 @@ main > .breadcrumbs {
     		font-size: calc(0.875rem + 0.125 * (100vw - 90rem) / 30);
     	} */
   }
+
+  .single-article__grid {
+    -ms-grid-columns: 1fr 21.4492753623%;
+    grid-template-columns: 1fr 21.4492753623%;
+    -webkit-column-gap: clamp( 3.75rem , -2.25rem  +  6.6666666667vw , 5.75rem );
+       -moz-column-gap: clamp( 3.75rem , -2.25rem  +  6.6666666667vw , 5.75rem );
+            column-gap: clamp( 3.75rem , -2.25rem  +  6.6666666667vw , 5.75rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (column-gap: $propertyValue) {
+    		column-gap: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (column-gap: $propertyValue) {
+    		column-gap: calc(3.75rem + 2 * (100vw - 90rem) / 30);
+    	} */
+  }
 }
 
 @media screen and (min-width: 102.49875em) {
@@ -6822,6 +6898,22 @@ main > .breadcrumbs {
 @media (min-width: 48em) {
   .features-item__text {
     font-size: inherit;
+  }
+}
+
+@media (max-width: 89.99875em) {
+  .single-article__grid {
+    -webkit-column-gap: clamp( 1.25rem , -4.2857142857rem  +  8.9285714286vw , 3.75rem );
+       -moz-column-gap: clamp( 1.25rem , -4.2857142857rem  +  8.9285714286vw , 3.75rem );
+            column-gap: clamp( 1.25rem , -4.2857142857rem  +  8.9285714286vw , 3.75rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (column-gap: $propertyValue) {
+    		column-gap: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (column-gap: $propertyValue) {
+    		column-gap: calc(1.25rem + 2.5 * (100vw - 62rem) / 28);
+    	} */
   }
 }
 
@@ -7521,6 +7613,26 @@ main > .breadcrumbs {
   .compare-table__add {
     display: none;
   }
+
+  .single-article__cards {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .single-article__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .single-article__button .btn {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
 }
 
 @media (max-width: 47.99875em) {
@@ -7605,7 +7717,7 @@ main > .breadcrumbs {
     	} */
   }
 
-  .breadcrumbs_border .breadcrumbs__wrapper {
+  .breadcrumbs__wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7615,7 +7727,7 @@ main > .breadcrumbs {
             flex-direction: column-reverse;
   }
 
-  .breadcrumbs_border .breadcrumbs__title:not(:last-child) {
+  .breadcrumbs__title:not(:last-child) {
     margin-bottom: 0;
     margin-top: clamp( 0.75rem , 0.6666666667rem  +  0.3703703704vw , 1rem );
     /* 	// Если поддерживается clamp();
@@ -7869,6 +7981,14 @@ main > .breadcrumbs {
     	@supports not (max-width: $propertyValue) {
     		max-width: calc(2.125rem + 1.875 * (100vw - 22.5rem) / 25.5);
     	} */
+  }
+
+  .single-article__cards {
+    margin: -0.625rem;
+  }
+
+  .single-article__suggest {
+    padding: 0.625rem;
   }
 }
 
