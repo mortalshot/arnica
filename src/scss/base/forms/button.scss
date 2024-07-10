@@ -12,6 +12,10 @@
 	min-height: rem(48);
 	border: rem(1) solid transparent;
 
+	@media (max-width:$mobileSmall){
+		 width: 100%; 
+	}
+
 	svg {
 		width: rem(20);
 		height: rem(20);

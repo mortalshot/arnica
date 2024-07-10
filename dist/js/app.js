@@ -3601,7 +3601,7 @@
         }
     }));
     const compareSwitch = document.querySelector(".compare__switch .switch__input");
-    compareSwitch.addEventListener("change", (function() {
+    if (compareSwitch) compareSwitch.addEventListener("change", (function() {
         const isChecked = this.checked;
         const compareCards = document.querySelectorAll(".compare-table__products .compare-attributes");
         const rows = [];

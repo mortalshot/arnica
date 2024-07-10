@@ -31,29 +31,60 @@ body::after {
 	&__wrapper {
 		display: flex;
 		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 		min-height: 100%;
 		flex: 1 1 auto;
 		width: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
 	}
 
 	// .popup__content
 	&__content {
 		visibility: hidden;
 		transform: scale(0);
-		transition: transform 0.3s ease 0s;
 		background-color: #fff;
 		padding: 20px;
 		width: 100%;
 		max-width: 900px;
 		border-radius: 20px;
+		transition: all 0.5s ease 0s;
 
 		.lock & {
 			visibility: visible;
 		}
+	}
+
+	// .popup__heading
+	&__heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptiveValue("padding-top", 28, 16, 1440, 768, 1);
+		@include adaptiveValue("padding-bottom", 28, 16, 1440, 768, 1);
+		margin-top: rem(-20);
+		border-bottom: rem(1) solid $LGray;
+		@include adaptiveValue("margin-bottom", 32, 24, 768, 360, 1);
+
+		@media (min-width: $mobile) {
+			@include adaptiveValue("padding-left", 34, 30, 1440, 768, 1);
+			@include adaptiveValue("padding-right", 34, 30, 1440, 768, 1);
+			@include adaptiveValue("margin-left", -34, -30, 1440, 768, 1);
+			@include adaptiveValue("margin-right", -34, -30, 1440, 768, 1);
+		}
+		@media (max-width: $mobile) {
+			@include adaptiveValue("padding-left", 30, 20, 768, 360, 1);
+			@include adaptiveValue("padding-right", 30, 20, 768, 360, 1);
+			@include adaptiveValue("margin-left", -30, -20, 768, 360, 1);
+			@include adaptiveValue("margin-right", -30, -20, 768, 360, 1);
+		}
+
+		.popup__close {
+			position: initial;
+		}
+	}
+
+	// .popup__title
+	&__title {
 	}
 
 	// .popup__close
@@ -63,6 +94,7 @@ body::after {
 		right: rem(20);
 		background-color: initial;
 		padding: rem(5);
+		outline: 0;
 
 		svg {
 			width: rem(30);
@@ -106,6 +138,35 @@ body::after {
 		}
 	}
 
+	&.popup_right {
+		padding: 0;
+
+		.popup__wrapper {
+			align-items: flex-end;
+		}
+
+		.popup__content {
+			min-height: 100svh;
+			max-width: 100%;
+			border-radius: 0;
+			opacity: 0;
+			transform: scale(1);
+
+			@media (min-width: $tablet) {
+				max-width: rem(673);
+			}
+
+			@media (min-width: $mobile) {
+				@include adaptiveValue("padding-left", 34, 30, 1440, 768, 1);
+				@include adaptiveValue("padding-right", 34, 30, 1440, 768, 1);
+			}
+			@media (max-width: $mobile) {
+				@include adaptiveValue("padding-left", 30, 20, 768, 360, 1);
+				@include adaptiveValue("padding-right", 30, 20, 768, 360, 1);
+			}
+		}
+	}
+
 	&.popup_show {
 		z-index: 150;
 		visibility: visible;
@@ -115,6 +176,7 @@ body::after {
 		.popup__content {
 			visibility: visible;
 			transform: scale(1);
+			opacity: 1;
 		}
 	}
 }

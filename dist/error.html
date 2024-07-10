@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240709201703" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240709201703">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240709201703">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240710140504" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240710140504">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240710140504">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -185,13 +185,13 @@
 						<div class="header__menu menu">
 							<nav class="menu__body">
 								<ul class="menu__list">
-									<li class="menu__item"><a href="" class="link-hover">Новинки</a></li>
-									<li class="menu__item"><a href="" class="link-hover">Акции</a></li>
-									<li class="menu__item"><a href="" class="link-hover">Доставка и оплата</a></li>
-									<li class="menu__item"><a href="" class="link-hover">О компании</a></li>
-									<li class="menu__item"><a href="" class="link-hover">Партнерам</a></li>
-									<li class="menu__item"><a href="" class="link-hover">Статьи</a></li>
-									<li class="menu__item"><a href="" class="link-hover">Контакты</a></li>
+									<li class="menu__item"><a href="taxanomy-type.html" class="link-hover">Новинки</a></li>
+									<li class="menu__item"><a href="promotions.html" class="link-hover">Акции</a></li>
+									<li class="menu__item"><a href="delivery.html" class="link-hover">Доставка и оплата</a></li>
+									<li class="menu__item"><a href="about.html" class="link-hover">О компании</a></li>
+									<li class="menu__item"><a href="partners.html" class="link-hover">Партнерам</a></li>
+									<li class="menu__item"><a href="archive-blog.html" class="link-hover">Статьи</a></li>
+									<li class="menu__item"><a href="contacts.html" class="link-hover">Контакты</a></li>
 								</ul>
 							</nav>
 						</div>
@@ -509,7 +509,7 @@
 							<form action="" class="subscribe__form">
 								<div class="subscribe__wrapper">
 									<input id="subscribe-email" type="email" class="form__input" name="email" placeholder="E-mail" required="">
-									<button type="submit" class="subscribe__btn btn btn-bg">
+									<button type="submit" class="subscribe__btn">
 										<svg class="icon icon_select">
 											<use xlink:href="img/sprite.svg#svg-select"></use>
 										</svg>
@@ -568,9 +568,87 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240709201703"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240709201703"></script>
-	<script src="js/app.min.js?_v=20240709201703"></script>
+
+	<div id="partner-questionnaire" aria-hidden="true" class="popup popup_right">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__heading">
+					<div class="popup__title title-h4">Анкета партнера</div>
+
+					<button data-close type="button" class="popup__close">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#svg-close"></use>
+						</svg>
+					</button>
+				</div>
+
+				<div class="popup__text">
+					<form action="" class="form">
+						<div class="form__row">
+							<div class="col-12 col-sm-6 form__item">
+								<label for="questionnaire-name" class="form__label">Имя</label>
+								<input id="questionnaire-name" type="text" name="questionnaire-name" placeholder="Введите имя" class="form__input form__input_gray" />
+							</div>
+
+							<div class="col-12 col-sm-6 form__item">
+								<label for="questionnaire-surname" class="form__label">Фамилия</label>
+								<input id="questionnaire-surname" type="text" name="questionnaire-surname" placeholder="Введите фамилию" class="form__input form__input_gray" />
+							</div>
+
+							<div class="col-12 col-sm-6 form__item">
+								<label for="questionnaire-surname2" class="form__label">Отчество</label>
+								<input id="questionnaire-surname2" type="text" name="questionnaire-surname2" placeholder="Введите отчество" class="form__input form__input_gray" />
+							</div>
+						</div>
+
+						<div class="form__spacer"></div>
+
+						<div class="form__row">
+							<div class="col-12 col-sm-6 form__item">
+								<label for="questionnaire-email" class="form__label">E-mail</label>
+								<input id="questionnaire-email" type="email" name="questionnaire-email" placeholder="Эл. почта" class="form__input form__input_gray" />
+							</div>
+
+							<div class="col-12 col-sm-6 form__item">
+								<label for="questionnaire-org" class="form__label">Название организации</label>
+								<input id="questionnaire-org" type="text" name="questionnaire-org" placeholder="Введите название" class="form__input form__input_gray" />
+							</div>
+
+							<div class="col-12 form__item">
+								<label for="questionnaire-text" class="form__label">Ваше сообщение</label>
+								<textarea id="questionnaire-text" name="questionnaire-text" placeholder="Сообщение..." class="form__input form__input_gray" rows="4"></textarea>
+							</div>
+
+							<div class="col-12 form__item">
+								<div class="form__privacy checkbox">
+									<label>
+										<input type="checkbox" name="in-stock" value="даю согласие" class="checkbox__input" checked>
+										<span class="checkbox__label">
+											<div>Я даю согласие на обработку персональных данных в соответствии
+												с указанными <a href="" class="link-underline">условиями</a></div>
+										</span>
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="form__spacer"></div>
+
+						<div class="form__row">
+							<div class="col-12">
+								<div class="form__submit">
+									<button type="submit" class="btn btn_bg-green">Отправить</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240710140504"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240710140504"></script>
+	<script src="js/app.min.js?_v=20240710140504"></script>
 </body>
 
 </html>
