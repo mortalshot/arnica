@@ -283,6 +283,11 @@ ol {
       left: 0;
     }
 
+    & > ol,
+    & > ul {
+      margin-top: rem(12) !important;
+    }
+
     & > ol {
       counter-reset: subitem;
 
@@ -290,6 +295,16 @@ ol {
         &::before {
           content: counter(item) "." counters(subitem, ".") " ";
           counter-increment: subitem;
+        }
+      }
+    }
+
+    & > ul {
+      li {
+        padding: 0;
+        
+        &::before {
+          display: none;
         }
       }
     }
@@ -827,10 +842,13 @@ body {
 
   // .contacts__item
   &__item {
-    // .contacts__item_phone
-    &_phone {
-      white-space: nowrap;
-    }
+  }
+
+  // .contacts__item_bg-gray
+  &__item_bg-gray {
+    padding: rem(14) rem(24);
+    background-color: $Line;
+    border-radius: rem(20);
   }
 
   // .contacts__row

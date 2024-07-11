@@ -20,6 +20,7 @@
 		border: rem(1) solid transparent;
 		height: rem(48);
 		transition: $transition ease border-color 0s;
+		outline: 0;
 	}
 
 	// .select__value
@@ -77,6 +78,7 @@
 	&__options {
 		color: $mainColor;
 		position: absolute;
+		z-index: 9;
 		top: rem(45);
 		border-radius: 0 0 rem(10) rem(10);
 		min-width: 100%;

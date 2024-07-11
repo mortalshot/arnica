@@ -3321,8 +3321,7 @@ a.partner-card {
   display: flex;
   flex-direction: column;
   position: relative;
-  @include adaptiveValue("border-radius", 40, 20, 768, 360, 1);
-  overflow: hidden;
+  // overflow: hidden;
   @include adaptiveValue("min-height", 302, 148, 768, 360, 1);
 
   @media (min-width: $mobile) {
@@ -3341,6 +3340,7 @@ a.partner-card {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @include adaptiveValue("border-radius", 40, 20, 768, 360, 1);
     }
   }
 
@@ -3364,6 +3364,7 @@ a.partner-card {
       width: 100%;
       height: 100%;
       object-fit: cover;
+      @include adaptiveValue("border-radius", 40, 20, 768, 360, 1);
     }
   }
 
@@ -3373,10 +3374,12 @@ a.partner-card {
     position: relative;
     z-index: 1;
     padding: rem(36);
+    @include adaptiveValue("padding-left", 36, 24, 1440, 360, 1);
+    @include adaptiveValue("padding-right", 36, 24, 1440, 360, 1);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: rem(16);
+    gap: rem(32);
   }
 
   // .help-banner__text
@@ -3831,6 +3834,323 @@ a.partner-card {
 
   // .review-reply__text
   &__text {
+  }
+}
+
+//.map     ====================================================================================================
+.map {
+  // .map__wrapper
+  &__wrapper {
+    @media (min-width: $tablet) {
+      position: relative;
+      border-radius: rem(30);
+      overflow: hidden;
+      padding-bottom: rem(480);
+    }
+  }
+  // .map__frame
+  &__frame {
+    @media (max-width: $tablet) {
+      position: relative;
+      padding-bottom: rem(310);
+      @include adaptiveValue("margin-left", -30, -20, 768, 360, 1);
+      @include adaptiveValue("margin-right", -30, -20, 768, 360, 1);
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  // .map__contacts
+  &__contacts {
+    @media (min-width: $tablet) {
+      position: absolute;
+      z-index: 1;
+      top: rem(16);
+      bottom: rem(16);
+      left: rem(16);
+      width: 100%;
+      max-width: rem(311);
+      border-radius: rem(20);
+      background-color: $White;
+      box-shadow: 0 16px 16px 0 rgba(50, 50, 71, 0.08);
+      padding: rem(24);
+    }
+    @media (max-width: $tablet) {
+      padding-top: rem(32);
+    }
+  }
+
+  // .map__caption
+  &__caption {
+    font-weight: 700;
+    margin-bottom: rem(20);
+  }
+
+  // .map__items
+  &__items {
+    max-height: rem(347);
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: $Red $Line;
+
+    @media (min-width: $tablet) {
+      max-height: calc(100% - rem(48));
+    }
+
+    &::-webkit-scrollbar {
+      width: rem(5);
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $Red;
+      border-radius: 22px;
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 22px;
+      background-color: $Line;
+    }
+  }
+
+  // .map__item
+  &__item {
+  }
+}
+
+.map-contact {
+  display: grid;
+  align-content: flex-start;
+  row-gap: rem(8);
+
+  &:not(:first-child) {
+    padding-top: rem(16);
+  }
+  &:not(:last-child) {
+    padding-bottom: rem(16);
+    border-bottom: rem(1) solid $LGray;
+  }
+
+  // .map-contact__name
+  &__name {
+    font-weight: 500;
+    font-size: rem(14);
+    line-height: math.div(26, 14);
+    color: $Blue;
+  }
+
+  // .map-contact__text
+  &__text {
+    font-size: rem(13);
+    line-height: math.div(18, 13);
+    color: $Gray3;
+
+    strong {
+      color: $mainColor;
+    }
+
+    & > * {
+      margin-top: rem(4);
+      margin-bottom: rem(4);
+    }
+  }
+
+  // .map-contact__link
+  &__link {
+    color: $Blue;
+  }
+}
+
+//.contacts-block     ====================================================================================================
+.contacts-block {
+  // .contacts-block__grid
+  &__grid {
+    display: grid;
+    row-gap: rem(32);
+    column-gap: rem(18);
+
+    @media (min-width: $tablet) and (max-width: em(1179.98)) {
+      grid-template-columns: 1fr percent(360, 1036);
+    }
+    @media (min-width: em(1179.98)) {
+      grid-template-columns: 1fr rem(310);
+    }
+  }
+
+  // .contacts-block__main
+  &__main {
+  }
+
+  // .contacts-block__list
+  &__list {
+  }
+
+  // .contacts-block__item
+  &__item {
+    display: grid;
+    align-content: flex-start;
+    row-gap: rem(16);
+
+    &:not(:first-child) {
+      padding-top: rem(16);
+    }
+    &:not(:last-child) {
+      padding-bottom: rem(16);
+      border-bottom: rem(1) solid $LGray;
+    }
+  }
+
+  // .contacts-block__caption
+  &__caption {
+    font-weight: 500;
+    font-size: rem(16);
+    line-height: math.div(26, 16);
+
+    @media (min-width: $tablet) {
+      @include adaptiveValue("font-size", 16, 14, 1440, 992, 1);
+    }
+  }
+
+  // .contacts-block__text
+  &__text {
+    h6 {
+      font-weight: 400;
+      @include adaptiveValue("font-size", 16, 12, 768, 360, 1);
+
+      @media (min-width: $tablet) {
+        @include adaptiveValue("font-size", 16, 14, 1440, 992, 1);
+      }
+    }
+
+    a {
+      color: $Blue;
+    }
+  }
+
+  // .contacts-block__sidebar
+  &__sidebar {
+  }
+
+  // .contacts-block__sidebar-wrapper
+  &__sidebar-wrapper {
+    @media (max-width: $tablet) {
+      position: sticky;
+      top: rem(100);
+    }
+  }
+
+  // .contacts-block__contacts
+  &__contacts {
+    gap: rem(12);
+
+    @media (min-width: $mobileM) and (max-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: rem(16);
+    }
+
+    .contacts__link {
+      color: $Blue;
+    }
+  }
+}
+
+//.faq     ====================================================================================================
+.faq {
+  // .faq__spollers
+  &__spollers {
+  }
+
+  // .faq__item
+  &__item {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 28, 20, 768, 360, 1);
+
+      .faq__body {
+        @include adaptiveValue("padding-bottom", 28, 20, 768, 360, 1);
+        border-bottom: rem(1) solid $LGray;
+      }
+    }
+  }
+
+  // .faq__title
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(16);
+    font-weight: 500;
+    @include adaptiveValue("font-size", 20, 14, 768, 360, 1);
+    color: $Blue;
+    padding: 0;
+
+    @media (any-hover: hover) {
+      transition: $transition ease opacity 0s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &::before {
+      display: none !important;
+    }
+
+    .spollers__icon {
+      flex: 0 0 rem(34);
+      height: rem(34);
+      border-radius: 50%;
+      background-color: $Blue3;
+      position: relative;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        background-color: $Blue;
+        width: rem(14);
+        height: rem(2);
+        border-radius: rem(4);
+      }
+      &::before {
+        transform: translate(-50%) rotate(-90deg);
+        transition: $transition ease transform 0s;
+      }
+    }
+
+    &._spoller-active {
+      .spollers__icon {
+        &::before {
+          transform: translate(-50%) rotate(0);
+        }
+      }
+    }
+  }
+
+  // .faq__body
+  &__body {
+    @include adaptiveValue("padding-top", 28, 20, 768, 360, 1);
+
+    ._content {
+      & > * {
+        &:not(:first-child) {
+          @include adaptiveValue("margin-top", 20, 12, 768, 360, 1);
+        }
+        &:not(:last-child) {
+          @include adaptiveValue("margin-bottom", 20, 12, 768, 360, 1);
+        }
+      }
+    }
+
+    h6 {
+      @include adaptiveValue("font-size", 18, 16, 768, 360, 1);
+    }
   }
 }
 

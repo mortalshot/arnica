@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Гарантия и Сервис"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="help">
+        <div class="help__container">
+          <div class="help__grid">
+            <aside class="help__sidebar">
+              <div class="help__sidebar-wrapper">
+                <div class="help__breadcrumbs breadcrumbs">
+                  <div class="breadcrumbs__wrapper">
+                    <h1 class="breadcrumbs__title">Гарантия и Сервис</h1>
+
+                    <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                      <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="" itemprop="item">
+                          <span itemprop="name">Главная</span>
+                        </a>
+                      </span>
+                      <span class="site-breadcrumbs__separator">/</span>
+                      <span class="site-breadcrumbs__title">Гарантия и Сервис</span>
+                    </div>
+                  </div>
+                </div>
+
+                <nav class="help__navigation">
+                  <ul class="help__navigation-desk">
+                    <li class="_active">
+                      <a href="warranty.html">
+                        <span>Гарантия и Сервис</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="extended-warranty.html">
+                        <span>Расширенная гарантия</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="archive-products-review.html">
+                        <span>Обзоры</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="instructions.html">
+                        <span>Инструкции</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="unauthorized-stores.html">
+                        <span>Список неавторизованных магазинов</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="video-instructions.html">
+                        <span>Видеоинструкции</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="serial-number.html">
+                        <span>Как найти серийный номер на пылесосе</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <select name="form[]" data-class-modif="help__navigation-mobile" class="select select_blue">
+                    <option value="" data-href="warranty.html" selected="">Гарантия и Сервис</option>
+                    <option value="Расширенная гарантия" data-href="extended-warranty.html">Расширенная гарантия</option>
+                    <option value="Обзоры" data-href="archive-products-review.html">Обзоры</option>
+                    <option value="Инструкции" data-href="instructions.html">Инструкции</option>
+                    <option value="Список неавторизованных магазинов" data-href="unauthorized-stores.html">Список неавторизованных магазинов</option>
+                    <option value="Видеоинструкции" data-href="video-instructions.html">Видеоинструкции</option>
+                    <option value="Как найти серийный номер на пылесосе" data-href="serial-number.html">Как найти серийный номер на пылесосе</option>
+                  </select>
+                </nav>
+              </div>
+            </aside>
+
+            <div class="help__main">
+              <div class="help__banner help-banner">
+                <div class="help-banner__bg">
+                  <img src="@img/help/help-banner4-bg.png" alt="" loading="lazy">
+                </div>
+
+                <div class="help-banner__wrapper">
+                  <div class="help-banner__text _content">
+                    <h4>Гарантия и Сервис</h4>
+                    <p style="color: #858B8D;">Бытовая техника Arnica имеет большой запас прочности и длительный срок службы. </p>
+                  </div>
+
+                  <div class="form__row">
+                    <div class="col-12 col-md-5 col-xxl-3">
+                      <div class="form__label">Выберите город</div>
+
+                      <select name="form[]" class="select">
+                        <option value="" selected>Санкт-Петербург</option>
+                        <option value="Москва">Москва</option>
+                        <option value="Тверь">Тверь</option>
+                        <option value="Ярославль">Ярославль</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="help__body">
+                <div class="map">
+                  <div class="map__wrapper">
+                    <div class="map__frame">
+                      <iframe src="https://yandex.ru/map-widget/v1/?ll=30.290186%2C59.900918&mode=whatshere&whatshere%5Bpoint%5D=30.290185%2C59.900917&whatshere%5Bzoom%5D=17&z=17" frameborder="0" allowfullscreen="false"></iframe>
+                    </div>
+
+                    <div class="map__contacts">
+                      <h5 class="map__caption">Сервисные центры</h5>
+
+                      <ul class="map__items">
+                        <li class="map__item map-contact">
+                          <div class="map-contact__name">Сервисный центр «Шуури»</div>
+                          <div class="map-contact__text _content">
+                            <p> <strong>Телефон: </strong> <a href="tel:+74996861446" class="_nowrap">+7 499 686-14-46</a> </p>
+                            <p> <strong>Адрес: </strong> 4-я Магистральная улица, 5с5 </p>
+                            <p> <strong>Режим работы: </strong> с 10 до 20 по будням </p>
+                          </div>
+                          <div class="map-contact__link">
+                            <a href="" class="link-underline">Перейти на сайт</a>
+                          </div>
+                        </li>
+
+                        <li class="map__item map-contact">
+                          <div class="map-contact__name">ООО "Кристалл"</div>
+                          <div class="map-contact__text _content">
+                            <p> <strong>Телефон: </strong> <a href="tel:+74956467073" class="_nowrap"> +7 (495) 646-70-73</a> <a href="tel:+74952302301" class="_nowrap">+7 (495) 230-23-01</a> </p>
+                            <p> <strong>Адрес: </strong> г. Москва, Югорский проезд д. 2, с.1 </p>
+                            <p> <strong>Режим работы: </strong> понедельник - суббота с 10.00 до 19.00 без перерыва выходной день - воскресенье </p>
+                          </div>
+                          <div class="map-contact__link">
+                            <a href="" class="link-underline">Перейти на сайт</a>
+                          </div>
+                        </li>
+
+                        <li class="map__item map-contact">
+                          <div class="map-contact__name">СЦ«ExpressTex» м. Преображенская площадь</div>
+                          <div class="map-contact__text _content">
+                            <p> <strong>Телефон: </strong> <a href="tel:+74956401817" class="_nowrap">+7 (495) 640-18-17</a> </p>
+                            <p> <strong>Адрес: </strong> Краснобогатырская улица дом 6, стр 5, офис 307 </p>
+                            <p> <strong>Режим работы: </strong> С 10:00 до 20:00 без выходных </p>
+                          </div>
+                          <div class="map-contact__link">
+                            <a href="" class="link-underline">Перейти на сайт</a>
+                          </div>
+                        </li>
+
+                        <li class="map__item map-contact">
+                          <div class="map-contact__name">Сервисный центр «Шуури»</div>
+                          <div class="map-contact__text _content">
+                            <p> <strong>Телефон: </strong> <a href="tel:+74996861446" class="_nowrap">+7 499 686-14-46</a> </p>
+                            <p> <strong>Адрес: </strong> 4-я Магистральная улица, 5с5 </p>
+                            <p> <strong>Режим работы: </strong> с 10 до 20 по будням </p>
+                          </div>
+                          <div class="map-contact__link">
+                            <a href="" class="link-underline">Перейти на сайт</a>
+                          </div>
+                        </li>
+
+                        <li class="map__item map-contact">
+                          <div class="map-contact__name">ООО "Кристалл"</div>
+                          <div class="map-contact__text _content">
+                            <p> <strong>Телефон: </strong> <a href="tel:+74956467073" class="_nowrap"> +7 (495) 646-70-73</a> <a href="tel:+74952302301" class="_nowrap">+7 (495) 230-23-01</a> </p>
+                            <p> <strong>Адрес: </strong> г. Москва, Югорский проезд д. 2, с.1 </p>
+                            <p> <strong>Режим работы: </strong> понедельник - суббота с 10.00 до 19.00 без перерыва выходной день - воскресенье </p>
+                          </div>
+                          <div class="map-contact__link">
+                            <a href="" class="link-underline">Перейти на сайт</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contacts-block">
+                  <div class="contacts-block__grid">
+                    <div class="contacts-block__main">
+                      <div class="contacts-block__list">
+                        <div class="contacts-block__item">
+                          <div class="contacts-block__caption">Качество материалов и сборки, высокие стандарты производства были отмечены наградами в ряде стран Европы, а также на родине Arnica - в Турции. </div>
+
+                          <div class="contacts-block__text _content">
+                            <h6 style="color: #686868;">Информацию о гарантии на конкретный товар можно уточнить в карточке товара или гарантийном талоне.</h6>
+                          </div>
+                        </div>
+
+                        <div class="contacts-block__item">
+                          <div class="contacts-block__caption">По вопросам неисправностей, некомплекта и сервисного обслуживания обращайтесь на нашу электронную почту или пишите в Телеграм.</div>
+
+                          <div class="contacts-block__text _content">
+                            <p>Для ускорения решения вашего вопроса прикладывайте к обращению с вопросом или описанием неисправности чек, фотографию серийного номера <a href="">как его найти</a>, фото или видео поломки, ваши контактные данные.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <aside class="contacts-block__sidebar">
+                      <div class="contacts-block__sidebar-wrapper">
+                        <div class="contacts-block__contacts contacts">
+                          <div class="contacts__item contacts__item_bg-gray">
+                            <div class="contacts__row">
+                              <div class="contacts__icon">
+                                <img src="@img/icons/email.svg" alt="" loading="lazy">
+                              </div>
+                              <div class="contacts__body">
+                                <div class="contacts__caption">Электронная почта</div>
+                                <a href="mailto:info@arnica.ru" class="contacts__link link-hover">info@arnica.ru</a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="contacts__item contacts__item_bg-gray">
+                            <div class="contacts__row">
+                              <div class="contacts__icon">
+                                <img src="@img/icons/telegram.svg" alt="" loading="lazy">
+                              </div>
+                              <div class="contacts__body">
+                                <div class="contacts__caption">Телеграм</div>
+                                <a href="t.me/ArnicaService" class="contacts__link link-hover">@ArnicaService</a>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="contacts__item contacts__item_bg-gray">
+                            <div class="contacts__row">
+                              <div class="contacts__icon">
+                                <img src="@img/icons/phone.svg" alt="" loading="lazy">
+                              </div>
+                              <div class="contacts__body">
+                                <div class="contacts__caption">Телефон</div>
+                                <a href="tel:88005555261" class="contacts__link link-hover">8 800 5555-261</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </aside>
+                  </div>
+                </div>
+
+                <div class="faq">
+                  <div data-spollers class="faq__spollers spollers">
+                    <div class="faq__item spollers__item">
+                      <button type="button" data-spoller class="faq__title spollers__title spollers__title _spoller-active">
+                        <span>Условия предоставления гарантии</span>
+                        <span class="spollers__icon"></span>
+                      </button>
+                      <div class="faq__body spollers__body">
+                        <div class="_content">
+                          <h6>Основные положения</h6>
+
+                          <ol>
+                            <li>Гарантийные обязательства вступают в силу с даты приобретения и действуют в соответствии с гарантийными условиями перечисленными ниже.</li>
+                            <li>В течение периода гарантийного обслуживания, клиенту на территории Российской Федерации гарантируется ремонт любых недостатков, которые могут возникнуть во время использования продукции из-за некачественного материала или производственных дефектов.</li>
+                            <li>Гарантийный ремонт продлевает гарантийный срок на время затраченное на проведение ремонта.</li>
+                            <li>Гарантия может быть прекращена, если:
+                              <ul>
+                                <li>Устройство было отремонтировано в неавторизированном сервисном центре или физическим лицом.</li>
+                                <li>Устройство было намерено повреждено. </li>
+                              </ul>
+                            </li>
+                            <li>Гарантийный талон является недействительным если:
+                              <ul>
+                                <li>Не предоставлен кассовый чек или другие, доказывающие приобретение прибора у официального дилера, документы.</li>
+                              </ul>
+                            </li>
+                            <li>Изготовитель не несет ответственности за несчастные случаи, травмы людей, или животных, порчи имущества, произошедшие в результате неправильной эксплуатации приборов, а так же в случае незнания или несоблюдения инструкции по эксплуатации.</li>
+                          </ol>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="faq__item spollers__item">
+                      <button type="button" data-spoller class="faq__title spollers__title spollers__title">
+                        <span>Негарантийные случаи</span>
+                        <span class="spollers__icon"></span>
+                      </button>
+                      <div class="faq__body spollers__body">
+                        <div class="_content">
+                          <h6>Случаи, когда гарантия не распространяется:</h6>
+
+                          <ul>
+                            <li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
+                            <li>Повреждения, вызванные воздействием химических веществ.&nbsp;</li>
+                            <li>Изменения цвета прибора - пожелтение, загрязнения и так далее.&nbsp;</li>
+                            <li>Неисправности, появившиеся в результате воздействия внешних факторов, например влажности или температуры, а также неправильное обращение с прибором.&nbsp;</li>
+                            <li>Повреждения или дефекты, вызванные транспортировкой, если они перевозятся покупателем.</li>
+                            <li>При обнаружении следов проникновения в устройство, а также ремонта не в авторизированном сервисе.&nbsp;</li>
+                            <li>При механических повреждениях(сколы, вмятины, трещины).&nbsp;</li>
+                            <li>Если повреждения произошли в результате попадания посторонних предметов, материалов, жидкостей или насекомых.&nbsp;</li>
+                            <li>При обнаружении неисправностей, возникших в результате использования нестандартных эксплуатационных материалов или деталей.&nbsp;</li>
+                            <li>Если прибор, предназначенный для использования в домашних(бытовых) условиях, используют в предпринимательской деятельности с целью получения прибыли, производственных и других целях, не соответствующих настоящему назначению прибора.&nbsp;</li>
+                            <li>Во всех остальных случаях, когда недостатки прибора выявились в результате не соблюдения инструкции по эксплуатации покупателем, или недостатки появились по вине третьих лиц, или действий непреодолимой силы.&nbsp;</li>
+                            <li>Гарантия также не распространяется на части подверженные естественному износу, такие как: лампы, фильтры, аккумуляторы, предохранители, внешние блоки питания и зарядные устройства, соединительные кабели, крышки, шланги, трубки, щетки, насадки, ремешки, фильтры.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="faq__item spollers__item">
+                      <button type="button" data-spoller class="faq__title spollers__title spollers__title">
+                        <span>Срок гарантийного обслуживания пылесосов</span>
+                        <span class="spollers__icon"></span>
+                      </button>
+                      <div class="faq__body spollers__body">
+                        <div class="_content">
+                          <h6>Случаи, когда гарантия не распространяется:</h6>
+
+                          <ul>
+                            <li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
+                            <li>Повреждения, вызванные воздействием химических веществ.&nbsp;</li>
+                            <li>Изменения цвета прибора - пожелтение, загрязнения и так далее.&nbsp;</li>
+                            <li>Неисправности, появившиеся в результате воздействия внешних факторов, например влажности или температуры, а также неправильное обращение с прибором.&nbsp;</li>
+                            <li>Повреждения или дефекты, вызванные транспортировкой, если они перевозятся покупателем.</li>
+                            <li>При обнаружении следов проникновения в устройство, а также ремонта не в авторизированном сервисе.&nbsp;</li>
+                            <li>При механических повреждениях(сколы, вмятины, трещины).&nbsp;</li>
+                            <li>Если повреждения произошли в результате попадания посторонних предметов, материалов, жидкостей или насекомых.&nbsp;</li>
+                            <li>При обнаружении неисправностей, возникших в результате использования нестандартных эксплуатационных материалов или деталей.&nbsp;</li>
+                            <li>Если прибор, предназначенный для использования в домашних(бытовых) условиях, используют в предпринимательской деятельности с целью получения прибыли, производственных и других целях, не соответствующих настоящему назначению прибора.&nbsp;</li>
+                            <li>Во всех остальных случаях, когда недостатки прибора выявились в результате не соблюдения инструкции по эксплуатации покупателем, или недостатки появились по вине третьих лиц, или действий непреодолимой силы.&nbsp;</li>
+                            <li>Гарантия также не распространяется на части подверженные естественному износу, такие как: лампы, фильтры, аккумуляторы, предохранители, внешние блоки питания и зарядные устройства, соединительные кабели, крышки, шланги, трубки, щетки, насадки, ремешки, фильтры.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="faq__item spollers__item">
+                      <button type="button" data-spoller class="faq__title spollers__title spollers__title">
+                        <span>Срок гарантийного обслуживания кухонной техники</span>
+                        <span class="spollers__icon"></span>
+                      </button>
+                      <div class="faq__body spollers__body">
+                        <div class="_content">
+                          <h6>Случаи, когда гарантия не распространяется:</h6>
+
+                          <ul>
+                            <li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
+                            <li>Повреждения, вызванные воздействием химических веществ.&nbsp;</li>
+                            <li>Изменения цвета прибора - пожелтение, загрязнения и так далее.&nbsp;</li>
+                            <li>Неисправности, появившиеся в результате воздействия внешних факторов, например влажности или температуры, а также неправильное обращение с прибором.&nbsp;</li>
+                            <li>Повреждения или дефекты, вызванные транспортировкой, если они перевозятся покупателем.</li>
+                            <li>При обнаружении следов проникновения в устройство, а также ремонта не в авторизированном сервисе.&nbsp;</li>
+                            <li>При механических повреждениях(сколы, вмятины, трещины).&nbsp;</li>
+                            <li>Если повреждения произошли в результате попадания посторонних предметов, материалов, жидкостей или насекомых.&nbsp;</li>
+                            <li>При обнаружении неисправностей, возникших в результате использования нестандартных эксплуатационных материалов или деталей.&nbsp;</li>
+                            <li>Если прибор, предназначенный для использования в домашних(бытовых) условиях, используют в предпринимательской деятельности с целью получения прибыли, производственных и других целях, не соответствующих настоящему назначению прибора.&nbsp;</li>
+                            <li>Во всех остальных случаях, когда недостатки прибора выявились в результате не соблюдения инструкции по эксплуатации покупателем, или недостатки появились по вине третьих лиц, или действий непреодолимой силы.&nbsp;</li>
+                            <li>Гарантия также не распространяется на части подверженные естественному износу, такие как: лампы, фильтры, аккумуляторы, предохранители, внешние блоки питания и зарядные устройства, соединительные кабели, крышки, шланги, трубки, щетки, насадки, ремешки, фильтры.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="faq__item spollers__item">
+                      <button type="button" data-spoller class="faq__title spollers__title spollers__title">
+                        <span>Срок гарантийного обслуживания утюгов и гладильных систем</span>
+                        <span class="spollers__icon"></span>
+                      </button>
+                      <div class="faq__body spollers__body">
+                        <div class="_content">
+                          <h6>Случаи, когда гарантия не распространяется:</h6>
+
+                          <ul>
+                            <li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
+                            <li>Повреждения, вызванные воздействием химических веществ.&nbsp;</li>
+                            <li>Изменения цвета прибора - пожелтение, загрязнения и так далее.&nbsp;</li>
+                            <li>Неисправности, появившиеся в результате воздействия внешних факторов, например влажности или температуры, а также неправильное обращение с прибором.&nbsp;</li>
+                            <li>Повреждения или дефекты, вызванные транспортировкой, если они перевозятся покупателем.</li>
+                            <li>При обнаружении следов проникновения в устройство, а также ремонта не в авторизированном сервисе.&nbsp;</li>
+                            <li>При механических повреждениях(сколы, вмятины, трещины).&nbsp;</li>
+                            <li>Если повреждения произошли в результате попадания посторонних предметов, материалов, жидкостей или насекомых.&nbsp;</li>
+                            <li>При обнаружении неисправностей, возникших в результате использования нестандартных эксплуатационных материалов или деталей.&nbsp;</li>
+                            <li>Если прибор, предназначенный для использования в домашних(бытовых) условиях, используют в предпринимательской деятельности с целью получения прибыли, производственных и других целях, не соответствующих настоящему назначению прибора.&nbsp;</li>
+                            <li>Во всех остальных случаях, когда недостатки прибора выявились в результате не соблюдения инструкции по эксплуатации покупателем, или недостатки появились по вине третьих лиц, или действий непреодолимой силы.&nbsp;</li>
+                            <li>Гарантия также не распространяется на части подверженные естественному износу, такие как: лампы, фильтры, аккумуляторы, предохранители, внешние блоки питания и зарядные устройства, соединительные кабели, крышки, шланги, трубки, щетки, насадки, ремешки, фильтры.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="faq__item spollers__item">
+                      <button type="button" data-spoller class="faq__title spollers__title spollers__title">
+                        <span>Куда обратиться, если Вы не нашли свой город в списке</span>
+                        <span class="spollers__icon"></span>
+                      </button>
+                      <div class="faq__body spollers__body">
+                        <div class="_content">
+                          <h6>Случаи, когда гарантия не распространяется:</h6>
+
+                          <ul>
+                            <li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
+                            <li>Повреждения, вызванные воздействием химических веществ.&nbsp;</li>
+                            <li>Изменения цвета прибора - пожелтение, загрязнения и так далее.&nbsp;</li>
+                            <li>Неисправности, появившиеся в результате воздействия внешних факторов, например влажности или температуры, а также неправильное обращение с прибором.&nbsp;</li>
+                            <li>Повреждения или дефекты, вызванные транспортировкой, если они перевозятся покупателем.</li>
+                            <li>При обнаружении следов проникновения в устройство, а также ремонта не в авторизированном сервисе.&nbsp;</li>
+                            <li>При механических повреждениях(сколы, вмятины, трещины).&nbsp;</li>
+                            <li>Если повреждения произошли в результате попадания посторонних предметов, материалов, жидкостей или насекомых.&nbsp;</li>
+                            <li>При обнаружении неисправностей, возникших в результате использования нестандартных эксплуатационных материалов или деталей.&nbsp;</li>
+                            <li>Если прибор, предназначенный для использования в домашних(бытовых) условиях, используют в предпринимательской деятельности с целью получения прибыли, производственных и других целях, не соответствующих настоящему назначению прибора.&nbsp;</li>
+                            <li>Во всех остальных случаях, когда недостатки прибора выявились в результате не соблюдения инструкции по эксплуатации покупателем, или недостатки появились по вине третьих лиц, или действий непреодолимой силы.&nbsp;</li>
+                            <li>Гарантия также не распространяется на части подверженные естественному износу, такие как: лампы, фильтры, аккумуляторы, предохранители, внешние блоки питания и зарядные устройства, соединительные кабели, крышки, шланги, трубки, щетки, насадки, ремешки, фильтры.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

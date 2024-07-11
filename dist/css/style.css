@@ -661,6 +661,7 @@ textarea.form__input {
   -webkit-transition: 0.3s ease border-color 0s;
   -o-transition: 0.3s ease border-color 0s;
   transition: 0.3s ease border-color 0s;
+  outline: 0;
 }
 
 .select__value {
@@ -736,6 +737,7 @@ textarea.form__input {
 .select__options {
   color: #222222;
   position: absolute;
+  z-index: 9;
   top: 2.8125rem;
   border-radius: 0 0 0.625rem 0.625rem;
   min-width: 100%;
@@ -2208,6 +2210,11 @@ ol li::before {
   left: 0;
 }
 
+ol li > ol,
+ol li > ul {
+  margin-top: 0.75rem !important;
+}
+
 ol li > ol {
   counter-reset: subitem;
 }
@@ -2215,6 +2222,14 @@ ol li > ol {
 ol li > ol li::before {
   content: counter(item) "." counters(subitem, ".") " ";
   counter-increment: subitem;
+}
+
+ol li > ul li {
+  padding: 0;
+}
+
+ol li > ul li::before {
+  display: none;
 }
 
 ._content {
@@ -2677,8 +2692,10 @@ body .lg-sub-html {
   	} */
 }
 
-.contacts__item_phone {
-  white-space: nowrap;
+.contacts__item_bg-gray {
+  padding: 0.875rem 1.5rem;
+  background-color: #f1f3f5;
+  border-radius: 1.25rem;
 }
 
 .contacts__row {
@@ -6446,16 +6463,6 @@ main > .breadcrumbs {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  border-radius: clamp( 1.25rem , 0.1470588235rem  +  4.9019607843vw , 2.5rem );
-  /* 	// Если поддерживается clamp();
-  	@supports (border-radius: $propertyValue) {
-  		border-radius: $propertyValue;
-  	}
-  	// Если не поддерживается clamp();
-  	@supports not (border-radius: $propertyValue) {
-  		border-radius: calc(1.25rem + 1.25 * (100vw - 22.5rem) / 25.5);
-  	} */
-  overflow: hidden;
   min-height: clamp( 9.25rem , 0.7573529412rem  +  37.7450980392vw , 18.875rem );
   /* 	// Если поддерживается clamp();
   	@supports (min-height: $propertyValue) {
@@ -6475,6 +6482,15 @@ main > .breadcrumbs {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: clamp( 1.25rem , 0.1470588235rem  +  4.9019607843vw , 2.5rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (border-radius: $propertyValue) {
+  		border-radius: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (border-radius: $propertyValue) {
+  		border-radius: calc(1.25rem + 1.25 * (100vw - 22.5rem) / 25.5);
+  	} */
 }
 
 .help-banner [data-popup] {
@@ -6489,6 +6505,15 @@ main > .breadcrumbs {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: clamp( 1.25rem , 0.1470588235rem  +  4.9019607843vw , 2.5rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (border-radius: $propertyValue) {
+  		border-radius: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (border-radius: $propertyValue) {
+  		border-radius: calc(1.25rem + 1.25 * (100vw - 22.5rem) / 25.5);
+  	} */
 }
 
 .help-banner__wrapper {
@@ -6498,6 +6523,24 @@ main > .breadcrumbs {
   position: relative;
   z-index: 1;
   padding: 2.25rem;
+  padding-left: clamp( 1.5rem , 1.25rem  +  1.1111111111vw , 2.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (padding-left: $propertyValue) {
+  		padding-left: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (padding-left: $propertyValue) {
+  		padding-left: calc(1.5rem + 0.75 * (100vw - 22.5rem) / 67.5);
+  	} */
+  padding-right: clamp( 1.5rem , 1.25rem  +  1.1111111111vw , 2.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (padding-right: $propertyValue) {
+  		padding-right: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (padding-right: $propertyValue) {
+  		padding-right: calc(1.5rem + 0.75 * (100vw - 22.5rem) / 67.5);
+  	} */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6508,7 +6551,7 @@ main > .breadcrumbs {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .help-banner__text {
@@ -7076,6 +7119,284 @@ main > .breadcrumbs {
 
 .review-reply .item-person__name {
   font-weight: 500;
+}
+
+.map__frame iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.map__caption {
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.map__items {
+  max-height: 21.6875rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ff3030 #f1f3f5;
+}
+
+.map__items::-webkit-scrollbar {
+  width: 0.3125rem;
+}
+
+.map__items::-webkit-scrollbar-track {
+  background-color: #ff3030;
+  border-radius: 22px;
+}
+
+.map__items::-webkit-scrollbar-thumb {
+  border-radius: 22px;
+  background-color: #f1f3f5;
+}
+
+.map-contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  row-gap: 0.5rem;
+}
+
+.map-contact:not(:first-child) {
+  padding-top: 1rem;
+}
+
+.map-contact:not(:last-child) {
+  padding-bottom: 1rem;
+  border-bottom: 0.0625rem solid #e3e3e3;
+}
+
+.map-contact__name {
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.8571428571;
+  color: #3b8de8;
+}
+
+.map-contact__text {
+  font-size: 0.8125rem;
+  line-height: 1.3846153846;
+  color: #686868;
+}
+
+.map-contact__text strong {
+  color: #222222;
+}
+
+.map-contact__text > * {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.map-contact__link {
+  color: #3b8de8;
+}
+
+.contacts-block__grid {
+  display: -ms-grid;
+  display: grid;
+  row-gap: 2rem;
+  -webkit-column-gap: 1.125rem;
+     -moz-column-gap: 1.125rem;
+          column-gap: 1.125rem;
+}
+
+.contacts-block__item {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  row-gap: 1rem;
+}
+
+.contacts-block__item:not(:first-child) {
+  padding-top: 1rem;
+}
+
+.contacts-block__item:not(:last-child) {
+  padding-bottom: 1rem;
+  border-bottom: 0.0625rem solid #e3e3e3;
+}
+
+.contacts-block__caption {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.625;
+}
+
+.contacts-block__text h6 {
+  font-weight: 400;
+  font-size: clamp( 0.75rem , 0.5294117647rem  +  0.9803921569vw , 1rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(0.75rem + 0.25 * (100vw - 22.5rem) / 25.5);
+  	} */
+}
+
+.contacts-block__text a {
+  color: #3b8de8;
+}
+
+.contacts-block__contacts {
+  gap: 0.75rem;
+}
+
+.contacts-block__contacts .contacts__link {
+  color: #3b8de8;
+}
+
+.faq__item:not(:last-child) {
+  margin-bottom: clamp( 1.25rem , 0.8088235294rem  +  1.9607843137vw , 1.75rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (margin-bottom: $propertyValue) {
+  		margin-bottom: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (margin-bottom: $propertyValue) {
+  		margin-bottom: calc(1.25rem + 0.5 * (100vw - 22.5rem) / 25.5);
+  	} */
+}
+
+.faq__item:not(:last-child) .faq__body {
+  padding-bottom: clamp( 1.25rem , 0.8088235294rem  +  1.9607843137vw , 1.75rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (padding-bottom: $propertyValue) {
+  		padding-bottom: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (padding-bottom: $propertyValue) {
+  		padding-bottom: calc(1.25rem + 0.5 * (100vw - 22.5rem) / 25.5);
+  	} */
+  border-bottom: 0.0625rem solid #e3e3e3;
+}
+
+.faq__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: clamp( 0.875rem , 0.5441176471rem  +  1.4705882353vw , 1.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(0.875rem + 0.375 * (100vw - 22.5rem) / 25.5);
+  	} */
+  color: #3b8de8;
+  padding: 0;
+}
+
+.faq__title::before {
+  display: none !important;
+}
+
+.faq__title .spollers__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2.125rem;
+          flex: 0 0 2.125rem;
+  height: 2.125rem;
+  border-radius: 50%;
+  background-color: #e8f3f7;
+  position: relative;
+  cursor: pointer;
+}
+
+.faq__title .spollers__icon::before,
+.faq__title .spollers__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+  background-color: #3b8de8;
+  width: 0.875rem;
+  height: 0.125rem;
+  border-radius: 0.25rem;
+}
+
+.faq__title .spollers__icon::before {
+  -webkit-transform: translate(-50%) rotate(-90deg);
+      -ms-transform: translate(-50%) rotate(-90deg);
+          transform: translate(-50%) rotate(-90deg);
+  -webkit-transition: 0.3s ease transform 0s;
+  -o-transition: 0.3s ease transform 0s;
+  transition: 0.3s ease transform 0s;
+}
+
+.faq__title._spoller-active .spollers__icon::before {
+  -webkit-transform: translate(-50%) rotate(0);
+      -ms-transform: translate(-50%) rotate(0);
+          transform: translate(-50%) rotate(0);
+}
+
+.faq__body {
+  padding-top: clamp( 1.25rem , 0.8088235294rem  +  1.9607843137vw , 1.75rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (padding-top: $propertyValue) {
+  		padding-top: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (padding-top: $propertyValue) {
+  		padding-top: calc(1.25rem + 0.5 * (100vw - 22.5rem) / 25.5);
+  	} */
+}
+
+.faq__body ._content > *:not(:first-child) {
+  margin-top: clamp( 0.75rem , 0.3088235294rem  +  1.9607843137vw , 1.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (margin-top: $propertyValue) {
+  		margin-top: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (margin-top: $propertyValue) {
+  		margin-top: calc(0.75rem + 0.5 * (100vw - 22.5rem) / 25.5);
+  	} */
+}
+
+.faq__body ._content > *:not(:last-child) {
+  margin-bottom: clamp( 0.75rem , 0.3088235294rem  +  1.9607843137vw , 1.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (margin-bottom: $propertyValue) {
+  		margin-bottom: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (margin-bottom: $propertyValue) {
+  		margin-bottom: calc(0.75rem + 0.5 * (100vw - 22.5rem) / 25.5);
+  	} */
+}
+
+.faq__body h6 {
+  font-size: clamp( 1rem , 0.8897058824rem  +  0.4901960784vw , 1.125rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(1rem + 0.125 * (100vw - 22.5rem) / 25.5);
+  	} */
 }
 
 .tippy-box[data-animation=fade][data-state=hidden] {
@@ -9757,6 +10078,56 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     		row-gap: calc(2rem + 2 * (100vw - 62rem) / 28);
     	} */
   }
+
+  .map__wrapper {
+    position: relative;
+    border-radius: 1.875rem;
+    overflow: hidden;
+    padding-bottom: 30rem;
+  }
+
+  .map__contacts {
+    position: absolute;
+    z-index: 1;
+    top: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    width: 100%;
+    max-width: 19.4375rem;
+    border-radius: 1.25rem;
+    background-color: #fff;
+    -webkit-box-shadow: 0 16px 16px 0 rgba(50, 50, 71, 0.08);
+            box-shadow: 0 16px 16px 0 rgba(50, 50, 71, 0.08);
+    padding: 1.5rem;
+  }
+
+  .map__items {
+    max-height: calc(100% - 3rem);
+  }
+
+  .contacts-block__caption {
+    font-size: clamp( 0.875rem , 0.5982142857rem  +  0.4464285714vw , 1rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (font-size: $propertyValue) {
+    		font-size: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (font-size: $propertyValue) {
+    		font-size: calc(0.875rem + 0.125 * (100vw - 62rem) / 28);
+    	} */
+  }
+
+  .contacts-block__text h6 {
+    font-size: clamp( 0.875rem , 0.5982142857rem  +  0.4464285714vw , 1rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (font-size: $propertyValue) {
+    		font-size: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (font-size: $propertyValue) {
+    		font-size: calc(0.875rem + 0.125 * (100vw - 62rem) / 28);
+    	} */
+  }
 }
 
 @media (min-width: 61.99875em) and (any-hover: hover) {
@@ -9816,6 +10187,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .cart-section__grid {
     -ms-grid-columns: 1fr 32.1739130435%;
     grid-template-columns: 1fr 32.1739130435%;
+  }
+
+  .contacts-block__grid {
+    -ms-grid-columns: 1fr 19.375rem;
+    grid-template-columns: 1fr 19.375rem;
   }
 }
 
@@ -10984,6 +11360,38 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     		padding-right: calc(1.25rem + 0.625 * (100vw - 22.5rem) / 25.5);
     	} */
   }
+
+  .map__frame {
+    position: relative;
+    padding-bottom: 19.375rem;
+    margin-left: clamp( -1.875rem , -0.6985294118rem  +  -2.4509803922vw , -1.25rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (margin-left: $propertyValue) {
+    		margin-left: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (margin-left: $propertyValue) {
+    		margin-left: calc(-1.25rem + -0.625 * (100vw - 22.5rem) / 25.5);
+    	} */
+    margin-right: clamp( -1.875rem , -0.6985294118rem  +  -2.4509803922vw , -1.25rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (margin-right: $propertyValue) {
+    		margin-right: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (margin-right: $propertyValue) {
+    		margin-right: calc(-1.25rem + -0.625 * (100vw - 22.5rem) / 25.5);
+    	} */
+  }
+
+  .map__contacts {
+    padding-top: 2rem;
+  }
+
+  .contacts-block__sidebar-wrapper {
+    position: sticky;
+    top: 6.25rem;
+  }
 }
 
 @media (max-width: 47.99875em) {
@@ -11495,6 +11903,19 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -ms-grid-columns: (1fr)[2];
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .contacts-block__contacts {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 61.99875em) and (max-width: 73.74875em) {
+  .contacts-block__grid {
+    -ms-grid-columns: 1fr 34.749034749%;
+    grid-template-columns: 1fr 34.749034749%;
+  }
 }
 
 @media (any-hover: hover) {
@@ -11942,6 +12363,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .review-attachments__item:hover {
     opacity: 0.7;
+  }
+
+  .faq__title {
+    -webkit-transition: 0.3s ease opacity 0s;
+    -o-transition: 0.3s ease opacity 0s;
+    transition: 0.3s ease opacity 0s;
+  }
+
+  .faq__title:hover {
+    opacity: 0.8;
   }
 }
 
