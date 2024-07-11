@@ -378,6 +378,14 @@ ol {
 ._nowrap {
   white-space: nowrap;
 }
+
+._color-green {
+  color: $Green;
+}
+._color-red {
+  color: $Red;
+}
+
 // Анимации при наведении
 [class*="link-"] {
   position: relative;

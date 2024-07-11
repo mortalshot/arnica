@@ -11,8 +11,8 @@
 	min-height: rem(48);
 	border: rem(1) solid transparent;
 
-	@media (max-width:$mobileSmall){
-		 width: 100%; 
+	@media (max-width: $mobileSmall) {
+		width: 100%;
 	}
 
 	svg {
@@ -43,6 +43,19 @@
 			transition: $transition ease background-color 0s;
 			&:hover {
 				background-color: rgba($color: $Red, $alpha: 0.8);
+			}
+		}
+	}
+
+	// .btn_bg-gray
+	&_bg-gray {
+		color: $mainColor;
+		background-color: $LGray;
+
+		@media (any-hover: hover) {
+			transition: $transition ease background-color 0s;
+			&:hover {
+				background-color: #dccaca;
 			}
 		}
 	}

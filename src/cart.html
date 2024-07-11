@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Корзина"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="cart-section">
+        <div class="cart-section__container">
+          <div class="cart-section__back _heading">
+            <button data-close="" type="button" class="popup-cart__back">
+              <svg class="icon">
+                <use xlink:href="img/sprite.svg#svg-select"></use>
+              </svg>
+
+              <span>Вернуться к покупкам</span>
+            </button>
+          </div>
+
+          <div class="cart-section__heading _heading">
+            <h1 class="cart-section__title">Корзина</h1>
+            <span>3 товара</span>
+          </div>
+
+          <div class="cart-section__grid">
+            <div class="cart-section__main">
+              <ul class="cart-section__items">
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Tesla Plus</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_current">19&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Nika Arnica, пылесос с циклонным фильтром, белый Arnica, пылесос с циклонным фильтром, белый</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_new">1 119&nbsp;990 ₽</div>
+                      <div class="price price_old">1 132&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Tesla Plus</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_current">19&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Nika Arnica, пылесос с циклонным фильтром, белый Arnica, пылесос с циклонным фильтром, белый</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_new">1 119&nbsp;990 ₽</div>
+                      <div class="price price_old">1 132&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Tesla Plus</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_current">19&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Nika Arnica, пылесос с циклонным фильтром, белый Arnica, пылесос с циклонным фильтром, белый</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_new">1 119&nbsp;990 ₽</div>
+                      <div class="price price_old">1 132&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Tesla Plus</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_current">19&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Nika Arnica, пылесос с циклонным фильтром, белый Arnica, пылесос с циклонным фильтром, белый</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_new">1 119&nbsp;990 ₽</div>
+                      <div class="price price_old">1 132&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Tesla Plus</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_current">19&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Nika Arnica, пылесос с циклонным фильтром, белый Arnica, пылесос с циклонным фильтром, белый</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_new">1 119&nbsp;990 ₽</div>
+                      <div class="price price_old">1 132&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Tesla Plus</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_current">19&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="cart-item">
+                  <a href="single-product.html" class="cart-item__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </a>
+
+                  <div class="cart-item__about">
+                    <a href="single-product.html" class="cart-item__name">Nika Arnica, пылесос с циклонным фильтром, белый Arnica, пылесос с циклонным фильтром, белый</a>
+                    <div class="cart-item__code">Артикул: <strong>ET14330</strong></div>
+                  </div>
+
+                  <div class="cart-item__quantity">
+                    <div class="quantity" data-quantity>
+                      <button type="button" class="quantity__button quantity__button_minus" data-quantity-minus></button>
+                      <div class="quantity__input">
+                        <input data-quantity-value="" type="text" name="" value="1">
+                      </div>
+                      <button type="button" class="quantity__button quantity__button_plus" data-quantity-plus></button>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__price">
+                    <div class="price">
+                      <div class="price price_new">1 119&nbsp;990 ₽</div>
+                      <div class="price price_old">1 132&nbsp;990 ₽</div>
+                    </div>
+                  </div>
+
+                  <div class="cart-item__actions">
+                    <div class="cart-item__remove">
+                      <button type="button">
+                        <svg class="icon">
+                          <use xlink:href="@img/sprite.svg#svg-close"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <aside class="cart-section__sidebar cart-sidebar">
+              <div class="cart-sidebar__wrapper">
+                <div class="cart-sidebar__card cart-sidebar__promocode promocode">
+                  <form action="#" class="promocode__wrapper">
+                    <div class="cart-sidebar__caption promocode__label">Промокод</div>
+
+                    <div class="promocode__row">
+                      <input id="promocode" type="text" class="form__input" placeholder="Введите код здесь">
+                      <button class="promocode__btn btn btn_bg-gray">Применить</button>
+                    </div>
+
+                    <div class="promocode__notify _color-green">Промокод успешно применен</div>
+                  </form>
+                </div>
+
+                <div class="cart-sidebar__card cart-sidebar__total cart-total">
+                  <div class="cart-total__wrapper">
+                    <div class="cart-sidebar__caption cart-total__caption">Стоимость заказа:</div>
+
+                    <div class="cart-total__price">
+                      <div class="price">
+                        <div class="price price_new">59 970 ₽</div>
+                        <div class="price price_old">42 990 ₽</div>
+                      </div>
+                    </div>
+
+                    <div class="cart-total__button">
+                      <a href="" class="btn btn_bg-green">Оформить заказ</a>
+                    </div>
+
+                    <div class="cart-total__installments">
+                      <button type="button" class="installments-button">
+                        <svg class="icon icon-installments">
+                          <use xlink:href="img/sprite.svg#svg-installments"></use>
+                        </svg>
+
+                        <span>Доступно в рассрочку <strong>от 13&nbsp;583&nbsp;₽/мес.</strong></span>
+
+                        <svg class="icon icon-select">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
