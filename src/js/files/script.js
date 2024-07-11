@@ -169,8 +169,6 @@ function initSliders() {
     }
 
     sliderMouseSlideInit();
-
-
   }
 
   if (document.querySelector('.widget-sales__slider')) {
@@ -414,6 +412,50 @@ function initSliders() {
       newMainSlider.controller.control = newAttributesSlider;
       newAttributesSlider.controller.control = newMainSlider;
     }
+  }
+
+  if (document.querySelector('.reviews-gallery__slider')) {
+    const reviewsGallerySlider = new Swiper('.reviews-gallery__slider', {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 3.5,
+      spaceBetween: 10,
+      autoHeight: false,
+      speed: 800,
+
+      // Пагинация
+      navigation: {
+        prevEl: '.reviews-gallery .swiper-arrows__arrow_prev',
+        nextEl: '.reviews-gallery .swiper-arrows__arrow_next',
+      },
+
+
+      // Брейкпоинты
+
+      breakpoints: {
+        768: {
+          slidesPerView: 3.2,
+          spaceBetween: 15,
+        },
+        992: {
+          slidesPerView: 4,
+          spaceBetween: 15,
+        },
+        1280: {
+          slidesPerView: 5,
+          spaceBetween: 15,
+        },
+        1640: {
+          slidesPerView: 6,
+          spaceBetween: 18,
+        },
+      },
+
+      // События
+      on: {
+
+      }
+    });
   }
 }
 

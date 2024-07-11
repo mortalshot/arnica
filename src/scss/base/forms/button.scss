@@ -60,6 +60,20 @@
 		}
 	}
 
+	// .btn_bg-white
+	&_bg-white {
+		color: $mainColor;
+		background-color: $White;
+
+		@media (any-hover: hover) {
+			transition: $transition ease all 0s;
+			&:hover {
+				color: $White;
+				background-color: $Red;
+			}
+		}
+	}
+
 	// .btn_border-main
 	&_border-main {
 		border-color: $mainColor;

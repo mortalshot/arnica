@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Отзывы"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="help">
+        <div class="help__container">
+          <div class="help__grid">
+            <aside class="help__sidebar">
+              <div class="help__sidebar-wrapper">
+                <div class="help__breadcrumbs breadcrumbs">
+                  <div class="breadcrumbs__wrapper">
+                    <h1 class="breadcrumbs__title">Отзывы</h1>
+
+                    <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                      <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="" itemprop="item">
+                          <span itemprop="name">Главная</span>
+                        </a>
+                      </span>
+                      <span class="site-breadcrumbs__separator">/</span>
+                      <span class="site-breadcrumbs__title">Отзывы</span>
+                    </div>
+                  </div>
+                </div>
+
+                <nav class="help__navigation">
+                  <ul class="help__navigation-desk">
+                    <li>
+                      <a href="about.html">
+                        <span>О компании</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="certificates.html">
+                        <span>Сертификаты</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="_active">
+                      <a href="reviews.html">
+                        <span>Отзывы</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="applications.html">
+                        <span>Приложения</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <select name="form[]" data-class-modif="help__navigation-mobile" class="select select_blue">
+                    <option value="О компании" data-href="about.html">О компании</option>
+                    <option value="Сертификаты" data-href="certificates.html">Сертификаты</option>
+                    <option value="" data-href="reviews.html" selected="">Отзывы</option>
+                    <option value="Приложения" data-href="applications.html">Приложения</option>
+                  </select>
+                </nav>
+              </div>
+            </aside>
+
+            <div class="help__main">
+              <div class="help__banner help-banner">
+                <div class="help-banner__bg">
+                  <img src="@img/help/help-banner3-bg.png" alt="" loading="lazy">
+                </div>
+
+                <div class="help-banner__wrapper">
+                  <div class="help-banner__text _content">
+                    <h4>Отзывы об интернет-магазине Arnica</h4>
+                    <p style="color: #858B8D;">Оставьте отзыв о магазине с вашей фотографией и фотографиями вашей покупки и получите на e-mail промокод со скидкой на любую покупку на сайте Arnica-Home.ru</p>
+                  </div>
+
+                  <div class="help-banner__button">
+                    <button type="button" data-popup="#leave-feedback" class="btn btn_bg-white">Оставить отзыв</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="help__body">
+                <div class="reviews">
+                  <div class="reviews__gallery reviews-gallery">
+                    <div class="reviews-gallery__heading _heading">
+                      <h1 class="reviews-gallery__title">
+                        <span>Отзывы</span>
+                        <span class="reviews-gallery__amount">6</span>
+                      </h1>
+
+                      <div class="swiper-arrows">
+                        <button type="button" class="swiper-arrows__arrow swiper-arrows__arrow_prev swiper-button-disabled" disabled="" tabindex="-1" aria-label="Previous slide" aria-controls="swiper-wrapper-828f9ca6f9b1745a" aria-disabled="true">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-select"></use>
+                          </svg>
+                        </button>
+
+                        <button type="button" class="swiper-arrows__arrow swiper-arrows__arrow_next" tabindex="0" aria-label="Next slide" aria-controls="swiper-wrapper-828f9ca6f9b1745a" aria-disabled="false">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-select"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="reviews-gallery__slider swiper">
+                      <div class="reviews-gallery__wrapper swiper-wrapper" data-gallery="">
+                        <div data-src="@img/widget-products/product1-review1.png" class="reviews-gallery__slide swiper-slide">
+                          <div class="reviews-gallery__image">
+                            <img src="@img/widget-products/product1-review1.png" alt="" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                          </div>
+                        </div>
+
+                        <div data-src="@img/widget-products/product1-review2.png" class="reviews-gallery__slide swiper-slide">
+                          <div class="reviews-gallery__image">
+                            <img src="@img/widget-products/product1-review2.png" alt="" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                          </div>
+                        </div>
+
+                        <div data-src="@img/widget-products/product1-review3.png" class="reviews-gallery__slide swiper-slide">
+                          <div class="reviews-gallery__image">
+                            <img src="@img/widget-products/product1-review3.png" alt="" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                          </div>
+                        </div>
+
+                        <div data-src="@img/widget-products/product1-review4.png" class="reviews-gallery__slide swiper-slide">
+                          <div class="reviews-gallery__image">
+                            <img src="@img/widget-products/product1-review4.png" alt="" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                          </div>
+                        </div>
+
+                        <div data-src="@img/widget-products/product1-review5.png" class="reviews-gallery__slide swiper-slide">
+                          <div class="reviews-gallery__image">
+                            <img src="@img/widget-products/product1-review5.png" alt="" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                          </div>
+                        </div>
+
+                        <div data-src="@img/widget-products/product1-review6.png" class="reviews-gallery__slide swiper-slide">
+                          <div class="reviews-gallery__image">
+                            <img src="@img/widget-products/product1-review6.png" alt="" loading="lazy">
+                            <div class="swiper-lazy-preloader"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="reviews__main">
+                    <div class="reviews__actions">
+                      <div class="reviews__label">Сортировать:</div>
+
+                      <button type="button" class="reviews__sorting reviews__sorting_active">По дате</button>
+
+                      <button type="button" class="reviews__sorting">По оценке</button>
+                    </div>
+
+                    <div class="reviews__items">
+                      <ul class="reviews__list">
+                        <li class="reviews__item review-item">
+                          <div class="review-item__heading">
+                            <div class="review-item__person item-person">
+                              <div class="item-person__icon">
+                                <img src="@img/icons/avatar.svg" alt="" loading="lazy">
+                              </div>
+
+                              <div class="item-person__body">
+                                <div class="item-person__name">Елена</div>
+                                <div class="review-item__rating">
+                                  <div class="review-item__star review-item__star_yellow">
+                                    <svg class="icon">
+                                      <use xlink:href="img/sprite.svg#svg-star"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="review-item__star review-item__star_yellow">
+                                    <svg class="icon">
+                                      <use xlink:href="img/sprite.svg#svg-star"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="review-item__star review-item__star_yellow">
+                                    <svg class="icon">
+                                      <use xlink:href="img/sprite.svg#svg-star"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="review-item__star review-item__star_yellow">
+                                    <svg class="icon">
+                                      <use xlink:href="img/sprite.svg#svg-star"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="review-item__star review-item__star_yellow">
+                                    <svg class="icon">
+                                      <use xlink:href="img/sprite.svg#svg-star"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="review-item__date">30 мая 2024</div>
+                          </div>
+
+                          <div class="review-item__body">
+                            <div class="review-item__text _content">
+                              <p>Когда в доме появился маленький ребенок, понадобился мощный пылесос, который эффективно справился бы пылью. Смотрели разнее модели, читали отзывы. Информация о том, что этот пылесос обладает новой системой фильтрации воздуха, стала решающей. Есть еще дополнительный НЕРА-фильтр, который задерживает до 99,99% мелкой пыли, аллергенов. Теперь в доме всегда чистый и свежий воздух.</p>
+                            </div>
+
+                            <div class="review-item__attachments review-attachments" data-gallery="">
+                              <div data-src="@img/widget-products/product1-review1.png" class="review-attachments__item">
+                                <div class="review-attachments__image">
+                                  <img src="@img/widget-products/product1-review1.png" alt="" loading="lazy">
+                                </div>
+                              </div>
+
+                              <div data-src="@img/widget-products/product1-review2.png" class="review-attachments__item">
+                                <div class="review-attachments__image">
+                                  <img src="@img/widget-products/product1-review2.png" alt="" loading="lazy">
+                                </div>
+                              </div>
+
+                              <div data-src="@img/widget-products/product1-review3.png" class="review-attachments__item">
+                                <div class="review-attachments__image">
+                                  <img src="@img/widget-products/product1-review3.png" alt="" loading="lazy">
+                                </div>
+                              </div>
+
+                              <div data-src="@img/widget-products/product1-review4.png" class="review-attachments__item">
+                                <div class="review-attachments__image">
+                                  <img src="@img/widget-products/product1-review4.png" alt="" loading="lazy">
+                                </div>
+                              </div>
+
+                              <div data-src="@img/widget-products/product1-review5.png" class="review-attachments__item">
+                                <div class="review-attachments__image">
+                                  <img src="@img/widget-products/product1-review5.png" alt="" loading="lazy">
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="review-item__reply review-reply">
+                              <div class="review-reply__wrapper">
+                                <div class="review-item__person item-person">
+                                  <div class="item-person__icon">
+                                    <img src="@img/icons/avatar-author.svg" alt="" loading="lazy">
+                                  </div>
+
+                                  <div class="item-person__body">
+                                    <div class="item-person__name">Ответ магазина Arnica</div>
+                                  </div>
+                                </div>
+
+                                <div class="review-reply__text _content">
+                                  <p>Елена, спасибо за ваш отзыв и доверие к нашей марке. Мы очень рады, что вы остались довольны покупкой.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+
+                        <li class="reviews__item review-item">
+                          <div class="review-item__heading">
+                            <div class="review-item__person item-person">
+                              <div class="item-person__icon">
+                                <img src="@img/icons/avatar.svg" alt="" loading="lazy">
+                              </div>
+
+                              <div class="item-person__body">
+                                <div class="item-person__name">Индивидуальный предприниматель Роман Юсибов</div>
+                                <div class="review-item__rating">
+                                  <div class="review-item__star review-item__star_yellow">
+                                    <svg class="icon">
+                                      <use xlink:href="img/sprite.svg#svg-star"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="review-item__star review-item__star_yellow">
+                                    <svg class="icon">
+                                      <use xlink:href="img/sprite.svg#svg-star"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="review-item__star review-item__star_yellow">
+                                    <svg class="icon">
+                                      <use xlink:href="img/sprite.svg#svg-star"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="review-item__star review-item__star_yellow">
+                                    <svg class="icon">
+                                      <use xlink:href="img/sprite.svg#svg-star"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="review-item__star">
+                                    <svg class="icon">
+                                      <use xlink:href="img/sprite.svg#svg-star"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="review-item__date">30 мая 2024</div>
+                          </div>
+
+                          <div class="review-item__body">
+                            <div class="review-item__text _content">
+                              <p>Доброго времени суток, Денис Витальевич!</p>
+                              <p>Хочу выразить свою признательность Вам, как руководителю и Вашему сотруднику - ассистенту отдела продаж Павловой Екатерине Александровне за то, что вы, в действительности, проявляете чуткость и профессионализм при работе со своими клиентами и не остаетесь безучастными в решении каких-либо проблем, связанных с определенными нюансами и возникающими трудностями. В наше время сотрудники многих компаний и даже их руководство, увы, забыли что такое индивидуальный подход. В данном случае, учитывая все факторы, связанные с ошибкой нашего специалиста при подборе нужного товара для подготовки тендера, можно было бы "пожать плечами" и оставить нас наедине со своими проблемами. Однако, Екатерина Александровна, уверен, сделала все, что в ее силах и сверх того, чтобы нам помочь и найти варианты решения сложившейся проблемы.</p>
+                              <p>Есть у одной компании хороший помпезный лозунг - "Нам не все равно", но на деле, оказывается совсем наоборот. Рад сознавать, что есть еще у нас на Родине компании для которых это не просто рекламный ход и не пустой звук. Касательно моего к Вам обращения... оно было целиком и полностью моей инициативой (я на этом настоял сам) ! Будучи приверженцем принципа "профессионализм во всём", я не могу позволить себе в благодарность за проделанную работу, не сделать хотя бы минимум, а именно, потратить немного времени, чтобы отметить каким-либо образом того или иного сотрудника в любых сферах услуг и работ (будь то поощрительная запись в книге жалоб и обращений или благодарственное письмо) за его профессиональный подход к своей работе.</p>
+                            </div>
+
+                            <div class="review-item__reply review-reply">
+                              <div class="review-reply__wrapper">
+                                <div class="review-item__person item-person">
+                                  <div class="item-person__icon">
+                                    <img src="@img/icons/avatar-author.svg" alt="" loading="lazy">
+                                  </div>
+
+                                  <div class="item-person__body">
+                                    <div class="item-person__name">Ответ магазина Arnica</div>
+                                  </div>
+                                </div>
+
+                                <div class="review-reply__text _content">
+                                  <p>Спасибо за ваш отзыв и доверие к нашей марке. Мы очень рады, что вы остались довольны покупкой.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+
+                      <div class="reviews__button">
+                        <button type="button" class="btn btn_border-main">Показать еще</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

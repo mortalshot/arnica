@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Сертификаты"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="help">
+        <div class="help__container">
+          <div class="help__grid">
+            <aside class="help__sidebar">
+              <div class="help__sidebar-wrapper">
+                <div class="help__breadcrumbs breadcrumbs">
+                  <div class="breadcrumbs__wrapper">
+                    <h1 class="breadcrumbs__title">Сертификаты</h1>
+
+                    <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                      <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="" itemprop="item">
+                          <span itemprop="name">Главная</span>
+                        </a>
+                      </span>
+                      <span class="site-breadcrumbs__separator">/</span>
+                      <span class="site-breadcrumbs__title">Сертификаты</span>
+                    </div>
+                  </div>
+                </div>
+
+                <nav class="help__navigation">
+                  <ul class="help__navigation-desk">
+                    <li>
+                      <a href="about.html">
+                        <span>О компании</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="_active">
+                      <a href="certificates.html">
+                        <span>Сертификаты</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="reviews.html">
+                        <span>Отзывы</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="applications.html">
+                        <span>Приложения</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <select name="form[]" data-class-modif="help__navigation-mobile" class="select select_blue">
+                    <option value="О компании" data-href="about.html">О компании</option>
+                    <option value="" data-href="certificates.html" selected="">Сертификаты</option>
+                    <option value="Отзывы" data-href="reviews.html">Отзывы</option>
+                    <option value="Приложения" data-href="applications.html">Приложения</option>
+                  </select>
+                </nav>
+              </div>
+            </aside>
+
+            <div class="help__main">
+              <div class="help__banner help-banner">
+                <div class="help-banner__bg">
+                  <img src="@img/help/help-banner2-bg.png" alt="" loading="lazy">
+                </div>
+
+                <div class="help-banner__wrapper">
+                  <div class="help-banner__text _content">
+                    <h4>Сертификаты</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="help__body">
+                <div class="help-template-certificates">
+                  <div class="help-template-certificates__items" data-gallery>
+                    <div data-src="@img/help/certificate-item1.jpg" data-sub-html="Сертификат соответствия RU С-TR.АД71.А.00314/19 <br> Сертификат соответствия на измельчители пищевых продуктов ARNICA" class="certificate-item">
+                      <div class="certificate-item__preview">
+                        <img src="@img/help/certificate-item1.jpg" alt="" loading="lazy">
+                      </div>
+
+                      <div class="certificate-item__body">
+                        <div class="certificate-item__name">Сертификат соответствия RU С-TR.АД71.А.00314/19</div>
+                        <div class="certificate-item__descr">Сертификат соответствия на измельчители пищевых продуктов ARNICA</div>
+                      </div>
+                    </div>
+
+                    <div data-src="@img/help/certificate-item2.jpg" data-sub-html="Сертификат соответствия RU C-TR.НА92.А.00121/19 <br> Сертификат соответствия на пылесосы ARNICA" class="certificate-item">
+                      <div class="certificate-item__preview">
+                        <img src="@img/help/certificate-item2.jpg" alt="" loading="lazy">
+                      </div>
+
+                      <div class="certificate-item__body">
+                        <div class="certificate-item__name">Сертификат соответствия RU C-TR.НА92.А.00121/19</div>
+                        <div class="certificate-item__descr">Сертификат соответствия на пылесосы ARNICA</div>
+                      </div>
+                    </div>
+
+                    <div data-src="@img/help/certificate-item3.jpg" data-sub-html="Сертификат соответствия RU C-TR.АД71.А.00313/19 <br> Сертификат соответствия на пылесосы ARNICA" class="certificate-item">
+                      <div class="certificate-item__preview">
+                        <img src="@img/help/certificate-item3.jpg" alt="" loading="lazy">
+                      </div>
+
+                      <div class="certificate-item__body">
+                        <div class="certificate-item__name">Сертификат соответствия RU C-TR.АД71.А.00313/19</div>
+                        <div class="certificate-item__descr">Сертификат соответствия на пылесосы ARNICA</div>
+                      </div>
+                    </div>
+
+                    <div data-src="@img/help/certificate-item4.jpg" data-sub-html="Сертификат соответствия RU С-TR.АЛ16B.21391 <br> Сертификат соответствия на чайники и кофеварки Arnica" class="certificate-item">
+                      <div class="certificate-item__preview">
+                        <img src="@img/help/certificate-item4.jpg" alt="" loading="lazy">
+                      </div>
+
+                      <div class="certificate-item__body">
+                        <div class="certificate-item__name">Сертификат соответствия RU С-TR.АЛ16B.21391</div>
+                        <div class="certificate-item__descr">Сертификат соответствия на чайники и кофеварки Arnica</div>
+                      </div>
+                    </div>
+
+                    <div data-src="@img/help/certificate-item5.jpg" data-sub-html="Сертификат соответствия RU С-TR.АЛ16B.21387 <br> Сертификат соответствия на утюги Arnica" class="certificate-item">
+                      <div class="certificate-item__preview">
+                        <img src="@img/help/certificate-item5.jpg" alt="" loading="lazy">
+                      </div>
+
+                      <div class="certificate-item__body">
+                        <div class="certificate-item__name">Сертификат соответствия RU С-TR.АЛ16B.21387</div>
+                        <div class="certificate-item__descr">Сертификат соответствия на утюги Arnica</div>
+                      </div>
+                    </div>
+
+                    <div data-src="@img/help/certificate-item6.jpg" data-sub-html="Сертификат соответствия RU С-TR.АЛ16B.21392 <br> Сертификат соответствия на комбайны и блендеры Arnica" class="certificate-item">
+                      <div class="certificate-item__preview">
+                        <img src="@img/help/certificate-item6.jpg" alt="" loading="lazy">
+                      </div>
+
+                      <div class="certificate-item__body">
+                        <div class="certificate-item__name">Сертификат соответствия RU С-TR.АЛ16B.21392</div>
+                        <div class="certificate-item__descr">Сертификат соответствия на комбайны и блендеры Arnica</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

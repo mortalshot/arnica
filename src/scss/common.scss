@@ -563,6 +563,48 @@ ol {
   }
 }
 
+//.lightgalleryjs     ====================================================================================================
+body {
+  .lg-backdrop {
+    background-color: $Grey;
+  }
+
+  .lg-toolbar .lg-icon,
+  .lg-counter {
+    color: $mainColor;
+
+    @media (any-hover: hover) {
+      &:not(.disabled) {
+        transition: $transition ease opacity 0s;
+        &:hover {
+          opacity: 0.6;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+
+  .lg-next,
+  .lg-prev {
+    background-color: transparent;
+    color: $mainColor;
+
+    @media (any-hover: hover) {
+      &:not(.disabled) {
+        transition: $transition ease opacity 0s;
+        &:hover {
+          opacity: 0.6;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+
+  .lg-sub-html {
+    color: $mainColor;
+  }
+}
+
 //.menu     ====================================================================================================
 .menu {
   // .menu__arrow
