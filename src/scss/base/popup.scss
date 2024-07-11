@@ -85,6 +85,14 @@ body::after {
 
 	// .popup__title
 	&__title {
+		display: flex;
+		align-items: center;
+		@include adaptiveValue("column-gap", 52, 16, 768, 360, 1);
+
+		span {
+			font-size: rem(13);
+			color: $Gray3;
+		}
 	}
 
 	// .popup__close
@@ -185,5 +193,11 @@ body::after {
 			transform: scale(1);
 			opacity: 1;
 		}
+	}
+}
+
+#popup-basket {
+	.popup__heading {
+		margin-bottom: 0;
 	}
 }

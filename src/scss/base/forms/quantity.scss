@@ -1,52 +1,53 @@
 //<QUANTITY>
 // Снипет (HTML): qa
 .quantity {
-	width: 88px;
-	height: 40px;
+	@include adaptiveValue("width", 76, 46, 768, 360, 1);
+	height: rem(28);
 	display: flex;
-	border: 1px solid rgba(166, 166, 166, 0.45);
+	border-bottom: rem(1) solid $Gray4;
+
 	// .quantity__button
 	&__button {
-		flex: 0 0 30px;
+		flex: 0 0 rem(24);
+		@include adaptiveValue("flex-basis", 24, 12, 768, 360, 1);
 		position: relative;
 		cursor: pointer;
+
 		&::before,
 		&::after {
 			content: "";
 			position: absolute;
 			top: 50%;
 			left: 50%;
-			transition: all 0.3s ease 0s;
-			margin: 0px 0px 0px -4.5px;
-			background-color: $Gray5;
-			width: 9px;
-			height: 1px;
+			margin: 0px 0px 0px rem(-6);
+			@include adaptiveValue("margin-left", -6, -4, 768, 360, 1);
+			background-color: $mainColor;
+			@include adaptiveValue("width", 13, 7, 768, 360, 1);
+			@include adaptiveValue("height", 2, 1, 768, 360, 1);
+			border-radius: rem(4);
 		}
-		@media (any-hover: hover) {
-			&:hover {
-				&::before,
-				&::after {
-					background-color: rgba(0, 0, 0, 0.5);
-				}
-			}
-		}
+
 		// .quantity__button_plus
 		&_plus {
 			&::before {
 				transform: rotate(-90deg);
 			}
 		}
+
 		// .quantity__button_minus
 		&_minus {
 		}
 	}
+
 	// .quantity__input
 	&__input {
 		flex: 1 1 auto;
+
 		input {
 			height: 100%;
-			color: $Gray5;
-			font-size: 12px;
+			color: $mainColor;
+			font-weight: 500;
+			@include adaptiveValue("font-size", 18, 12, 768, 360, 1);
 			width: 100%;
 			text-align: center;
 		}
