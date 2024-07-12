@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Инструкции</title>
+	<title>Обзоры</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -385,7 +385,7 @@
 							<div class="help__sidebar-wrapper">
 								<div class="help__breadcrumbs breadcrumbs">
 									<div class="breadcrumbs__wrapper">
-										<h1 class="breadcrumbs__title">Инструкции</h1>
+										<h1 class="breadcrumbs__title">Обзоры</h1>
 
 										<div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 											<span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
@@ -394,7 +394,7 @@
 												</a>
 											</span>
 											<span class="site-breadcrumbs__separator">/</span>
-											<span class="site-breadcrumbs__title">Инструкции</span>
+											<span class="site-breadcrumbs__title">Обзоры</span>
 										</div>
 									</div>
 								</div>
@@ -421,7 +421,7 @@
 											</a>
 										</li>
 
-										<li>
+										<li class="_active">
 											<a href="archive-products-review.html">
 												<span>Обзоры</span>
 
@@ -431,7 +431,7 @@
 											</a>
 										</li>
 
-										<li class="_active">
+										<li>
 											<a href="instructions.html">
 												<span>Инструкции</span>
 
@@ -475,8 +475,8 @@
 									<select name="form[]" data-class-modif="help__navigation-mobile" class="select select_blue">
 										<option value="Гарантия и Сервис" data-href="warranty.html">Гарантия и Сервис</option>
 										<option value="Расширенная гарантия" data-href="extended-warranty.html">Расширенная гарантия</option>
-										<option value="Обзоры" data-href="archive-products-review.html">Обзоры</option>
-										<option value="" data-href="instructions.html" selected="">Инструкции</option>
+										<option value="" data-href="archive-products-review.html" selected="">Обзоры</option>
+										<option value="Инструкции" data-href="instructions.html">Инструкции</option>
 										<option value="Список неавторизованных магазинов" data-href="unauthorized-stores.html">Список неавторизованных магазинов</option>
 										<option value="Видеоинструкции" data-href="video-instructions.html">Видеоинструкции</option>
 										<option value="Как найти серийный номер на пылесосе" data-href="serial-number.html">Как найти серийный номер на пылесосе</option>
@@ -488,150 +488,185 @@
 						<div class="help__main">
 							<div class="help__banner help-banner">
 								<div class="help-banner__bg">
-									<picture><source srcset="img/help/help-banner7-bg.webp"type="image/webp"><img src="img/help/help-banner7-bg.png" alt="" loading="lazy"></picture>
+									<picture><source srcset="img/help/help-banner6-bg.webp"type="image/webp"><img src="img/help/help-banner6-bg.png" alt="" loading="lazy"></picture>
 								</div>
 
 								<div class="help-banner__wrapper">
 									<div class="help-banner__text _content">
-										<h4>Инструкции</h4>
+										<h4>Обзоры</h4>
 									</div>
 								</div>
 							</div>
 
 							<div class="help__body">
-								<div class="template-instructions">
-									<div data-tabs data-tabs-animate class="template-instructions__tabs tabs">
-										<div class="template-instructions__heading _heading">
-											<nav data-tabs-titles class="tabs__navigation">
-												<button type="submit" class="btn btn_border-main tabs__title _tab-active">Пылесосы</button>
-												<button type="submit" class="btn btn_border-main tabs__title">Кухонные приборы</button>
-												<button type="submit" class="btn btn_border-main tabs__title">Утюги</button>
-											</nav>
+								<div class="products-review">
+									<nav class="products-review__navigation _heading">
+										<div class="products-review__button"><button type="button" class="_active btn btn_border-main">Все</button></div>
+										<div class="products-review__button"><button type="button" class="btn btn_border-main">Пылесосы</button></div>
+										<div class="products-review__button"><button type="button" class="btn btn_border-main">Пылесосы с аквафильтром</button></div>
+										<div class="products-review__button"><button type="button" class="btn btn_border-main">Фены</button></div>
+										<div class="products-review__button"><button type="button" class="btn btn_border-main">Утюги</button></div>
+									</nav>
 
-											<div class="template-instructions__search">
-												<div class="search">
-													<div class="search__input">
-														<input type="text" name="form[]" placeholder="Поиск по названию..." class="form__input form__input_gray" />
+									<div class="products-review__items">
+										<div class="products-review__list">
+											<article class="products-review__card news-card">
+												<div class="news-card__wrapper">
+													<a href="single-products-review.html" data-popup="#news-card1" class="news-card__preview">
+														<picture><source srcset="img/news/news8-card-preview1440.webp"type="image/webp"><img src="img/news/news8-card-preview1440.png" alt="" loading="lazy"></picture>
+													</a>
 
-														<svg class="icon icon_search">
-															<use xlink:href="img/sprite.svg#svg-search"></use>
-														</svg>
+													<div class="news-card__body">
+														<a href="single-products-review.html" data-popup="#news-card1" class="news-card__title">Обзор компактного вертикального пылесоса Arnica Tria Pro</a>
+														<div class="news-card__excrpt _content">
+															<p>Arnica Tria Pro — это компактный вертикальный пылесос с питанием от электросети. В линейку входят две модели, отличающиеся только цветом: пользователь может выбрать красное или фиолетовое устройство.</p>
+														</div>
 													</div>
 												</div>
-											</div>
+
+												<div id="news-card1" aria-hidden="true" class="popup popup_right">
+													<div class="popup__wrapper">
+														<div class="popup__content">
+															<div class="popup__heading">
+																<div class="popup__title">
+																	<div class="title-h4">Обзор компактного вертикального пылесоса Arnica Tria Pro </div>
+																</div>
+
+																<button data-close type="button" class="popup__close">
+																	<svg class="icon">
+																		<use xlink:href="img/sprite.svg#svg-close"></use>
+																	</svg>
+																</button>
+															</div>
+															<div class="popup__text">
+																<div class="popup-review">
+																	<div class="_content">
+																		<p>
+																			<a target="_blank" href="/catalog/pylesosy/vertikalnye_pylesosy/tria_pro_arnica_pylesos_cherno_krasnyy.html">Arnica Tria Pro</a> — это компактный <a target="_blank" href="/catalog/pylesosy/vertikalnye_pylesosy/tria_pro_arnica_pylesos_cherno_krasnyy.html">вертикальный пылесос</a> с питанием от электросети. В линейку входят две модели, отличающиеся только цветом: пользователь может выбрать красное или фиолетовое устройство.
+																		</p>
+
+																		<p>
+																			Устройство поставляется в иллюстрированной картонной коробке. В комплект поставки входят:
+																		</p>
+
+																		<ul>
+																			<li>моторный блок с пылесборником и фильтрами,</li>
+																			<li>треугольная насадка с системой тройного всасывания,</li>
+																			<li>насадка для чистки текстиля и тканевых обивок мебели,</li>
+																			<li>щелевая насадка</li>
+																			<li>и руководство пользователя</li>
+																		</ul>
+
+																		<iframe width="100%" height="313" src="https://www.youtube.com/embed/mamM4_sKvi0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+																		<p>
+																			Включается пылесос крупной кнопкой на корпусе моторного блока.
+																		</p>
+																		<p>
+																			Кабель питания имеет оптимальную длину. Он достаточно длинный, чтобы убрать одну комнату средних размеров от одной розетки, но при этом не сильно мешается во время уборки, его просто придерживаешь второй рукой. Отметим, что сетевое питание исключает проблему не вовремя разряженного или потерявшего емкость аккумулятора.
+																		</p>
+																		<p>
+																			При сложенной ручке устройство представляет собой компактный ручной пылесос. Без использования насадок можно оперативно убирать поверхности от крошек и мелкого мусора. Насадка для чистки текстиля позволяет эффективно пылесосить мягкую мебель, шторы и поверхности полок. С помощью щелевой насадки можно убирать в узких местах, например между подушками дивана. Основная насадка подходит для уборки как на твердых, так и на мягких напольных покрытиях.
+																		</p>
+																		<p>
+																			Удерживать устройство в варианте ручного пылесоса бывает сложно, так как основной вес сосредоточен в передней части далеко от руки. Для трансформации устройства в вертикальный пылесос типичной компоновки нужно выдвинуть стальную штангу и откинуть рукоятку вверх. Длина штанги меняется, что позволяет подстроить высоту пылесоса под рост пользователя. Опираясь на основную насадку, <a target="_blank" href="/catalog/pylesosy/vertikalnye_pylesosy/tria_pro_arnica_pylesos_cherno_krasnyy.html">пылесос</a> устойчиво стоит в вертикальном положении. В таком виде его удобно оставлять во время перерывов в уборке и при хранении. Основная насадка крепится к моторному блоку посредством гибкого шарнира, что облегчает маневрирование при уборке. В вертикальном варианте компоновки рука от работы с пылесосом не устает, вибрация в рукоятке умеренная.
+																		</p>
+																		<p>
+																			Уникальная система тройного всасывания обеспечивает сбор мусора со всех трех граней насадки. Чтобы высыпать собранный мусор, нужно нажать на кнопку фиксатора пылесборника, отсоединить его, а затем извлечь блок фильтров. Для полной очистки необходимо отделить фильтр HEPA13 от сеточного фильтра и почистить сами фильтры (все фильтры можно мыть).
+																		</p>
+																		<p>
+																			Благодаря телескопической ручке со складной рукояткой <a target="_blank" href="/catalog/pylesosy/vertikalnye_pylesosy/tria_pro_arnica_pylesos_cherno_krasnyy.html">пылесос Arnica Tria Pro</a> легко трансформируется из вертикального в ручной. Уникальная форма основной насадки облегчает уборку напольных покрытий в углах и узких местах. Пылесос отличается небольшим весом и габаритами, но при этом работает от сети.
+																		</p>
+																		<p>
+																			Источник:&nbsp;
+																			<a href="https://www.ixbt.com/home/arnica-tria-pro-videoreview.html" rel="nofollow" target="_blank">https://www.ixbt.com/home/arnica-tria-pro-videoreview.html</a>
+																		</p>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</article>
+
+											<article class="products-review__card news-card">
+												<div class="news-card__wrapper">
+													<a href="single-products-review.html" class="news-card__preview">
+														<picture><source srcset="img/news/news5-card-preview1440.webp"type="image/webp"><img src="img/news/news5-card-preview1440.png" alt="" loading="lazy"></picture>
+													</a>
+
+													<div class="news-card__body">
+														<a href="single-products-review.html" class="news-card__title">Обзор вертикального пылесоса ARNICA Merlin Pro</a>
+														<div class="news-card__excrpt _content">
+															<p>Инженер и генеральный директор сервисного центра Шуури Андрей Беляев поделился мнением о вертикальном пылесосе ARNICA Merlin Pro.</p>
+														</div>
+													</div>
+												</div>
+											</article>
+
+											<article class="products-review__card news-card">
+												<div class="news-card__wrapper">
+													<a href="single-products-review.html" class="news-card__preview">
+														<picture><source srcset="img/news/news6-card-preview1440.webp"type="image/webp"><img src="img/news/news6-card-preview1440.png" alt="" loading="lazy"></picture>
+													</a>
+
+													<div class="news-card__body">
+														<a href="single-products-review.html" class="news-card__title">Обзор пылесоса ARNICA BORA 7000 Premium</a>
+														<div class="news-card__excrpt _content">
+															<p>Полный обзор на пылесос ARNICA BORA 7000 Premium c полным испытанием его в деле! После этого обзора у вас не останется вопросов к этой модели!</p>
+														</div>
+													</div>
+												</div>
+											</article>
+
+											<article class="products-review__card news-card">
+												<div class="news-card__wrapper">
+													<a href="single-products-review.html" class="news-card__preview">
+														<picture><source srcset="img/news/news7-card-preview1440.webp"type="image/webp"><img src="img/news/news7-card-preview1440.png" alt="" loading="lazy"></picture>
+													</a>
+
+													<div class="news-card__body">
+														<a href="single-products-review.html" class="news-card__title">Обзор напольного пылесоса Arnica Mila Trend</a>
+														<div class="news-card__excrpt _content">
+															<p>Напольный пылесос Arnica Mila Trend компактен и энергоэффективен. Хороший набор насадок и возможность плавной регулировки мощности всасывания позволяют успешно решать задачи, связанные с уборкой в домашних условиях.</p>
+														</div>
+													</div>
+												</div>
+											</article>
+
+											<article class="products-review__card news-card">
+												<div class="news-card__wrapper">
+													<a href="single-products-review.html" class="news-card__preview">
+														<picture><source srcset="img/news/news8-card-preview1440.webp"type="image/webp"><img src="img/news/news8-card-preview1440.png" alt="" loading="lazy"></picture>
+													</a>
+
+													<div class="news-card__body">
+														<a href="single-products-review.html" class="news-card__title">Обзор напольного пылесоса Arnica Mila Trend</a>
+														<div class="news-card__excrpt _content">
+															<p>Напольный пылесос Arnica Mila Trend компактен и энергоэффективен. Хороший набор насадок и возможность плавной регулировки мощности всасывания позволяют успешно решать задачи, связанные с уборкой в домашних условиях.</p>
+														</div>
+													</div>
+												</div>
+											</article>
+
+											<article class="products-review__card news-card">
+												<div class="news-card__wrapper">
+													<a href="single-products-review.html" class="news-card__preview">
+														<picture><source srcset="img/news/news3-card-preview1440.webp"type="image/webp"><img src="img/news/news3-card-preview1440.png" alt="" loading="lazy"></picture>
+													</a>
+
+													<div class="news-card__body">
+														<a href="single-products-review.html" class="news-card__title">Обзор напольного пылесоса Arnica Mila Trend</a>
+														<div class="news-card__excrpt _content">
+															<p>Напольный пылесос Arnica Mila Trend компактен и энергоэффективен. Хороший набор насадок и возможность плавной регулировки мощности всасывания позволяют успешно решать задачи, связанные с уборкой в домашних условиях.</p>
+														</div>
+													</div>
+												</div>
+											</article>
 										</div>
-										<div data-tabs-body class="tabs__content">
-											<div class="tabs__body">
-												<div class="template-instructions__cards">
-													<div class="template-instructions__card">
-														<div class="template-instructions__card-wrapper">
-															<ul class="template-instructions__list">
-																<li class="template-instructions__item"> <a href="">BORA 3000</a> </li>
-																<li class="template-instructions__item"> <a href="">BORA 4000</a> </li>
-																<li class="template-instructions__item"> <a href="">BORA 5000</a> </li>
-																<li class="template-instructions__item"> <a href="">BORA 7000 / BORA 7000 PREMIUM</a> </li>
-																<li class="template-instructions__item"> <a href="">Hydra</a> </li>
-																<li class="template-instructions__item"> <a href="">Hydra Rain</a> </li>
-																<li class="template-instructions__item"> <a href="">Hydra Rain Plus</a> </li>
-																<li class="template-instructions__item"> <a href="">Damla Plus</a> </li>
-																<li class="template-instructions__item"> <a href="">Merlin / Merlin Pro</a> </li>
-															</ul>
-														</div>
-													</div>
 
-													<div class="template-instructions__card">
-														<div class="template-instructions__card-wrapper">
-															<ul class="template-instructions__list">
-																<li class="template-instructions__item"> <a href="">Tayfun</a> </li>
-																<li class="template-instructions__item"> <a href="">Terra / Terra Plus / Terra Premium</a> </li>
-																<li class="template-instructions__item"> <a href="">Vira</a> </li>
-																<li class="template-instructions__item"> <a href="">Karayel</a> </li>
-																<li class="template-instructions__item"> <a href="">TRIA / TRIA PRO</a> </li>
-																<li class="template-instructions__item"> <a href="">Pika</a> </li>
-																<li class="template-instructions__item"> <a href="">Tesla / Tesla Premium</a> </li>
-																<li class="template-instructions__item"> <a href="">Klik Klak</a> </li>
-																<li class="template-instructions__item"> <a href="">Lotus</a> </li>
-															</ul>
-														</div>
-													</div>
-
-													<div class="template-instructions__card">
-														<div class="template-instructions__card-wrapper">
-															<ul class="template-instructions__list">
-																<li class="template-instructions__item"> <a href="">Mila Trend</a> </li>
-																<li class="template-instructions__item"> <a href="">Mila</a> </li>
-																<li class="template-instructions__item"> <a href="">Vesta</a> </li>
-																<li class="template-instructions__item"> <a href="">Sofa</a> </li>
-																<li class="template-instructions__item"> <a href="">E-max</a> </li>
-																<li class="template-instructions__item"> <a href="">NIKA</a> </li>
-																<li class="template-instructions__item"> <a href="">Solara</a> </li>
-																<li class="template-instructions__item"> <a href="">Mika</a> </li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="tabs__body">
-												<div class="template-instructions__cards">
-													<div class="template-instructions__card">
-														<div class="template-instructions__card-wrapper">
-															<ul class="template-instructions__list">
-																<li class="template-instructions__item"> <a href="">Rapid Plus / Rapid Mini / Rapid Pro</a> </li>
-																<li class="template-instructions__item"> <a href="">Quick Mix</a> </li>
-																<li class="template-instructions__item"> <a href="">Orbital Plus</a> </li>
-																<li class="template-instructions__item"> <a href="">ProKit444</a> </li>
-																<li class="template-instructions__item"> <a href="">ProKit777</a> </li>
-															</ul>
-														</div>
-													</div>
-
-													<div class="template-instructions__card">
-														<div class="template-instructions__card-wrapper">
-															<ul class="template-instructions__list">
-																<li class="template-instructions__item"> <a href="">Блендер Arnica Diva Trend PRO GH21801</a> </li>
-																<li class="template-instructions__item"> <a href="">Блендер Arnica Diva, Diva Trend GH21592 GH21593</a> </li>
-																<li class="template-instructions__item"> <a href="">Блендер Arnica Panna GH21581, GH21580</a> </li>
-																<li class="template-instructions__item"> <a href="">Блендер Arnica Panna set GH21560</a> </li>
-															</ul>
-														</div>
-													</div>
-
-													<div class="template-instructions__card">
-														<div class="template-instructions__card-wrapper">
-															<ul class="template-instructions__list">
-																<li class="template-instructions__item"> <a href="">Мясорубка Arnica Meatchef GH21220</a> </li>
-																<li class="template-instructions__item"> <a href="">Мясорубка Arnica Promeat GH21200</a> </li>
-																<li class="template-instructions__item"> <a href="">Соковыжималка PRESSO 3322 IH37101 IH37102</a> </li>
-															</ul>
-														</div>
-													</div>
-
-													<div class="template-instructions__card">
-														<div class="template-instructions__card-wrapper">
-															<ul class="template-instructions__list">
-																<li class="template-instructions__item"> <a href="">Электротурка Arnica Kopuklu IH32051+ Kopuklu Eco IH32059</a> </li>
-																<li class="template-instructions__item"> <a href="">Электротурка Arnica Kopuklu Pro IH32040 IH32041</a> </li>
-																<li class="template-instructions__item"> <a href="">Электротурка Kopuklu Eco IH32020</a> </li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
-
-											<div class="tabs__body">
-												<div class="template-instructions__cards">
-													<div class="template-instructions__card">
-														<div class="template-instructions__card-wrapper">
-															<ul class="template-instructions__list">
-																<li class="template-instructions__item"> <a href="">Puf-Puf</a> </li>
-																<li class="template-instructions__item"> <a href="">Puf-Puf Plus</a> </li>
-																<li class="template-instructions__item"> <a href="">Puf-Puf Star</a> </li>
-															</ul>
-														</div>
-													</div>
-												</div>
-											</div>
+										<div class="products-review__more">
+											<button type="button" class="btn btn_border-main">Показать еще</button>
 										</div>
 									</div>
 								</div>

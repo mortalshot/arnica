@@ -2780,23 +2780,23 @@ ol li > ul li::before {
   	@supports not (border-radius: $propertyValue) {
   		border-radius: calc(1.25rem + 0.625 * (100vw - 22.5rem) / 25.5);
   	} */
-  margin-top: clamp( 1.25rem , 0.3676470588rem  +  3.9215686275vw , 2.25rem );
+  margin-top: clamp( 0.0000000625rem , -0.8823528235rem  +  3.9215683824vw , 1rem );
   /* 	// Если поддерживается clamp();
   	@supports (margin-top: $propertyValue) {
   		margin-top: $propertyValue;
   	}
   	// Если не поддерживается clamp();
   	@supports not (margin-top: $propertyValue) {
-  		margin-top: calc(1.25rem + 1 * (100vw - 22.5rem) / 25.5);
+  		margin-top: calc(0.0000000625rem + 0.9999999375 * (100vw - 22.5rem) / 25.5);
   	} */
-  margin-bottom: clamp( 1.25rem , 0.3676470588rem  +  3.9215686275vw , 2.25rem );
+  margin-bottom: clamp( 0.0000000625rem , -0.8823528235rem  +  3.9215683824vw , 1rem );
   /* 	// Если поддерживается clamp();
   	@supports (margin-bottom: $propertyValue) {
   		margin-bottom: $propertyValue;
   	}
   	// Если не поддерживается clamp();
   	@supports not (margin-bottom: $propertyValue) {
-  		margin-bottom: calc(1.25rem + 1 * (100vw - 22.5rem) / 25.5);
+  		margin-bottom: calc(0.0000000625rem + 0.9999999375 * (100vw - 22.5rem) / 25.5);
   	} */
 }
 
@@ -5989,6 +5989,55 @@ main > .breadcrumbs {
   margin-bottom: 1.875rem;
 }
 
+.single-article__back .btn {
+  padding: 0.625rem 1rem;
+  min-height: 2.5rem;
+  gap: 0.75rem;
+}
+
+.single-article__back .btn .icon_text-link {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.single-article__heading {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  row-gap: 0.5rem;
+}
+
+.single-article__title {
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: clamp( 1.25rem , 1.0294117647rem  +  0.9803921569vw , 1.5rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(1.25rem + 0.25 * (100vw - 22.5rem) / 25.5);
+  	} */
+  line-height: 1.25;
+}
+
+.single-article__date {
+  font-size: clamp( 0.75rem , 0.6907894737rem  +  0.2631578947vw , 1rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(0.75rem + 0.25 * (100vw - 22.5rem) / 95);
+  	} */
+  line-height: 1.625;
+  color: #acacac;
+}
+
 .single-article__preview {
   border-radius: clamp( 1.25rem , 0.1470588235rem  +  4.9019607843vw , 2.5rem );
   /* 	// Если поддерживается clamp();
@@ -6038,6 +6087,10 @@ main > .breadcrumbs {
   		font-size: calc(0.75rem + 0.25 * (100vw - 22.5rem) / 25.5);
   	} */
   line-height: 1.625;
+}
+
+.single-article__text a {
+  color: #3b8de8;
 }
 
 .single-article__suggest .news-card__preview {
@@ -8008,6 +8061,193 @@ main > .breadcrumbs {
   	} */
 }
 
+.products-review__navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.products-review__navigation::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.products-review__navigation .btn {
+  white-space: nowrap;
+}
+
+.products-review__button .btn {
+  min-width: 6.25rem;
+}
+
+.products-review__button .btn:not(._active) {
+  border-color: transparent;
+  color: #686868;
+}
+
+.products-review__list {
+  display: -ms-grid;
+  display: grid;
+  -webkit-column-gap: clamp( 1.125rem , -1.875rem  +  6.25vw , 3.75rem );
+     -moz-column-gap: clamp( 1.125rem , -1.875rem  +  6.25vw , 3.75rem );
+          column-gap: clamp( 1.125rem , -1.875rem  +  6.25vw , 3.75rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (column-gap: $propertyValue) {
+  		column-gap: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (column-gap: $propertyValue) {
+  		column-gap: calc(1.125rem + 2.625 * (100vw - 48rem) / 42);
+  	} */
+  row-gap: clamp( 2rem , 0.0000000625rem  +  4.1666666667vw , 3.75rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (row-gap: $propertyValue) {
+  		row-gap: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (row-gap: $propertyValue) {
+  		row-gap: calc(2rem + 1.75 * (100vw - 48rem) / 42);
+  	} */
+}
+
+.products-review__card .news-card__wrapper {
+  row-gap: 0.5rem;
+}
+
+.products-review__card .news-card__body {
+  max-width: initial;
+}
+
+.products-review__card .news-card__preview {
+  padding-bottom: 56.0081466395%;
+  border-radius: clamp( 1.25rem , 0.5357142857rem  +  1.4880952381vw , 1.875rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (border-radius: $propertyValue) {
+  		border-radius: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (border-radius: $propertyValue) {
+  		border-radius: calc(1.25rem + 0.625 * (100vw - 48rem) / 42);
+  	} */
+}
+
+.products-review__card .news-card__title {
+  font-weight: 700;
+  font-size: clamp( 1rem , 0.9703947368rem  +  0.1315789474vw , 1.125rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(1rem + 0.125 * (100vw - 22.5rem) / 95);
+  	} */
+  line-height: 1.4444444444;
+}
+
+.products-review__card .news-card__excrpt {
+  color: #7a7a7a;
+}
+
+.products-review__more {
+  margin-top: clamp( 1.25rem , 0.3676470588rem  +  3.9215686275vw , 2.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (margin-top: $propertyValue) {
+  		margin-top: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (margin-top: $propertyValue) {
+  		margin-top: calc(1.25rem + 1 * (100vw - 22.5rem) / 25.5);
+  	} */
+}
+
+.products-review__more .btn {
+  width: 100%;
+}
+
+.popup-review {
+  max-height: calc(100svh - 12.5rem);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #ff3030 #f1f3f5;
+  padding-left: clamp( 1.875rem , 1.5892857143rem  +  0.5952380952vw , 2.125rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (padding-left: $propertyValue) {
+  		padding-left: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (padding-left: $propertyValue) {
+  		padding-left: calc(1.875rem + 0.25 * (100vw - 48rem) / 42);
+  	} */
+  padding-right: clamp( 1.875rem , 1.5892857143rem  +  0.5952380952vw , 2.125rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (padding-right: $propertyValue) {
+  		padding-right: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (padding-right: $propertyValue) {
+  		padding-right: calc(1.875rem + 0.25 * (100vw - 48rem) / 42);
+  	} */
+  margin-left: clamp( -2.125rem , -1.5892857143rem  +  -0.5952380952vw , -1.875rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (margin-left: $propertyValue) {
+  		margin-left: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (margin-left: $propertyValue) {
+  		margin-left: calc(-1.875rem + -0.25 * (100vw - 48rem) / 42);
+  	} */
+  margin-right: clamp( -2.125rem , -1.5892857143rem  +  -0.5952380952vw , -1.875rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (margin-right: $propertyValue) {
+  		margin-right: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (margin-right: $propertyValue) {
+  		margin-right: calc(-1.875rem + -0.25 * (100vw - 48rem) / 42);
+  	} */
+}
+
+.popup-review::-webkit-scrollbar {
+  width: 0.3125rem;
+}
+
+.popup-review::-webkit-scrollbar-track {
+  background-color: #ff3030;
+  border-radius: 22px;
+}
+
+.popup-review::-webkit-scrollbar-thumb {
+  border-radius: 22px;
+  background-color: #f1f3f5;
+}
+
+.popup-review ._content {
+  font-size: clamp( 0.875rem , 0.8453947368rem  +  0.1315789474vw , 1rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(0.875rem + 0.125 * (100vw - 22.5rem) / 95);
+  	} */
+  line-height: 1.625;
+}
+
+.popup-review ._content a {
+  color: #3b8de8;
+}
+
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0;
 }
@@ -9127,6 +9367,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     	@supports not (column-gap: $propertyValue) {
     		column-gap: calc(2.5rem + 5.75 * (100vw - 48rem) / 14);
     	} */
+  }
+
+  .products-review__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -10672,6 +10917,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     display: none;
   }
 
+  .help__main .single-article__grid {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+
   .help-banner {
     min-height: clamp( 16.375rem , 0.4375rem  +  17.7083333333vw , 21.6875rem );
     /* 	// Если поддерживается clamp();
@@ -10820,6 +11070,11 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .cart-section__grid {
     -ms-grid-columns: 1fr 32.1739130435%;
     grid-template-columns: 1fr 32.1739130435%;
+  }
+
+  .help__main .single-article__grid {
+    -ms-grid-columns: 1fr 18.5rem;
+    grid-template-columns: 1fr 18.5rem;
   }
 
   .contacts-block__grid {
@@ -11195,6 +11450,26 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
+  }
+
+  .help__main .single-article__cards {
+    -ms-grid-columns: (1fr)[3];
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .help__main .single-article__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 2rem;
+  }
+
+  .help__main .single-article__button .btn {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
 }
 
@@ -13038,6 +13313,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .faq__title:hover {
     opacity: 0.8;
+  }
+
+  .products-review__button .btn:not(._active):hover {
+    color: #fff;
   }
 }
 

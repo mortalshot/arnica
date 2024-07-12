@@ -351,8 +351,8 @@ ol {
   iframe {
     position: relative;
     @include adaptiveValue("border-radius", 30, 20, 768, 360, 1);
-    @include adaptiveValue("margin-top", 36, 20, 768, 360, 1);
-    @include adaptiveValue("margin-bottom", 36, 20, 768, 360, 1);
+    @include adaptiveValue("margin-top", 16, 0, 768, 360, 1);
+    @include adaptiveValue("margin-bottom", 16, 0, 768, 360, 1);
   }
 
   div {
