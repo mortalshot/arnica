@@ -376,6 +376,59 @@ ol {
   }
 }
 
+.table {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: $Red $Line;
+
+  &::-webkit-scrollbar {
+    width: rem(5);
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $Red;
+    border-radius: 22px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 22px;
+    background-color: $Line;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: separate;
+    @include adaptiveValue("font-size", 16, 12, 768, 360, 1);
+    line-height: math.div(26, 16);
+    border-spacing: rem(2) rem(4);
+
+    th {
+      font-weight: 400;
+      text-align: left;
+      color: $Gray3;
+      padding: rem(12) rem(16);
+    }
+
+    td {
+      padding: rem(10) rem(16);
+      background-color: $Line;
+
+      &:first-child {
+        border-top-left-radius: rem(8);
+        border-bottom-left-radius: rem(8);
+      }
+
+      &:last-child {
+        border-top-right-radius: rem(8);
+        border-bottom-right-radius: rem(8);
+      }
+
+      a {
+        color: $Blue;
+      }
+    }
+  }
+}
+
 ._hidden {
   position: absolute;
   left: 0;

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Список неавторизованных магазинов"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="help">
+        <div class="help__container">
+          <div class="help__grid">
+            <aside class="help__sidebar">
+              <div class="help__sidebar-wrapper">
+                <div class="help__breadcrumbs breadcrumbs">
+                  <div class="breadcrumbs__wrapper">
+                    <h1 class="breadcrumbs__title">Покупателям</h1>
+
+                    <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                      <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="" itemprop="item">
+                          <span itemprop="name">Главная</span>
+                        </a>
+                      </span>
+                      <span class="site-breadcrumbs__separator">/</span>
+                      <span class="site-breadcrumbs__title">Покупателям</span>
+                    </div>
+                  </div>
+                </div>
+
+                <nav class="help__navigation">
+                  <ul class="help__navigation-desk">
+                    <li>
+                      <a href="warranty.html">
+                        <span>Гарантия и Сервис</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="extended-warranty.html">
+                        <span>Расширенная гарантия</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="archive-products-review.html">
+                        <span>Обзоры</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="instructions.html">
+                        <span>Инструкции</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="_active">
+                      <a href="unauthorized-stores.html">
+                        <span>Список неавторизованных магазинов</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="video-instructions.html">
+                        <span>Видеоинструкции</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="serial-number.html">
+                        <span>Как найти серийный номер на пылесосе</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <select name="form[]" data-class-modif="help__navigation-mobile" class="select select_blue">
+                    <option value="Гарантия и Сервис" data-href="warranty.html">Гарантия и Сервис</option>
+                    <option value="Расширенная гарантия" data-href="extended-warranty.html">Расширенная гарантия</option>
+                    <option value="Обзоры" data-href="archive-products-review.html">Обзоры</option>
+                    <option value="Инструкции" data-href="instructions.html">Инструкции</option>
+                    <option value="" data-href="unauthorized-stores.html" selected="">Список неавторизованных магазинов</option>
+                    <option value="Видеоинструкции" data-href="video-instructions.html">Видеоинструкции</option>
+                    <option value="Как найти серийный номер на пылесосе" data-href="serial-number.html">Как найти серийный номер на пылесосе</option>
+                  </select>
+                </nav>
+              </div>
+            </aside>
+
+            <div class="help__main">
+              <div class="help__banner help-banner">
+                <div class="help-banner__bg">
+                  <img src="@img/help/help-banner8-bg.png" alt="" loading="lazy">
+                </div>
+
+                <div class="help-banner__wrapper">
+                  <div class="help-banner__text _content">
+                    <h4>Список неавторизованных магазинов</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="help-template-text">
+                <div class="_content">
+                  <h6>Уважаемые покупатели и посетители сайта!</h6>
+                  <p>Наша компания несет ответственность за качество своей продукции. Мы тщательно подходим к выбору партнеров, которые представляют на российском рынке бренд Arnica. <br> Полный список официальных дилеров Arnica доступен в разделе <a href="">Магазины</a> на нашем сайте.</p>
+                  <p>Но есть неавторизованные магазины, которые не всегда предоставляют покупателям корректно оформленную официальную гарантию на продукцию, а также достоверную информацию о технических характеристиках и особенностях эксплуатации приборов Arnica.</p>
+                  <p>Мы не поставляем технику и не оказываем никакой технической поддержки неавторизованным интернет-магазинам. В связи с этим не рекомендуем приобретение техники Arnica в указанных ниже магазинах во избежании проблем с использованием и обслуживанием бытовой техники.</p>
+                </div>
+              </div>
+
+              <div class="template-table">
+                <div class="template-table__heading _content _heading">
+                  <h6>Список неавторизированных магазинов:</h6>
+                </div>
+
+                <div class="table" style="max-width: 820px;">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>№</th>
+                        <th>Наименование магазина</th>
+                        <th>Наименование сайта</th>
+                      </tr>
+                    </thead>
+
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>01</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Elecity</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">elecity.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>02</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Первый</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">first-bt.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>03</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Cenam net</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">cenam.net</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>04</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Техника.СПБ.ру</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">technika.spb.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>05</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Плеер.ру</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">pleer.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>06</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Техника.МКС.ру</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">technika.msk.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>07</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Электрозон</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">electrozon.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>08</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>HARBERY.RU</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">harbery.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>09</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Ого!</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">ogo1.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>10</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>СебеВДом</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">sebevdom.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>11</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Везу в Дом</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">vezuvdom.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>12</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>CYBER-TOUCH</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">sebevdom.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>13</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Техностор</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">technostor.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>14</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Время ТВ</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">timetv.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>15</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Оптимальный выбор</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">optimabt-spb.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>16</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>TTT.ru</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">TTT.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>17</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>Лоусток</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">lowstock.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <div class="_content">
+                            <p>18</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <p>RFMS.ru</p>
+                          </div>
+                        </td>
+                        <td>
+                          <div class="_content">
+                            <a href="">rfms.ru</a>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

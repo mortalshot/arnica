@@ -2861,6 +2861,69 @@ ol li > ul li::before {
   margin-bottom: 0;
 }
 
+.table {
+  width: 100%;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ff3030 #f1f3f5;
+}
+
+.table::-webkit-scrollbar {
+  width: 0.3125rem;
+}
+
+.table::-webkit-scrollbar-track {
+  background-color: #ff3030;
+  border-radius: 22px;
+}
+
+.table::-webkit-scrollbar-thumb {
+  border-radius: 22px;
+  background-color: #f1f3f5;
+}
+
+.table table {
+  width: 100%;
+  border-collapse: separate;
+  font-size: clamp( 0.75rem , 0.5294117647rem  +  0.9803921569vw , 1rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(0.75rem + 0.25 * (100vw - 22.5rem) / 25.5);
+  	} */
+  line-height: 1.625;
+  border-spacing: 0.125rem 0.25rem;
+}
+
+.table table th {
+  font-weight: 400;
+  text-align: left;
+  color: #686868;
+  padding: 0.75rem 1rem;
+}
+
+.table table td {
+  padding: 0.625rem 1rem;
+  background-color: #f1f3f5;
+}
+
+.table table td:first-child {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.table table td:last-child {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.table table td a {
+  color: #3b8de8;
+}
+
 ._hidden {
   position: absolute;
   left: 0;
@@ -5237,6 +5300,11 @@ main > .breadcrumbs {
   color: #999999;
 }
 
+.news-card_video .news-card__title {
+  font-family: "CeraPro";
+  font-weight: 500 !important;
+}
+
 .search-page__container {
   min-height: 40svh;
   display: -webkit-box;
@@ -6957,6 +7025,10 @@ main > .breadcrumbs {
   	} */
 }
 
+.help__breadcrumbs .breadcrumbs__title {
+  word-break: break-all;
+}
+
 .help__navigation ul {
   display: -ms-grid;
   display: grid;
@@ -7189,6 +7261,10 @@ main > .breadcrumbs {
   		font-size: calc(0.875rem + 0.125 * (100vw - 22.5rem) / 25.5);
   	} */
   line-height: 1.625;
+}
+
+.help-template-text a {
+  color: #3b8de8;
 }
 
 .help-template-uppercase ._content {
@@ -13253,12 +13329,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .help__navigation ul a:hover svg {
     fill: #222222;
-  }
-
-  .help-banner [data-popup] {
-    -webkit-transition: 0.3s ease opacity 0s;
-    -o-transition: 0.3s ease opacity 0s;
-    transition: 0.3s ease opacity 0s;
   }
 
   .help-banner [data-popup]:hover {

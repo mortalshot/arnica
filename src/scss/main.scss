@@ -1097,6 +1097,14 @@ a.partner-card {
   &__date {
     color: #999999;
   }
+
+  // .news-card_video
+  &_video {
+    .news-card__title {
+      font-family: $fontFamily;
+      font-weight: 500 !important;
+    }
+  }
 }
 
 // !Страница поиска
@@ -3260,6 +3268,9 @@ a.partner-card {
 
   // .help__breadcrumbs
   &__breadcrumbs {
+    .breadcrumbs__title {
+      word-break: break-all;
+    }
   }
 
   // .help__navigation
@@ -3415,7 +3426,6 @@ a.partner-card {
     cursor: pointer;
 
     @media (any-hover: hover) {
-      transition: $transition ease opacity 0s;
       &:hover {
         opacity: 0.8;
       }
@@ -3512,6 +3522,10 @@ a.partner-card {
 .help-template-text {
   @include adaptiveValue("font-size", 16, 14, 768, 360, 1);
   line-height: math.div(26, 16);
+
+  a {
+    color: $Blue;
+  }
 }
 
 //.help-template-uppercase     ====================================================================================================
