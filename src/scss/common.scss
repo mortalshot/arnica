@@ -302,7 +302,7 @@ ol {
     & > ul {
       li {
         padding: 0;
-        
+
         &::before {
           display: none;
         }
@@ -1139,5 +1139,26 @@ main > .breadcrumbs {
   .page-next {
   }
   .page-all {
+  }
+}
+
+.search {
+  // .search__input
+  &__input {
+    position: relative;
+
+    input {
+      padding-right: rem(52);
+    }
+
+    .icon_search {
+      position: absolute;
+      right: rem(16);
+      top: 50%;
+      transform: translateY(-50%);
+      width: rem(20);
+      height: rem(20);
+      flex: 0 0 rem(20);
+    }
   }
 }

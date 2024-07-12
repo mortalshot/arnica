@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Гарантия и Сервис"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="help">
+        <div class="help__container">
+          <div class="help__grid">
+            <aside class="help__sidebar">
+              <div class="help__sidebar-wrapper">
+                <div class="help__breadcrumbs breadcrumbs">
+                  <div class="breadcrumbs__wrapper">
+                    <h1 class="breadcrumbs__title">Инструкции</h1>
+
+                    <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                      <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                        <a href="" itemprop="item">
+                          <span itemprop="name">Главная</span>
+                        </a>
+                      </span>
+                      <span class="site-breadcrumbs__separator">/</span>
+                      <span class="site-breadcrumbs__title">Инструкции</span>
+                    </div>
+                  </div>
+                </div>
+
+                <nav class="help__navigation">
+                  <ul class="help__navigation-desk">
+                    <li>
+                      <a href="warranty.html">
+                        <span>Гарантия и Сервис</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="extended-warranty.html">
+                        <span>Расширенная гарантия</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="archive-products-review.html">
+                        <span>Обзоры</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li class="_active">
+                      <a href="instructions.html">
+                        <span>Инструкции</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="unauthorized-stores.html">
+                        <span>Список неавторизованных магазинов</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="video-instructions.html">
+                        <span>Видеоинструкции</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="serial-number.html">
+                        <span>Как найти серийный номер на пылесосе</span>
+
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-select"></use>
+                        </svg>
+                      </a>
+                    </li>
+                  </ul>
+
+                  <select name="form[]" data-class-modif="help__navigation-mobile" class="select select_blue">
+                    <option value="Гарантия и Сервис" data-href="warranty.html">Гарантия и Сервис</option>
+                    <option value="Расширенная гарантия" data-href="extended-warranty.html">Расширенная гарантия</option>
+                    <option value="Обзоры" data-href="archive-products-review.html">Обзоры</option>
+                    <option value="" data-href="instructions.html" selected="">Инструкции</option>
+                    <option value="Список неавторизованных магазинов" data-href="unauthorized-stores.html">Список неавторизованных магазинов</option>
+                    <option value="Видеоинструкции" data-href="video-instructions.html">Видеоинструкции</option>
+                    <option value="Как найти серийный номер на пылесосе" data-href="serial-number.html">Как найти серийный номер на пылесосе</option>
+                  </select>
+                </nav>
+              </div>
+            </aside>
+
+            <div class="help__main">
+              <div class="help__banner help-banner">
+                <div class="help-banner__bg">
+                  <img src="@img/help/help-banner7-bg.png" alt="" loading="lazy">
+                </div>
+
+                <div class="help-banner__wrapper">
+                  <div class="help-banner__text _content">
+                    <h4>Инструкции</h4>
+                  </div>
+                </div>
+              </div>
+
+              <div class="help__body">
+                <div class="template-instructions">
+                  <div data-tabs data-tabs-animate class="template-instructions__tabs tabs">
+                    <div class="template-instructions__heading _heading">
+                      <nav data-tabs-titles class="tabs__navigation">
+                        <button type="submit" class="btn btn_border-main tabs__title _tab-active">Пылесосы</button>
+                        <button type="submit" class="btn btn_border-main tabs__title">Кухонные приборы</button>
+                        <button type="submit" class="btn btn_border-main tabs__title">Утюги</button>
+                      </nav>
+
+                      <div class="template-instructions__search">
+                        <div class="search">
+                          <div class="search__input">
+                            <input type="text" name="form[]" placeholder="Поиск по названию..." class="form__input form__input_gray" />
+
+                            <svg class="icon icon_search">
+                              <use xlink:href="img/sprite.svg#svg-search"></use>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div data-tabs-body class="tabs__content">
+                      <div class="tabs__body">
+                        <div class="template-instructions__cards">
+                          <div class="template-instructions__card">
+                            <div class="template-instructions__card-wrapper">
+                              <ul class="template-instructions__list">
+                                <li class="template-instructions__item"> <a href="">BORA 3000</a> </li>
+                                <li class="template-instructions__item"> <a href="">BORA 4000</a> </li>
+                                <li class="template-instructions__item"> <a href="">BORA 5000</a> </li>
+                                <li class="template-instructions__item"> <a href="">BORA 7000 / BORA 7000 PREMIUM</a> </li>
+                                <li class="template-instructions__item"> <a href="">Hydra</a> </li>
+                                <li class="template-instructions__item"> <a href="">Hydra Rain</a> </li>
+                                <li class="template-instructions__item"> <a href="">Hydra Rain Plus</a> </li>
+                                <li class="template-instructions__item"> <a href="">Damla Plus</a> </li>
+                                <li class="template-instructions__item"> <a href="">Merlin / Merlin Pro</a> </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="template-instructions__card">
+                            <div class="template-instructions__card-wrapper">
+                              <ul class="template-instructions__list">
+                                <li class="template-instructions__item"> <a href="">Tayfun</a> </li>
+                                <li class="template-instructions__item"> <a href="">Terra / Terra Plus / Terra Premium</a> </li>
+                                <li class="template-instructions__item"> <a href="">Vira</a> </li>
+                                <li class="template-instructions__item"> <a href="">Karayel</a> </li>
+                                <li class="template-instructions__item"> <a href="">TRIA / TRIA PRO</a> </li>
+                                <li class="template-instructions__item"> <a href="">Pika</a> </li>
+                                <li class="template-instructions__item"> <a href="">Tesla / Tesla Premium</a> </li>
+                                <li class="template-instructions__item"> <a href="">Klik Klak</a> </li>
+                                <li class="template-instructions__item"> <a href="">Lotus</a> </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="template-instructions__card">
+                            <div class="template-instructions__card-wrapper">
+                              <ul class="template-instructions__list">
+                                <li class="template-instructions__item"> <a href="">Mila Trend</a> </li>
+                                <li class="template-instructions__item"> <a href="">Mila</a> </li>
+                                <li class="template-instructions__item"> <a href="">Vesta</a> </li>
+                                <li class="template-instructions__item"> <a href="">Sofa</a> </li>
+                                <li class="template-instructions__item"> <a href="">E-max</a> </li>
+                                <li class="template-instructions__item"> <a href="">NIKA</a> </li>
+                                <li class="template-instructions__item"> <a href="">Solara</a> </li>
+                                <li class="template-instructions__item"> <a href="">Mika</a> </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="tabs__body">
+                        <div class="template-instructions__cards">
+                          <div class="template-instructions__card">
+                            <div class="template-instructions__card-wrapper">
+                              <ul class="template-instructions__list">
+                                <li class="template-instructions__item"> <a href="">Rapid Plus / Rapid Mini / Rapid Pro</a> </li>
+                                <li class="template-instructions__item"> <a href="">Quick Mix</a> </li>
+                                <li class="template-instructions__item"> <a href="">Orbital Plus</a> </li>
+                                <li class="template-instructions__item"> <a href="">ProKit444</a> </li>
+                                <li class="template-instructions__item"> <a href="">ProKit777</a> </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="template-instructions__card">
+                            <div class="template-instructions__card-wrapper">
+                              <ul class="template-instructions__list">
+                                <li class="template-instructions__item"> <a href="">Блендер Arnica Diva Trend PRO GH21801</a> </li>
+                                <li class="template-instructions__item"> <a href="">Блендер Arnica Diva, Diva Trend GH21592 GH21593</a> </li>
+                                <li class="template-instructions__item"> <a href="">Блендер Arnica Panna GH21581, GH21580</a> </li>
+                                <li class="template-instructions__item"> <a href="">Блендер Arnica Panna set GH21560</a> </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="template-instructions__card">
+                            <div class="template-instructions__card-wrapper">
+                              <ul class="template-instructions__list">
+                                <li class="template-instructions__item"> <a href="">Мясорубка Arnica Meatchef GH21220</a> </li>
+                                <li class="template-instructions__item"> <a href="">Мясорубка Arnica Promeat GH21200</a> </li>
+                                <li class="template-instructions__item"> <a href="">Соковыжималка PRESSO 3322 IH37101 IH37102</a> </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="template-instructions__card">
+                            <div class="template-instructions__card-wrapper">
+                              <ul class="template-instructions__list">
+                                <li class="template-instructions__item"> <a href="">Электротурка Arnica Kopuklu IH32051+ Kopuklu Eco IH32059</a> </li>
+                                <li class="template-instructions__item"> <a href="">Электротурка Arnica Kopuklu Pro IH32040 IH32041</a> </li>
+                                <li class="template-instructions__item"> <a href="">Электротурка Kopuklu Eco IH32020</a> </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="tabs__body">
+                        <div class="template-instructions__cards">
+                          <div class="template-instructions__card">
+                            <div class="template-instructions__card-wrapper">
+                              <ul class="template-instructions__list">
+                                <li class="template-instructions__item"> <a href="">Puf-Puf</a> </li>
+                                <li class="template-instructions__item"> <a href="">Puf-Puf Plus</a> </li>
+                                <li class="template-instructions__item"> <a href="">Puf-Puf Star</a> </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

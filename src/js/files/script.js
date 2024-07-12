@@ -631,3 +631,20 @@ if (compareSwitch) {
     })
   });
 }
+
+// Поиск нужной инструкции
+const templateInstructions = document.querySelector('.template-instructions');
+if (templateInstructions) {
+  const instructionItems = document.querySelectorAll('.template-instructions__item');
+  const instructionSearch = document.querySelector('.template-instructions__search input');
+
+  instructionSearch.addEventListener('input', function () {
+    instructionItems.forEach(item => {
+      if (item.textContent.toLowerCase().includes(instructionSearch.value.toLowerCase())) {
+        item.removeAttribute('hidden');
+      } else {
+        item.setAttribute('hidden', 'true');
+      }
+    });
+  })
+}

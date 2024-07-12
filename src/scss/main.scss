@@ -3568,6 +3568,115 @@ a.partner-card {
   }
 }
 
+//.template-instructions     ====================================================================================================
+.template-instructions {
+  // .template-instructions__tabs
+  &__tabs {
+  }
+
+  // .template-instructions__heading
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: rem(32) rem(16);
+
+    .tabs__navigation {
+      width: initial;
+    }
+  }
+
+  // .template-instructions__search
+  &__search {
+    flex: 1 0 rem(300);
+
+    @media (min-width: $tablet) {
+      flex: 0 1 rem(307);
+    }
+
+    .form__input {
+      border-radius: rem(30) !important;
+    }
+  }
+
+  // .template-instructions__cards
+  &__cards {
+    min-height: rem(330);
+    display: grid;
+    align-content: flex-start;
+
+    @media (min-width: $mobile) {
+      grid-template-columns: repeat(3, 1fr);
+      @include adaptiveValue("gap", 32, 12, 1440, 992, 1);
+    }
+    @media (max-width: $tablet) {
+      border-radius: rem(16);
+      overflow: hidden;
+      background-color: $Grey;
+    }
+  }
+
+  // .template-instructions__card
+  &__card {
+    @media (max-width: $mobile) {
+      .template-instructions__card-wrapper {
+        padding-top: 0;
+      }
+
+      &:first-child {
+        .template-instructions__card-wrapper {
+          padding-top: rem(16);
+        }
+      }
+      &:last-child {
+        .template-instructions__card-wrapper {
+          padding-bottom: rem(16);
+        }
+      }
+    }
+  }
+
+  // .template-instructions__card-wrapper
+  &__card-wrapper {
+    padding: rem(16);
+
+    @media (min-width: $mobile) {
+      background-color: $Grey;
+      border-radius: rem(16);
+    }
+  }
+
+  // .template-instructions__list
+  &__list {
+    display: grid;
+    align-content: flex-start;
+    row-gap: rem(16);
+  }
+
+  // .template-instructions__item
+  &__item {
+    a {
+      font-size: rem(13);
+      line-height: math.div(18, 13);
+      color: $Blue;
+      text-decoration: underline from-font;
+      text-underline-offset: 3px;
+      transition: $transition ease text-decoration 0s;
+
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: underline transparent from-font;
+        }
+      }
+
+      &[hidden] {
+        display: none;
+      }
+    }
+  }
+}
+
 //.reviews     ====================================================================================================
 .reviews {
   // .reviews__gallery

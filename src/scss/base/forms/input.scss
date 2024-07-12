@@ -20,7 +20,7 @@ textarea {
 	}
 
 	&:focus {
-		border-color: $mainColor;
+		border-color: $mainColor !important;
 
 		&::placeholder {
 			opacity: 0;
