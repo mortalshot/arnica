@@ -167,7 +167,7 @@ body::after {
 	}
 
 	&.popup_right {
-		padding: 0;
+		padding: 0 !important;
 
 		.popup__wrapper {
 			align-items: flex-end;

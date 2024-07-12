@@ -1377,7 +1377,11 @@ a.partner-card {
     }
   }
 
-  .catalog__sorting {
+  &__sorting {
+    div.select {
+      min-width: rem(200);
+    }
+
     .select__value {
       height: rem(32);
     }
@@ -1391,10 +1395,6 @@ a.partner-card {
 .catalog-sidebar {
   // .catalog-sidebar__wrapper
   &__wrapper {
-    @media (min-width: $tablet) {
-      position: sticky;
-      top: rem(108);
-    }
     @media (max-width: $tablet) {
       padding-bottom: rem(80);
       padding-top: rem(70);

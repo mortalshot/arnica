@@ -4,7 +4,7 @@
 	display: flex;
 	align-items: flex-end;
 	font-size: 40px;
-	line-height: 0.75;
+	line-height: 1.1;
 	transition: opacity 0.3s ease 0s;
 }
 
@@ -24,6 +24,7 @@
 .rating__body::before {
 	content: "★★★★★";
 	display: block;
+	color: $Gray4;
 }
 
 .rating__active {

@@ -905,7 +905,7 @@ textarea.form__input {
       -ms-flex-align: end;
           align-items: flex-end;
   font-size: 40px;
-  line-height: 0.75;
+  line-height: 1.1;
   -webkit-transition: opacity 0.3s ease 0s;
   -o-transition: opacity 0.3s ease 0s;
   transition: opacity 0.3s ease 0s;
@@ -927,6 +927,7 @@ textarea.form__input {
 .rating__body::before {
   content: "★★★★★";
   display: block;
+  color: #acacac;
 }
 
 .rating__active {
@@ -2168,7 +2169,7 @@ body::after {
 }
 
 .popup.popup_right {
-  padding: 0;
+  padding: 0 !important;
 }
 
 .popup.popup_right .popup__wrapper {
@@ -5518,11 +5519,15 @@ main > .breadcrumbs {
   margin: -0.375rem;
 }
 
-.catalog .catalog__sorting .select__value {
+.catalog__sorting div.select {
+  min-width: 12.5rem;
+}
+
+.catalog__sorting .select__value {
   height: 2rem;
 }
 
-.catalog .catalog__sorting .select__options {
+.catalog__sorting .select__options {
   top: 1.9375rem;
 }
 
@@ -10626,11 +10631,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .catalog__heading .catalog-filter__caption {
     display: none;
-  }
-
-  .catalog-sidebar__wrapper {
-    position: sticky;
-    top: 6.75rem;
   }
 
   .catalog-filter__head {
