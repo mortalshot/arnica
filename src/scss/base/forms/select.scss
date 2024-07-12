@@ -29,6 +29,7 @@
 		align-items: center;
 		padding: 0 rem(16);
 		gap: rem(4);
+		height: 100%;
 
 		> * {
 			flex: 1 1 auto;
@@ -68,10 +69,12 @@
 		flex: 1 1 auto;
 	}
 
+	// .select__input
 	&__input {
 		width: 100%;
 		background-color: transparent;
 		height: 100%;
+		color: $mainColor;
 	}
 
 	// .select__options
@@ -91,10 +94,23 @@
 
 	// .select__scroll
 	&__scroll {
+		max-height: 200px;
 		overflow-y: auto;
 		overflow-x: hidden;
-		// Максимальная высота
-		max-height: 200px;
+		overflow-y: auto;
+		scrollbar-width: thin;
+		scrollbar-color: $Red $Line;
+		&::-webkit-scrollbar {
+			width: rem(5);
+		}
+		&::-webkit-scrollbar-track {
+			background-color: $Red;
+			border-radius: 22px;
+		}
+		&::-webkit-scrollbar-thumb {
+			border-radius: 22px;
+			background-color: $Line;
+		}
 		// Стили скроллбара
 		.simplebar-scrollbar {
 			&::before {
@@ -121,6 +137,10 @@
 			&:hover {
 				color: $Red;
 			}
+		}
+
+		&[hidden] {
+			display: none;
 		}
 	}
 

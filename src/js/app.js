@@ -12,7 +12,7 @@
 */
 
 // Включить/выключить FLS (Full Logging System) (в работе)
-window['FLS'] = true;
+window['FLS'] = false;
 
 // Подключение основного файла стилей
 import "../scss/style.scss";
@@ -103,7 +103,7 @@ flsForms.formRating();
 import './libs/select.js'
 
 /* Модуль работы с календарем */
-// import './files/forms/datepicker.js'
+import './files/forms/datepicker.js'
 
 /* (В работе) Модуль работы с масками.*/
 /*
@@ -112,7 +112,7 @@ import './libs/select.js'
 Документация плагина: https://github.com/RobinHerbots/inputmask
 Сниппет(HTML):
 */
-// import "./files/forms/inputmask.js";
+import "./files/forms/inputmask.js";
 
 /* Модуль работы с ползунком */
 /*

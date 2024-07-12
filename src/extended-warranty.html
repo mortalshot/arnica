@@ -31,7 +31,7 @@
 
                 <nav class="help__navigation">
                   <ul class="help__navigation-desk">
-                    <li class="_active">
+                    <li>
                       <a href="warranty.html">
                         <span>Гарантия и Сервис</span>
 
@@ -41,7 +41,7 @@
                       </a>
                     </li>
 
-                    <li>
+                    <li class="_active">
                       <a href="extended-warranty.html">
                         <span>Расширенная гарантия</span>
 
@@ -116,243 +116,49 @@
             </aside>
 
             <div class="help__main">
-              <div class="help__banner help-banner">
+              <div class="help__banner help-banner help-banner_white">
                 <div class="help-banner__bg">
-                  <img src="@img/help/help-banner4-bg.png" alt="" loading="lazy">
+                  <img src="@img/help/help-banner5-bg.png" alt="" loading="lazy">
                 </div>
 
                 <div class="help-banner__wrapper">
-                  <div class="help-banner__text _content">
-                    <h4>Гарантия и Сервис</h4>
-                    <p style="color: #858B8D;">Бытовая техника Arnica имеет большой запас прочности и длительный срок службы. </p>
+                  <div class="help-banner__caption title-h4" style="max-width: 800px;">Расширенная гарантия на продукцию ARNICA</div>
+
+                  <div class="help-banner__text _content" style="max-width: 800px;">
+                    <h4>РЕГИСТРИРУЙТЕ ПОКУПКУ И ПОЛУЧАЙТЕ ДОПОЛНИТЕЛЬНЫЙ ГОД ГАРАНТИЙНОГО ОБСЛУЖИВАНИЯ</h4>
                   </div>
 
-                  <div class="form__row">
-                    <div class="col-12 col-md-5 col-xxl-3">
-                      <div class="form__label">Выберите город</div>
-
-                      <select name="form[]" class="select" data-scroll data-search>
-                        <option value="239">Абакан</option>
-                        <option value="52">Астрахань</option>
-                        <option value="213">Белгород</option>
-                        <option value="171">Брест</option>
-                        <option value="174">Брянск</option>
-                        <option value="139">Великий Новгород</option>
-                        <option value="173">Витебск</option>
-                        <option value="142">Владивосток</option>
-                        <option value="53">Волгоград</option>
-                        <option value="54">Вологда</option>
-                        <option value="55">Воронеж</option>
-                        <option value="170">Гомель</option>
-                        <option value="56">Екатеринбург</option>
-                        <option value="262">Зеленоград</option>
-                        <option value="166">Ижевск</option>
-                        <option value="178">Иркутск</option>
-                        <option value="57">Йошкар-Ола</option>
-                        <option value="58">Казань</option>
-                        <option value="263">Калининград</option>
-                        <option value="59">Кемерово</option>
-                        <option value="60">Краснодар</option>
-                        <option value="61">Красноярск</option>
-                        <option value="169">Курган</option>
-                        <option value="167">Курск</option>
-                        <option value="240">Кызыл</option>
-                        <option value="261">Магнитогорск</option>
-                        <option value="63">Махачкала</option>
-                        <option value="249">Междуреченск</option>
-                        <option value="168">Минск</option>
-                        <option value="51">Москва</option>
-                        <option value="138">Мурманск</option>
-                        <option value="251">Нальчик</option>
-                        <option value="64">Нижний Новгород</option>
-                        <option value="177">Нижний Тагил</option>
-                        <option value="238">Новокузнецк</option>
-                        <option value="65">Новосибирск</option>
-                        <option value="114">Новочеркасск</option>
-                        <option value="66">Омск</option>
-                        <option value="67">Оренбург</option>
-                        <option value="264">Орёл</option>
-                        <option value="172">Пенза</option>
-                        <option value="68">Пермь</option>
-                        <option value="70">Петрозаводск</option>
-                        <option value="248">Прокопьевск</option>
-                        <option value="69">Псков</option>
-                        <option value="175">Пятигорск</option>
-                        <option value="71">Ростов-на-Дону</option>
-                        <option value="185">Рыбинск</option>
-                        <option value="136">Рязань</option>
-                        <option value="118">Самара</option>
-                        <option value="" selected="">Санкт-Петербург</option>
-                        <option value="74">Саратов</option>
-                        <option value="252">Севастополь</option>
-                        <option value="183">Симферополь</option>
-                        <option value="184">Ставрополь</option>
-                        <option value="259">Старый Оскол</option>
-                        <option value="256">Тверь</option>
-                        <option value="75">Тольятти</option>
-                        <option value="76">Томск</option>
-                        <option value="110">Тула</option>
-                        <option value="241">Улан-Удэ</option>
-                        <option value="140">Тюмень</option>
-                        <option value="77">Ульяновск</option>
-                        <option value="78">Уфа</option>
-                        <option value="79">Хабаровск</option>
-                        <option value="250">Ханты-Мансийск</option>
-                        <option value="80">Челябинск</option>
-                        <option value="137">Череповец</option>
-                        <option value="81">Ярославль</option>
-                      </select>
-                    </div>
+                  <div class="help-banner__button">
+                    <button type="button" data-popup="#sign-extended-warranty" class="btn btn_bg-white">Зарегистрировать</button>
                   </div>
                 </div>
               </div>
 
               <div class="help__body">
-                <div class="map">
-                  <div class="map__wrapper">
-                    <div class="map__frame">
-                      <iframe src="https://yandex.ru/map-widget/v1/?ll=30.290186%2C59.900918&mode=whatshere&whatshere%5Bpoint%5D=30.290185%2C59.900917&whatshere%5Bzoom%5D=17&z=17" frameborder="0" allowfullscreen="false"></iframe>
-                    </div>
-
-                    <div class="map__contacts">
-                      <h5 class="map__caption">Сервисные центры</h5>
-
-                      <ul class="map__items">
-                        <li class="map__item map-contact">
-                          <div class="map-contact__name">Сервисный центр «Шуури»</div>
-                          <div class="map-contact__text _content">
-                            <p> <strong>Телефон: </strong> <a href="tel:+74996861446" class="_nowrap">+7 499 686-14-46</a> </p>
-                            <p> <strong>Адрес: </strong> 4-я Магистральная улица, 5с5 </p>
-                            <p> <strong>Режим работы: </strong> с 10 до 20 по будням </p>
-                          </div>
-                          <div class="map-contact__link">
-                            <a href="" class="link-underline">Перейти на сайт</a>
-                          </div>
-                        </li>
-
-                        <li class="map__item map-contact">
-                          <div class="map-contact__name">ООО "Кристалл"</div>
-                          <div class="map-contact__text _content">
-                            <p> <strong>Телефон: </strong> <a href="tel:+74956467073" class="_nowrap"> +7 (495) 646-70-73</a> <a href="tel:+74952302301" class="_nowrap">+7 (495) 230-23-01</a> </p>
-                            <p> <strong>Адрес: </strong> г. Москва, Югорский проезд д. 2, с.1 </p>
-                            <p> <strong>Режим работы: </strong> понедельник - суббота с 10.00 до 19.00 без перерыва выходной день - воскресенье </p>
-                          </div>
-                          <div class="map-contact__link">
-                            <a href="" class="link-underline">Перейти на сайт</a>
-                          </div>
-                        </li>
-
-                        <li class="map__item map-contact">
-                          <div class="map-contact__name">СЦ«ExpressTex» м. Преображенская площадь</div>
-                          <div class="map-contact__text _content">
-                            <p> <strong>Телефон: </strong> <a href="tel:+74956401817" class="_nowrap">+7 (495) 640-18-17</a> </p>
-                            <p> <strong>Адрес: </strong> Краснобогатырская улица дом 6, стр 5, офис 307 </p>
-                            <p> <strong>Режим работы: </strong> С 10:00 до 20:00 без выходных </p>
-                          </div>
-                          <div class="map-contact__link">
-                            <a href="" class="link-underline">Перейти на сайт</a>
-                          </div>
-                        </li>
-
-                        <li class="map__item map-contact">
-                          <div class="map-contact__name">Сервисный центр «Шуури»</div>
-                          <div class="map-contact__text _content">
-                            <p> <strong>Телефон: </strong> <a href="tel:+74996861446" class="_nowrap">+7 499 686-14-46</a> </p>
-                            <p> <strong>Адрес: </strong> 4-я Магистральная улица, 5с5 </p>
-                            <p> <strong>Режим работы: </strong> с 10 до 20 по будням </p>
-                          </div>
-                          <div class="map-contact__link">
-                            <a href="" class="link-underline">Перейти на сайт</a>
-                          </div>
-                        </li>
-
-                        <li class="map__item map-contact">
-                          <div class="map-contact__name">ООО "Кристалл"</div>
-                          <div class="map-contact__text _content">
-                            <p> <strong>Телефон: </strong> <a href="tel:+74956467073" class="_nowrap"> +7 (495) 646-70-73</a> <a href="tel:+74952302301" class="_nowrap">+7 (495) 230-23-01</a> </p>
-                            <p> <strong>Адрес: </strong> г. Москва, Югорский проезд д. 2, с.1 </p>
-                            <p> <strong>Режим работы: </strong> понедельник - суббота с 10.00 до 19.00 без перерыва выходной день - воскресенье </p>
-                          </div>
-                          <div class="map-contact__link">
-                            <a href="" class="link-underline">Перейти на сайт</a>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="contacts-block">
-                  <div class="contacts-block__grid">
-                    <div class="contacts-block__main">
-                      <div class="contacts-block__list">
-                        <div class="contacts-block__item">
-                          <div class="contacts-block__caption">Качество материалов и сборки, высокие стандарты производства были отмечены наградами в ряде стран Европы, а также на родине Arnica - в Турции. </div>
-
-                          <div class="contacts-block__text _content">
-                            <h6 style="color: #686868;">Информацию о гарантии на конкретный товар можно уточнить в карточке товара или гарантийном талоне.</h6>
-                          </div>
-                        </div>
-
-                        <div class="contacts-block__item">
-                          <div class="contacts-block__caption">По вопросам неисправностей, некомплекта и сервисного обслуживания обращайтесь на нашу электронную почту или пишите в Телеграм.</div>
-
-                          <div class="contacts-block__text _content">
-                            <p>Для ускорения решения вашего вопроса прикладывайте к обращению с вопросом или описанием неисправности чек, фотографию серийного номера <a href="">как его найти</a>, фото или видео поломки, ваши контактные данные.</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <aside class="contacts-block__sidebar">
-                      <div class="contacts-block__sidebar-wrapper">
-                        <div class="contacts-block__contacts contacts">
-                          <div class="contacts__item contacts__item_bg-gray">
-                            <div class="contacts__row">
-                              <div class="contacts__icon">
-                                <img src="@img/icons/email.svg" alt="" loading="lazy">
-                              </div>
-                              <div class="contacts__body">
-                                <div class="contacts__caption">Электронная почта</div>
-                                <a href="mailto:info@arnica.ru" class="contacts__link link-hover">info@arnica.ru</a>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="contacts__item contacts__item_bg-gray">
-                            <div class="contacts__row">
-                              <div class="contacts__icon">
-                                <img src="@img/icons/telegram.svg" alt="" loading="lazy">
-                              </div>
-                              <div class="contacts__body">
-                                <div class="contacts__caption">Телеграм</div>
-                                <a href="t.me/ArnicaService" class="contacts__link link-hover">@ArnicaService</a>
-                              </div>
-                            </div>
-                          </div>
-
-                          <div class="contacts__item contacts__item_bg-gray">
-                            <div class="contacts__row">
-                              <div class="contacts__icon">
-                                <img src="@img/icons/phone.svg" alt="" loading="lazy">
-                              </div>
-                              <div class="contacts__body">
-                                <div class="contacts__caption">Телефон</div>
-                                <a href="tel:88005555261" class="contacts__link link-hover">8 800 5555-261</a>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </aside>
+                <div class="help-template-text">
+                  <div class="_content">
+                    <h6>Уважаемый покупатель!</h6>
+                    <p>Благодарим вас за выбор турецкого пылесоса ARNICA. <br> Получите дополнительный год гарантийного обслуживания на вашу покупку!</p>
+                    <p></p>
+                    <h6>Для получения расширенной гарантии:</h6>
+                    <ol>
+                      <li>В период с 01 февраля 2021 года по 31 декабря 2024 года купите пылесосы ARNICA в магазинах-партнерах акции, либо на нашем сайте.</li>
+                      <li>Зарегистрируйте свою покупку на этой странице в течение 14 дней с момента приобретения пылесоса (смотрите дату в чеке).</li>
+                      <li>Сохраните чек на покупку и письмо с Сертификатом, которые вы получите по электронной почте после регистрации покупки на сайте.</li>
+                      <li>Предъявите чек и электронное письмо с Сертификатом в сервисном центре ARNICA для получения бесплатной услуги по сервисному обслуживанию и ремонту в период действия расширенной гарантии.</li>
+                    </ol>
                   </div>
                 </div>
 
                 <div class="faq">
+                  <div class="faq__heading _content">
+                    <h6>Справочная информация</h6>
+                  </div>
+
                   <div data-spollers class="faq__spollers spollers">
                     <div class="faq__item spollers__item">
-                      <button type="button" data-spoller class="faq__title spollers__title spollers__title _spoller-active">
-                        <span>Условия предоставления гарантии</span>
+                      <button type="button" data-spoller class="faq__title spollers__title spollers__title">
+                        <span>Что такое расширенная гарантия?</span>
                         <span class="spollers__icon"></span>
                       </button>
                       <div class="faq__body spollers__body">
@@ -382,7 +188,7 @@
 
                     <div class="faq__item spollers__item">
                       <button type="button" data-spoller class="faq__title spollers__title spollers__title">
-                        <span>Негарантийные случаи</span>
+                        <span>Список магазинов-партнеров Акции</span>
                         <span class="spollers__icon"></span>
                       </button>
                       <div class="faq__body spollers__body">
@@ -409,7 +215,7 @@
 
                     <div class="faq__item spollers__item">
                       <button type="button" data-spoller class="faq__title spollers__title spollers__title">
-                        <span>Срок гарантийного обслуживания пылесосов</span>
+                        <span>Список товаров, участвующих в Акции</span>
                         <span class="spollers__icon"></span>
                       </button>
                       <div class="faq__body spollers__body">
@@ -436,7 +242,7 @@
 
                     <div class="faq__item spollers__item">
                       <button type="button" data-spoller class="faq__title spollers__title spollers__title">
-                        <span>Срок гарантийного обслуживания кухонной техники</span>
+                        <span>Что такое Сертификат?</span>
                         <span class="spollers__icon"></span>
                       </button>
                       <div class="faq__body spollers__body">
@@ -463,7 +269,7 @@
 
                     <div class="faq__item spollers__item">
                       <button type="button" data-spoller class="faq__title spollers__title spollers__title">
-                        <span>Срок гарантийного обслуживания утюгов и гладильных систем</span>
+                        <span>Какой основной срок гарантии у моего пылесоса ARNICA?</span>
                         <span class="spollers__icon"></span>
                       </button>
                       <div class="faq__body spollers__body">
@@ -490,7 +296,34 @@
 
                     <div class="faq__item spollers__item">
                       <button type="button" data-spoller class="faq__title spollers__title spollers__title">
-                        <span>Куда обратиться, если Вы не нашли свой город в списке</span>
+                        <span>Как найти серийный номер пылесоса?</span>
+                        <span class="spollers__icon"></span>
+                      </button>
+                      <div class="faq__body spollers__body">
+                        <div class="_content">
+                          <h6>Случаи, когда гарантия не распространяется:</h6>
+
+                          <ul>
+                            <li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
+                            <li>Повреждения, вызванные воздействием химических веществ.&nbsp;</li>
+                            <li>Изменения цвета прибора - пожелтение, загрязнения и так далее.&nbsp;</li>
+                            <li>Неисправности, появившиеся в результате воздействия внешних факторов, например влажности или температуры, а также неправильное обращение с прибором.&nbsp;</li>
+                            <li>Повреждения или дефекты, вызванные транспортировкой, если они перевозятся покупателем.</li>
+                            <li>При обнаружении следов проникновения в устройство, а также ремонта не в авторизированном сервисе.&nbsp;</li>
+                            <li>При механических повреждениях(сколы, вмятины, трещины).&nbsp;</li>
+                            <li>Если повреждения произошли в результате попадания посторонних предметов, материалов, жидкостей или насекомых.&nbsp;</li>
+                            <li>При обнаружении неисправностей, возникших в результате использования нестандартных эксплуатационных материалов или деталей.&nbsp;</li>
+                            <li>Если прибор, предназначенный для использования в домашних(бытовых) условиях, используют в предпринимательской деятельности с целью получения прибыли, производственных и других целях, не соответствующих настоящему назначению прибора.&nbsp;</li>
+                            <li>Во всех остальных случаях, когда недостатки прибора выявились в результате не соблюдения инструкции по эксплуатации покупателем, или недостатки появились по вине третьих лиц, или действий непреодолимой силы.&nbsp;</li>
+                            <li>Гарантия также не распространяется на части подверженные естественному износу, такие как: лампы, фильтры, аккумуляторы, предохранители, внешние блоки питания и зарядные устройства, соединительные кабели, крышки, шланги, трубки, щетки, насадки, ремешки, фильтры.</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="faq__item spollers__item">
+                      <button type="button" data-spoller class="faq__title spollers__title spollers__title">
+                        <span>Подробные условия акции «Расширенная гарантия на пылесосы ARNICA»</span>
                         <span class="spollers__icon"></span>
                       </button>
                       <div class="faq__body spollers__body">

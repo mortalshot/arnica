@@ -3382,11 +3382,22 @@ a.partner-card {
     gap: rem(32);
   }
 
+  // .help-banner__caption
+  &__caption {
+    font-family: Montserrat;
+    font-weight: 600;
+
+    &:not(:last-child) {
+      padding-bottom: rem(20);
+      margin-bottom: rem(20);
+      border-bottom: rem(1) solid rgba($color: $mainColor, $alpha: 0.2);
+    }
+  }
+
   // .help-banner__text
   &__text {
     @include adaptiveValue("font-size", 13, 12, 768, 360, 1);
     line-height: math.div(18, 13);
-    max-width: rem(483);
 
     h1,
     h2,
@@ -3406,6 +3417,26 @@ a.partner-card {
       line-height: math.div(20, 16);
       width: 100%;
       max-width: rem(296);
+    }
+  }
+
+  // .help-banner_white
+  &_white {
+    color: $White;
+
+    .help-banner__caption {
+      &:not(:last-child) {
+        border-bottom: rem(1) solid rgba($color: $White, $alpha: 0.2);
+      }
+    }
+
+    .btn_bg-white {
+      @media (any-hover: hover) {
+        &:hover {
+          color: $mainColor;
+          background-color: $White;
+        }
+      }
     }
   }
 }
@@ -3870,7 +3901,6 @@ a.partner-card {
   &__contacts {
     @media (min-width: $tablet) {
       position: absolute;
-      z-index: 1;
       top: rem(16);
       bottom: rem(16);
       left: rem(16);
@@ -4060,6 +4090,13 @@ a.partner-card {
 
 //.faq     ====================================================================================================
 .faq {
+  // .faq__heading
+  &__heading {
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+
   // .faq__spollers
   &__spollers {
   }

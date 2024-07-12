@@ -10,6 +10,27 @@
     margin-bottom: rem(18);
   }
 
+  [data-tippy-content] {
+    display: inline-flex;
+    align-items: center;
+    gap: rem(8);
+    &::after {
+      content: '';
+      display: block;
+      width: rem(16);
+      height: rem(16);
+      flex: 0 0 rem(16);
+      background: url(../img/icons/info2.svg) no-repeat center/contain;
+    }
+  }
+
+  // .form__title
+  &__title {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 18, 14, 768, 360, 1);
+    line-height: math.div(26 , 18);
+  }
+
   // .form__privacy
   &__privacy {
     .checkbox__label {
@@ -71,7 +92,7 @@
 
 // <CALENDAR>
 // Снипет (HTML):
-// @import "datepicker";
+@import "datepicker";
 
 // <col>
 // Снипет (HTML):
