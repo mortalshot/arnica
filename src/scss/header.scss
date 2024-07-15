@@ -816,7 +816,7 @@
 		display: grid;
 		align-content: flex-start;
 		row-gap: rem(8);
-		max-height: calc(100svh - rem(300));
+		max-height: calc(100vh - rem(300));
 		overflow-y: auto;
 		scrollbar-width: thin;
 		scrollbar-color: $Red $Line;
@@ -834,7 +834,7 @@
 		}
 
 		@media (max-width: $tablet) {
-			max-height: calc(100svh - rem(250));
+			max-height: calc(100vh - rem(250));
 		}
 	}
 

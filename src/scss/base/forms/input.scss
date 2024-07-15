@@ -28,14 +28,18 @@ textarea {
 	}
 }
 
-.form__label {
+.form__label,
+.bx-soa-custom-label,
+.bx-soa-customer-label {
 	display: inline-block;
 	font-size: rem(12);
 	line-height: math.div(16, 12);
 	margin-bottom: rem(6);
 }
 
-.form__input {
+.form__input,
+.bx-soa-customer-input,
+.bx-soa-customer-textarea {
 	font-size: rem(14);
 	border-radius: rem(10) !important;
 	width: 100%;
@@ -51,6 +55,7 @@ textarea {
 		background-color: $LGray2;
 	}
 }
-textarea.form__input {
+textarea.form__input,
+.bx-soa-customer-textarea {
 	resize: none;
 }

@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Обзоры</title>
+	<title>Оформление заказа</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -389,299 +389,776 @@
 			</div>
 		</header>
 		<main class="page">
-			<section class="help">
-				<div class="help__container">
-					<div class="help__grid">
-						<aside class="help__sidebar">
-							<div class="help__sidebar-wrapper">
-								<div class="help__breadcrumbs breadcrumbs">
-									<div class="breadcrumbs__wrapper">
-										<div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-											<span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-												<a href="" itemprop="item">
-													<span itemprop="name">Главная</span>
-												</a>
-											</span>
-											<span class="site-breadcrumbs__separator">/</span>
-											<span class="site-breadcrumbs__title">Покупателям</span>
+			<section class="cart-section checkout">
+				<div class="checkout__container">
+					<div class="cart-section__back _heading">
+						<a href="cart.html" class="popup-cart__back">
+							<svg class="icon">
+								<use xlink:href="img/sprite.svg#svg-select"></use>
+							</svg>
+
+							<span>Вернуться в корзину</span>
+						</a>
+					</div>
+
+					<div class="checkout__heading _heading">
+						<h1>Оформление заказа</h1>
+					</div>
+
+					<form action="/personal/order/" method="POST" name="ORDER_FORM" id="bx-soa-order-form" enctype="multipart/form-data" data-gtm-form-interact-id="0">
+						<input type="hidden" name="sessid" id="sessid" value="ad36ca3979a01e3087313b0c169b1e07"> <input type="hidden" name="soa-action" value="saveOrderAjax">
+						<input type="hidden" name="location_type" value="code">
+						<input type="hidden" name="BUYER_STORE" id="BUYER_STORE" value="0">
+						<div id="bx-soa-order" class="row bx-red">
+							<!--	MAIN BLOCK	-->
+							<div class="col-sm-9 bx-soa">
+								<div id="bx-soa-main-notifications">
+									<div class="alert alert-danger" style="display:none"></div>
+									<div data-type="informer" style="display:none"></div>
+								</div>
+
+								<!--	AUTH BLOCK	-->
+								<div id="bx-soa-auth" class="bx-soa-section bx-soa-auth" style="display:none">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>Авторизация
+										</h2>
+									</div>
+									<div class="bx-soa-section-content container-fluid"></div>
+								</div>
+
+								<!--	DUPLICATE MOBILE ORDER SAVE BLOCK	-->
+								<div id="bx-soa-total-mobile" style="margin-bottom: 6px;" class="visible-xs">
+									<div class="bx-soa-cart-total">
+										<div class="bx-soa-total__item-list">
+											<div class="bx-soa-total__item ">
+												<div class="bx-soa-total__item-img"><picture><source srcset="https://arnica-home.ru/upload/resize_cache/iblock/0db/160_160_1/fsn2866hz3xs3vn108thf0b4uf2binhf.webp"type="image/webp"><img src="https://arnica-home.ru/upload/resize_cache/iblock/0db/160_160_1/fsn2866hz3xs3vn108thf0b4uf2binhf.jpg"></picture></div>
+												<div class="bx-soa-total__item-name">Tayfun Aqua 2 in 1<div class="bx-soa-total__item-price">1 x 11&nbsp;990 ₽</div>
+												</div>
+											</div>
+											<div class="bx-soa-total__item ">
+												<div class="bx-soa-total__item-img"><picture><source srcset="https://arnica-home.ru/upload/resize_cache/iblock/445/160_160_1/lm6wbwycmqwi27tuhrb9qjito5pvnx7e.webp"type="image/webp"><img src="https://arnica-home.ru/upload/resize_cache/iblock/445/160_160_1/lm6wbwycmqwi27tuhrb9qjito5pvnx7e.jpg"></picture></div>
+												<div class="bx-soa-total__item-name">Tesla Plus<div class="bx-soa-total__item-price">1 x 19&nbsp;990 ₽</div>
+												</div>
+											</div>
+											<div class="bx-soa-total__item ">
+												<div class="bx-soa-total__item-img"><picture><source srcset="https://arnica-home.ru/upload/resize_cache/iblock/1f8/160_160_1/1f8bbebac98086f9a95fc4170e3bd494.webp"type="image/webp"><img src="https://arnica-home.ru/upload/resize_cache/iblock/1f8/160_160_1/1f8bbebac98086f9a95fc4170e3bd494.png"></picture></div>
+												<div class="bx-soa-total__item-name">Lotus Trend<div class="bx-soa-total__item-price">1 x 14&nbsp;990 ₽</div>
+												</div>
+											</div>
+											<div class="bx-soa-total__item ">
+												<div class="bx-soa-total__item-img"><picture><source srcset="https://arnica-home.ru/upload/resize_cache/iblock/73c/160_160_1/73c4c7180600576b690859ca199f225b.webp"type="image/webp"><img src="https://arnica-home.ru/upload/resize_cache/iblock/73c/160_160_1/73c4c7180600576b690859ca199f225b.jpg"></picture></div>
+												<div class="bx-soa-total__item-name">Tesla красный<div class="bx-soa-total__item-price">1 x 17&nbsp;990 ₽</div>
+												</div>
+											</div>
 										</div>
+										<div class="bx-soa-cart-total-line"><span class="bx-soa-cart-t">Товаров на:</span><span class="bx-soa-cart-d">64&nbsp;960 ₽</span></div>
+										<div class="bx-soa-cart-total-line"><span class="bx-soa-cart-t">Общий вес:</span><span class="bx-soa-cart-d">10750 г</span></div>
+										<div class="bx-soa-cart-total-line"><span class="bx-soa-cart-t">Доставка:</span><span class="bx-soa-cart-d"><span class="bx-soa-price-free">бесплатно</span></span></div>
+										<div class="bx-soa-cart-total-line bx-soa-cart-total-line-total"><span class="bx-soa-cart-t">Итого:</span><span class="bx-soa-cart-d">64&nbsp;960 ₽</span></div>
+										<div class="bx-soa-cart-total-button-container visible-xs"><a href="javascript:void(0)" class="btn btn-default btn-lg btn-order-save">Оформить заказ</a></div>
 									</div>
 								</div>
 
-								<nav class="help__navigation">
-									<ul class="help__navigation-desk">
-										<li>
-											<a href="warranty.html">
-												<span>Гарантия и Сервис</span>
 
-												<svg class="icon">
-													<use xlink:href="img/sprite.svg#svg-select"></use>
-												</svg>
-											</a>
-										</li>
-
-										<li>
-											<a href="extended-warranty.html">
-												<span>Расширенная гарантия</span>
-
-												<svg class="icon">
-													<use xlink:href="img/sprite.svg#svg-select"></use>
-												</svg>
-											</a>
-										</li>
-
-										<li class="_active">
-											<a href="archive-products-review.html">
-												<span>Обзоры</span>
-
-												<svg class="icon">
-													<use xlink:href="img/sprite.svg#svg-select"></use>
-												</svg>
-											</a>
-										</li>
-
-										<li>
-											<a href="instructions.html">
-												<span>Инструкции</span>
-
-												<svg class="icon">
-													<use xlink:href="img/sprite.svg#svg-select"></use>
-												</svg>
-											</a>
-										</li>
-
-										<li>
-											<a href="unauthorized-stores.html">
-												<span>Список неавторизованных магазинов</span>
-
-												<svg class="icon">
-													<use xlink:href="img/sprite.svg#svg-select"></use>
-												</svg>
-											</a>
-										</li>
-
-										<li>
-											<a href="video-instructions.html">
-												<span>Видеоинструкции</span>
-
-												<svg class="icon">
-													<use xlink:href="img/sprite.svg#svg-select"></use>
-												</svg>
-											</a>
-										</li>
-
-										<li>
-											<a href="serial-number.html">
-												<span>Как найти серийный номер на пылесосе</span>
-
-												<svg class="icon">
-													<use xlink:href="img/sprite.svg#svg-select"></use>
-												</svg>
-											</a>
-										</li>
-									</ul>
-
-									<select name="form[]" data-class-modif="help__navigation-mobile" class="select select_blue">
-										<option value="Гарантия и Сервис" data-href="warranty.html">Гарантия и Сервис</option>
-										<option value="Расширенная гарантия" data-href="extended-warranty.html">Расширенная гарантия</option>
-										<option value="" data-href="archive-products-review.html" selected="">Обзоры</option>
-										<option value="Инструкции" data-href="instructions.html">Инструкции</option>
-										<option value="Список неавторизованных магазинов" data-href="unauthorized-stores.html">Список неавторизованных магазинов</option>
-										<option value="Видеоинструкции" data-href="video-instructions.html">Видеоинструкции</option>
-										<option value="Как найти серийный номер на пылесосе" data-href="serial-number.html">Как найти серийный номер на пылесосе</option>
-									</select>
-								</nav>
-							</div>
-						</aside>
-
-						<div class="help__main">
-							<div class="help__banner help-banner">
-								<div class="help-banner__bg">
-									<picture><source srcset="img/help/help-banner6-bg.webp"type="image/webp"><img src="img/help/help-banner6-bg.png" alt="" loading="lazy"></picture>
-								</div>
-
-								<div class="help-banner__wrapper">
-									<div class="help-banner__text _content">
-										<h1>Обзоры</h1>
+								<!--	REGION BLOCK	-->
+								<div id="bx-soa-region" data-visited="true" class="bx-soa-section bx-active bx-selected">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>Регион доставки
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right"><a href="" class="bx-soa-editstep">изменить</a></div>
 									</div>
-								</div>
-							</div>
 
-							<div class="help__body">
-								<div class="products-review">
-									<nav class="products-review__navigation _heading">
-										<div class="products-review__button"><button data-ripple="" type="button" class="_active btn btn_border-main">Все</button></div>
-										<div class="products-review__button"><button data-ripple="" type="button" class="btn btn_border-main">Пылесосы</button></div>
-										<div class="products-review__button"><button data-ripple="" type="button" class="btn btn_border-main">Пылесосы с аквафильтром</button></div>
-										<div class="products-review__button"><button data-ripple="" type="button" class="btn btn_border-main">Фены</button></div>
-										<div class="products-review__button"><button data-ripple="" type="button" class="btn btn_border-main">Утюги</button></div>
-									</nav>
+									<div class="bx-soa-section-content container-fluid">
+										<div class="alert alert-danger" style="display: none;"></div>
 
-									<div class="products-review__items">
-										<div class="products-review__list">
-											<article class="products-review__card news-card">
-												<div class="news-card__wrapper">
-													<a href="single-products-review.html" data-popup="#news-card1" class="news-card__preview">
-														<picture><source srcset="img/news/news8-card-preview1440.webp"type="image/webp"><img src="img/news/news8-card-preview1440.png" alt="" loading="lazy"></picture>
-													</a>
+										<div class="bx_soa_location row">
+											<div class="col-xs-12">
+												<input type="hidden" name="PERSON_TYPE" value="1">
 
-													<div class="news-card__body">
-														<a href="single-products-review.html" data-popup="#news-card1" class="news-card__title">Обзор компактного вертикального пылесоса Arnica Tria Pro</a>
-														<div class="news-card__excrpt _content">
-															<p>Arnica Tria Pro — это компактный вертикальный пылесос с питанием от электросети. В линейку входят две модели, отличающиеся только цветом: пользователь может выбрать красное или фиолетовое устройство.</p>
+												<div data-property-id-row="4" class="form-group bx-soa-location-input-container">
+													<label class="bx-soa-custom-label" for="soa-property-4"><span class="bx-authform-starrequired">*</span> Населенный пункт</label>
+													<div id="sls-88404" class="bx-sls ">
+														<div class="dropdown-block bx-ui-sls-input-block form-control">
+															<span class="dropdown-icon"></span>
+															<input type="text" autocomplete="off" name="ORDER_PROP_4" value="0000103664" class="dropdown-field" placeholder="Введите название ..." style="display: none;" data-gtm-form-interact-field-id="0">
+															<div class="bx-ui-sls-container" style="margin: 0px; padding: 0px; border: none; position: relative;">
+																<input type="text" disabled="disabled" autocomplete="off" class="bx-ui-sls-route" style="padding: 0px; margin: 0px;">
+																<input type="text" autocomplete="off" value="0000103664" class="bx-ui-sls-fake" placeholder="Введите название ..." title="Санкт-Петербург, Россия">
+															</div>
+
+															<div class="dropdown-fade2white"></div>
+															<div class="bx-ui-sls-loader"></div>
+															<div class="bx-ui-sls-clear" title="Отменить выбор" style="display: block;"></div>
+															<div class="bx-ui-sls-pane" style="overflow: hidden auto; display: none;">
+																<div class="bx-ui-sls-variants"></div>
+															</div>
+														</div>
+
+														<div class="bx-ui-sls-error-message">
 														</div>
 													</div>
 												</div>
 
-												<div id="news-card1" aria-hidden="true" class="popup popup_right">
-													<div class="popup__wrapper">
-														<div class="popup__content">
-															<div class="popup__heading">
-																<div class="popup__title">
-																	<div class="title-h4">Обзор компактного вертикального пылесоса Arnica Tria Pro </div>
-																</div>
+												<input type="hidden" name="RECENT_DELIVERY_VALUE" value="0000103664">
+												<div class="bx-soa-reference">Выберите свой город в списке. Если вы не нашли свой город, выберите "другое местоположение", а город впишите в поле "Город"</div>
+											</div>
+										</div>
+										<div class="row bx-soa-more" style="display: none;">
+											<div class="bx-soa-more-btn col-xs-12"><a href="javascript:void(0)" class="pull-right btn btn-default btn-md">Далее</a></div>
+										</div>
+									</div>
+								</div>
 
-																<button data-close type="button" class="popup__close">
-																	<svg class="icon">
-																		<use xlink:href="img/sprite.svg#svg-close"></use>
-																	</svg>
-																</button>
+								<!--	DELIVERY BLOCK	-->
+								<div id="bx-soa-delivery" data-visited="true" class="bx-soa-section bx-active bx-selected">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>Доставка
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right"><a href="" class="bx-soa-editstep" style="">изменить</a></div>
+									</div>
+
+									<div class="bx-soa-section-content container-fluid">
+										<div class="alert alert-danger" style="display: none;"></div>
+
+										<div class="bx-soa-pp row">
+											<div class="col-sm-7 bx-soa-pp-item-container">
+												<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6 bx-selected">
+													<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_112" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="112">
+														<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 1x, url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 2x)"></div>
+														<div class="bx-soa-pp-delivery-cost">0 ₽</div>
+													</div>
+													<div class="bx-soa-pp-company-smalltitle">Доставка boxberry (Доставка до пункта выдачи с оплатой на сайте)</div>
+												</div>
+												<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+													<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_110" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="110">
+														<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 1x, url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 2x)"></div>
+													</div>
+													<div class="bx-soa-pp-company-smalltitle">Доставка boxberry (Доставка до пункта выдачи с оплатой при получении)</div>
+												</div>
+												<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+													<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_118" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="118">
+														<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/300_300_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/300_300_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png) 1x, url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/600_600_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png) 2x)"></div>
+													</div>
+													<div class="bx-soa-pp-company-smalltitle">СДЭК (Доставка курьером)</div>
+												</div>
+												<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+													<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_120" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="120">
+														<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/300_300_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/300_300_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png) 1x, url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/600_600_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png) 2x)"></div>
+													</div>
+													<div class="bx-soa-pp-company-smalltitle">СДЭК (Самовывоз)</div>
+												</div>
+												<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+													<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_34" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="34">
+														<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/bitrix/templates/.default/components/bitrix/sale.order.ajax/.default/images/delivery_logo.png);"></div>
+													</div>
+													<div class="bx-soa-pp-company-smalltitle">Стоимость доставки будет рассчитана менеджером</div>
+												</div>
+											</div>
+
+											<div class="col-sm-5 bx-soa-pp-desc-container">
+												<div class="bx-soa-pp-company">
+													<div class="bx-soa-pp-company-subTitle">Доставка boxberry (Доставка до пункта выдачи с оплатой на сайте)</div>
+													<div class="bx-soa-pp-company-logo">
+														<div class="bx-soa-pp-company-graf-container">
+															<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 1x, url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 2x)"></div>
+														</div>
+													</div>
+													<div class="bx-soa-pp-company-block">
+														<div class="bx-soa-pp-company-desc">
+															<div id="boxberrySelectPvzWidget"><a href="#" class="bxblink" onclick="boxberry.checkLocation(1);boxberry.open(delivery, '1$94e3ce7fd13f81a7f535ff28c119d754',' СОЛНЕЧНОГОРСК  СОЛНЕЧНОГОРСКИЙ РАЙОН','','64960','13750','0','55','55','55','0');return false;"><span>Выбрать пункт выдачи на карте...</span></a></div>
+														</div>
+													</div>
+													<div style="clear: both;"></div>
+													<ul class="bx-soa-pp-list">
+														<li>
+															<div class="bx-soa-pp-list-termin">Стоимость:</div>
+															<div class="bx-soa-pp-list-description">0 ₽</div>
+														</li>
+														<li>
+															<div class="bx-soa-pp-list-termin">Срок доставки:</div>
+															<div class="bx-soa-pp-list-description">2 дня</div>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+										<div class="row bx-soa-more" style="display: none;">
+											<div class="bx-soa-more-btn col-xs-12">
+												<a href="javascript:void(0)" class="pull-left btn btn-default btn-md">Назад</a>
+												<a href="javascript:void(0)" class="pull-right btn btn-default btn-md">Далее</a>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--	PICKUP BLOCK	-->
+								<div id="bx-soa-pickup" data-visited="false" class="bx-soa-section" style="display:none">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right"><a href="" class="bx-soa-editstep">изменить</a></div>
+									</div>
+									<div class="bx-soa-section-content container-fluid"></div>
+								</div>
+
+								<!--	PAY SYSTEMS BLOCK	-->
+								<div id="bx-soa-paysystem" data-visited="false" class="bx-soa-section bx-active">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>Оплата
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right"><a href="" class="bx-soa-editstep" style="display: none;">изменить</a></div>
+									</div>
+
+									<div class="bx-soa-section-content">
+										<div class="alert alert-danger" style="display: none;"></div>
+										<div class="bx-soa-pp row">
+											<div class="col-sm-7 bx-soa-pp-item-container">
+												<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+													<div class="bx-soa-pp-company-graf-container"><input id="ID_PAY_SYSTEM_ID_6" name="PAY_SYSTEM_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="6">
+														<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/resize_cache/sale/paysystem/logotip/50f/300_300_1/q15vdyv5exzw7r58lz285bx66d88jsv1.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/sale/paysystem/logotip/50f/300_300_1/q15vdyv5exzw7r58lz285bx66d88jsv1.png) 1x, url(https://arnica-home.ru/upload/sale/paysystem/logotip/50f/q15vdyv5exzw7r58lz285bx66d88jsv1.png) 2x)"></div>
+													</div>
+													<div class="bx-soa-pp-company-smalltitle">Рассрочка от Тинькофф</div>
+												</div>
+												<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6 bx-selected">
+													<div class="bx-soa-pp-company-graf-container"><input id="ID_PAY_SYSTEM_ID_2" name="PAY_SYSTEM_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="2">
+														<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/paysystem/logotip/60b/60b6608ef2a49f15c416ba2c23031715.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/paysystem/logotip/60b/60b6608ef2a49f15c416ba2c23031715.png) 1x, url(https://arnica-home.ru/upload/sale/paysystem/logotip/60b/60b6608ef2a49f15c416ba2c23031715.png) 2x)"></div>
+													</div>
+													<div class="bx-soa-pp-company-smalltitle">Наличными или картой при получении</div>
+												</div>
+												<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+													<div class="bx-soa-pp-company-graf-container"><input id="ID_PAY_SYSTEM_ID_9" name="PAY_SYSTEM_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="9">
+														<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/paysystem/logotip/8cd/oe3857zzs79hexunnjqqyf37xgxbi073.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/paysystem/logotip/8cd/oe3857zzs79hexunnjqqyf37xgxbi073.png) 1x, url(https://arnica-home.ru/upload/sale/paysystem/logotip/8cd/oe3857zzs79hexunnjqqyf37xgxbi073.png) 2x)"></div>
+													</div>
+													<div class="bx-soa-pp-company-smalltitle">Онлайн на сайте</div>
+												</div>
+											</div>
+											<div class="col-sm-5 bx-soa-pp-desc-container">
+												<div class="bx-soa-pp-company">
+													<div>
+														<div class="bx-soa-pp-company-subTitle">Наличными или картой при получении</div>
+														<div class="bx-soa-pp-company-logo">
+															<div class="bx-soa-pp-company-graf-container">
+																<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/paysystem/logotip/60b/60b6608ef2a49f15c416ba2c23031715.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/paysystem/logotip/60b/60b6608ef2a49f15c416ba2c23031715.png) 1x, url(https://arnica-home.ru/upload/sale/paysystem/logotip/60b/60b6608ef2a49f15c416ba2c23031715.png) 2x)"></div>
 															</div>
-															<div class="popup__text">
-																<div class="popup-review">
-																	<div class="_content">
-																		<p>
-																			<a target="_blank" href="/catalog/pylesosy/vertikalnye_pylesosy/tria_pro_arnica_pylesos_cherno_krasnyy.html">Arnica Tria Pro</a> — это компактный <a target="_blank" href="/catalog/pylesosy/vertikalnye_pylesosy/tria_pro_arnica_pylesos_cherno_krasnyy.html">вертикальный пылесос</a> с питанием от электросети. В линейку входят две модели, отличающиеся только цветом: пользователь может выбрать красное или фиолетовое устройство.
-																		</p>
+														</div>
+														<div class="bx-soa-pp-company-block">
+															<div class="bx-soa-pp-company-desc"></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
 
-																		<p>
-																			Устройство поставляется в иллюстрированной картонной коробке. В комплект поставки входят:
-																		</p>
+								<!--	BUYER PROPS BLOCK	-->
+								<div id="bx-soa-properties" data-visited="false" class="bx-soa-section bx-active">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>Покупатель
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right"><a href="" class="bx-soa-editstep" style="display: none;">изменить</a></div>
+									</div>
 
-																		<ul>
-																			<li>моторный блок с пылесборником и фильтрами,</li>
-																			<li>треугольная насадка с системой тройного всасывания,</li>
-																			<li>насадка для чистки текстиля и тканевых обивок мебели,</li>
-																			<li>щелевая насадка</li>
-																			<li>и руководство пользователя</li>
-																		</ul>
+									<div class="bx-soa-section-content container-fluid">
+										<div class="alert alert-danger" style="display: none;"></div>
 
-																		<iframe width="100%" height="313" src="https://www.youtube.com/embed/mamM4_sKvi0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+										<div class="row">
+											<div class="col-sm-12 bx-soa-customer">
+												<div class="form-group bx-soa-customer-field" data-property-id-row="42">
+													<label for="soa-property-42" class="bx-soa-custom-label">Trace b24</label>
+													<div class="soa-property-container">
+														<input type="text" maxlength="5000" size="30" name="ORDER_PROP_42" id="soa-property-42" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix">
+													</div>
+												</div>
+												<div class="form-group bx-soa-customer-field" data-property-id-row="1">
+													<label for="soa-property-1" class="bx-soa-custom-label">
+														<span class="bx-authform-starrequired">*</span>
+														Имя
+													</label>
+													<div class="soa-property-container">
+														<input type="text" size="30" name="ORDER_PROP_1" id="soa-property-1" autocomplete="name" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix">
+													</div>
+												</div>
+												<div class="form-group bx-soa-customer-field" data-property-id-row="29"><label for="soa-property-29" class="bx-soa-custom-label"><span class="bx-authform-starrequired">*</span> Фамилия</label>
+													<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_29" id="soa-property-29" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+												</div>
+												<div class="form-group bx-soa-customer-field" data-property-id-row="2"><label for="soa-property-2" class="bx-soa-custom-label"><span class="bx-authform-starrequired">*</span> Телефон</label>
+													<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_2" id="soa-property-2" autocomplete="tel" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+												</div>
+												<div class="form-group bx-soa-customer-field" data-property-id-row="3"><label for="soa-property-3" class="bx-soa-custom-label"><span class="bx-authform-starrequired">*</span> Email</label>
+													<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_3" id="soa-property-3" autocomplete="email" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+												</div>
+												<div class="form-group bx-soa-customer-field" data-property-id-row="6"><label for="soa-property-6" class="bx-soa-custom-label"><span class="bx-authform-starrequired">*</span> Улица</label>
+													<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_6" id="soa-property-6" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+												</div>
+												<div class="form-group bx-soa-customer-field" data-property-id-row="7"><label for="soa-property-7" class="bx-soa-custom-label"><span class="bx-authform-starrequired">*</span> Дом / Корпус</label>
+													<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_7" id="soa-property-7" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+												</div>
+												<div class="form-group bx-soa-customer-field" data-property-id-row="8"><label for="soa-property-8" class="bx-soa-custom-label"><span class="bx-authform-starrequired">*</span> Квартира / Офис</label>
+													<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_8" id="soa-property-8" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+												</div>
+											</div>
+											<div class="col-sm-12">
+												<div class="form-group bx-soa-customer-field"><label for="orderDescription" class="bx-soa-customer-label">Комментарии к заказу:</label><textarea id="orderDescription" cols="4" class="form-control bx-soa-customer-textarea bx-ios-fix" name="ORDER_DESCRIPTION"></textarea></div>
+											</div>
+										</div>
+									</div>
+								</div>
 
-																		<p>
-																			Включается пылесос крупной кнопкой на корпусе моторного блока.
-																		</p>
-																		<p>
-																			Кабель питания имеет оптимальную длину. Он достаточно длинный, чтобы убрать одну комнату средних размеров от одной розетки, но при этом не сильно мешается во время уборки, его просто придерживаешь второй рукой. Отметим, что сетевое питание исключает проблему не вовремя разряженного или потерявшего емкость аккумулятора.
-																		</p>
-																		<p>
-																			При сложенной ручке устройство представляет собой компактный ручной пылесос. Без использования насадок можно оперативно убирать поверхности от крошек и мелкого мусора. Насадка для чистки текстиля позволяет эффективно пылесосить мягкую мебель, шторы и поверхности полок. С помощью щелевой насадки можно убирать в узких местах, например между подушками дивана. Основная насадка подходит для уборки как на твердых, так и на мягких напольных покрытиях.
-																		</p>
-																		<p>
-																			Удерживать устройство в варианте ручного пылесоса бывает сложно, так как основной вес сосредоточен в передней части далеко от руки. Для трансформации устройства в вертикальный пылесос типичной компоновки нужно выдвинуть стальную штангу и откинуть рукоятку вверх. Длина штанги меняется, что позволяет подстроить высоту пылесоса под рост пользователя. Опираясь на основную насадку, <a target="_blank" href="/catalog/pylesosy/vertikalnye_pylesosy/tria_pro_arnica_pylesos_cherno_krasnyy.html">пылесос</a> устойчиво стоит в вертикальном положении. В таком виде его удобно оставлять во время перерывов в уборке и при хранении. Основная насадка крепится к моторному блоку посредством гибкого шарнира, что облегчает маневрирование при уборке. В вертикальном варианте компоновки рука от работы с пылесосом не устает, вибрация в рукоятке умеренная.
-																		</p>
-																		<p>
-																			Уникальная система тройного всасывания обеспечивает сбор мусора со всех трех граней насадки. Чтобы высыпать собранный мусор, нужно нажать на кнопку фиксатора пылесборника, отсоединить его, а затем извлечь блок фильтров. Для полной очистки необходимо отделить фильтр HEPA13 от сеточного фильтра и почистить сами фильтры (все фильтры можно мыть).
-																		</p>
-																		<p>
-																			Благодаря телескопической ручке со складной рукояткой <a target="_blank" href="/catalog/pylesosy/vertikalnye_pylesosy/tria_pro_arnica_pylesos_cherno_krasnyy.html">пылесос Arnica Tria Pro</a> легко трансформируется из вертикального в ручной. Уникальная форма основной насадки облегчает уборку напольных покрытий в углах и узких местах. Пылесос отличается небольшим весом и габаритами, но при этом работает от сети.
-																		</p>
-																		<p>
-																			Источник:&nbsp;
-																			<a href="https://www.ixbt.com/home/arnica-tria-pro-videoreview.html" rel="nofollow" target="_blank">https://www.ixbt.com/home/arnica-tria-pro-videoreview.html</a>
-																		</p>
+								<!--	BASKET ITEMS BLOCK	-->
+								<div id="bx-soa-basket" data-visited="false" class="bx-soa-section bx-active" style="display:none">
+									<div class="bx-soa-section-title-container">
+										<h2 class="bx-soa-section-title col-sm-9">
+											<span class="bx-soa-section-title-count"></span>Товары в заказе
+										</h2>
+										<div class="col-xs-12 col-sm-3 text-right"><a href="javascript:void(0)" class="bx-soa-editstep" style="display: none;">изменить</a></div>
+									</div>
+
+									<div class="bx-soa-section-content container-fluid">
+										<div class="bx-soa-table-fade">
+											<div style="overflow: auto hidden;">
+												<div class="bx-soa-item-table">
+													<div class="bx-soa-item-tr bx-soa-basket-info bx-soa-item-tr-first">
+														<div class="bx-soa-item-td" style="min-width: 300px;">
+															<div class="bx-soa-item-block">
+																<div class="bx-soa-item-img-block"><a href="/catalog/pylesosy/pylesosy_s_akvafiltrom/tayfun_aqua_pylesos_s_akvafiltrom.html">
+																		<div class="bx-soa-item-imgcontainer" style="background-image: url(https://arnica-home.ru/upload/resize_cache/iblock/0db/160_160_1/fsn2866hz3xs3vn108thf0b4uf2binhf.jpg);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/iblock/0db/160_160_1/fsn2866hz3xs3vn108thf0b4uf2binhf.jpg) 1x, url(https://arnica-home.ru/upload/resize_cache/iblock/0db/320_320_1/fsn2866hz3xs3vn108thf0b4uf2binhf.jpg) 2x)"></div>
+																	</a></div>
+																<div class="bx-soa-item-content">
+																	<div class="bx-soa-item-title"><a href="/catalog/pylesosy/pylesosy_s_akvafiltrom/tayfun_aqua_pylesos_s_akvafiltrom.html">Tayfun Aqua Arnica, пылесос с аквафильтром, красный</a></div>
+																</div>
+															</div>
+														</div>
+														<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+															<div class="bx-soa-item-td-title visible-xs visible-sm">Количество</div>
+															<div class="bx-soa-item-td-text"><span>1&nbsp;шт</span></div>
+														</div>
+														<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+															<div class="bx-soa-item-td-title visible-xs visible-sm">Сумма</div>
+															<div class="bx-soa-item-td-text"><strong class="bx-price all">11&nbsp;990 ₽</strong></div>
+														</div>
+													</div>
+													<div class="bx-soa-item-tr bx-soa-basket-info">
+														<div class="bx-soa-item-td" style="min-width: 300px;">
+															<div class="bx-soa-item-block">
+																<div class="bx-soa-item-img-block"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/tesla_plus_blue_arnica_pylesos_s_tsiklonnym_filtrom.html">
+																		<div class="bx-soa-item-imgcontainer" style="background-image: url(https://arnica-home.ru/upload/resize_cache/iblock/445/160_160_1/lm6wbwycmqwi27tuhrb9qjito5pvnx7e.jpg);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/iblock/445/160_160_1/lm6wbwycmqwi27tuhrb9qjito5pvnx7e.jpg) 1x, url(https://arnica-home.ru/upload/resize_cache/iblock/445/320_320_1/lm6wbwycmqwi27tuhrb9qjito5pvnx7e.jpg) 2x)"></div>
+																	</a></div>
+																<div class="bx-soa-item-content">
+																	<div class="bx-soa-item-title"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/tesla_plus_blue_arnica_pylesos_s_tsiklonnym_filtrom.html">Tesla Plus Arnica, пылесос с циклонным фильтром, синий</a></div>
+																</div>
+															</div>
+														</div>
+														<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+															<div class="bx-soa-item-td-title visible-xs visible-sm">Количество</div>
+															<div class="bx-soa-item-td-text"><span>1&nbsp;шт</span></div>
+														</div>
+														<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+															<div class="bx-soa-item-td-title visible-xs visible-sm">Сумма</div>
+															<div class="bx-soa-item-td-text"><strong class="bx-price all">19&nbsp;990 ₽</strong></div>
+														</div>
+													</div>
+													<div class="bx-soa-item-tr bx-soa-basket-info">
+														<div class="bx-soa-item-td" style="min-width: 300px;">
+															<div class="bx-soa-item-block">
+																<div class="bx-soa-item-img-block"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/lotus_trend.html">
+																		<div class="bx-soa-item-imgcontainer" style="background-image: url(https://arnica-home.ru/upload/resize_cache/iblock/1f8/160_160_1/1f8bbebac98086f9a95fc4170e3bd494.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/iblock/1f8/160_160_1/1f8bbebac98086f9a95fc4170e3bd494.png) 1x, url(https://arnica-home.ru/upload/resize_cache/iblock/1f8/320_320_1/1f8bbebac98086f9a95fc4170e3bd494.png) 2x)"></div>
+																	</a></div>
+																<div class="bx-soa-item-content">
+																	<div class="bx-soa-item-title"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/lotus_trend.html">Lotus Trend Arnica, пылесос с мешком, синий</a></div>
+																</div>
+															</div>
+														</div>
+														<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+															<div class="bx-soa-item-td-title visible-xs visible-sm">Количество</div>
+															<div class="bx-soa-item-td-text"><span>1&nbsp;шт</span></div>
+														</div>
+														<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+															<div class="bx-soa-item-td-title visible-xs visible-sm">Сумма</div>
+															<div class="bx-soa-item-td-text"><strong class="bx-price all">14&nbsp;990 ₽</strong></div>
+														</div>
+													</div>
+													<div class="bx-soa-item-tr bx-soa-basket-info">
+														<div class="bx-soa-item-td" style="min-width: 300px;">
+															<div class="bx-soa-item-block">
+																<div class="bx-soa-item-img-block"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/arnica_tesla.html">
+																		<div class="bx-soa-item-imgcontainer" style="background-image: url(https://arnica-home.ru/upload/resize_cache/iblock/73c/160_160_1/73c4c7180600576b690859ca199f225b.jpg);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/iblock/73c/160_160_1/73c4c7180600576b690859ca199f225b.jpg) 1x, url(https://arnica-home.ru/upload/resize_cache/iblock/73c/320_320_1/73c4c7180600576b690859ca199f225b.jpg) 2x)"></div>
+																	</a></div>
+																<div class="bx-soa-item-content">
+																	<div class="bx-soa-item-title"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/arnica_tesla.html">Tesla Arnica, пылесос с циклонным фильтром, красный</a></div>
+																</div>
+															</div>
+														</div>
+														<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+															<div class="bx-soa-item-td-title visible-xs visible-sm">Количество</div>
+															<div class="bx-soa-item-td-text"><span>1&nbsp;шт</span></div>
+														</div>
+														<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+															<div class="bx-soa-item-td-title visible-xs visible-sm">Сумма</div>
+															<div class="bx-soa-item-td-text"><strong class="bx-price all">17&nbsp;990 ₽</strong></div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!--	ORDER SAVE BLOCK	-->
+								<div id="bx-soa-orderSave" style="display:none">
+									<div class="checkbox">
+									</div>
+									<a href="javascript:void(0)" style="margin: 10px 0" class="pull-right btn btn-default btn-lg hidden-xs" data-save-button="true">
+										Оформить заказ </a>
+								</div>
+
+								<div style="display: none;">
+									<div id="bx-soa-basket-hidden" class="bx-soa-section">
+										<div class="bx-soa-section-content container-fluid">
+											<div class="bx-soa-table-fade">
+												<div style="overflow: auto hidden;">
+													<div class="bx-soa-item-table">
+														<div class="bx-soa-item-tr bx-soa-basket-info bx-soa-item-tr-first">
+															<div class="bx-soa-item-td" style="min-width: 300px;">
+																<div class="bx-soa-item-block">
+																	<div class="bx-soa-item-img-block"><a href="/catalog/pylesosy/pylesosy_s_akvafiltrom/tayfun_aqua_pylesos_s_akvafiltrom.html">
+																			<div class="bx-soa-item-imgcontainer" style="background-image: url(https://arnica-home.ru/upload/resize_cache/iblock/0db/160_160_1/fsn2866hz3xs3vn108thf0b4uf2binhf.jpg);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/iblock/0db/160_160_1/fsn2866hz3xs3vn108thf0b4uf2binhf.jpg) 1x, url(https://arnica-home.ru/upload/resize_cache/iblock/0db/320_320_1/fsn2866hz3xs3vn108thf0b4uf2binhf.jpg) 2x)"></div>
+																		</a></div>
+																	<div class="bx-soa-item-content">
+																		<div class="bx-soa-item-title"><a href="/catalog/pylesosy/pylesosy_s_akvafiltrom/tayfun_aqua_pylesos_s_akvafiltrom.html">Tayfun Aqua Arnica, пылесос с аквафильтром, красный</a></div>
 																	</div>
 																</div>
 															</div>
+															<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+																<div class="bx-soa-item-td-title visible-xs visible-sm">Количество</div>
+																<div class="bx-soa-item-td-text"><span>1&nbsp;шт</span></div>
+															</div>
+															<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+																<div class="bx-soa-item-td-title visible-xs visible-sm">Сумма</div>
+																<div class="bx-soa-item-td-text"><strong class="bx-price all">11&nbsp;990 ₽</strong></div>
+															</div>
+														</div>
+														<div class="bx-soa-item-tr bx-soa-item-info-container">
+															<div class="bx-soa-item-td"><a href="" class="bx-soa-info-shower">Дополнительные свойства</a>
+																<div class="bx-soa-item-info-block">
+																	<table class="bx-soa-info-block">
+																		<tr class="bx-soa-info-line">
+																			<td class="bx-soa-info-title">Название для сайта:</td>
+																			<td class="bx-soa-info-text"><span>Tayfun Aqua 2 in 1</span><br></td>
+																		</tr>
+																	</table>
+																</div>
+															</div>
+														</div>
+														<div class="bx-soa-item-tr bx-soa-basket-info">
+															<div class="bx-soa-item-td" style="min-width: 300px;">
+																<div class="bx-soa-item-block">
+																	<div class="bx-soa-item-img-block"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/tesla_plus_blue_arnica_pylesos_s_tsiklonnym_filtrom.html">
+																			<div class="bx-soa-item-imgcontainer" style="background-image: url(https://arnica-home.ru/upload/resize_cache/iblock/445/160_160_1/lm6wbwycmqwi27tuhrb9qjito5pvnx7e.jpg);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/iblock/445/160_160_1/lm6wbwycmqwi27tuhrb9qjito5pvnx7e.jpg) 1x, url(https://arnica-home.ru/upload/resize_cache/iblock/445/320_320_1/lm6wbwycmqwi27tuhrb9qjito5pvnx7e.jpg) 2x)"></div>
+																		</a></div>
+																	<div class="bx-soa-item-content">
+																		<div class="bx-soa-item-title"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/tesla_plus_blue_arnica_pylesos_s_tsiklonnym_filtrom.html">Tesla Plus Arnica, пылесос с циклонным фильтром, синий</a></div>
+																	</div>
+																</div>
+															</div>
+															<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+																<div class="bx-soa-item-td-title visible-xs visible-sm">Количество</div>
+																<div class="bx-soa-item-td-text"><span>1&nbsp;шт</span></div>
+															</div>
+															<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+																<div class="bx-soa-item-td-title visible-xs visible-sm">Сумма</div>
+																<div class="bx-soa-item-td-text"><strong class="bx-price all">19&nbsp;990 ₽</strong></div>
+															</div>
+														</div>
+														<div class="bx-soa-item-tr bx-soa-item-info-container">
+															<div class="bx-soa-item-td"><a href="" class="bx-soa-info-shower">Дополнительные свойства</a>
+																<div class="bx-soa-item-info-block">
+																	<table class="bx-soa-info-block">
+																		<tr class="bx-soa-info-line">
+																			<td class="bx-soa-info-title">Название для сайта:</td>
+																			<td class="bx-soa-info-text"><span>Tesla Plus</span><br></td>
+																		</tr>
+																	</table>
+																</div>
+															</div>
+														</div>
+														<div class="bx-soa-item-tr bx-soa-basket-info">
+															<div class="bx-soa-item-td" style="min-width: 300px;">
+																<div class="bx-soa-item-block">
+																	<div class="bx-soa-item-img-block"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/lotus_trend.html">
+																			<div class="bx-soa-item-imgcontainer" style="background-image: url(https://arnica-home.ru/upload/resize_cache/iblock/1f8/160_160_1/1f8bbebac98086f9a95fc4170e3bd494.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/iblock/1f8/160_160_1/1f8bbebac98086f9a95fc4170e3bd494.png) 1x, url(https://arnica-home.ru/upload/resize_cache/iblock/1f8/320_320_1/1f8bbebac98086f9a95fc4170e3bd494.png) 2x)"></div>
+																		</a></div>
+																	<div class="bx-soa-item-content">
+																		<div class="bx-soa-item-title"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/lotus_trend.html">Lotus Trend Arnica, пылесос с мешком, синий</a></div>
+																	</div>
+																</div>
+															</div>
+															<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+																<div class="bx-soa-item-td-title visible-xs visible-sm">Количество</div>
+																<div class="bx-soa-item-td-text"><span>1&nbsp;шт</span></div>
+															</div>
+															<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+																<div class="bx-soa-item-td-title visible-xs visible-sm">Сумма</div>
+																<div class="bx-soa-item-td-text"><strong class="bx-price all">14&nbsp;990 ₽</strong></div>
+															</div>
+														</div>
+														<div class="bx-soa-item-tr bx-soa-item-info-container">
+															<div class="bx-soa-item-td"><a href="" class="bx-soa-info-shower">Дополнительные свойства</a>
+																<div class="bx-soa-item-info-block">
+																	<table class="bx-soa-info-block">
+																		<tr class="bx-soa-info-line">
+																			<td class="bx-soa-info-title">Название для сайта:</td>
+																			<td class="bx-soa-info-text"><span>Lotus Trend</span><br></td>
+																		</tr>
+																	</table>
+																</div>
+															</div>
+														</div>
+														<div class="bx-soa-item-tr bx-soa-basket-info">
+															<div class="bx-soa-item-td" style="min-width: 300px;">
+																<div class="bx-soa-item-block">
+																	<div class="bx-soa-item-img-block"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/arnica_tesla.html">
+																			<div class="bx-soa-item-imgcontainer" style="background-image: url(https://arnica-home.ru/upload/resize_cache/iblock/73c/160_160_1/73c4c7180600576b690859ca199f225b.jpg);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/iblock/73c/160_160_1/73c4c7180600576b690859ca199f225b.jpg) 1x, url(https://arnica-home.ru/upload/resize_cache/iblock/73c/320_320_1/73c4c7180600576b690859ca199f225b.jpg) 2x)"></div>
+																		</a></div>
+																	<div class="bx-soa-item-content">
+																		<div class="bx-soa-item-title"><a href="/catalog/pylesosy/pylesosy_s_meshkom_kolboy/arnica_tesla.html">Tesla Arnica, пылесос с циклонным фильтром, красный</a></div>
+																	</div>
+																</div>
+															</div>
+															<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+																<div class="bx-soa-item-td-title visible-xs visible-sm">Количество</div>
+																<div class="bx-soa-item-td-text"><span>1&nbsp;шт</span></div>
+															</div>
+															<div class="bx-soa-item-td bx-soa-item-properties bx-text-right">
+																<div class="bx-soa-item-td-title visible-xs visible-sm">Сумма</div>
+																<div class="bx-soa-item-td-text"><strong class="bx-price all">17&nbsp;990 ₽</strong></div>
+															</div>
+														</div>
+														<div class="bx-soa-item-tr bx-soa-item-info-container">
+															<div class="bx-soa-item-td"><a href="" class="bx-soa-info-shower">Дополнительные свойства</a>
+																<div class="bx-soa-item-info-block">
+																	<table class="bx-soa-info-block">
+																		<tr class="bx-soa-info-line">
+																			<td class="bx-soa-info-title">Название для сайта:</td>
+																			<td class="bx-soa-info-text"><span>Tesla красный</span><br></td>
+																		</tr>
+																	</table>
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>
-											</article>
-
-											<article class="products-review__card news-card">
-												<div class="news-card__wrapper">
-													<a href="single-products-review.html" class="news-card__preview">
-														<picture><source srcset="img/news/news5-card-preview1440.webp"type="image/webp"><img src="img/news/news5-card-preview1440.png" alt="" loading="lazy"></picture>
-													</a>
-
-													<div class="news-card__body">
-														<a href="single-products-review.html" class="news-card__title">Обзор вертикального пылесоса ARNICA Merlin Pro</a>
-														<div class="news-card__excrpt _content">
-															<p>Инженер и генеральный директор сервисного центра Шуури Андрей Беляев поделился мнением о вертикальном пылесосе ARNICA Merlin Pro.</p>
-														</div>
-													</div>
-												</div>
-											</article>
-
-											<article class="products-review__card news-card">
-												<div class="news-card__wrapper">
-													<a href="single-products-review.html" class="news-card__preview">
-														<picture><source srcset="img/news/news6-card-preview1440.webp"type="image/webp"><img src="img/news/news6-card-preview1440.png" alt="" loading="lazy"></picture>
-													</a>
-
-													<div class="news-card__body">
-														<a href="single-products-review.html" class="news-card__title">Обзор пылесоса ARNICA BORA 7000 Premium</a>
-														<div class="news-card__excrpt _content">
-															<p>Полный обзор на пылесос ARNICA BORA 7000 Premium c полным испытанием его в деле! После этого обзора у вас не останется вопросов к этой модели!</p>
-														</div>
-													</div>
-												</div>
-											</article>
-
-											<article class="products-review__card news-card">
-												<div class="news-card__wrapper">
-													<a href="single-products-review.html" class="news-card__preview">
-														<picture><source srcset="img/news/news7-card-preview1440.webp"type="image/webp"><img src="img/news/news7-card-preview1440.png" alt="" loading="lazy"></picture>
-													</a>
-
-													<div class="news-card__body">
-														<a href="single-products-review.html" class="news-card__title">Обзор напольного пылесоса Arnica Mila Trend</a>
-														<div class="news-card__excrpt _content">
-															<p>Напольный пылесос Arnica Mila Trend компактен и энергоэффективен. Хороший набор насадок и возможность плавной регулировки мощности всасывания позволяют успешно решать задачи, связанные с уборкой в домашних условиях.</p>
-														</div>
-													</div>
-												</div>
-											</article>
-
-											<article class="products-review__card news-card">
-												<div class="news-card__wrapper">
-													<a href="single-products-review.html" class="news-card__preview">
-														<picture><source srcset="img/news/news8-card-preview1440.webp"type="image/webp"><img src="img/news/news8-card-preview1440.png" alt="" loading="lazy"></picture>
-													</a>
-
-													<div class="news-card__body">
-														<a href="single-products-review.html" class="news-card__title">Обзор напольного пылесоса Arnica Mila Trend</a>
-														<div class="news-card__excrpt _content">
-															<p>Напольный пылесос Arnica Mila Trend компактен и энергоэффективен. Хороший набор насадок и возможность плавной регулировки мощности всасывания позволяют успешно решать задачи, связанные с уборкой в домашних условиях.</p>
-														</div>
-													</div>
-												</div>
-											</article>
-
-											<article class="products-review__card news-card">
-												<div class="news-card__wrapper">
-													<a href="single-products-review.html" class="news-card__preview">
-														<picture><source srcset="img/news/news3-card-preview1440.webp"type="image/webp"><img src="img/news/news3-card-preview1440.png" alt="" loading="lazy"></picture>
-													</a>
-
-													<div class="news-card__body">
-														<a href="single-products-review.html" class="news-card__title">Обзор напольного пылесоса Arnica Mila Trend</a>
-														<div class="news-card__excrpt _content">
-															<p>Напольный пылесос Arnica Mila Trend компактен и энергоэффективен. Хороший набор насадок и возможность плавной регулировки мощности всасывания позволяют успешно решать задачи, связанные с уборкой в домашних условиях.</p>
-														</div>
-													</div>
-												</div>
-											</article>
+											</div>
+											<div class="row bx-soa-more">
+												<div class="bx-soa-more-btn col-xs-12"><a href="javascript:void(0)" class="pull-left btn btn-default btn-md">Назад</a></div>
+											</div>
 										</div>
-
-										<div class="products-review__more">
-											<button type="button" data-ripple="" class="btn btn_border-main">Показать еще</button>
+									</div>
+									<div id="bx-soa-region-hidden" class="bx-soa-section"></div>
+									<div id="bx-soa-paysystem-hidden" class="bx-soa-section">
+										<div class="bx-soa-section-content container-fluid">
+											<div class="alert alert-danger" style="display: none;"></div>
+											<div class="bx-soa-pp row">
+												<div class="col-sm-7 bx-soa-pp-item-container">
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6 bx-selected">
+														<div class="bx-soa-pp-company-graf-container"><input id="ID_PAY_SYSTEM_ID_6" name="PAY_SYSTEM_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="6">
+															<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/resize_cache/sale/paysystem/logotip/50f/300_300_1/q15vdyv5exzw7r58lz285bx66d88jsv1.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/sale/paysystem/logotip/50f/300_300_1/q15vdyv5exzw7r58lz285bx66d88jsv1.png) 1x, url(https://arnica-home.ru/upload/sale/paysystem/logotip/50f/q15vdyv5exzw7r58lz285bx66d88jsv1.png) 2x)"></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Рассрочка от Тинькофф</div>
+													</div>
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+														<div class="bx-soa-pp-company-graf-container"><input id="ID_PAY_SYSTEM_ID_9" name="PAY_SYSTEM_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="9">
+															<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/paysystem/logotip/8cd/oe3857zzs79hexunnjqqyf37xgxbi073.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/paysystem/logotip/8cd/oe3857zzs79hexunnjqqyf37xgxbi073.png) 1x, url(https://arnica-home.ru/upload/sale/paysystem/logotip/8cd/oe3857zzs79hexunnjqqyf37xgxbi073.png) 2x)"></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Онлайн на сайте</div>
+													</div>
+												</div>
+												<div class="col-sm-5 bx-soa-pp-desc-container">
+													<div class="bx-soa-pp-company">
+														<div>
+															<div class="bx-soa-pp-company-subTitle">Рассрочка от Тинькофф</div>
+															<div class="bx-soa-pp-company-logo">
+																<div class="bx-soa-pp-company-graf-container">
+																	<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/resize_cache/sale/paysystem/logotip/50f/300_300_1/q15vdyv5exzw7r58lz285bx66d88jsv1.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/sale/paysystem/logotip/50f/300_300_1/q15vdyv5exzw7r58lz285bx66d88jsv1.png) 1x, url(https://arnica-home.ru/upload/sale/paysystem/logotip/50f/q15vdyv5exzw7r58lz285bx66d88jsv1.png) 2x)"></div>
+																</div>
+															</div>
+															<div class="bx-soa-pp-company-block">
+																<div class="bx-soa-pp-company-desc"></div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row bx-soa-more">
+												<div class="bx-soa-more-btn col-xs-12"><a href="javascript:void(0)" class="pull-left btn btn-default btn-md">Назад</a><a href="javascript:void(0)" class="pull-right btn btn-default btn-md">Далее</a></div>
+											</div>
 										</div>
+									</div>
+									<div id="bx-soa-delivery-hidden" class="bx-soa-section">
+										<div class="bx-soa-section-content container-fluid">
+											<div class="alert alert-danger" style="display: none;"></div>
+											<div class="bx-soa-pp row">
+												<div class="col-sm-7 bx-soa-pp-item-container">
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6 bx-selected">
+														<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_112" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="112">
+															<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 1x, url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 2x)"></div>
+															<div class="bx-soa-pp-delivery-cost">0 ₽</div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Доставка boxberry (Доставка до пункта выдачи с оплатой на сайте)</div>
+													</div>
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+														<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_110" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="110">
+															<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 1x, url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 2x)"></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Доставка boxberry (Доставка до пункта выдачи с оплатой при получении)</div>
+													</div>
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+														<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_118" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="118">
+															<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/300_300_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/300_300_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png) 1x, url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/600_600_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png) 2x)"></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">СДЭК (Доставка курьером)</div>
+													</div>
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+														<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_113" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="113">
+															<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 1x, url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 2x)"></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Доставка boxberry (Курьерская доставка с оплатой на сайте)</div>
+													</div>
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+														<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_111" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="111">
+															<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 1x, url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 2x)"></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Доставка boxberry (Курьерская доставка с оплатой при получении)</div>
+													</div>
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+														<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_120" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="120">
+															<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/300_300_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/300_300_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png) 1x, url(https://arnica-home.ru/upload/resize_cache/sale/delivery/logotip/2bc/600_600_1/yxcjoglp7sqbbr9dktvazm6lzvujfvxq.png) 2x)"></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">СДЭК (Самовывоз)</div>
+													</div>
+													<div class="bx-soa-pp-company col-lg-4 col-sm-4 col-xs-6">
+														<div class="bx-soa-pp-company-graf-container"><input id="ID_DELIVERY_ID_34" name="DELIVERY_ID" type="checkbox" class="bx-soa-pp-company-checkbox" value="34">
+															<div class="bx-soa-pp-company-image" style="background-image: url(/bitrix/templates/.default/components/bitrix/sale.order.ajax/.default/images/delivery_logo.png);"></div>
+														</div>
+														<div class="bx-soa-pp-company-smalltitle">Стоимость доставки будет рассчитана менеджером</div>
+													</div>
+												</div>
+												<div class="col-sm-5 bx-soa-pp-desc-container">
+													<div class="bx-soa-pp-company">
+														<div class="bx-soa-pp-company-subTitle">Доставка boxberry (Доставка до пункта выдачи с оплатой на сайте)</div>
+														<div class="bx-soa-pp-company-logo">
+															<div class="bx-soa-pp-company-graf-container">
+																<div class="bx-soa-pp-company-image" style="background-image: url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png);background-image: -webkit-image-set(url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 1x, url(https://arnica-home.ru/upload/sale/delivery/logotip/e85/kam0grn70ose988cvnxnbihl3nwstt7q.png) 2x)"></div>
+															</div>
+														</div>
+														<div class="bx-soa-pp-company-block">
+															<div class="bx-soa-pp-company-desc">
+																<div id="boxberrySelectPvzWidget"><a href="#" class="bxblink" onclick="boxberry.checkLocation(1);boxberry.open(delivery, '1$94e3ce7fd13f81a7f535ff28c119d754',' САНКТ-ПЕТЕРБУРГ РОССИЯ','','64960','13750','0','55','55','55','0');return false;"><span>Выбрать пункт выдачи на карте...</span></a></div>
+															</div>
+														</div>
+														<div style="clear: both;"></div>
+														<ul class="bx-soa-pp-list">
+															<li>
+																<div class="bx-soa-pp-list-termin">Стоимость:</div>
+																<div class="bx-soa-pp-list-description">0 ₽</div>
+															</li>
+															<li>
+																<div class="bx-soa-pp-list-termin">Срок доставки:</div>
+																<div class="bx-soa-pp-list-description">2 дня</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+											<div class="row bx-soa-more">
+												<div class="bx-soa-more-btn col-xs-12"><a href="javascript:void(0)" class="pull-left btn btn-default btn-md">Назад</a><a href="javascript:void(0)" class="pull-right btn btn-default btn-md">Далее</a></div>
+											</div>
+										</div>
+									</div>
+									<div id="bx-soa-pickup-hidden" class="bx-soa-section"></div>
+									<div id="bx-soa-properties-hidden" class="bx-soa-section">
+										<div class="bx-soa-section-content container-fluid">
+											<div class="alert alert-danger" style="display: none;"></div>
+											<div class="row">
+												<div class="col-sm-12 bx-soa-customer">
+													<div class="form-group bx-soa-customer-field" data-property-id-row="42"><label for="soa-property-42" class="bx-soa-custom-label">Trace b24</label>
+														<div class="soa-property-container"><input type="text" maxlength="5000" size="30" name="ORDER_PROP_42" id="soa-property-42" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+													</div>
+													<div class="form-group bx-soa-customer-field" data-property-id-row="1"><label for="soa-property-1" class="bx-soa-custom-label"><span class="bx-authform-starrequired">*</span> Имя</label>
+														<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_1" id="soa-property-1" autocomplete="name" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+													</div>
+													<div class="form-group bx-soa-customer-field" data-property-id-row="29"><label for="soa-property-29" class="bx-soa-custom-label"><span class="bx-authform-starrequired">*</span> Фамилия</label>
+														<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_29" id="soa-property-29" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+													</div>
+													<div class="form-group bx-soa-customer-field" data-property-id-row="2"><label for="soa-property-2" class="bx-soa-custom-label"><span class="bx-authform-starrequired">*</span> Телефон</label>
+														<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_2" id="soa-property-2" autocomplete="tel" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+													</div>
+													<div class="form-group bx-soa-customer-field" data-property-id-row="3"><label for="soa-property-3" class="bx-soa-custom-label"><span class="bx-authform-starrequired">*</span> Email</label>
+														<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_3" id="soa-property-3" autocomplete="email" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix"></div>
+													</div>
+													<div class="form-group bx-soa-customer-field" data-property-id-row="5"><label for="soa-property-5" class="bx-soa-custom-label">Пункт самовывоза</label>
+														<div class="soa-property-container"><input type="text" size="30" name="ORDER_PROP_5" id="soa-property-5" placeholder="" class="form-control bx-soa-customer-input bx-ios-fix" readonly="true">
+															<div class="delivery-buttton bx-red btn btn-default" style="margin: 5px 0px;">Выбрать</div>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-12">
+													<div class="form-group bx-soa-customer-field"><label for="orderDescription" class="bx-soa-customer-label">Комментарии к заказу:</label><textarea id="orderDescription" cols="4" class="form-control bx-soa-customer-textarea bx-ios-fix" name="ORDER_DESCRIPTION"></textarea></div>
+												</div>
+											</div>
+											<div class="row bx-soa-more">
+												<div class="bx-soa-more-btn col-xs-12"><a href="javascript:void(0)" class="pull-left btn btn-default btn-md">Назад</a><a href="javascript:void(0)" class="pull-right btn btn-default btn-md">Далее</a></div>
+											</div>
+										</div>
+									</div>
+									<div id="bx-soa-auth-hidden" class="bx-soa-section">
+
 									</div>
 								</div>
 							</div>
+
+							<!--	SIDEBAR BLOCK	-->
+							<div id="bx-soa-total" class="col-sm-3 bx-soa-sidebar">
+								<div class="bx-soa-cart-total-ghost"></div>
+								<div class="bx-soa-cart-total">
+									<div class="bx-soa-total__item-list">
+										<div class="bx-soa-total__item ">
+											<div class="bx-soa-total__item-img"><picture><source srcset="https://arnica-home.ru/upload/resize_cache/iblock/0db/160_160_1/fsn2866hz3xs3vn108thf0b4uf2binhf.webp"type="image/webp"><img src="https://arnica-home.ru/upload/resize_cache/iblock/0db/160_160_1/fsn2866hz3xs3vn108thf0b4uf2binhf.jpg"></picture></div>
+											<div class="bx-soa-total__item-name">Tayfun Aqua 2 in 1<div class="bx-soa-total__item-price">1 x 11&nbsp;990 ₽</div>
+											</div>
+										</div>
+										<div class="bx-soa-total__item ">
+											<div class="bx-soa-total__item-img"><picture><source srcset="https://arnica-home.ru/upload/resize_cache/iblock/445/160_160_1/lm6wbwycmqwi27tuhrb9qjito5pvnx7e.webp"type="image/webp"><img src="https://arnica-home.ru/upload/resize_cache/iblock/445/160_160_1/lm6wbwycmqwi27tuhrb9qjito5pvnx7e.jpg"></picture></div>
+											<div class="bx-soa-total__item-name">Tesla Plus<div class="bx-soa-total__item-price">1 x 19&nbsp;990 ₽</div>
+											</div>
+										</div>
+										<div class="bx-soa-total__item ">
+											<div class="bx-soa-total__item-img"><picture><source srcset="https://arnica-home.ru/upload/resize_cache/iblock/1f8/160_160_1/1f8bbebac98086f9a95fc4170e3bd494.webp"type="image/webp"><img src="https://arnica-home.ru/upload/resize_cache/iblock/1f8/160_160_1/1f8bbebac98086f9a95fc4170e3bd494.png"></picture></div>
+											<div class="bx-soa-total__item-name">Lotus Trend<div class="bx-soa-total__item-price">1 x 14&nbsp;990 ₽</div>
+											</div>
+										</div>
+										<div class="bx-soa-total__item ">
+											<div class="bx-soa-total__item-img"><picture><source srcset="https://arnica-home.ru/upload/resize_cache/iblock/73c/160_160_1/73c4c7180600576b690859ca199f225b.webp"type="image/webp"><img src="https://arnica-home.ru/upload/resize_cache/iblock/73c/160_160_1/73c4c7180600576b690859ca199f225b.jpg"></picture></div>
+											<div class="bx-soa-total__item-name">Tesla красный<div class="bx-soa-total__item-price">1 x 17&nbsp;990 ₽</div>
+											</div>
+										</div>
+									</div>
+									<div class="bx-soa-cart-total-line"><span class="bx-soa-cart-t">Товаров на:</span><span class="bx-soa-cart-d">64&nbsp;960 ₽</span></div>
+									<div class="bx-soa-cart-total-line"><span class="bx-soa-cart-t">Общий вес:</span><span class="bx-soa-cart-d">10750 г</span></div>
+									<div class="bx-soa-cart-total-line"><span class="bx-soa-cart-t">Доставка:</span><span class="bx-soa-cart-d"><span class="bx-soa-price-free">бесплатно</span></span></div>
+									<div class="bx-soa-cart-total-line bx-soa-cart-total-line-total"><span class="bx-soa-cart-t">Итого:</span><span class="bx-soa-cart-d" style="font-size: 28px;">64&nbsp;960 ₽</span></div>
+									<div class="bx-soa-cart-total-button-container visible-xs"><a href="javascript:void(0)" class="btn btn-default btn-lg btn-order-save">Оформить заказ</a></div>
+								</div>
+							</div>
 						</div>
-					</div>
+					</form>
 				</div>
 			</section>
 		</main>
