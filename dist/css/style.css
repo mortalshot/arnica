@@ -386,6 +386,8 @@ h6 {
   padding: 0.625rem 1.125rem;
   min-height: 3rem;
   border: 0.0625rem solid transparent;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn svg {
@@ -439,6 +441,41 @@ h6 {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 1.125rem;
           flex: 0 0 1.125rem;
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0.0625rem solid rgba(255, 255, 255, 0.5);
+  -webkit-animation: button-circle 2s ease forwards;
+          animation: button-circle 2s ease forwards;
+}
+
+@-webkit-keyframes button-circle {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(20);
+            transform: scale(20);
+    opacity: 0;
+  }
+}
+
+@keyframes button-circle {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+
+  100% {
+    -webkit-transform: scale(20);
+            transform: scale(20);
+    opacity: 0;
+  }
 }
 
 input[type=text],

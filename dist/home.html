@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240715160757" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240715160757">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240715160757">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240715164455" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240715164455">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240715164455">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,11 +42,11 @@
 
 						<div class="location-confirmation__actions">
 							<div class="location-confirmation__button">
-								<button type="button" class="btn btn_bg-green location-close">Да</button>
+								<button data-ripple="" type="button" class="btn btn_bg-green location-close">Да</button>
 							</div>
 
 							<div class="location-confirmation__button">
-								<button type="button" class="btn btn_border-main location-next">Нет</button>
+								<button data-ripple="" type="button" class="btn btn_border-main location-next">Нет</button>
 							</div>
 						</div>
 					</div>
@@ -166,7 +166,7 @@
 
 						<div class="header__catalog header-catalog" data-da=".menu__body, 991.98, 0">
 							<div class="header-catalog__button">
-								<button type="button" class="btn btn_bg-red">
+								<button data-ripple="" type="button" class="btn btn_bg-red">
 									<svg class="icon icon_catalog">
 										<use xlink:href="img/sprite.svg#svg-catalog"></use>
 									</svg>
@@ -346,7 +346,7 @@
 								</div>
 
 								<div class="search-results__button">
-									<a href="" class="btn btn_border-main">
+									<a href="" data-ripple="" class="btn btn_border-main">
 										<span>Показать все результаты</span>
 
 										<svg class="icon">
@@ -659,176 +659,7 @@
 
 										<div class="product-card__footer">
 											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
-													<span>В корзину</span>
-
-													<svg class="icon">
-														<use xlink:href="img/sprite.svg#svg-cart"></use>
-													</svg>
-												</button>
-											</div>
-
-											<div class="product-card__actions">
-												<div class="product-card__compare">
-													<button type="button" class="shake-animation">
-														<svg class="icon">
-															<use xlink:href="img/sprite.svg#svg-compare"></use>
-														</svg>
-													</button>
-												</div>
-
-												<div class="product-card__wishlist">
-													<button type="button" class="shake-animation">
-														<svg class="icon">
-															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
-														</svg>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</article>
-							</div>
-
-							<div class="widget-products__slide swiper-slide">
-								<article class="product-card">
-									<a href="single-product.html" class="product-card__link"> </a>
-
-									<div class="product-card__head">
-										<div class="product-card__labels">
-											<div class="product-card__label product-card__label_new">NEW</div>
-										</div>
-
-										<div data-mousemove-swipe class="product-preview__slider swiper">
-											<div class="product-preview__wrapper swiper-wrapper">
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card1-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card1-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card3-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card3-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card4-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card4-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-											</div>
-
-											<div class="swiper-pagination"></div>
-										</div>
-									</div>
-
-									<div class="product-card__main">
-										<div class="product-card__body">
-											<div class="product-card__top">
-												<a href="" class="product-card__title">Tesla Plus</a>
-
-												<div class="product-card__excrpt _content">
-													<p>Высокая мощность и расширенная комплектация для максимального результата
-														без лишних усилий</p>
-													<p>Высокая мощность и расширенная комплектация для максимального результата
-														без лишних усилий</p>
-												</div>
-											</div>
-
-											<div class="product-card__price price">
-												<div class="price price_new">1 119 990 ₽</div>
-												<div class="price price_old">1 132 990 ₽</div>
-											</div>
-										</div>
-
-										<div class="product-card__footer">
-											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
-													<span>В корзину</span>
-
-													<svg class="icon">
-														<use xlink:href="img/sprite.svg#svg-cart"></use>
-													</svg>
-												</button>
-											</div>
-
-											<div class="product-card__actions">
-												<div class="product-card__compare">
-													<button type="button" class="shake-animation">
-														<svg class="icon">
-															<use xlink:href="img/sprite.svg#svg-compare"></use>
-														</svg>
-													</button>
-												</div>
-
-												<div class="product-card__wishlist">
-													<button type="button" class="shake-animation">
-														<svg class="icon">
-															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
-														</svg>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</article>
-							</div>
-
-							<div class="widget-products__slide swiper-slide">
-								<article class="product-card">
-									<a href="single-product.html" class="product-card__link"> </a>
-
-									<div class="product-card__head">
-										<div class="product-card__labels">
-											<div class="product-card__label product-card__label_new">NEW</div>
-										</div>
-
-										<div data-mousemove-swipe class="product-preview__slider swiper">
-											<div class="product-preview__wrapper swiper-wrapper">
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card3-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card3-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-											</div>
-
-											<div class="swiper-pagination"></div>
-										</div>
-									</div>
-
-									<div class="product-card__main">
-										<div class="product-card__body">
-											<div class="product-card__top">
-												<a href="" class="product-card__title">Tesla Plus</a>
-
-												<div class="product-card__excrpt _content">
-													<p>Высокая мощность и расширенная комплектация для максимального результата
-														без лишних усилий</p>
-												</div>
-											</div>
-
-											<div class="product-card__price price">
-												<div class="price price_new">19 990 ₽</div>
-												<div class="price price_old">32 990 ₽</div>
-											</div>
-										</div>
-
-										<div class="product-card__footer">
-											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
+												<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
 													<span>В корзину</span>
 
 													<svg class="icon">
@@ -909,7 +740,7 @@
 
 										<div class="product-card__footer">
 											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
+												<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
 													<span>В корзину</span>
 
 													<svg class="icon">
@@ -947,6 +778,7 @@
 									<div class="product-card__head">
 										<div class="product-card__labels">
 											<div class="product-card__label product-card__label_new">NEW</div>
+											<div class="product-card__label product-card__label_sale">sale</div>
 										</div>
 
 										<div data-mousemove-swipe class="product-preview__slider swiper">
@@ -965,16 +797,6 @@
 													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
 													<div class="swiper-lazy-preloader"></div>
 												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card3-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card3-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card4-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card4-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
 											</div>
 
 											<div class="swiper-pagination"></div>
@@ -989,20 +811,17 @@
 												<div class="product-card__excrpt _content">
 													<p>Высокая мощность и расширенная комплектация для максимального результата
 														без лишних усилий</p>
-													<p>Высокая мощность и расширенная комплектация для максимального результата
-														без лишних усилий</p>
 												</div>
 											</div>
 
 											<div class="product-card__price price">
-												<div class="price price_new">1 119 990 ₽</div>
-												<div class="price price_old">1 132 990 ₽</div>
+												<div class="price price_current">19 990 ₽</div>
 											</div>
 										</div>
 
 										<div class="product-card__footer">
 											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
+												<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
 													<span>В корзину</span>
 
 													<svg class="icon">
@@ -1040,17 +859,23 @@
 									<div class="product-card__head">
 										<div class="product-card__labels">
 											<div class="product-card__label product-card__label_new">NEW</div>
+											<div class="product-card__label product-card__label_sale">sale</div>
 										</div>
 
 										<div data-mousemove-swipe class="product-preview__slider swiper">
 											<div class="product-preview__wrapper swiper-wrapper">
 												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
+													<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
 													<div class="swiper-lazy-preloader"></div>
 												</div>
 
 												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card3-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card3-bg1440.png" alt="" loading="lazy"></picture>
+													<picture><source srcset="img/widget-sales/sale-card1-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card1-bg1440.png" alt="" loading="lazy"></picture>
+													<div class="swiper-lazy-preloader"></div>
+												</div>
+
+												<div class="product-preview__slide swiper-slide">
+													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
 													<div class="swiper-lazy-preloader"></div>
 												</div>
 											</div>
@@ -1071,14 +896,94 @@
 											</div>
 
 											<div class="product-card__price price">
-												<div class="price price_new">19 990 ₽</div>
-												<div class="price price_old">32 990 ₽</div>
+												<div class="price price_current">19 990 ₽</div>
 											</div>
 										</div>
 
 										<div class="product-card__footer">
 											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
+												<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+											<div class="product-card__label product-card__label_sale">sale</div>
+										</div>
+
+										<div data-mousemove-swipe class="product-preview__slider swiper">
+											<div class="product-preview__wrapper swiper-wrapper">
+												<div class="product-preview__slide swiper-slide">
+													<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+													<div class="swiper-lazy-preloader"></div>
+												</div>
+
+												<div class="product-preview__slide swiper-slide">
+													<picture><source srcset="img/widget-sales/sale-card1-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card1-bg1440.png" alt="" loading="lazy"></picture>
+													<div class="swiper-lazy-preloader"></div>
+												</div>
+
+												<div class="product-preview__slide swiper-slide">
+													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
+													<div class="swiper-lazy-preloader"></div>
+												</div>
+											</div>
+
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
 													<span>В корзину</span>
 
 													<svg class="icon">
@@ -1309,176 +1214,7 @@
 
 										<div class="product-card__footer">
 											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
-													<span>В корзину</span>
-
-													<svg class="icon">
-														<use xlink:href="img/sprite.svg#svg-cart"></use>
-													</svg>
-												</button>
-											</div>
-
-											<div class="product-card__actions">
-												<div class="product-card__compare">
-													<button type="button" class="shake-animation">
-														<svg class="icon">
-															<use xlink:href="img/sprite.svg#svg-compare"></use>
-														</svg>
-													</button>
-												</div>
-
-												<div class="product-card__wishlist">
-													<button type="button" class="shake-animation">
-														<svg class="icon">
-															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
-														</svg>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</article>
-							</div>
-
-							<div class="widget-products__slide swiper-slide">
-								<article class="product-card">
-									<a href="single-product.html" class="product-card__link"> </a>
-
-									<div class="product-card__head">
-										<div class="product-card__labels">
-											<div class="product-card__label product-card__label_new">NEW</div>
-										</div>
-
-										<div data-mousemove-swipe class="product-preview__slider swiper">
-											<div class="product-preview__wrapper swiper-wrapper">
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card1-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card1-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card3-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card3-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card4-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card4-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-											</div>
-
-											<div class="swiper-pagination"></div>
-										</div>
-									</div>
-
-									<div class="product-card__main">
-										<div class="product-card__body">
-											<div class="product-card__top">
-												<a href="" class="product-card__title">Tesla Plus</a>
-
-												<div class="product-card__excrpt _content">
-													<p>Высокая мощность и расширенная комплектация для максимального результата
-														без лишних усилий</p>
-													<p>Высокая мощность и расширенная комплектация для максимального результата
-														без лишних усилий</p>
-												</div>
-											</div>
-
-											<div class="product-card__price price">
-												<div class="price price_new">1 119 990 ₽</div>
-												<div class="price price_old">1 132 990 ₽</div>
-											</div>
-										</div>
-
-										<div class="product-card__footer">
-											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
-													<span>В корзину</span>
-
-													<svg class="icon">
-														<use xlink:href="img/sprite.svg#svg-cart"></use>
-													</svg>
-												</button>
-											</div>
-
-											<div class="product-card__actions">
-												<div class="product-card__compare">
-													<button type="button" class="shake-animation">
-														<svg class="icon">
-															<use xlink:href="img/sprite.svg#svg-compare"></use>
-														</svg>
-													</button>
-												</div>
-
-												<div class="product-card__wishlist">
-													<button type="button" class="shake-animation">
-														<svg class="icon">
-															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
-														</svg>
-													</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</article>
-							</div>
-
-							<div class="widget-products__slide swiper-slide">
-								<article class="product-card">
-									<a href="single-product.html" class="product-card__link"> </a>
-
-									<div class="product-card__head">
-										<div class="product-card__labels">
-											<div class="product-card__label product-card__label_new">NEW</div>
-										</div>
-
-										<div data-mousemove-swipe class="product-preview__slider swiper">
-											<div class="product-preview__wrapper swiper-wrapper">
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card3-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card3-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-											</div>
-
-											<div class="swiper-pagination"></div>
-										</div>
-									</div>
-
-									<div class="product-card__main">
-										<div class="product-card__body">
-											<div class="product-card__top">
-												<a href="" class="product-card__title">Tesla Plus</a>
-
-												<div class="product-card__excrpt _content">
-													<p>Высокая мощность и расширенная комплектация для максимального результата
-														без лишних усилий</p>
-												</div>
-											</div>
-
-											<div class="product-card__price price">
-												<div class="price price_new">19 990 ₽</div>
-												<div class="price price_old">32 990 ₽</div>
-											</div>
-										</div>
-
-										<div class="product-card__footer">
-											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
+												<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
 													<span>В корзину</span>
 
 													<svg class="icon">
@@ -1559,7 +1295,7 @@
 
 										<div class="product-card__footer">
 											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
+												<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
 													<span>В корзину</span>
 
 													<svg class="icon">
@@ -1597,6 +1333,7 @@
 									<div class="product-card__head">
 										<div class="product-card__labels">
 											<div class="product-card__label product-card__label_new">NEW</div>
+											<div class="product-card__label product-card__label_sale">sale</div>
 										</div>
 
 										<div data-mousemove-swipe class="product-preview__slider swiper">
@@ -1615,16 +1352,6 @@
 													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
 													<div class="swiper-lazy-preloader"></div>
 												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card3-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card3-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
-
-												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card4-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card4-bg1440.png" alt="" loading="lazy"></picture>
-													<div class="swiper-lazy-preloader"></div>
-												</div>
 											</div>
 
 											<div class="swiper-pagination"></div>
@@ -1639,20 +1366,17 @@
 												<div class="product-card__excrpt _content">
 													<p>Высокая мощность и расширенная комплектация для максимального результата
 														без лишних усилий</p>
-													<p>Высокая мощность и расширенная комплектация для максимального результата
-														без лишних усилий</p>
 												</div>
 											</div>
 
 											<div class="product-card__price price">
-												<div class="price price_new">1 119 990 ₽</div>
-												<div class="price price_old">1 132 990 ₽</div>
+												<div class="price price_current">19 990 ₽</div>
 											</div>
 										</div>
 
 										<div class="product-card__footer">
 											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
+												<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
 													<span>В корзину</span>
 
 													<svg class="icon">
@@ -1690,17 +1414,23 @@
 									<div class="product-card__head">
 										<div class="product-card__labels">
 											<div class="product-card__label product-card__label_new">NEW</div>
+											<div class="product-card__label product-card__label_sale">sale</div>
 										</div>
 
 										<div data-mousemove-swipe class="product-preview__slider swiper">
 											<div class="product-preview__wrapper swiper-wrapper">
 												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
+													<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
 													<div class="swiper-lazy-preloader"></div>
 												</div>
 
 												<div class="product-preview__slide swiper-slide">
-													<picture><source srcset="img/widget-sales/sale-card3-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card3-bg1440.png" alt="" loading="lazy"></picture>
+													<picture><source srcset="img/widget-sales/sale-card1-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card1-bg1440.png" alt="" loading="lazy"></picture>
+													<div class="swiper-lazy-preloader"></div>
+												</div>
+
+												<div class="product-preview__slide swiper-slide">
+													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
 													<div class="swiper-lazy-preloader"></div>
 												</div>
 											</div>
@@ -1721,14 +1451,94 @@
 											</div>
 
 											<div class="product-card__price price">
-												<div class="price price_new">19 990 ₽</div>
-												<div class="price price_old">32 990 ₽</div>
+												<div class="price price_current">19 990 ₽</div>
 											</div>
 										</div>
 
 										<div class="product-card__footer">
 											<div class="product-card__add">
-												<button type="button" class="btn btn_border-main">
+												<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
+													<span>В корзину</span>
+
+													<svg class="icon">
+														<use xlink:href="img/sprite.svg#svg-cart"></use>
+													</svg>
+												</button>
+											</div>
+
+											<div class="product-card__actions">
+												<div class="product-card__compare">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-compare"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__wishlist">
+													<button type="button" class="shake-animation">
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+														</svg>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+
+							<div class="widget-products__slide swiper-slide">
+								<article class="product-card">
+									<a href="single-product.html" class="product-card__link"> </a>
+
+									<div class="product-card__head">
+										<div class="product-card__labels">
+											<div class="product-card__label product-card__label_new">NEW</div>
+											<div class="product-card__label product-card__label_sale">sale</div>
+										</div>
+
+										<div data-mousemove-swipe class="product-preview__slider swiper">
+											<div class="product-preview__wrapper swiper-wrapper">
+												<div class="product-preview__slide swiper-slide">
+													<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+													<div class="swiper-lazy-preloader"></div>
+												</div>
+
+												<div class="product-preview__slide swiper-slide">
+													<picture><source srcset="img/widget-sales/sale-card1-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card1-bg1440.png" alt="" loading="lazy"></picture>
+													<div class="swiper-lazy-preloader"></div>
+												</div>
+
+												<div class="product-preview__slide swiper-slide">
+													<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
+													<div class="swiper-lazy-preloader"></div>
+												</div>
+											</div>
+
+											<div class="swiper-pagination"></div>
+										</div>
+									</div>
+
+									<div class="product-card__main">
+										<div class="product-card__body">
+											<div class="product-card__top">
+												<a href="" class="product-card__title">Tesla Plus</a>
+
+												<div class="product-card__excrpt _content">
+													<p>Высокая мощность и расширенная комплектация для максимального результата
+														без лишних усилий</p>
+												</div>
+											</div>
+
+											<div class="product-card__price price">
+												<div class="price price_current">19 990 ₽</div>
+											</div>
+										</div>
+
+										<div class="product-card__footer">
+											<div class="product-card__add">
+												<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
 													<span>В корзину</span>
 
 													<svg class="icon">
@@ -1894,7 +1704,7 @@
 								</div>
 
 								<div class="widget-news__button" data-da=".widget-news__container, 991.98, last">
-									<a href="" class="btn btn_border-main">Все новости</a>
+									<a href="" data-ripple="" class="btn btn_border-main">Все новости</a>
 								</div>
 							</div>
 
@@ -2169,7 +1979,7 @@
 						<div class="form__row">
 							<div class="col-12">
 								<div class="form__submit">
-									<button type="submit" class="btn btn_bg-green">Отправить</button>
+									<button data-ripple="" type="submit" class="btn btn_bg-green">Отправить</button>
 								</div>
 							</div>
 						</div>
@@ -2270,7 +2080,7 @@
 						<div class="form__row">
 							<div class="col-12">
 								<div class="form__submit">
-									<button type="submit" class="btn btn_bg-green">Отправить</button>
+									<button data-ripple="" type="submit" class="btn btn_bg-green">Отправить</button>
 								</div>
 							</div>
 						</div>
@@ -2915,7 +2725,7 @@
 							</div>
 
 							<div class="popup-cart__button">
-								<a href="checkout.html" class="btn btn_bg-green">Оформить заказ</a>
+								<a data-ripple="" href="checkout.html" class="btn btn_bg-green">Оформить заказ</a>
 							</div>
 						</div>
 					</form>
@@ -3068,7 +2878,7 @@
 						<div class="form__row">
 							<div class="col-12">
 								<div class="form__submit">
-									<button type="submit" class="btn btn_bg-green">Отправить</button>
+									<button data-ripple="" type="submit" class="btn btn_bg-green">Отправить</button>
 								</div>
 							</div>
 						</div>
@@ -3331,7 +3141,7 @@
 						<div class="form__row">
 							<div class="col-12">
 								<div class="form__submit">
-									<button type="submit" class="btn btn_bg-green">Отправить</button>
+									<button data-ripple="" type="submit" class="btn btn_bg-green">Отправить</button>
 								</div>
 							</div>
 						</div>
@@ -3340,9 +3150,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240715160757"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240715160757"></script>
-	<script src="js/app.min.js?_v=20240715160757"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240715164455"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240715164455"></script>
+	<script src="js/app.min.js?_v=20240715164455"></script>
 </body>
 
 </html>
