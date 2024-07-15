@@ -100,4 +100,10 @@
 	display: inline-flex;
 	align-items: center;
 	gap: rem(8);
+	
+	svg {
+		width: rem(18);
+		height: rem(18);
+		flex: 0 0 rem(18);
+	}
 }

@@ -165,7 +165,7 @@
   // .category-card__main
   &__main {
     height: 100%;
-    @include adaptiveValue("min-height", 402, 180, 1440, 992, 1);
+    @include adaptiveValue("min-height", 402, 218, 1440, 992, 1);
     display: grid;
     align-content: space-between;
     position: relative;
@@ -177,13 +177,14 @@
   &__head {
     display: grid;
     align-content: flex-start;
-    @include adaptiveValue("row-gap", 16, 4, 1440, 768, 1);
+    @include adaptiveValue("row-gap", 16, 8, 1440, 768, 1);
     max-width: rem(285);
   }
 
   // .category-card__title
   &__title {
-    @include adaptiveValue("font-size", 28, 14, 1440, 768, 1);
+    font-weight: 700;
+    @include adaptiveValue("font-size", 28, 16, 1440, 768, 1);
     line-height: math.div(32, 28);
   }
 
@@ -192,7 +193,6 @@
     display: flex;
     align-items: center;
     gap: rem(6);
-    @include adaptiveValue("font-size", 14, 12, 1440, 768, 1);
 
     span {
       color: $Red;
@@ -204,11 +204,10 @@
   }
 
   .text-link {
+    @include adaptiveValue("font-size", 14, 12, 768, 360, 1);
     opacity: 0.6;
 
     @media (max-width: $tablet) {
-      font-size: rem(10);
-
       svg {
         width: rem(14);
         height: rem(14);
@@ -288,7 +287,7 @@
 
   // .widget-products__link
   &__link {
-    @include adaptiveValue("font-size", 14, 10, 768, 360, 1);
+    @include adaptiveValue("font-size", 14, 12, 768, 360, 1);
   }
 
   // .widget-products__slider
@@ -366,10 +365,10 @@
 
   // .product-card__label
   &__label {
-    @include adaptiveValue("font-size", 14, 8, 1440, 360, 1);
+    @include adaptiveValue("font-size", 14, 12, 1440, 360, 1);
     text-transform: uppercase;
-    @include adaptiveValue("padding-top", 10, 2, 1440, 360, 1);
-    @include adaptiveValue("padding-bottom", 10, 2, 1440, 360, 1);
+    @include adaptiveValue("padding-top", 10, 4, 1440, 360, 1);
+    @include adaptiveValue("padding-bottom", 10, 4, 1440, 360, 1);
     @include adaptiveValue("padding-left", 10, 4, 1440, 360, 1);
     @include adaptiveValue("padding-right", 10, 4, 1440, 360, 1);
     border-radius: rem(20);
@@ -403,6 +402,23 @@
     }
   }
 
+  .swiper-pagination {
+    bottom: rem(4) !important;
+  }
+
+  .swiper-pagination-bullet {
+    border-radius: 0;
+    width: rem(23);
+    height: rem(2);
+    background: $LGray;
+    border: 0;
+    margin: 0 rem(3) !important;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $mainColor;
+  }
+
   // .product-card__main
   &__main {
     flex: 1;
@@ -424,22 +440,23 @@
     flex: 1;
     display: grid;
     align-content: flex-start;
-    row-gap: rem(8);
+    row-gap: rem(4);
   }
 
   // .product-card__title
   &__title {
-    font-weight: 500;
-    @include adaptiveValue("font-size", 18, 16, 1440, 768, 1);
+    font-weight: 700;
+    @include adaptiveValue("font-size", 22, 20, 1440, 768, 1);
+    line-height: math.div(24, 22);
   }
 
   // .product-card__excrpt
   &__excrpt {
-    @include adaptiveValue("font-size", 12, 8, 768, 360, 1);
-    line-height: math.div(10, 8);
+    font-size: rem(14);
+    line-height: math.div(16, 14);
     color: $Gray3;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
 
@@ -556,7 +573,7 @@
 .price {
   white-space: nowrap;
   font-weight: 500;
-  @include adaptiveValue("font-size", 28, 18, 1440, 768, 1);
+  @include adaptiveValue("font-size", 28, 20, 1440, 768, 1);
   line-height: math.div(30, 28);
   color: $Green;
 
@@ -686,7 +703,7 @@
     border-radius: rem(20);
     overflow: hidden;
     background-color: $White;
-    @include adaptiveValue("font-size", 12, 10, 768, 360, 1);
+    @include adaptiveValue("font-size", 14, 12, 768, 360, 1);
     color: $mainColor;
   }
 
@@ -695,6 +712,7 @@
     @include adaptiveValue("padding", 34, 14, 768, 360, 1);
     @include adaptiveValue("padding-top", 68, 38, 768, 360, 1);
     position: relative;
+    font-size: rem(14);
 
     & > * {
       margin-top: rem(6);
@@ -875,13 +893,13 @@ a.partner-card {
     margin-right: rem(-35);
 
     @media (min-width: $tablet) {
-      @include adaptiveValue("margin-left", -35, -8, 1440, 992, 1);
-      @include adaptiveValue("margin-right", -35, -8, 1440, 992, 1);
+      @include adaptiveValue("margin-left", -20, -8, 1440, 992, 1);
+      @include adaptiveValue("margin-right", -20, -8, 1440, 992, 1);
     }
 
     @media (max-width: $mobile) {
-      @include adaptiveValue("margin-left", -35, -16, 768, 360, 1);
-      @include adaptiveValue("margin-right", -35, -16, 768, 360, 1);
+      @include adaptiveValue("margin-left", -20, -16, 768, 360, 1);
+      @include adaptiveValue("margin-right", -20, -16, 768, 360, 1);
     }
 
     & > * {
@@ -891,12 +909,12 @@ a.partner-card {
       padding-right: rem(35);
 
       @media (min-width: $tablet) {
-        @include adaptiveValue("padding-left", 35, 8, 1440, 992, 1);
-        @include adaptiveValue("padding-right", 35, 8, 1440, 992, 1);
+        @include adaptiveValue("padding-left", 20, 8, 1440, 992, 1);
+        @include adaptiveValue("padding-right", 20, 8, 1440, 992, 1);
       }
       @media (max-width: $mobile) {
-        @include adaptiveValue("padding-left", 35, 16, 768, 360, 1);
-        @include adaptiveValue("padding-right", 35, 16, 768, 360, 1);
+        @include adaptiveValue("padding-left", 20, 16, 768, 360, 1);
+        @include adaptiveValue("padding-right", 20, 16, 768, 360, 1);
       }
     }
   }
@@ -909,13 +927,11 @@ a.partner-card {
 
   // .features-item__title
   &__title {
-    font-weight: 700;
     color: #7e9aa5;
   }
 
   // .features-item__text
   &__text {
-    @include adaptiveValue("font-size", 12, 8, 768, 360);
   }
 }
 
@@ -1089,12 +1105,12 @@ a.partner-card {
 
   // .news-card__excrpt
   &__excrpt {
-    @include adaptiveValue("font-size", 16, 12, 768, 360, 1);
-    line-height: math.div(26, 16);
   }
 
   // .news-card__date
   &__date {
+    @include adaptiveValue("font-size", 14, 12);
+    line-height: math.div(16, 14);
     color: #999999;
   }
 
@@ -1236,8 +1252,6 @@ a.partner-card {
 
   // .error-section__body
   &__body {
-    font-size: rem(13);
-
     @media (max-width: $tablet) {
       max-width: rem(502);
       margin-left: auto;
@@ -1319,7 +1333,7 @@ a.partner-card {
   // .catalog__heading
   &__heading {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     gap: rem(20);
 
@@ -1328,7 +1342,7 @@ a.partner-card {
     }
 
     &:not(:last-child) {
-      margin-bottom: rem(24);
+      margin-bottom: rem(16);
     }
 
     .catalog-filter__caption {
@@ -1377,9 +1391,14 @@ a.partner-card {
     }
   }
 
+  // .catalog__sorting
   &__sorting {
     div.select {
-      min-width: rem(200);
+      min-width: rem(205);
+    }
+
+    .select__title {
+      height: rem(32);
     }
 
     .select__value {
@@ -1432,8 +1451,6 @@ a.partner-card {
   // .catalog-filter__found
   &__found {
     font-weight: 500;
-    font-size: rem(14);
-    line-height: math.div(18, 14);
   }
 
   // .catalog-filter__reset
@@ -1588,11 +1605,11 @@ a.partner-card {
       .btn {
         width: 100%;
         font-weight: 500;
-        font-size: rem(12);
+        font-size: rem(14);
         line-height: math.div(20, 12);
         min-height: rem(40);
-        padding-left: rem(28);
-        padding-right: rem(28);
+        padding-left: rem(16);
+        padding-right: rem(16);
       }
     }
   }
@@ -1611,6 +1628,7 @@ a.partner-card {
     align-items: center;
     gap: rem(10);
     padding: rem(8) rem(10);
+    font-size: rem(14);
 
     @media (any-hover: hover) {
       transition: $transition ease border-color 0s;
@@ -2005,7 +2023,7 @@ a.partner-card {
 
     .switch__slider span {
       @media (min-width: $tablet) {
-        @include adaptiveValue("font-size", 14, 12, 1440, 992, 1);
+        @include adaptiveValue("font-size", 13, 12, 1440, 992, 1);
       }
     }
   }
@@ -2045,7 +2063,7 @@ a.partner-card {
     }
 
     @media (max-width: $mobile) {
-      @include adaptiveValue("font-size", 16, 13, 768, 360, 1);
+      @include adaptiveValue("font-size", 16, 14, 768, 360, 1);
 
       &::before {
         content: attr(data-title);
@@ -2077,8 +2095,6 @@ a.partner-card {
 
   // .text-section__text
   &__text {
-    @include adaptiveValue("font-size", 16, 12, 768, 360, 1);
-
     &:not(:last-child) {
       margin-bottom: rem(28);
     }
@@ -2180,9 +2196,6 @@ a.partner-card {
 
   // .work-features__body
   &__body {
-    @media (min-width: $pc) {
-      @include adaptiveValue("font-size", 16, 14, 1920, 1440, 1);
-    }
 
     & > * {
       margin-top: rem(12);
@@ -2191,7 +2204,7 @@ a.partner-card {
 
     h6 {
       font-weight: 700;
-      @include adaptiveValue("font-size", 18, 14, 768, 360, 1);
+      @include adaptiveValue("font-size", 18, 16, 768, 360, 1);
     }
   }
 }
@@ -2343,7 +2356,6 @@ a.partner-card {
   // .single-article__text
   &__text {
     max-width: 100%;
-    @include adaptiveValue("font-size", 16, 12, 768, 360, 1);
     line-height: math.div(26, 16);
 
     a {
@@ -2583,7 +2595,6 @@ a.partner-card {
 
   // .delivery-template1__text
   &__text {
-    @include adaptiveValue("font-size", 16, 12, 768, 360, 1);
     line-height: math.div(26, 16);
   }
 
@@ -2597,7 +2608,6 @@ a.partner-card {
     background-color: $Blue3;
     border-radius: rem(20);
     overflow: hidden;
-    @include adaptiveValue("font-size", 16, 14, 768, 360, 1);
     line-height: math.div(26, 16);
 
     @media (min-width: $tablet) {
@@ -2613,7 +2623,6 @@ a.partner-card {
 
   // .delivery-template2__text
   &__text {
-    @include adaptiveValue("font-size", 16, 12, 768, 360, 1);
     line-height: math.div(26, 16);
   }
 
@@ -2675,9 +2684,6 @@ a.partner-card {
     @media (min-width: $mobile) {
       @include adaptiveValue("font-size", 16, 13, 1480, 768, 1);
     }
-    @media (max-width: $mobile) {
-      @include adaptiveValue("font-size", 13, 12, 768, 360, 1);
-    }
   }
 }
 
@@ -2724,7 +2730,6 @@ a.partner-card {
 
     span {
       font-weight: 500;
-      @include adaptiveValue("font-size", 16, 14, 768, 360, 1);
       color: $Gray4;
     }
   }
@@ -3053,7 +3058,7 @@ a.partner-card {
 .cart-item {
   display: flex;
   align-items: center;
-  @include adaptiveValue("column-gap", 20, 10, 992, 360, 1);
+  @include adaptiveValue("column-gap", 20, 6, 992, 360, 1);
   border-bottom: rem(1) solid $LGray;
   padding-top: rem(10);
   padding-bottom: rem(10);
@@ -3123,10 +3128,10 @@ a.partner-card {
   // .cart-item__name
   &__name {
     font-weight: 500;
-    @include adaptiveValue("font-size", 14, 12, 768, 360, 1);
+    font-size: rem(14);
     line-height: math.div(24, 18);
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     overflow: hidden;
 
@@ -3145,6 +3150,7 @@ a.partner-card {
 
   // .cart-item__code
   &__code {
+    font-size: rem(13);
     color: $Gray4;
 
     .cart-item_popup & {
@@ -3167,7 +3173,7 @@ a.partner-card {
 
   // .cart-item__price
   &__price {
-    @include adaptiveValue("flex-basis", 100, 64, 768, 360, 1);
+    @include adaptiveValue("flex-basis", 100, 68, 768, 360, 1);
 
     @media (min-width: $mobile) {
       flex: 0 0 rem(120);
@@ -3288,8 +3294,6 @@ a.partner-card {
         border-radius: rem(12);
         background-color: $White;
         font-weight: 500;
-        font-size: rem(13);
-        line-height: math.div(18, 13);
         transition: $transition ease background-color 0s;
 
         svg {
@@ -3473,17 +3477,6 @@ a.partner-card {
 
   // .help-banner__text
   &__text {
-    @include adaptiveValue("font-size", 13, 12, 768, 360, 1);
-    line-height: math.div(18, 13);
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: Montserrat;
-    }
   }
 
   // .help-banner__button
@@ -3520,7 +3513,6 @@ a.partner-card {
 
 //.help-template-text     ====================================================================================================
 .help-template-text {
-  @include adaptiveValue("font-size", 16, 14, 768, 360, 1);
   line-height: math.div(26, 16);
 
   a {
@@ -3638,13 +3630,14 @@ a.partner-card {
   // .certificate-item__name
   &__name {
     font-weight: 500;
-    @include adaptiveValue("font-size", 18, 14, 768, 360, 1);
+    @include adaptiveValue("font-size", 18, 16, 768, 360, 1);
     line-height: math.div(24, 18);
+    word-break: break-word;
   }
 
   // .certificate-item__descr
   &__descr {
-    @include adaptiveValue("font-size", 14, 12, 768, 360, 1);
+    font-size: rem(14);
     color: $Gray3;
   }
 }
@@ -3758,6 +3751,16 @@ a.partner-card {
   }
 }
 
+// .template-table
+.template-table {
+  // .template-table__heading
+  &__heading {
+    &:not(:last-child) {
+      margin-bottom: rem(16);
+    }
+  }
+}
+
 //.reviews     ====================================================================================================
 .reviews {
   // .reviews__gallery
@@ -3776,7 +3779,6 @@ a.partner-card {
     display: flex;
     align-items: center;
     gap: rem(16);
-    @include adaptiveValue("font-size", 16, 14, 768, 360, 1);
   }
 
   // .reviews__label
@@ -3938,6 +3940,7 @@ a.partner-card {
 
   // .review-item__date
   &__date {
+    font-size: rem(14);
     color: $Gray4;
   }
 
@@ -3951,7 +3954,7 @@ a.partner-card {
 
   // .review-item__text
   &__text {
-    @include adaptiveValue("font-size", 13, 12);
+    font-size: rem(14);
   }
 
   // .review-item__attachments
@@ -4055,6 +4058,8 @@ a.partner-card {
 
   // .review-reply__text
   &__text {
+    font-size: rem(14);
+    padding-left: rem(34);
   }
 }
 
@@ -4495,7 +4500,6 @@ a.partner-card {
   }
 
   ._content {
-    @include adaptiveValue("font-size", 16, 14);
     line-height: math.div(26, 16);
 
     a {

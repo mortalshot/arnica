@@ -135,6 +135,7 @@
 		align-items: center;
 		gap: rem(16);
 		font-weight: 500;
+		font-size: rem(13);
 		color: #0ab3a3;
 	}
 }
@@ -476,13 +477,13 @@
 				display: flex;
 				align-items: center;
 				flex-wrap: wrap;
-				@include adaptiveValue("margin", -20, -8, 1440, 992, 1);
+				@include adaptiveValue("margin", -11, -8, 1440, 992, 1);
 			}
 
 			& > li {
 				@media (min-width: $tablet) {
-					@include adaptiveValue("padding", 20, 8, 1440, 992, 1);
-					font-size: rem(13);
+					@include adaptiveValue("padding", 11, 8, 1440, 992, 1);
+					font-size: rem(15);
 				}
 				@media (max-width: $tablet) {
 					&:last-child {
@@ -511,6 +512,12 @@
 						}
 					}
 				}
+			}
+		}
+
+		.menu__item_circle {
+			@media (min-width: em(1379.98)) {
+				display: none;
 			}
 		}
 	}

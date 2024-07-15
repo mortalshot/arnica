@@ -215,39 +215,41 @@ section {
 
 h,
 .title-h {
-  &1,
+  &1 {
+    font-family: Montserrat;
+    font-weight: 700;
+    @include adaptiveValue("font-size", 44, 29, 1440, 360, 1);
+    line-height: math.div(40, 34);
+  }
+  
   &2 {
     font-family: Montserrat;
-    font-weight: 600;
-    @include adaptiveValue("font-size", 34, 20, 768, 360, 1);
+    font-weight: 700;
+    @include adaptiveValue("font-size", 34, 28, 1440, 360, 1);
     line-height: math.div(40, 34);
   }
 
-  &2 {
-    font-weight: 700;
-  }
-
   &3 {
-    font-weight: 600;
-    @include adaptiveValue("font-size", 28, 18, 768, 360, 1);
+    font-weight: 700;
+    @include adaptiveValue("font-size", 28, 22, 768, 360, 1);
     line-height: math.div(32, 28);
   }
 
   &4 {
     font-weight: 600;
-    @include adaptiveValue("font-size", 24, 18, 768, 360, 1);
+    @include adaptiveValue("font-size", 22, 20, 768, 360, 1);
     line-height: math.div(30, 24);
   }
 
   &5 {
     font-weight: 500;
-    font-size: rem(20);
+    font-size: rem(18);
     line-height: math.div(26, 20);
   }
 
   &6 {
     font-weight: 500;
-    font-size: rem(18);
+    @include adaptiveValue("font-size", 16, 14, 768, 360, 1);
     line-height: math.div(24, 18);
   }
 }
@@ -397,7 +399,6 @@ ol {
   table {
     width: 100%;
     border-collapse: separate;
-    @include adaptiveValue("font-size", 16, 12, 768, 360, 1);
     line-height: math.div(26, 16);
     border-spacing: rem(2) rem(4);
 
@@ -773,7 +774,7 @@ body {
             pointer-events: all !important;
           }
 
-          .menu__arrow {
+          .icon_select {
             transform: rotate(180deg);
           }
         }
@@ -786,7 +787,7 @@ body {
           pointer-events: all !important;
         }
 
-        .menu__arrow {
+        .icon_select {
           transform: rotate(180deg);
         }
       }
@@ -799,46 +800,71 @@ body {
           display: none;
         }
 
-        @media (min-width: $mobile) {
+        @media (min-width: $tablet) {
           background-color: $White;
           position: absolute;
           z-index: 7;
           bottom: 0;
           transform: translateY(100%);
+          padding: rem(12) rem(16);
           opacity: 0;
           visibility: hidden;
           pointer-events: none;
-          border-radius: rem(4);
+          border-radius: rem(14);
           overflow: hidden;
           transition: $transition ease all 0s;
 
           a {
+            font-size: rem(15);
+            line-height: math.div(24 , 15);
+            padding-top: rem(8);
+            padding-bottom: rem(8);
+            color: $Gray3;
             display: block;
-            padding: rem(12) rem(16);
             white-space: nowrap;
 
             @media (any-hover: hover) {
-              transition: $transition ease background-color 0s;
+              transition: $transition ease color 0s;
               &:hover {
-                background-color: $Line;
+                color: $mainColor;
               }
             }
           }
         }
+
+        .menu__item {
+          padding: 0;
+        }
       }
 
       .menu__arrow {
-        transition: $transition ease transform 0s;
-
         svg {
           pointer-events: none;
         }
       }
+
+      .icon_select {
+        transition: $transition ease transform 0s;
+      }
     }
   }
 
-  // .menu__sub-menu
-  &__sub-menu {
+  // .menu__sub-list
+  &__sub-list {
+  }
+
+  .menu__item_circle {
+    .menu__arrow {
+      @media (max-width: $tablet) {
+        display: none;
+      }
+    }
+
+    .menu__sub-list {
+      @media (max-width: $tablet) {
+        flex: 1;
+      }
+    }
   }
 }
 
@@ -952,7 +978,7 @@ main > .breadcrumbs {
 
   &._section-bg {
     padding-top: rem(30);
-    min-height: rem(310);
+    min-height: rem(280);
 
     &:first-child {
       margin-top: 0;
@@ -971,6 +997,10 @@ main > .breadcrumbs {
       object-position: right;
       pointer-events: none;
     }
+
+    & + section {
+      @include adaptiveValue("margin-top", -30, -24);
+    }
   }
 
   // .breadcrumbs__container
@@ -980,6 +1010,10 @@ main > .breadcrumbs {
 
   // .breadcrumbs__wrapper
   &__wrapper {
+    display: grid;
+    align-content: flex-start;
+    row-gap: rem(8);
+
     @media (max-width: $mobile) {
       display: flex;
       flex-direction: column-reverse;
@@ -988,16 +1022,7 @@ main > .breadcrumbs {
 
   // .breadcrumbs__title
   &__title {
-    &:not(:last-child) {
-      @include adaptiveValue("margin-bottom", 16, 12, 1440, 360, 1);
-    }
-
-    @media (max-width: $mobile) {
-      &:not(:last-child) {
-        margin-bottom: 0;
-        @include adaptiveValue("margin-top", 16, 12, 1440, 360, 1);
-      }
-    }
+    font-weight: 600;
   }
 
   // .breadcrumbs_row
@@ -1052,8 +1077,9 @@ main > .breadcrumbs {
 .site-breadcrumbs {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: rem(10);
-  @include adaptiveValue("font-size", 12, 8, 1440, 360, 1);
+  @include adaptiveValue("font-size", 13, 12, 768, 360, 1);
   line-height: math.div(16, 12);
 
   // .site-breadcrumbs__link

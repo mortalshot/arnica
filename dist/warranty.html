@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240712183330" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240712183330">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240712183330">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240715160757" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240715160757">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240715160757">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -189,9 +189,20 @@
 									<li class="menu__item"><a href="promotions.html" class="link-hover">Акции</a></li>
 									<li class="menu__item"><a href="delivery.html" class="link-hover">Доставка и оплата</a></li>
 									<li class="menu__item"><a href="about.html" class="link-hover">О компании</a></li>
-									<li class="menu__item"><a href="partners.html" class="link-hover">Партнерам</a></li>
-									<li class="menu__item"><a href="archive-news.html" class="link-hover">Статьи</a></li>
-									<li class="menu__item"><a href="contacts.html" class="link-hover">Контакты</a></li>
+									<li class="menu__item" data-da="#dropdown-menu, 1119.98"><a href="partners.html" class="link-hover">Партнерам</a></li>
+									<li class="menu__item" data-da="#dropdown-menu, 1219.98"><a href="archive-news.html" class="link-hover">Статьи</a></li>
+									<li class="menu__item" data-da="#dropdown-menu, 1379.98"><a href="contacts.html" class="link-hover">Контакты</a></li>
+
+									<li class="menu__item menu__item_circle menu__item_has-children">
+										<button type="button" class="menu__arrow" tabindex="-1">
+											<svg class="icon">
+												<use xlink:href="img/sprite.svg#svg-menu-circle"></use>
+											</svg>
+										</button>
+
+										<ul id="dropdown-menu" class="menu__sub-list">
+										</ul>
+									</li>
 								</ul>
 							</nav>
 						</div>
@@ -385,8 +396,6 @@
 							<div class="help__sidebar-wrapper">
 								<div class="help__breadcrumbs breadcrumbs">
 									<div class="breadcrumbs__wrapper">
-										<h1 class="breadcrumbs__title">Покупателям</h1>
-
 										<div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 											<span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 												<a href="" itemprop="item">
@@ -493,7 +502,7 @@
 
 								<div class="help-banner__wrapper">
 									<div class="help-banner__text _content">
-										<h4>Гарантия и Сервис</h4>
+										<h1>Гарантия и Сервис</h1>
 										<p style="color: #858B8D;">Бытовая техника Arnica имеет большой запас прочности и длительный срок службы. </p>
 									</div>
 
@@ -660,7 +669,7 @@
 													<div class="contacts-block__caption">Качество материалов и сборки, высокие стандарты производства были отмечены наградами в ряде стран Европы, а также на родине Arnica - в Турции. </div>
 
 													<div class="contacts-block__text _content">
-														<h6 style="color: #686868;">Информацию о гарантии на конкретный товар можно уточнить в карточке товара или гарантийном талоне.</h6>
+														<h5 style="color: #686868;">Информацию о гарантии на конкретный товар можно уточнить в карточке товара или гарантийном талоне.</h5>
 													</div>
 												</div>
 
@@ -727,7 +736,7 @@
 											</button>
 											<div class="faq__body spollers__body">
 												<div class="_content">
-													<h6>Основные положения</h6>
+													<h5>Основные положения</h5>
 
 													<ol>
 														<li>Гарантийные обязательства вступают в силу с даты приобретения и действуют в соответствии с гарантийными условиями перечисленными ниже.</li>
@@ -757,7 +766,7 @@
 											</button>
 											<div class="faq__body spollers__body">
 												<div class="_content">
-													<h6>Случаи, когда гарантия не распространяется:</h6>
+													<h5>Случаи, когда гарантия не распространяется:</h5>
 
 													<ul>
 														<li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
@@ -784,7 +793,7 @@
 											</button>
 											<div class="faq__body spollers__body">
 												<div class="_content">
-													<h6>Случаи, когда гарантия не распространяется:</h6>
+													<h5>Случаи, когда гарантия не распространяется:</h5>
 
 													<ul>
 														<li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
@@ -811,7 +820,7 @@
 											</button>
 											<div class="faq__body spollers__body">
 												<div class="_content">
-													<h6>Случаи, когда гарантия не распространяется:</h6>
+													<h5>Случаи, когда гарантия не распространяется:</h5>
 
 													<ul>
 														<li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
@@ -838,7 +847,7 @@
 											</button>
 											<div class="faq__body spollers__body">
 												<div class="_content">
-													<h6>Случаи, когда гарантия не распространяется:</h6>
+													<h5>Случаи, когда гарантия не распространяется:</h5>
 
 													<ul>
 														<li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
@@ -865,7 +874,7 @@
 											</button>
 											<div class="faq__body spollers__body">
 												<div class="_content">
-													<h6>Случаи, когда гарантия не распространяется:</h6>
+													<h5>Случаи, когда гарантия не распространяется:</h5>
 
 													<ul>
 														<li>Повреждения, вызванные подключением к неподходящему источнику питания или нарушениями энергосистемы.&nbsp;</li>
@@ -1014,9 +1023,8 @@
 					</div>
 
 					<div class="footer-bottom__right">
-						<div class="footer-bottom__text _content">
-							<p>Сайт производителя: <a href="https://www.arnica.com.tr/" target="_blank">arnica.com.tr.</a></p>
-						</div>
+						<div class="footer-bottom__made" style="color: #686868;">Сделано в <a href="https://lensite.ru/" target="_blank">Lensite</a></div>
+						<div class="footer-bottom__made">Сайт производителя: <a href="https://www.arnica.com.tr/" target="_blank">arnica.com.tr.</a></div>
 					</div>
 				</div>
 			</div>
@@ -2285,9 +2293,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240712183330"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240712183330"></script>
-	<script src="js/app.min.js?_v=20240712183330"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240715160757"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240715160757"></script>
+	<script src="js/app.min.js?_v=20240715160757"></script>
 </body>
 
 </html>

@@ -574,11 +574,11 @@ document.addEventListener('click', function (e) {
   }
 
   // Показываем фильтры на мобильном
-  if (targetElement.classList.contains('catalog-filter__caption') || targetElement.closest('.catalog-filter__caption')) {
+  if ((targetElement.classList.contains('catalog-filter__caption') || targetElement.closest('.catalog-filter__caption')) && window.innerWidth <= 991.98) {
     targetElement.closest('body').classList.add('_filter-active');
     bodyLock();
   }
-  if (targetElement.closest('.catalog-filter__close') || targetElement.closest('.catalog-filter__found')) {
+  if ((targetElement.closest('.catalog-filter__close') || targetElement.closest('.catalog-filter__found')) && window.innerWidth <= 991.98) {
     targetElement.closest('body').classList.remove('_filter-active');
     bodyUnlock();
   }
