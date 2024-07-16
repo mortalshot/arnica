@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240716163107" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240716163107">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240716163107">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240716181652" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240716181652">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240716181652">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2405,9 +2405,54 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240716163107"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240716163107"></script>
-	<script src="js/app.min.js?_v=20240716163107"></script>
+
+	<div id="subscribe-product" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<div class="popup__heading">
+					<div class="popup__caption">
+						<div class="popup__title">
+							<div class="title-h4">Подписаться на товар</div>
+						</div>
+					</div>
+
+					<button data-close type="button" class="popup__close">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#svg-close"></use>
+						</svg>
+					</button>
+				</div>
+
+				<div class="popup__text">
+
+
+					<form action="" class="form">
+						<div class="form__row">
+							<div class="col-12 form__item">
+								<div class="_content">
+									<p style="color: #686868;">Вы получите уведомление как только товар появится на складе</p>
+								</div>
+							</div>
+
+							<div class="col-12 form__item">
+								<label for="subscribe-product-email" class="form__label">E-mail</label>
+								<input id="subscribe-product-email" type="email" name="subscribe-product-email" placeholder="Ваш E-mail" class="form__input form__input_gray" />
+							</div>
+
+							<div class="col-12">
+								<div class="form__submit">
+									<button data-ripple="" type="submit" class="btn btn_bg-green">Подписаться</button>
+								</div>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240716181652"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240716181652"></script>
+	<script src="js/app.min.js?_v=20240716181652"></script>
 </body>
 
 </html>

@@ -1223,7 +1223,7 @@
 						<div class="col-12 col-sm-6 form__item">
 							<label for="warranty-date" class="form__label">Дата приобретения</label>
 							<div class="form__date">
-								<input id="warranty-date" data-datepicker="" type="text" placeholder="dd.mm.yyyy" name="warranty-date" class="form__input form__input_date form__input_gray"> 
+								<input id="warranty-date" data-datepicker="" type="text" placeholder="dd.mm.yyyy" name="warranty-date" class="form__input form__input_date form__input_gray">
 								<svg class="icon">
 									<use xlink:href="@img/sprite.svg#svg-calendar"></use>
 								</svg>
@@ -1253,6 +1253,51 @@
 						<div class="col-12">
 							<div class="form__submit">
 								<button data-ripple="" type="submit" class="btn btn_bg-green">Отправить</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="subscribe-product" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<div class="popup__heading">
+				<div class="popup__caption">
+					<div class="popup__title">
+						<div class="title-h4">Подписаться на товар</div>
+					</div>
+				</div>
+
+				<button data-close type="button" class="popup__close">
+					<svg class="icon">
+						<use xlink:href="@img/sprite.svg#svg-close"></use>
+					</svg>
+				</button>
+			</div>
+
+			<div class="popup__text">
+
+
+				<form action="" class="form">
+					<div class="form__row">
+						<div class="col-12 form__item">
+							<div class="_content">
+								<p style="color: #686868;">Вы получите уведомление как только товар появится на складе</p>
+							</div>
+						</div>
+
+						<div class="col-12 form__item">
+							<label for="subscribe-product-email" class="form__label">E-mail</label>
+							<input id="subscribe-product-email" type="email" name="subscribe-product-email" placeholder="Ваш E-mail" class="form__input form__input_gray" />
+						</div>
+
+						<div class="col-12">
+							<div class="form__submit">
+								<button data-ripple="" type="submit" class="btn btn_bg-green">Подписаться</button>
 							</div>
 						</div>
 					</div>

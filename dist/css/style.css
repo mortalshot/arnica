@@ -2128,35 +2128,7 @@ body::after {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: clamp( 1rem , 0.1428571429rem  +  1.7857142857vw , 1.75rem );
-  /* 	// Если поддерживается clamp();
-  	@supports (padding-top: $propertyValue) {
-  		padding-top: $propertyValue;
-  	}
-  	// Если не поддерживается clamp();
-  	@supports not (padding-top: $propertyValue) {
-  		padding-top: calc(1rem + 0.75 * (100vw - 48rem) / 42);
-  	} */
-  padding-bottom: clamp( 1rem , 0.1428571429rem  +  1.7857142857vw , 1.75rem );
-  /* 	// Если поддерживается clamp();
-  	@supports (padding-bottom: $propertyValue) {
-  		padding-bottom: $propertyValue;
-  	}
-  	// Если не поддерживается clamp();
-  	@supports not (padding-bottom: $propertyValue) {
-  		padding-bottom: calc(1rem + 0.75 * (100vw - 48rem) / 42);
-  	} */
-  margin-top: -1.25rem;
-  border-bottom: 0.0625rem solid #e3e3e3;
-  margin-bottom: clamp( 1.5rem , 1.0588235294rem  +  1.9607843137vw , 2rem );
-  /* 	// Если поддерживается clamp();
-  	@supports (margin-bottom: $propertyValue) {
-  		margin-bottom: $propertyValue;
-  	}
-  	// Если не поддерживается clamp();
-  	@supports not (margin-bottom: $propertyValue) {
-  		margin-bottom: calc(1.5rem + 0.5 * (100vw - 22.5rem) / 25.5);
-  	} */
+  margin-bottom: 1rem;
 }
 
 .popup__heading .popup__close {
@@ -2251,6 +2223,38 @@ body::after {
   padding: 0 !important;
 }
 
+.popup.popup_right .popup__heading {
+  padding-top: clamp( 1rem , 0.1428571429rem  +  1.7857142857vw , 1.75rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (padding-top: $propertyValue) {
+  		padding-top: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (padding-top: $propertyValue) {
+  		padding-top: calc(1rem + 0.75 * (100vw - 48rem) / 42);
+  	} */
+  padding-bottom: clamp( 1rem , 0.1428571429rem  +  1.7857142857vw , 1.75rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (padding-bottom: $propertyValue) {
+  		padding-bottom: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (padding-bottom: $propertyValue) {
+  		padding-bottom: calc(1rem + 0.75 * (100vw - 48rem) / 42);
+  	} */
+  margin-top: -1.25rem;
+  border-bottom: 0.0625rem solid #e3e3e3;
+  margin-bottom: clamp( 1.5rem , 1.0588235294rem  +  1.9607843137vw , 2rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (margin-bottom: $propertyValue) {
+  		margin-bottom: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (margin-bottom: $propertyValue) {
+  		margin-bottom: calc(1.5rem + 0.5 * (100vw - 22.5rem) / 25.5);
+  	} */
+}
+
 .popup.popup_right .popup__wrapper {
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -2284,6 +2288,15 @@ body::after {
 
 #popup-basket .popup__heading {
   margin-bottom: 0;
+}
+
+#subscribe-product .popup__content {
+  max-width: 27.4375rem;
+  border-radius: 0.625rem;
+}
+
+#subscribe-product .btn {
+  width: 100%;
 }
 
 .spollers__title {
@@ -3923,15 +3936,19 @@ main > .breadcrumbs {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  -webkit-transition: 0.5s ease all 0s;
-  -o-transition: 0.5s ease all 0s;
-  transition: 0.5s ease all 0s;
+  -webkit-transition: 0.5s ease opacity, 0.5s visibility 0s;
+  -o-transition: 0.5s ease opacity, 0.5s visibility 0s;
+  transition: 0.5s ease opacity, 0.5s visibility 0s;
 }
 
 ._active .header-catalog__results {
   opacity: 1;
   visibility: visible;
   pointer-events: all;
+}
+
+._active .header-catalog__results .header-catalog__menu > li > ul {
+  display: block;
 }
 
 .header-catalog__grid {
@@ -3998,6 +4015,7 @@ main > .breadcrumbs {
 }
 
 .header-catalog__menu > li > ul {
+  display: none;
   background-color: #fff;
   overflow-y: auto;
   overflow-x: hidden;
@@ -10258,7 +10276,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (min-width: 47.99875em) {
-  .popup__heading {
+  .popup.popup_right .popup__heading {
     padding-left: clamp( 1.875rem , 1.5892857143rem  +  0.5952380952vw , 2.125rem );
     /* 	// Если поддерживается clamp();
     	@supports (padding-left: $propertyValue) {
@@ -13248,7 +13266,7 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 }
 
 @media (max-width: 47.99875em) {
-  .popup__heading {
+  .popup.popup_right .popup__heading {
     padding-left: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
     /* 	// Если поддерживается clamp();
     	@supports (padding-left: $propertyValue) {

@@ -59,24 +59,7 @@ body::after {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		@include adaptiveValue("padding-top", 28, 16, 1440, 768, 1);
-		@include adaptiveValue("padding-bottom", 28, 16, 1440, 768, 1);
-		margin-top: rem(-20);
-		border-bottom: rem(1) solid $LGray;
-		@include adaptiveValue("margin-bottom", 32, 24, 768, 360, 1);
-
-		@media (min-width: $mobile) {
-			@include adaptiveValue("padding-left", 34, 30, 1440, 768, 1);
-			@include adaptiveValue("padding-right", 34, 30, 1440, 768, 1);
-			@include adaptiveValue("margin-left", -34, -30, 1440, 768, 1);
-			@include adaptiveValue("margin-right", -34, -30, 1440, 768, 1);
-		}
-		@media (max-width: $mobile) {
-			@include adaptiveValue("padding-left", 30, 20, 768, 360, 1);
-			@include adaptiveValue("padding-right", 30, 20, 768, 360, 1);
-			@include adaptiveValue("margin-left", -30, -20, 768, 360, 1);
-			@include adaptiveValue("margin-right", -30, -20, 768, 360, 1);
-		}
+		margin-bottom: rem(16);
 
 		.popup__close {
 			position: initial;
@@ -169,6 +152,27 @@ body::after {
 	&.popup_right {
 		padding: 0 !important;
 
+		.popup__heading {
+			@include adaptiveValue("padding-top", 28, 16, 1440, 768, 1);
+			@include adaptiveValue("padding-bottom", 28, 16, 1440, 768, 1);
+			margin-top: rem(-20);
+			border-bottom: rem(1) solid $LGray;
+			@include adaptiveValue("margin-bottom", 32, 24, 768, 360, 1);
+
+			@media (min-width: $mobile) {
+				@include adaptiveValue("padding-left", 34, 30, 1440, 768, 1);
+				@include adaptiveValue("padding-right", 34, 30, 1440, 768, 1);
+				@include adaptiveValue("margin-left", -34, -30, 1440, 768, 1);
+				@include adaptiveValue("margin-right", -34, -30, 1440, 768, 1);
+			}
+			@media (max-width: $mobile) {
+				@include adaptiveValue("padding-left", 30, 20, 768, 360, 1);
+				@include adaptiveValue("padding-right", 30, 20, 768, 360, 1);
+				@include adaptiveValue("margin-left", -30, -20, 768, 360, 1);
+				@include adaptiveValue("margin-right", -30, -20, 768, 360, 1);
+			}
+		}
+
 		.popup__wrapper {
 			align-items: flex-end;
 		}
@@ -212,5 +216,16 @@ body::after {
 #popup-basket {
 	.popup__heading {
 		margin-bottom: 0;
+	}
+}
+
+#subscribe-product {
+	.popup__content {
+		max-width: rem(439);
+		border-radius: rem(10);
+	}
+
+	.btn {
+		width: 100%;
 	}
 }

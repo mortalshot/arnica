@@ -604,7 +604,9 @@
 		opacity: 0;
 		visibility: hidden;
 		pointer-events: none;
-		transition: 0.5s ease all 0s;
+		transition:
+			0.5s ease opacity,
+			0.5s visibility 0s;
 
 		@media (max-width: $tablet) {
 			overflow-y: auto;
@@ -621,6 +623,10 @@
 			opacity: 1;
 			visibility: visible;
 			pointer-events: all;
+
+			.header-catalog__menu > li > ul {
+				display: block;
+			}
 		}
 	}
 
@@ -740,6 +746,7 @@
 			}
 
 			& > ul {
+				display: none;
 				background-color: $White;
 				overflow-y: auto;
 				overflow-x: hidden;
