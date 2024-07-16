@@ -821,7 +821,7 @@
 				a {
 					@media (any-hover: hover) {
 						&:hover {
-							background-color: $Grey;
+							background-color: $Grey !important;
 						}
 					}
 				}
@@ -859,7 +859,7 @@
 			& > li {
 				&._active {
 					a {
-						background-color: $White;
+						background-color: $White !important;
 					}
 				}
 			}
