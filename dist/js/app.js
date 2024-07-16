@@ -3814,6 +3814,7 @@
                 if (bodyLockStatus && e.target.closest(".icon-menu")) {
                     bodyLockToggle();
                     document.documentElement.classList.toggle("menu-open");
+                    document.querySelector(".header-catalog").classList.remove("_active");
                 }
             }));
         }
@@ -8946,10 +8947,6 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
             }));
         }
-        window.addEventListener("load", (function(e) {
-            initSliders();
-            noUiSliderInit();
-        }));
         document.addEventListener("click", (function(e) {
             const targetElement = e.target;
             if (window.innerWidth > 991.98) {
@@ -8962,17 +8959,22 @@ PERFORMANCE OF THIS SOFTWARE.
                 _slideToggle(list);
                 arrowParent.classList.toggle("_hover");
             }
-            if (targetElement.classList.contains("header-catalog__button .btn") || targetElement.closest(".header-catalog__button")) targetElement.closest(".header-catalog").classList.toggle("_active");
+            if (targetElement.classList.contains("header-catalog__button .btn") || targetElement.closest(".header-catalog__button")) {
+                targetElement.closest(".header-catalog").classList.toggle("_active");
+                if (window.innerWidth >= 991.98) bodyLockToggle();
+            }
             if (targetElement.classList.contains("search-form__btn") || targetElement.closest(".search-form__btn")) {
                 targetElement.closest("body").classList.add("_search-active");
                 bodyLock();
             }
             if (!targetElement.closest(".search-results") && document.querySelectorAll("body._search-active").length > 0 && !targetElement.closest(".search-form")) {
                 document.querySelector("body").classList.remove("_search-active");
+                document.querySelector(".header-catalog").classList.remove("_active");
                 bodyUnlock();
             }
             if ((targetElement.classList.contains("search-form__reset") || targetElement.closest(".search-form__reset")) && window.innerWidth <= 991.98) {
                 document.querySelector("body").classList.remove("_search-active");
+                document.querySelector(".header-catalog").classList.remove("_active");
                 bodyUnlock();
             }
             if (targetElement.classList.contains("location__button") || targetElement.closest(".location__button")) {
@@ -9018,6 +9020,31 @@ PERFORMANCE OF THIS SOFTWARE.
                     return aDuration.includes("ms") ? aDuration.replace("ms", "") : 1e3 * aDuration.replace("s", "");
                 }
             }
+            if (targetElement.closest(".header-catalog__arrow")) e.preventDefault();
+            if (window.innerWidth <= 574.98 && targetElement.closest("[data-catalog-close]")) document.querySelector(".header-catalog._active").classList.remove("_active");
+            if (window.innerWidth <= 574.98 && targetElement.closest("[data-li-close]")) targetElement.closest("._active").classList.remove("_active");
+        }));
+        function updateDistanceСatalogToTop() {
+            var headerBottom = document.querySelector(".header-bottom");
+            var distanceFromBottomToTop = headerBottom.getBoundingClientRect().top + headerBottom.offsetHeight;
+            document.body.style.setProperty("--distance-catalog-to-top", distanceFromBottomToTop + "px");
+        }
+        window.addEventListener("DOMContentLoaded", (function() {
+            setTimeout((() => {
+                updateDistanceСatalogToTop();
+            }), 500);
+            if (window.innerWidth <= 574.98) document.querySelector(".header-catalog__menu ._active").classList.remove("_active");
+        }));
+        window.addEventListener("scroll", (function() {
+            updateDistanceСatalogToTop();
+        }));
+        const headerCatalogMenu = document.querySelector(".header-catalog__menu");
+        const liElements = Array.from(headerCatalogMenu.children);
+        liElements.forEach((li => {
+            li.addEventListener("mouseover", (() => {
+                li.classList.add("_active");
+                liElements.filter((item => item !== li)).forEach((item => item.classList.remove("_active")));
+            }));
         }));
         const compareSwitch = document.querySelector(".compare__switch .switch__input");
         if (compareSwitch) compareSwitch.addEventListener("change", (function() {
@@ -9056,6 +9083,10 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
             }));
         }
+        window.addEventListener("load", (function(e) {
+            initSliders();
+            noUiSliderInit();
+        }));
         window["FLS"] = false;
         isWebp();
         menuInit();

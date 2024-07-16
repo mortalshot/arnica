@@ -1,5 +1,5 @@
 // Подключение функционала 
-import { isMobile, _slideToggle, removeClasses, bodyLock, bodyUnlock } from "./functions.js";
+import { isMobile, _slideToggle, removeClasses, bodyLock, bodyUnlock, bodyLockToggle } from "./functions.js";
 // Подключение списка активных модулей
 import { flsModules } from "./modules.js";
 
@@ -505,13 +505,6 @@ function noUiSliderInit() {
   }
 }
 
-window.addEventListener("load", function (e) {
-  // Запуск инициализации слайдеров
-  initSliders();
-
-  // Запуск инициализации noUiSlider
-  noUiSliderInit();
-});
 
 document.addEventListener('click', function (e) {
   const targetElement = e.target;
@@ -538,6 +531,10 @@ document.addEventListener('click', function (e) {
   // Показываем каталог в шапке
   if (targetElement.classList.contains('header-catalog__button .btn') || targetElement.closest('.header-catalog__button')) {
     targetElement.closest('.header-catalog').classList.toggle('_active');
+
+    if (window.innerWidth >= 991.98) {
+      bodyLockToggle();
+    }
   }
 
   // Показываем поиск
@@ -547,10 +544,12 @@ document.addEventListener('click', function (e) {
   }
   if (!targetElement.closest('.search-results') && document.querySelectorAll('body._search-active').length > 0 && !targetElement.closest('.search-form')) {
     document.querySelector('body').classList.remove('_search-active');
+    document.querySelector('.header-catalog').classList.remove('_active');
     bodyUnlock();
   }
   if ((targetElement.classList.contains('search-form__reset') || targetElement.closest('.search-form__reset')) && window.innerWidth <= 991.98) {
     document.querySelector('body').classList.remove('_search-active');
+    document.querySelector('.header-catalog').classList.remove('_active');
     bodyUnlock();
   }
 
@@ -583,6 +582,7 @@ document.addEventListener('click', function (e) {
     bodyUnlock();
   }
 
+  // Эффект клика по кнопку
   if (targetElement.closest('[data-ripple]')) {
     const button = targetElement.closest('[data-ripple]');
     const ripple = document.createElement('span');
@@ -609,7 +609,53 @@ document.addEventListener('click', function (e) {
       return aDuration.includes('ms') ? aDuration.replace("ms", '') : aDuration.replace("s", '') * 1000;
     }
   }
+
+  // Показываем суб меню в шапке в каталоге товаров
+  if (targetElement.closest('.header-catalog__arrow')) {
+    e.preventDefault();
+  }
+
+  if (window.innerWidth <= 574.98 && targetElement.closest('[data-catalog-close]')) {
+    document.querySelector('.header-catalog._active').classList.remove('_active');
+  }
+
+  if (window.innerWidth <= 574.98 && targetElement.closest('[data-li-close]')) {
+    targetElement.closest('._active').classList.remove('_active');
+  }
 })
+
+// Определяем расстояние от низа header-bottom до верха экрана при скролле:
+function updateDistanceСatalogToTop() {
+  var headerBottom = document.querySelector('.header-bottom');
+  var distanceFromBottomToTop = headerBottom.getBoundingClientRect().top + headerBottom.offsetHeight;
+  document.body.style.setProperty('--distance-catalog-to-top', distanceFromBottomToTop + 'px');
+}
+
+window.addEventListener('DOMContentLoaded', function () {
+  setTimeout(() => {
+    updateDistanceСatalogToTop();
+  }, 500);
+
+  if (window.innerWidth <= 574.98) {
+    document.querySelector('.header-catalog__menu ._active').classList.remove('_active');
+  }
+
+});
+window.addEventListener('scroll', function () {
+  updateDistanceСatalogToTop();
+});
+
+const headerCatalogMenu = document.querySelector('.header-catalog__menu');
+const liElements = Array.from(headerCatalogMenu.children);
+
+liElements.forEach(li => {
+  li.addEventListener('mouseover', () => {
+    li.classList.add('_active');
+    liElements.filter(item => item !== li).forEach(item => item.classList.remove('_active'));
+  });
+});
+
+
 
 // Скрываем строки с одинаковыми значениями
 const compareSwitch = document.querySelector('.compare__switch .switch__input');
@@ -675,3 +721,12 @@ if (templateInstructions) {
     });
   })
 }
+
+
+window.addEventListener("load", function (e) {
+  // Запуск инициализации слайдеров
+  initSliders();
+
+  // Запуск инициализации noUiSlider
+  noUiSliderInit();
+});

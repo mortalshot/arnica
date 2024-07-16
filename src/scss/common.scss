@@ -688,8 +688,8 @@ body {
   &__body {
     @media (max-width: $tablet) {
       position: fixed;
-      top: -100%;
-      left: 0;
+      top: 0;
+      left: -100%;
       right: 0;
       bottom: 0;
       min-height: 100vh;
@@ -708,9 +708,9 @@ body {
       &::before {
         content: "";
         position: fixed;
-        left: 0;
+        left: -100%;
         right: 0;
-        top: -100%;
+        top: 0;
         height: rem(80);
         background-color: $White;
         opacity: 0;
@@ -721,7 +721,7 @@ body {
       }
 
       .menu-open & {
-        top: 0;
+        left: 0;
         opacity: 1 !important;
         visibility: visible;
         pointer-events: all;
@@ -729,7 +729,7 @@ body {
         &::before {
           opacity: 1 !important;
           visibility: visible;
-          top: 0;
+          left: 0;
         }
       }
     }

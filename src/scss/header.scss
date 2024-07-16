@@ -33,8 +33,8 @@
 		z-index: 6;
 
 		@media (max-width: $mobile) {
-			padding-top: rem(26);
-			padding-bottom: rem(26);
+			padding-top: rem(24);
+			padding-bottom: rem(24);
 		}
 	}
 
@@ -527,6 +527,9 @@
 .header-catalog {
 	// .header-catalog__button
 	&__button {
+		display: grid;
+		align-items: center;
+
 		.btn {
 			min-height: initial;
 			font-size: rem(13);
@@ -551,6 +554,9 @@
 					top: 50%;
 					transform: translateY(-50%);
 				}
+			}
+			@media (max-width: $tablet) {
+				min-height: rem(44);
 			}
 
 			span {
@@ -585,6 +591,300 @@
 					}
 				}
 			}
+		}
+	}
+
+	// .header-catalog__results
+	&__results {
+		position: fixed;
+		left: 0;
+		right: 0;
+		background-color: $White;
+		top: var(--distance-catalog-to-top);
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+		transition: 0.5s ease all 0s;
+
+		@media (max-width: $tablet) {
+			overflow-y: auto;
+			overflow-x: hidden;
+			scrollbar-width: thin;
+			scrollbar-color: transparent transparent;
+			&::-webkit-scrollbar {
+				width: 0;
+				height: 0;
+			}
+		}
+
+		._active & {
+			opacity: 1;
+			visibility: visible;
+			pointer-events: all;
+		}
+	}
+
+	// .header-catalog__container
+	&__container {
+	}
+
+	// .header-catalog__grid
+	&__grid {
+		display: grid;
+		height: calc(100vh - var(--distance-catalog-to-top));
+
+		@media (min-width: $tablet) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	// .header-catalog__close
+	&__close {
+		@media (min-width: $mobileM) {
+			display: none;
+		}
+		@media (max-width: $mobileM) {
+			width: 100%;
+			font-size: rem(16);
+			line-height: math.div(26, 16);
+			display: flex;
+			align-items: center;
+			gap: rem(8);
+			min-height: rem(44);
+			margin-bottom: rem(24);
+
+			svg {
+				width: rem(24);
+				height: rem(24);
+				flex: 0 0 rem(24);
+				transform: rotate(90deg);
+			}
+		}
+	}
+
+	// .header-catalog__menu
+	&__menu {
+		position: relative;
+		font-size: rem(13);
+		line-height: math.div(18, 13);
+		padding-top: rem(32);
+		padding-bottom: rem(32);
+
+		@media (min-width: $mobileM) {
+			@include adaptiveValue("padding-left", 30, 20, 768, 360, 1);
+			@include adaptiveValue("padding-right", 30, 20, 768, 360, 1);
+		}
+		@media (min-width: $tablet) {
+			@include adaptiveValue("margin-left", -30, -20, 768, 360, 1);
+			border-right: rem(1) solid $Line;
+		}
+		@media (min-width: em($pc)) {
+			@include adaptiveValue("padding-left", 40, 32, 1920, 1440, 1);
+			@include adaptiveValue("padding-right", 40, 32, 1920, 1440, 1);
+			@include adaptiveValue("margin-left", -40, -32, 1920, 1440, 1);
+		}
+
+		&::before {
+			@media (min-width: $tablet) {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 100vw;
+				transform: translateX(-100%);
+				pointer-events: none;
+			}
+		}
+
+		li {
+			&:not(:last-child) {
+				margin-bottom: rem(8);
+			}
+		}
+
+		& > li {
+			@media (min-width: $mobileM) {
+				width: 50%;
+			}
+
+			a {
+				display: flex;
+				align-items: center;
+				gap: rem(8);
+				padding: rem(10) rem(12);
+				border-radius: rem(12);
+				min-height: rem(44);
+				transition: $transition ease all 0s;
+
+				img {
+					max-width: rem(24);
+				}
+
+				span {
+					flex: 1;
+				}
+
+				.icon_select {
+					transform: rotate(-90deg);
+					width: rem(18);
+					height: rem(18);
+					flex: 0 0 rem(18);
+					fill: $Gray4;
+					transition: $transition ease fill 0s;
+				}
+			}
+
+			& > a {
+				font-weight: 700;
+			}
+
+			& > ul {
+				background-color: $White;
+				overflow-y: auto;
+				overflow-x: hidden;
+				opacity: 0;
+				visibility: hidden;
+				pointer-events: none;
+				transition: $transition ease all 0s;
+				scrollbar-width: thin;
+				scrollbar-color: $Red $Line;
+				&::-webkit-scrollbar {
+					width: rem(5);
+				}
+				&::-webkit-scrollbar-track {
+					background-color: $Red;
+					border-radius: 22px;
+				}
+				&::-webkit-scrollbar-thumb {
+					border-radius: 22px;
+					background-color: $Line;
+				}
+
+				@media (min-width: $mobileM) {
+					width: calc(50% - clamp(1rem, -1.2142857143rem + 3.5714285714vw, 2rem));
+					position: absolute;
+					@include adaptiveValue("left", 32, 16, 1440, 992, 1);
+					top: rem(0);
+					height: 100%;
+					transform: translateX(100%);
+					padding: rem(24);
+					@include adaptiveValue("padding-left", 24, 16, 1440, 992, 1);
+					@include adaptiveValue("padding-right", 24, 16, 1440, 992, 1);
+					@include adaptiveValue("margin-left", 32, 16, 1440, 992, 1);
+				}
+				@media (max-width: $mobileM) {
+					position: fixed;
+					left: 0;
+					right: 0;
+					top: var(--distance-catalog-to-top);
+					height: calc(100vh - var(--distance-catalog-to-top));
+					padding-top: rem(32);
+					padding-bottom: rem(32);
+					@include adaptiveValue("padding-left", 30, 20, 768, 360, 1);
+					@include adaptiveValue("padding-right", 30, 20, 768, 360, 1);
+					z-index: 1;
+					font-size: rem(16);
+
+					li {
+						&:not(:last-child) {
+							margin: 0;
+						}
+						&:last-child {
+							a {
+								border-bottom: rem(1) solid $Line;
+							}
+						}
+					}
+
+					a {
+						display: flex;
+						align-items: center;
+						justify-content: space-between;
+						gap: rem(16);
+						padding-top: rem(18);
+						padding-bottom: rem(18);
+						border-top: rem(1) solid $Line;
+
+						&::after {
+							content: "";
+							display: block;
+							width: rem(18);
+							height: rem(18);
+							flex: 0 0 rem(18);
+							background: url(../img/icons/select.svg) no-repeat center/contain;
+							transform: rotate(-90deg);
+						}
+					}
+				}
+
+				a {
+					@media (any-hover: hover) {
+						&:hover {
+							background-color: $Grey;
+						}
+					}
+				}
+			}
+
+			&._active {
+				a {
+					@media (min-width: $mobileM) {
+						background-color: $Grey;
+
+						svg {
+							fill: $mainColor;
+						}
+					}
+				}
+
+				& > ul {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: all;
+				}
+			}
+		}
+
+		// .header-catalog__menu_gray
+		&_gray {
+			@media (min-width: $mobileM) {
+				background-color: $Grey;
+			}
+
+			&::before {
+				background-color: $Grey;
+			}
+
+			& > li {
+				&._active {
+					a {
+						background-color: $White;
+					}
+				}
+			}
+		}
+	}
+
+	// .header-catalog__link
+	&__link {
+		margin-top: rem(32);
+		@include adaptiveValue("margin-left", 32, 16, 1440, 992, 1);
+
+		.text-link {
+			color: $Blue;
+		}
+	}
+
+	// .header-catalog__offer
+	&__offer {
+		@media (min-width: $tablet) {
+			padding: rem(24) rem(32);
+			padding-right: 0;
+			@include adaptiveValue("padding-left", 32, 16, 1440, 992, 1);
+		}
+		@media (max-width: $tablet) {
+			display: none;
 		}
 	}
 }
