@@ -1177,7 +1177,7 @@ main > .breadcrumbs {
 
   // .items-navigation_column
   &_column {
-    display: grid;
+    display: grid !important;
     align-content: flex-start;
     @include adaptiveValue("row-gap", 40, 24, 768, 360, 1);
 

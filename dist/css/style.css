@@ -3662,8 +3662,8 @@ main > .breadcrumbs {
 }
 
 .items-navigation_column {
-  display: -ms-grid;
-  display: grid;
+  display: -ms-grid !important;
+  display: grid !important;
   -ms-flex-line-pack: start;
       align-content: flex-start;
   row-gap: clamp( 1.5rem , 0.6176470588rem  +  3.9215686275vw , 2.5rem );
@@ -5240,7 +5240,15 @@ main > .breadcrumbs {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 0.75rem;
+  gap: clamp( 0.25rem , -0.1911764706rem  +  1.9607843137vw , 0.75rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (gap: $propertyValue) {
+  		gap: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (gap: $propertyValue) {
+  		gap: calc(0.25rem + 0.5 * (100vw - 22.5rem) / 25.5);
+  	} */
   position: relative;
   z-index: 3;
 }

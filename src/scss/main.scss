@@ -530,7 +530,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: rem(12);
+    @include adaptiveValue("gap", 12, 4, 768, 360, 1);
     position: relative;
     z-index: 3;
 
