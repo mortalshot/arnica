@@ -22,10 +22,18 @@
 		padding-left: rem(30);
 		padding-right: rem(30);
 		white-space: nowrap;
+		width: initial !important;
+		overflow: initial !important;
 
 		&:not(._tab-active) {
 			border-color: transparent;
+
+			&.btn_bg-gray {
+				background-color: transparent;
+				color: $Gray4;
+			}
 		}
+
 	}
 
 	// .tabs__content

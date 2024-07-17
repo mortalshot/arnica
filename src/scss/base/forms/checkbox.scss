@@ -12,8 +12,15 @@
 		height: 0;
 		opacity: 0;
 
-		&:checked + .checkbox__label::after {
-			opacity: 1;
+		&:checked + .checkbox__label {
+			&::before {
+				border-color: $Red;
+				background-color: $Red;
+			}
+
+			&::after {
+				opacity: 1;
+			}
 		}
 	}
 
@@ -42,8 +49,9 @@
 			flex: 0 0 rem(16);
 			width: rem(16);
 			height: rem(16);
-			background-color: $Gray5;
+			border: rem(2) solid $Gray4;
 			border-radius: rem(4);
+			transition: $transition ease all 0s;
 		}
 
 		&::after {
@@ -59,6 +67,24 @@
 
 		div {
 			display: inline-block;
+		}
+	}
+
+	// .checkbox_row
+	&_row {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		margin-top: rem(-8);
+		margin-bottom: rem(-8);
+		@include adaptiveValue("margin-left", -20, -10);
+		@include adaptiveValue("margin-right", -20, -10);
+
+		& > * {
+			padding-top: rem(8);
+			padding-bottom: rem(8);
+			@include adaptiveValue("padding-left", 20, 10);
+			@include adaptiveValue("padding-right", 20, 10);
 		}
 	}
 }

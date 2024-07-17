@@ -210,6 +210,10 @@ section {
     background-color: $White;
     @include adaptiveValue("border-top-left-radius", 40, 20, 768, 360, 1);
     @include adaptiveValue("border-top-right-radius", 40, 20, 768, 360, 1);
+
+    @media (max-width: $mobile) {
+      @include adaptiveValue("padding-top", 50, 32, 768, 360, 1);
+    }
   }
 }
 
@@ -221,7 +225,7 @@ h,
     @include adaptiveValue("font-size", 44, 29, 1440, 360, 1);
     line-height: math.div(40, 34);
   }
-  
+
   &2 {
     font-family: Montserrat;
     font-weight: 700;
@@ -580,6 +584,7 @@ ol {
     align-items: center;
     justify-content: center;
     cursor: initial;
+    transition: $transition ease opacity 0s;
 
     &:not(.swiper-button-lock) {
       display: inline-flex;
@@ -589,11 +594,14 @@ ol {
       cursor: pointer;
 
       @media (any-hover: hover) {
-        transition: $transition ease opacity 0s;
         &:hover {
           opacity: 0.8;
         }
       }
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.6;
     }
 
     // .swiper-arrows__arrow_prev
@@ -689,7 +697,7 @@ body {
     @media (max-width: $tablet) {
       position: fixed;
       top: 0;
-      left: -100%;
+      left: 0;
       right: 0;
       bottom: 0;
       min-height: 100vh;
@@ -721,7 +729,6 @@ body {
       }
 
       .menu-open & {
-        left: 0;
         opacity: 1 !important;
         visibility: visible;
         pointer-events: all;
@@ -733,7 +740,6 @@ body {
         }
       }
     }
-
     @media (min-width: $mobile) and (max-width: $tablet) {
       @include adaptiveValue("padding-left", 32, 30, 1440, 768, 1);
       @include adaptiveValue("padding-right", 32, 30, 1440, 768, 1);
@@ -754,12 +760,12 @@ body {
 
   // .menu__item
   &__item {
-    display: flex;
-    align-items: center;
-    gap: rem(6);
     position: relative;
 
     @media (min-width: $tablet) {
+      display: flex;
+      align-items: center;
+      gap: rem(6);
       padding-top: rem(8);
       padding-bottom: rem(8);
     }
@@ -816,7 +822,7 @@ body {
 
           a {
             font-size: rem(15);
-            line-height: math.div(24 , 15);
+            line-height: math.div(24, 15);
             padding-top: rem(8);
             padding-bottom: rem(8);
             color: $Gray3;
@@ -976,15 +982,6 @@ main > .breadcrumbs {
 .breadcrumbs {
   position: relative;
 
-  &._section-bg {
-    padding-top: rem(30);
-    min-height: rem(280);
-
-    &:first-child {
-      margin-top: 0;
-    }
-  }
-
   // .breadcrumbs__bg
   &__bg {
     img {
@@ -1071,6 +1068,19 @@ main > .breadcrumbs {
 
   & + section {
     @include adaptiveValue("margin-top", 30, 24);
+  }
+
+  &._section-bg {
+    padding-top: rem(30);
+    min-height: rem(300);
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    & + section {
+      @include adaptiveValue("margin-top", -30, -24);
+    }
   }
 }
 
@@ -1164,6 +1174,31 @@ main > .breadcrumbs {
       justify-content: flex-end;
     }
   }
+
+  // .items-navigation_column
+  &_column {
+    display: grid;
+    align-content: flex-start;
+    @include adaptiveValue("row-gap", 40, 24, 768, 360, 1);
+
+    .items-navigation__button {
+      .btn {
+        max-width: 100%;
+      }
+    }
+
+    .pagination {
+      justify-content: center;
+
+      .page-numbers.current {
+        color: $Green;
+      }
+
+      .page-numbers:not(:last-child) {
+        border: 0;
+      }
+    }
+  }
 }
 
 .pagination {
@@ -1207,15 +1242,31 @@ main > .breadcrumbs {
       transition: $transition ease color 0s;
       &:hover {
         color: $mainColor;
+
+        svg {
+          fill: $mainColor;
+        }
       }
     }
   }
 
-  .page-prev {
+  svg {
+    fill: $Gray3;
+    transition: $transition ease fill 0s;
   }
+
+  .page-prev {
+    svg {
+      transform: rotate(90deg);
+    }
+  }
+
   .current {
   }
   .page-next {
+    svg {
+      transform: rotate(-90deg);
+    }
   }
   .page-all {
   }

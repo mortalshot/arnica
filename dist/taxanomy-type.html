@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240716181833" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240716181833">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240716181833">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240717200202" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240717200202">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240717200202">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -289,9 +289,27 @@
 									<li class="menu__item"><a href="taxanomy-type.html" class="link-hover">Новинки</a></li>
 									<li class="menu__item"><a href="promotions.html" class="link-hover">Акции</a></li>
 									<li class="menu__item"><a href="delivery.html" class="link-hover">Доставка и оплата</a></li>
-									<li class="menu__item"><a href="about.html" class="link-hover">О компании</a></li>
-									<li class="menu__item" data-da="#dropdown-menu, 1119.98"><a href="partners.html" class="link-hover">Партнерам</a></li>
-									<li class="menu__item" data-da="#dropdown-menu, 1219.98"><a href="archive-news.html" class="link-hover">Статьи</a></li>
+									<li class="menu__item menu__item_has-children">
+										<a href="about.html" class="link-hover">О компании</a>
+
+										<button type="button" class="menu__arrow" tabindex="-1">
+											<svg class="icon icon_select">
+												<use xlink:href="img/sprite.svg#svg-select"></use>
+											</svg>
+										</button>
+
+										<ul class="menu__sub-list">
+											<li><a href="">Доставка и оплата</a></li>
+											<li><a href="">История компании</a></li>
+											<li><a href="">Сертификаты</a></li>
+											<li><a href="">Отзывы</a></li>
+											<li><a href="">Статьи</a></li>
+											<li><a href="">Партнерство</a></li>
+											<li><a href="">Контакты</a></li>
+										</ul>
+									</li>
+									<li class="menu__item" data-da="#dropdown-menu, 1139.98"><a href="partners.html" class="link-hover">Партнерам</a></li>
+									<li class="menu__item" data-da="#dropdown-menu, 1239.98"><a href="archive-news.html" class="link-hover">Статьи</a></li>
 									<li class="menu__item" data-da="#dropdown-menu, 1379.98"><a href="contacts.html" class="link-hover">Контакты</a></li>
 
 									<li class="menu__item menu__item_circle menu__item_has-children">
@@ -502,6 +520,8 @@
 
 				<div class="breadcrumbs__container">
 					<div class="breadcrumbs__wrapper">
+						<h1 class="breadcrumbs__title">Пылесосы с аквафильтром</h1>
+
 						<div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
 							<span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
 								<a href="" itemprop="item">
@@ -523,8 +543,6 @@
 							<span class="site-breadcrumbs__separator">/</span>
 							<span class="site-breadcrumbs__title">Пылесосы с аквафильтром</span>
 						</div>
-
-						<h1 class="breadcrumbs__title">Пылесосы с аквафильтром</h1>
 					</div>
 				</div>
 			</section>
@@ -842,7 +860,7 @@
 							</div>
 
 							<div class="catalog__products _row">
-								<div class="col-6 col-xl-4 col-xxl-3">
+								<div class="col-6 col-xlg-4 col-xxl-3">
 									<article class="product-card">
 										<a href="single-product.html" class="product-card__link"> </a>
 
@@ -922,7 +940,7 @@
 										</div>
 									</article>
 								</div>
-								<div class="col-6 col-xl-4 col-xxl-3">
+								<div class="col-6 col-xlg-4 col-xxl-3">
 									<article class="product-card">
 										<a href="single-product.html" class="product-card__link"> </a>
 
@@ -953,10 +971,15 @@
 														<p>Высокая мощность и расширенная комплектация для максимального результата
 															без лишних усилий</p>
 													</div>
+
+													<ul class="product-card__available">
+														<li class="_color-red">Нет в наличии</li>
+													</ul>
 												</div>
 
 												<div class="product-card__price price">
-													<div class="price price_current">19 990 ₽</div>
+													<div class="price price_new">19 990 ₽</div>
+													<div class="price price_old">20 990 ₽</div>
 												</div>
 											</div>
 
@@ -992,7 +1015,87 @@
 										</div>
 									</article>
 								</div>
-								<div class="col-6 col-xl-4 col-xxl-3">
+								<div class="col-6 col-xlg-4 col-xxl-3">
+									<article class="product-card">
+										<a href="single-product.html" class="product-card__link"> </a>
+
+										<div class="product-card__head">
+											<div class="product-card__labels">
+												<div class="product-card__label product-card__label_new">NEW</div>
+												<div class="product-card__label product-card__label_sale">sale</div>
+											</div>
+
+											<div data-mousemove-swipe class="product-preview__slider swiper">
+												<div class="product-preview__wrapper swiper-wrapper">
+													<div class="product-preview__slide swiper-slide">
+														<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
+														<div class="swiper-lazy-preloader"></div>
+													</div>
+
+													<div class="product-preview__slide swiper-slide">
+														<picture><source srcset="img/widget-sales/sale-card1-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card1-bg1440.png" alt="" loading="lazy"></picture>
+														<div class="swiper-lazy-preloader"></div>
+													</div>
+
+													<div class="product-preview__slide swiper-slide">
+														<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
+														<div class="swiper-lazy-preloader"></div>
+													</div>
+												</div>
+
+												<div class="swiper-pagination"></div>
+											</div>
+										</div>
+
+										<div class="product-card__main">
+											<div class="product-card__body">
+												<div class="product-card__top">
+													<a href="" class="product-card__title">Tesla Plus</a>
+
+													<div class="product-card__excrpt _content">
+														<p>Высокая мощность и расширенная комплектация для максимального результата
+															без лишних усилий</p>
+													</div>
+												</div>
+
+												<div class="product-card__price price">
+													<div class="price price_current">19 990 ₽</div>
+												</div>
+											</div>
+
+											<div class="product-card__footer">
+												<div class="product-card__add">
+													<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main _active">
+														<span>В корзину</span>
+
+														<svg class="icon">
+															<use xlink:href="img/sprite.svg#svg-cart"></use>
+														</svg>
+													</button>
+												</div>
+
+												<div class="product-card__actions">
+													<div class="product-card__compare">
+														<button type="button" class="shake-animation _active">
+															<svg class="icon">
+																<use xlink:href="img/sprite.svg#svg-compare"></use>
+															</svg>
+														</button>
+													</div>
+
+													<div class="product-card__wishlist">
+														<button type="button" class="shake-animation _active">
+															<svg class="icon">
+																<use xlink:href="img/sprite.svg#svg-wishlist"></use>
+															</svg>
+														</button>
+													</div>
+												</div>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="col-6 col-xlg-4 col-xxl-3">
 									<article class="product-card">
 										<a href="single-product.html" class="product-card__link"> </a>
 
@@ -1072,7 +1175,7 @@
 										</div>
 									</article>
 								</div>
-								<div class="col-6 col-xl-4 col-xxl-3">
+								<div class="col-6 col-xlg-4 col-xxl-3">
 									<article class="product-card">
 										<a href="single-product.html" class="product-card__link"> </a>
 
@@ -1152,7 +1255,7 @@
 										</div>
 									</article>
 								</div>
-								<div class="col-6 col-xl-4 col-xxl-3">
+								<div class="col-6 col-xlg-4 col-xxl-3">
 									<article class="product-card">
 										<a href="single-product.html" class="product-card__link"> </a>
 
@@ -1232,7 +1335,7 @@
 										</div>
 									</article>
 								</div>
-								<div class="col-6 col-xl-4 col-xxl-3">
+								<div class="col-6 col-xlg-4 col-xxl-3">
 									<article class="product-card">
 										<a href="single-product.html" class="product-card__link"> </a>
 
@@ -1312,7 +1415,7 @@
 										</div>
 									</article>
 								</div>
-								<div class="col-6 col-xl-4 col-xxl-3">
+								<div class="col-6 col-xlg-4 col-xxl-3">
 									<article class="product-card">
 										<a href="single-product.html" class="product-card__link"> </a>
 
@@ -1392,86 +1495,32 @@
 										</div>
 									</article>
 								</div>
-								<div class="col-6 col-xl-4 col-xxl-3">
-									<article class="product-card">
-										<a href="single-product.html" class="product-card__link"> </a>
+							</div>
 
-										<div class="product-card__head">
-											<div class="product-card__labels">
-												<div class="product-card__label product-card__label_new">NEW</div>
-												<div class="product-card__label product-card__label_sale">sale</div>
-											</div>
-
-											<div data-mousemove-swipe class="product-preview__slider swiper">
-												<div class="product-preview__wrapper swiper-wrapper">
-													<div class="product-preview__slide swiper-slide">
-														<picture><source srcset="img/widget-products/product1-preview.webp"type="image/webp"><img src="img/widget-products/product1-preview.png" alt="" loading="lazy"></picture>
-														<div class="swiper-lazy-preloader"></div>
-													</div>
-
-													<div class="product-preview__slide swiper-slide">
-														<picture><source srcset="img/widget-sales/sale-card1-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card1-bg1440.png" alt="" loading="lazy"></picture>
-														<div class="swiper-lazy-preloader"></div>
-													</div>
-
-													<div class="product-preview__slide swiper-slide">
-														<picture><source srcset="img/widget-sales/sale-card2-bg1440.webp"type="image/webp"><img src="img/widget-sales/sale-card2-bg1440.png" alt="" loading="lazy"></picture>
-														<div class="swiper-lazy-preloader"></div>
-													</div>
-												</div>
-
-												<div class="swiper-pagination"></div>
-											</div>
-										</div>
-
-										<div class="product-card__main">
-											<div class="product-card__body">
-												<div class="product-card__top">
-													<a href="" class="product-card__title">Tesla Plus</a>
-
-													<div class="product-card__excrpt _content">
-														<p>Высокая мощность и расширенная комплектация для максимального результата
-															без лишних усилий</p>
-													</div>
-												</div>
-
-												<div class="product-card__price price">
-													<div class="price price_current">19 990 ₽</div>
-												</div>
-											</div>
-
-											<div class="product-card__footer">
-												<div class="product-card__add">
-													<button type="button" data-popup="#popup-basket" data-ripple="" class="btn btn_border-main">
-														<span>В корзину</span>
-
-														<svg class="icon">
-															<use xlink:href="img/sprite.svg#svg-cart"></use>
-														</svg>
-													</button>
-												</div>
-
-												<div class="product-card__actions">
-													<div class="product-card__compare">
-														<button type="button" class="shake-animation">
-															<svg class="icon">
-																<use xlink:href="img/sprite.svg#svg-compare"></use>
-															</svg>
-														</button>
-													</div>
-
-													<div class="product-card__wishlist">
-														<button type="button" class="shake-animation">
-															<svg class="icon">
-																<use xlink:href="img/sprite.svg#svg-wishlist"></use>
-															</svg>
-														</button>
-													</div>
-												</div>
-											</div>
-										</div>
-									</article>
+							<div class="items-navigation items-navigation_column">
+								<div class="items-navigation__button">
+									<a href="" class="btn btn_border-main" data-ripple="">Показать еще</a>
 								</div>
+
+								<nav class="pagination" aria-label="Posts">
+									<div class="nav-links">
+										<a class="page-numbers page-prev" href="">
+											<svg class="icon">
+												<use xlink:href="img/sprite.svg#svg-select"></use>
+											</svg>
+										</a>
+										<span aria-current="page" class="page-numbers current">1</span>
+										<a class="page-numbers" href="">2</a>
+										<a class="page-numbers" href="">3</a>
+										<a class="page-numbers" href="">3</a>
+										<span class="page-numbers dots">…</span>
+										<a class="page-numbers page-next" href="">
+											<svg class="icon">
+												<use xlink:href="img/sprite.svg#svg-select"></use>
+											</svg>
+										</a>
+									</div>
+								</nav>
 							</div>
 						</div>
 					</div>
@@ -2915,9 +2964,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240716181833"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240716181833"></script>
-	<script src="js/app.min.js?_v=20240716181833"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240717200202"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240717200202"></script>
+	<script src="js/app.min.js?_v=20240717200202"></script>
 </body>
 
 </html>

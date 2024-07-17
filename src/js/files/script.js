@@ -80,95 +80,97 @@ function initSliders() {
   }
 
   if (document.querySelector('.product-preview__slider')) {
-    const productPreviewSlider = new Swiper('.product-preview__slider', {
-      observer: true,
-      observeParents: true,
-      slidesPerView: 1,
-      spaceBetween: 20,
-      autoHeight: false,
-      speed: 800,
-      effect: 'fade',
-      crossFade: true,
-      lazy: true,
+    if (!isMobile.any()) {
+      const productPreviewSlider = new Swiper('.product-preview__slider', {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        autoHeight: false,
+        speed: 800,
+        effect: 'fade',
+        crossFade: true,
+        lazy: true,
 
-      // Пагинация
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
-
-    let swiperIndex;
-
-    // Получаем индекс слайдера, в котором нужно менять слайды
-    var swiperContainers = document.querySelectorAll('[data-mousemove-swipe]');
-    swiperContainers.forEach(function (container, index) {
-      container.addEventListener('mousemove', function () {
-        swiperIndex = Array.from(swiperContainers).indexOf(container) + 1;
+        // Пагинация
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
       });
-    });
 
-    function sliderMouseSlideInit() {
-      document.addEventListener('mousemove', function (e) {
-        const targetElement = e.target;
-        if (targetElement.closest('[data-mousemove-swipe]')) {
-          let parentSlider = targetElement.closest('.widget-products__slider');
-          let parentSliderWrapper;
-          let translateXValue = 0;
-          let parentOffset = 0;
-          let sliderElement;
-
-          if (parentSlider) {
-            parentSliderWrapper = targetElement.closest('.widget-products__wrapper');
-            translateXValue = getTranslateXValue(parentSliderWrapper);
-            let styles = window.getComputedStyle(parentSlider);
-            var paddingLeft = parseFloat(styles.paddingLeft);
-            parentOffset = parentSlider.offsetLeft + paddingLeft;
-          }
-
-          sliderElement = targetElement.closest('.widget-products__slide');
-          if (!sliderElement) {
-            sliderElement = targetElement.closest('.product-card');
-          }
-
-          const sliderItem = productPreviewSlider[swiperIndex - 1];
-          const sliderLength = sliderItem.slides.length;
-
-          if (sliderLength > 1) {
-            const sliderWidth = sliderItem.width;
-            const sliderPath = Math.round(sliderWidth / sliderLength);
-            const sliderMousePos = e.clientX - (sliderElement.offsetLeft + parentOffset) + (-translateXValue);
-            const sliderSlide = Math.floor(sliderMousePos / sliderPath);
-            sliderItem.slideTo(sliderSlide);
-          }
-        }
-      })
+      let swiperIndex;
 
       // Получаем индекс слайдера, в котором нужно менять слайды
-      function getIndex(el) {
-        return Array.from(el.parentNode.children).indexOf(el);
-      }
+      var swiperContainers = document.querySelectorAll('[data-mousemove-swipe]');
+      swiperContainers.forEach(function (container, index) {
+        container.addEventListener('mousemove', function () {
+          swiperIndex = Array.from(swiperContainers).indexOf(container) + 1;
+        });
+      });
 
-      // Получаем смещение верхнего слайдера при переключении слайдов
-      function getTranslateXValue(element) {
-        const styles = window.getComputedStyle(element);
-        const transformValue = styles.getPropertyValue('transform');
+      function sliderMouseSlideInit() {
+        document.addEventListener('mousemove', function (e) {
+          const targetElement = e.target;
+          if (targetElement.closest('[data-mousemove-swipe]')) {
+            let parentSlider = targetElement.closest('.widget-products__slider');
+            let parentSliderWrapper;
+            let translateXValue = 0;
+            let parentOffset = 0;
+            let sliderElement;
 
-        if (transformValue && transformValue !== 'none') {
-          const matrix = transformValue.match(/^matrix\((.+)\)$/);
-          if (matrix) {
-            const matrixValues = matrix[1].split(', ');
-            if (matrixValues.length >= 4) {
-              return parseFloat(matrixValues[4]);
+            if (parentSlider) {
+              parentSliderWrapper = targetElement.closest('.widget-products__wrapper');
+              translateXValue = getTranslateXValue(parentSliderWrapper);
+              let styles = window.getComputedStyle(parentSlider);
+              var paddingLeft = parseFloat(styles.paddingLeft);
+              parentOffset = parentSlider.offsetLeft + paddingLeft;
+            }
+
+            sliderElement = targetElement.closest('.widget-products__slide');
+            if (!sliderElement) {
+              sliderElement = targetElement.closest('.product-card');
+            }
+
+            const sliderItem = productPreviewSlider[swiperIndex - 1];
+            const sliderLength = sliderItem.slides.length;
+
+            if (sliderLength > 1) {
+              const sliderWidth = sliderItem.width;
+              const sliderPath = Math.round(sliderWidth / sliderLength);
+              const sliderMousePos = e.clientX - (sliderElement.offsetLeft + parentOffset) + (-translateXValue);
+              const sliderSlide = Math.floor(sliderMousePos / sliderPath);
+              sliderItem.slideTo(sliderSlide);
             }
           }
+        })
+
+        // Получаем индекс слайдера, в котором нужно менять слайды
+        function getIndex(el) {
+          return Array.from(el.parentNode.children).indexOf(el);
         }
 
-        return 0;
-      }
-    }
+        // Получаем смещение верхнего слайдера при переключении слайдов
+        function getTranslateXValue(element) {
+          const styles = window.getComputedStyle(element);
+          const transformValue = styles.getPropertyValue('transform');
 
-    sliderMouseSlideInit();
+          if (transformValue && transformValue !== 'none') {
+            const matrix = transformValue.match(/^matrix\((.+)\)$/);
+            if (matrix) {
+              const matrixValues = matrix[1].split(', ');
+              if (matrixValues.length >= 4) {
+                return parseFloat(matrixValues[4]);
+              }
+            }
+          }
+
+          return 0;
+        }
+      }
+
+      sliderMouseSlideInit();
+    }
   }
 
   if (document.querySelector('.widget-sales__slider')) {

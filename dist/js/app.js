@@ -3518,6 +3518,26 @@
                 document.documentElement.classList.add(className);
             }));
         }
+        let isMobile = {
+            Android: function() {
+                return navigator.userAgent.match(/Android/i);
+            },
+            BlackBerry: function() {
+                return navigator.userAgent.match(/BlackBerry/i);
+            },
+            iOS: function() {
+                return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+            },
+            Opera: function() {
+                return navigator.userAgent.match(/Opera Mini/i);
+            },
+            Windows: function() {
+                return navigator.userAgent.match(/IEMobile/i);
+            },
+            any: function() {
+                return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
+            }
+        };
         function functions_getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
@@ -8622,7 +8642,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     on: {}
                 });
             }
-            if (document.querySelector(".product-preview__slider")) {
+            if (document.querySelector(".product-preview__slider")) if (!isMobile.any()) {
                 const productPreviewSlider = new Swiper(".product-preview__slider", {
                     observer: true,
                     observeParents: true,

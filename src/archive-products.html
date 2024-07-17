@@ -8,40 +8,31 @@
   <div class="wrapper">
     @@include('html/_header.htm',{})
     <main class="page">
-      <div class="breadcrumbs breadcrumbs_row breadcrumbs_border">
-        <div class="breadcrumbs__container">
-          <div class="breadcrumbs__wrapper">
-            <h1 class="breadcrumbs__title">Каталог</h1>
-
-            <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
-              <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
-                <a href="" itemprop="item">
-                  <span itemprop="name">Главная</span>
-                </a>
-              </span>
-              <span class="site-breadcrumbs__separator">/</span>
-              <span class="site-breadcrumbs__title">Каталог</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <section class="product-categories">
         <div class="product-categories__container">
+          <div class="product-categories__heading">
+            <div class="_content">
+              <h1>Каталог</h1>
+            </div>
+          </div>
+
           <div class="product-categories__items">
-            <article class="category-card category-card_big">
+            <!-- category-card_big -->
+            <article class="category-card">
               <a href="taxanomy-type.html" class="category-card__link"></a>
 
               <div class="category-card__bg">
                 <picture>
-                  <source srcset="img/widget-category/category-card1-bg768.png" media="(max-width: 1279.98px)">
-                  <img src="img/widget-category/category-card1-bg1440.png" alt="" loading="lazy">
+                  <source srcset="@img/widget-category/category-card6-bg360.png" media="(max-width: 574.98px)">
+                  <source srcset="@img/widget-category/category-card6-bg768.png" media="(max-width: 991.98px)">
+                  <source srcset="@img/widget-category/category-card6-bg1440.png" media="(max-width: 1639.98px)">
+                  <img src="@img/widget-category/category-card6-bg1920.png" alt="" loading="lazy">
                 </picture>
               </div>
 
               <div class="category-card__main">
                 <div class="category-card__head">
-                  <h3 class="category-card__title">Все пылесосы</h3>
+                  <h3 class="category-card__title">Пылесосы с аквафильтром</h3>
                   <div class="category-card__amount"><span>140</span> Товаров</div>
                 </div>
 
@@ -62,42 +53,16 @@
 
               <div class="category-card__bg">
                 <picture>
-                  <source srcset="img/widget-category/category-card2-bg768.png" media="(max-width: 991.98px)">
-                  <img src="img/widget-category/category-card2-bg1440.png" alt="" loading="lazy">
+                  <source srcset="@img/widget-category/category-card7-bg360.png" media="(max-width: 574.98px)">
+                  <source srcset="@img/widget-category/category-card7-bg768.png" media="(max-width: 991.98px)">
+                  <source srcset="@img/widget-category/category-card7-bg1440.png" media="(max-width: 1639.98px)">
+                  <img src="@img/widget-category/category-card7-bg1920.png" alt="" loading="lazy">
                 </picture>
               </div>
 
               <div class="category-card__main">
                 <div class="category-card__head">
-                  <h3 class="category-card__title">Пылесосы <br> с аквафильтром</h3>
-                  <div class="category-card__amount"><span>16</span> Товаров</div>
-                </div>
-
-                <div class="category-card__footer">
-                  <div class="text-link link-underline">
-                    <span>Подробнее</span>
-
-                    <svg class="icon">
-                      <use xlink:href="img/sprite.svg#svg-text-link"></use>
-                    </svg>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <article class="category-card">
-              <a href="taxanomy-type.html" class="category-card__link"></a>
-
-              <div class="category-card__bg">
-                <picture>
-                  <!-- <source srcset="img/widget-category/category-card3-bg768.png" media="(max-width: 1279.98px)"> -->
-                  <img src="img/widget-category/category-card3-bg1440.png" alt="" loading="lazy">
-                </picture>
-              </div>
-
-              <div class="category-card__main">
-                <div class="category-card__head">
-                  <h3 class="category-card__title">Вертикальные <br> пылесосы </h3>
+                  <h3 class="category-card__title">Вертикальные пылесосы </h3>
                   <div class="category-card__amount"><span>26</span> Товаров</div>
                 </div>
 
@@ -118,14 +83,46 @@
 
               <div class="category-card__bg">
                 <picture>
-                  <!-- <source srcset="img/widget-category/category-card3-bg768.png" media="(max-width: 1279.98px)"> -->
-                  <img src="img/widget-category/category-card4-bg1440.png" alt="" loading="lazy">
+                  <source srcset="@img/widget-category/category-card8-bg360.png" media="(max-width: 574.98px)">
+                  <source srcset="@img/widget-category/category-card8-bg768.png" media="(max-width: 991.98px)">
+                  <source srcset="@img/widget-category/category-card8-bg1440.png" media="(max-width: 1639.98px)">
+                  <img src="@img/widget-category/category-card8-bg1920.png" alt="" loading="lazy">
                 </picture>
               </div>
 
               <div class="category-card__main">
                 <div class="category-card__head">
                   <h3 class="category-card__title">Пылесосы с мешком / колбой </h3>
+                  <div class="category-card__amount"><span>140</span> Товаров</div>
+                </div>
+
+                <div class="category-card__footer">
+                  <div class="text-link link-underline">
+                    <span>Подробнее</span>
+
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#svg-text-link"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="category-card">
+              <a href="taxanomy-type.html" class="category-card__link"></a>
+
+              <div class="category-card__bg">
+                <picture>
+                  <source srcset="@img/widget-category/category-card9-bg360.png" media="(max-width: 574.98px)">
+                  <source srcset="@img/widget-category/category-card9-bg768.png" media="(max-width: 991.98px)">
+                  <source srcset="@img/widget-category/category-card9-bg1440.png" media="(max-width: 1639.98px)">
+                  <img src="@img/widget-category/category-card9-bg1920.png" alt="" loading="lazy">
+                </picture>
+              </div>
+
+              <div class="category-card__main">
+                <div class="category-card__head">
+                  <h3 class="category-card__title">Моющие пылесосы </h3>
                   <div class="category-card__amount"><span>26</span> Товаров</div>
                 </div>
 
@@ -146,14 +143,46 @@
 
               <div class="category-card__bg">
                 <picture>
-                  <!-- <source srcset="img/widget-category/category-card3-bg768.png" media="(max-width: 1279.98px)"> -->
-                  <img src="img/widget-category/category-card5-bg1440.png" alt="" loading="lazy">
+                  <source srcset="@img/widget-category/category-card10-bg360.png" media="(max-width: 574.98px)">
+                  <source srcset="@img/widget-category/category-card10-bg768.png" media="(max-width: 991.98px)">
+                  <source srcset="@img/widget-category/category-card10-bg1440.png" media="(max-width: 1639.98px)">
+                  <img src="@img/widget-category/category-card10-bg1920.png" alt="" loading="lazy">
                 </picture>
               </div>
 
               <div class="category-card__main">
                 <div class="category-card__head">
-                  <h3 class="category-card__title">Моющие <br> пылесосы </h3>
+                  <h3 class="category-card__title">Товары со скидкой </h3>
+                  <div class="category-card__amount"><span>26</span> Товаров</div>
+                </div>
+
+                <div class="category-card__footer">
+                  <div class="text-link link-underline">
+                    <span>Подробнее</span>
+
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#svg-text-link"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <article class="category-card">
+              <a href="taxanomy-type.html" class="category-card__link"></a>
+
+              <div class="category-card__bg">
+                <picture>
+                  <source srcset="@img/widget-category/category-card11-bg360.png" media="(max-width: 574.98px)">
+                  <source srcset="@img/widget-category/category-card11-bg768.png" media="(max-width: 991.98px)">
+                  <source srcset="@img/widget-category/category-card11-bg1440.png" media="(max-width: 1639.98px)">
+                  <img src="@img/widget-category/category-card11-bg1920.png" alt="" loading="lazy">
+                </picture>
+              </div>
+
+              <div class="category-card__main">
+                <div class="category-card__head">
+                  <h3 class="category-card__title">Аксессуары для пылесосов </h3>
                   <div class="category-card__amount"><span>26</span> Товаров</div>
                 </div>
 
