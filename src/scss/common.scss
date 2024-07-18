@@ -254,7 +254,7 @@ h,
   &6 {
     font-weight: 500;
     @include adaptiveValue("font-size", 16, 14, 768, 360, 1);
-    line-height: math.div(24, 18);
+    line-height: math.div(24, 16);
   }
 }
 
@@ -263,6 +263,7 @@ video {
   display: block;
   max-width: 100%;
   height: auto;
+  word-break: break-word;
 }
 
 ._heading {
@@ -403,7 +404,6 @@ ol {
   table {
     width: 100%;
     border-collapse: separate;
-    line-height: math.div(26, 16);
     border-spacing: rem(2) rem(4);
 
     th {
@@ -818,6 +818,7 @@ body {
           pointer-events: none;
           border-radius: rem(14);
           overflow: hidden;
+          box-shadow: 0 16px 16px 0 rgba(50, 50, 71, 0.08);
           transition: $transition ease all 0s;
 
           a {

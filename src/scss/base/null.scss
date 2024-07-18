@@ -24,7 +24,7 @@ body {
 body {
 	font-family: $fontFamily;
 	@include adaptiveValue("font-size", 16, 14, 768, 360, 1);
-	line-height: math.div(18 , 14);
+	line-height: math.div(24 , 16);
 	color: $mainColor;
 	//text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;

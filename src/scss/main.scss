@@ -221,19 +221,6 @@
 .product-categories {
   // .product-categories__breadcrumbs
   &__breadcrumbs {
-    @media (max-width: $mobile) {
-      .breadcrumbs__wrapper {
-        display: flex;
-        flex-direction: column-reverse;
-      }
-
-      .breadcrumbs__title {
-        &:not(:last-child) {
-          margin-bottom: 0;
-          @include adaptiveValue("margin-top", 16, 12, 1440, 360, 1);
-        }
-      }
-    }
   }
 
   // .product-categories__container
@@ -1630,7 +1617,6 @@ a.partner-card {
   &__caption {
     font-weight: 500;
     font-size: rem(16);
-    line-height: math.div(26, 16);
     display: flex;
     align-items: center;
     gap: rem(6);
@@ -1682,7 +1668,6 @@ a.partner-card {
   &__title {
     font-weight: 500;
     font-size: rem(16);
-    line-height: math.div(26, 16);
 
     & + .catalog-filter__body {
       padding-top: rem(18);
@@ -1796,16 +1781,6 @@ a.partner-card {
 
 // !Страница сравнения
 //.compare     ====================================================================================================
-.compare-breadcrumbs {
-  @include adaptiveValue("margin-bottom", 30, 24, 768, 360, 1);
-
-  .breadcrumbs__wrapper {
-    border: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-  }
-}
-
 .compare {
   @media (min-width: $mobile) {
     background-color: $Line;
@@ -2190,7 +2165,6 @@ a.partner-card {
     padding-top: rem(16);
     padding-bottom: rem(16);
     font-size: rem(16);
-    line-height: math.div(26, 16);
     color: $DGray;
 
     &:not(:last-child) {
@@ -2205,7 +2179,6 @@ a.partner-card {
         display: block;
         font-weight: 500;
         font-size: rem(16);
-        line-height: math.div(26, 16);
         margin-bottom: rem(18);
         color: $mainColor;
       }
@@ -2429,10 +2402,20 @@ a.partner-card {
   // .single-article__breadcrumbs
   &__breadcrumbs {
     margin-bottom: rem(30);
+
+    .breadcrumbs__wrapper {
+      @media (max-width: $tablet) {
+        flex-direction: column;
+      }
+    }
   }
 
   // .single-article__back
   &__back {
+    @media (min-width: $mobileM) {
+      display: none;
+    }
+
     .btn {
       padding: rem(10) rem(16);
       min-height: rem(40);
@@ -2440,6 +2423,10 @@ a.partner-card {
 
       .icon_text-link {
         transform: rotate(-180deg);
+      }
+
+      @media (max-width: $mobileM) {
+        width: initial;
       }
     }
   }
@@ -2453,16 +2440,11 @@ a.partner-card {
 
   // .single-article__title
   &__title {
-    font-family: Montserrat;
-    font-weight: 600;
-    @include adaptiveValue("font-size", 24, 20, 768, 360, 1);
-    line-height: math.div(30, 24);
   }
 
   // .single-article__date
   &__date {
     @include adaptiveValue("font-size", 16, 12);
-    line-height: math.div(26, 16);
     color: $Gray4;
   }
 
@@ -2490,7 +2472,6 @@ a.partner-card {
   // .single-article__text
   &__text {
     max-width: 100%;
-    line-height: math.div(26, 16);
 
     a {
       color: $Blue;
@@ -2545,7 +2526,7 @@ a.partner-card {
 
       // .news-card__excrpt
       &__excrpt {
-        font-size: rem(13);
+        font-size: rem(14);
       }
 
       // .news-card__date
@@ -2582,6 +2563,8 @@ a.partner-card {
 
   // .article-sidebar__caption
   &__caption {
+    font-weight: 700;
+
     &:not(:last-child) {
       margin-bottom: rem(32);
     }
@@ -2635,7 +2618,6 @@ a.partner-card {
 
     .contacts__body {
       font-size: rem(16);
-      line-height: math.div(26, 16);
     }
 
     .contacts__link {
@@ -2729,7 +2711,6 @@ a.partner-card {
 
   // .delivery-template1__text
   &__text {
-    line-height: math.div(26, 16);
   }
 
   // .delivery-template1__aside
@@ -2742,7 +2723,6 @@ a.partner-card {
     background-color: $Blue3;
     border-radius: rem(20);
     overflow: hidden;
-    line-height: math.div(26, 16);
 
     @media (min-width: $tablet) {
       @include adaptiveValue("padding", 28, 20, 1440, 992, 1);
@@ -2757,7 +2737,6 @@ a.partner-card {
 
   // .delivery-template2__text
   &__text {
-    line-height: math.div(26, 16);
   }
 
   // .delivery-template2__cards
@@ -2813,8 +2792,6 @@ a.partner-card {
 
   // .delivery-card__body
   &__body {
-    line-height: math.div(26, 16);
-
     @media (min-width: $mobile) {
       @include adaptiveValue("font-size", 16, 13, 1480, 768, 1);
     }
@@ -4261,17 +4238,26 @@ a.partner-card {
       align-content: flex-start;
       row-gap: rem(8);
 
+      @media (min-width: $tablet) {
+        margin-left: rem(-10);
+        margin-right: rem(-10);
+      }
+
       a {
         padding: rem(12) rem(10);
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: rem(8);
         border-radius: rem(12);
         background-color: $White;
         font-weight: 500;
         transition: $transition ease background-color 0s;
 
         svg {
+          width: rem(18);
+          height: rem(18);
+          flex: 0 0 rem(18);
           transform: rotate(-90deg);
           fill: $Gray4;
           transition: $transition ease fill 0s;
@@ -4321,13 +4307,13 @@ a.partner-card {
       @media (min-width: $tablet) {
         grid-template-columns: 1fr;
       }
-      @media (min-width: em(1179.98)) {
+      @media (min-width: em(1299.98)) {
         grid-template-columns: 1fr rem(296);
       }
     }
 
     .single-article__cards {
-      @media (max-width: em(1179.98)) {
+      @media (max-width: em(1299.98)) {
         grid-template-columns: repeat(3, 1fr);
       }
     }
@@ -4378,8 +4364,9 @@ a.partner-card {
   display: flex;
   flex-direction: column;
   position: relative;
-  // overflow: hidden;
   @include adaptiveValue("min-height", 302, 148, 768, 360, 1);
+  @include adaptiveValue("border-radius", 40, 20, 768, 360, 1);
+  overflow: hidden;
 
   @media (min-width: $mobile) {
     @include adaptiveValue("min-height", 347, 302, 992, 768, 1);
@@ -4405,6 +4392,7 @@ a.partner-card {
     cursor: pointer;
 
     @media (any-hover: hover) {
+      transition: $transition ease opacity 0s;
       &:hover {
         opacity: 0.8;
       }
@@ -4415,12 +4403,17 @@ a.partner-card {
   &__bg {
     img {
       position: absolute;
+      right: 0;
       top: 0;
-      left: 0;
-      width: 100%;
       height: 100%;
       object-fit: cover;
-      @include adaptiveValue("border-radius", 40, 20, 768, 360, 1);
+    }
+  }
+
+  // .help-banner__top
+  &__top {
+    @media (max-width: $mobileM) {
+      max-width: 100% !important;
     }
   }
 
@@ -4488,8 +4481,6 @@ a.partner-card {
 
 //.help-template-text     ====================================================================================================
 .help-template-text {
-  line-height: math.div(26, 16);
-
   a {
     color: $Blue;
   }
@@ -5094,26 +5085,23 @@ a.partner-card {
 
   // .map__items
   &__items {
-    max-height: rem(347);
-    overflow-y: auto;
-    overflow-x: hidden;
-    scrollbar-width: thin;
-    scrollbar-color: $Red $Line;
-
     @media (min-width: $tablet) {
       max-height: calc(100% - rem(48));
-    }
-
-    &::-webkit-scrollbar {
-      width: rem(5);
-    }
-    &::-webkit-scrollbar-track {
-      background-color: $Red;
-      border-radius: 22px;
-    }
-    &::-webkit-scrollbar-thumb {
-      border-radius: 22px;
-      background-color: $Line;
+      overflow-y: auto;
+      overflow-x: hidden;
+      scrollbar-width: thin;
+      scrollbar-color: $Red $Line;
+      &::-webkit-scrollbar {
+        width: rem(5);
+      }
+      &::-webkit-scrollbar-track {
+        background-color: $Red;
+        border-radius: 22px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 22px;
+        background-color: $Line;
+      }
     }
   }
 
@@ -5207,23 +5195,12 @@ a.partner-card {
   // .contacts-block__caption
   &__caption {
     font-weight: 500;
-    font-size: rem(16);
-    line-height: math.div(26, 16);
-
-    @media (min-width: $tablet) {
-      @include adaptiveValue("font-size", 16, 14, 1440, 992, 1);
-    }
   }
 
   // .contacts-block__text
   &__text {
     h6 {
       font-weight: 400;
-      @include adaptiveValue("font-size", 16, 12, 768, 360, 1);
-
-      @media (min-width: $tablet) {
-        @include adaptiveValue("font-size", 16, 14, 1440, 992, 1);
-      }
     }
 
     a {
@@ -5317,7 +5294,7 @@ a.partner-card {
       &::after {
         content: "";
         position: absolute;
-        top: 50%;
+        top: 47%;
         left: 50%;
         transform: translate(-50%);
         background-color: $Blue;
@@ -5417,10 +5394,6 @@ a.partner-card {
 
   // .products-review__card
   &__card {
-    .news-card__wrapper {
-      row-gap: rem(8);
-    }
-
     .news-card__body {
       max-width: initial;
     }
@@ -5475,8 +5448,6 @@ a.partner-card {
   }
 
   ._content {
-    line-height: math.div(26, 16);
-
     a {
       color: $Blue;
     }

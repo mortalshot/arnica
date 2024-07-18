@@ -219,7 +219,7 @@
 	.select_gray + .select__body {
 		.select__title,
 		.select__options {
-			border-color: $mainColor;
+			border-color: $mainColor !important;
 		}
 	}
 
