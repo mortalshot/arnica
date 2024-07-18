@@ -4303,6 +4303,10 @@ a.partner-card {
   &__main {
     min-width: 0;
 
+    .single-article {
+      margin-top: 0 !important;
+    }
+
     .single-article__grid {
       @media (min-width: $tablet) {
         grid-template-columns: 1fr;
@@ -4319,7 +4323,7 @@ a.partner-card {
     }
 
     .single-article__button {
-      @media (max-width: em(1179.98)) {
+      @media (max-width: em(1299.98)) {
         display: flex;
         justify-content: center;
         margin-top: rem(32);
