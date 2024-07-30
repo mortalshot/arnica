@@ -50,6 +50,7 @@ if (galleries.length) {
 			})
 		})
 	});
+
 	// Добавляем в объект модулей
 	flsModules.gallery = galleyItems;
 }

@@ -363,12 +363,14 @@ ol {
   }
 
   div {
-    @include adaptiveValue("padding-top", 24, 16, 768, 360, 1);
-    @include adaptiveValue("padding-bottom", 24, 16, 768, 360, 1);
-    @include adaptiveValue("padding-left", 24, 18, 768, 360, 1);
-    @include adaptiveValue("padding-right", 24, 18, 768, 360, 1);
-    border-radius: rem(20);
-    background-color: $Blue3;
+    &:not(.table) {
+      @include adaptiveValue("padding-top", 24, 16, 768, 360, 1);
+      @include adaptiveValue("padding-bottom", 24, 16, 768, 360, 1);
+      @include adaptiveValue("padding-left", 24, 18, 768, 360, 1);
+      @include adaptiveValue("padding-right", 24, 18, 768, 360, 1);
+      border-radius: rem(20);
+      background-color: $Blue3;
+    }
   }
 
   img {
@@ -606,12 +608,16 @@ ol {
 
     // .swiper-arrows__arrow_prev
     &_prev {
-      transform: rotate(90deg);
+      svg {
+        transform: rotate(90deg);
+      }
     }
 
     // .swiper-arrows__arrow_next
     &_next {
-      transform: rotate(-90deg);
+      svg {
+        transform: rotate(-90deg);
+      }
     }
 
     svg {

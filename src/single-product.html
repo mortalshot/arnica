@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Карточка товара"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="page">
+      <section class="single-product">
+        <div class="single-product__container">
+          <div class="single-product__breadcrumbs breadcrumbs">
+            <div class="breadcrumbs__wrapper">
+              <div class="site-breadcrumbs" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+                <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a href="" itemprop="item">
+                    <span itemprop="name">Главная</span>
+                  </a>
+                </span>
+                <span class="site-breadcrumbs__separator">/</span>
+                <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a href="" itemprop="item">
+                    <span itemprop="name">Каталог</span>
+                  </a>
+                </span>
+                <span class="site-breadcrumbs__separator">/</span>
+                <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a href="" itemprop="item">
+                    <span itemprop="name">Пылесосы</span>
+                  </a>
+                </span>
+                <span class="site-breadcrumbs__separator">/</span>
+                <span class="site-breadcrumbs__link link-hover" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+                  <a href="" itemprop="item">
+                    <span itemprop="name">Пылесосы с аквафильтром</span>
+                  </a>
+                </span>
+                <span class="site-breadcrumbs__separator">/</span>
+                <span class="site-breadcrumbs__title">Tesla Plus</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="single-product__grid">
+            <div class="single-product__content">
+              <div class="single-product__main">
+                <div class="single-product__gallery product-gallery">
+                  <div class="product-gallery__thumb-wrapper">
+                    <div class="swiper-arrows__arrow swiper-arrows__arrow_prev">
+                      <svg class="icon">
+                        <use xlink:href="img/sprite.svg#svg-select"></use>
+                      </svg>
+                    </div>
+
+                    <div class="product-gallery__thumb swiper">
+                      <div class="product-gallery__wrapper swiper-wrapper">
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/icons/product-3d.svg" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image1.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image2.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image3.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image4.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image5.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image6.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image7.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image8.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image9.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image10.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image11.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image12.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image13.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image14.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image15.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                        <div class="product-gallery__slide swiper-slide">
+                          <img src="@img/widget-products/product2-image16.png" alt="" loading="lazy">
+                          <div class="swiper-lazy-preloader"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-arrows__arrow swiper-arrows__arrow_next">
+                      <svg class="icon">
+                        <use xlink:href="img/sprite.svg#svg-select"></use>
+                      </svg>
+                    </div>
+                  </div>
+
+
+                  <div class="product-gallery__main swiper">
+                    <div class="single-product__labels">
+                      <div class="product-card__label product-card__label_sale">SALE</div>
+                      <div class="product-card__label product-card__label_installment">Расcрочка 0-0-6</div>
+                      <div class="product-card__label product-card__label_warranty">Расширенная гарантия</div>
+                    </div>
+
+                    <div class="product-gallery__wrapper swiper-wrapper" data-gallery="">
+                      <div data-src="@img/widget-products/product2-preview.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-preview.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image1.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image1.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image2.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image2.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image3.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image3.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image4.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image4.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image5.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image5.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image6.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image6.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image7.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image7.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image8.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image8.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image9.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image9.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image10.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image10.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image11.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image11.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image12.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image12.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image13.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image13.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image14.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image14.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image15.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image15.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                      <div data-src="@img/widget-products/product2-image16.png" class="product-gallery__slide swiper-slide">
+                        <img src="@img/widget-products/product2-image16.png" alt="" loading="lazy">
+                        <div class="swiper-lazy-preloader"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="single-product__info product-info">
+                  <div class="product-info__top">
+                    <h1 class="product-info__title">E-Max Arnica, пылесос вертикальный аккумуляторный, синий</h1>
+
+                    <div class="product-info__row">
+                      <div class="product-info__code">Артикул: <strong>ET14330</strong></div>
+
+                      <div class="product-info__actions product-card__actions">
+                        <div class="product-card__compare">
+                          <button type="button" class="shake-animation">
+                            <svg class="icon">
+                              <use xlink:href="img/sprite.svg#svg-compare"></use>
+                            </svg>
+                          </button>
+                        </div>
+
+                        <div class="product-card__wishlist">
+                          <button type="button" class="shake-animation">
+                            <svg class="icon">
+                              <use xlink:href="img/sprite.svg#svg-wishlist"></use>
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-info__reviews">
+                    <div class="product-info__rating review-item__rating">
+                      <div class="review-item__star review-item__star_yellow">
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-star"></use>
+                        </svg>
+                      </div>
+                      <div class="review-item__star review-item__star_yellow">
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-star"></use>
+                        </svg>
+                      </div>
+                      <div class="review-item__star review-item__star_yellow">
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-star"></use>
+                        </svg>
+                      </div>
+                      <div class="review-item__star review-item__star_yellow">
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-star"></use>
+                        </svg>
+                      </div>
+                      <div class="review-item__star review-item__star_yellow">
+                        <svg class="icon">
+                          <use xlink:href="img/sprite.svg#svg-star"></use>
+                        </svg>
+                      </div>
+                    </div>
+
+                    <a href="#reviews" class="link-underline">6 отзывов</a>
+                  </div>
+
+                  <div class="product-info__attributes">
+                    <div class="product-attribute">
+                      <div class="product-attribute__caption">Выбрать цвет:</div>
+
+                      <div class="product-attribute__items product-colors">
+                        <div class="product-colors__item">
+                          <a href="" class="product-colors__link _active">
+                            <img src="@img/widget-products/product2-preview.png" alt="" loading="lazy">
+                          </a>
+                        </div>
+                        <div class="product-colors__item">
+                          <a href="" class="product-colors__link">
+                            <img src="@img/widget-products/product2-preview2.png" alt="" loading="lazy">
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="product-info__characteristics product-characteristics">
+                    <div class="product-info__caption">
+                      <img src="@img/icons/gears.svg" alt="" loading="lazy">
+                      <span>Характеристики</span>
+                    </div>
+
+                    <ul class="product-characteristics__list">
+                      <li><span>Гарантия:</span> <strong>36 месяцев</strong></li>
+                      <li><span>Длина сетевого кабеля:</span> <strong>6 метров</strong></li>
+                      <li><span>Режимы:</span> <strong>сухая уборка</strong></li>
+                      <li><span>Вес прибора с упаковкой <br> и принадлежностями:</span> <strong>11,7 кг</strong></li>
+                    </ul>
+
+                    <div class="product-characteristics__link">
+                      <a href="#product-characteristics" class="link-underline">Все характеристики</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="product-characteristics" data-tabs class="single-product__tabs tabs">
+                <nav data-tabs-titles class="tabs__navigation">
+                  <button type="submit" class="tabs__title btn btn_border-main _tab-active">Описание</button>
+                  <button type="submit" class="tabs__title btn btn_border-main">Преимущества</button>
+                  <button type="submit" class="tabs__title btn btn_border-main">Обзоры</button>
+                  <button type="submit" class="tabs__title btn btn_border-main">Характеристики</button>
+                  <button type="submit" class="tabs__title btn btn_border-main">Возможности</button>
+                  <button type="submit" class="tabs__title btn btn_border-main">Комплектация</button>
+                  <button type="submit" class="tabs__title btn btn_border-main">Примечание</button>
+                </nav>
+                <div data-tabs-body class="tabs__content">
+                  <div class="tabs__body">
+                    <div class="_content">
+                      <h4>Описание</h4>
+                      <p>Новинка от Arnica повторяет исключительные характеристики известной модели Tesla Premium. Работает очень тихо, уровень шума всего 70 дБ — никакого дискомфорта для окружающих. Потребляет минимум электроэнергии  — 750 Вт, отличная экономия на счетах за электричество. Но при этом имеет отличную мощность —450 аВт, которая обеспечивает высокое качество уборки любого напольного покрытия и мебели.</p>
+                      <p>Инновационная система Cyclone MAX Technology очищает не только пол, но и воздух, не давая пыли вернуться обратно в комнату. А фильтр тонкой очистки HEPA-13 задерживает мельчайшие частицы грязи — воздух идеален даже для аллергиков и маленьких детей. Универсальная щётка пол/ковёр 2 in 1 Ergo Active Nozzle отлично справляется с любыми загрязнениями, а турбощётка максимально очищает любое ковровое покрытие. В комплекте также насадка для чистки текстиля, мебели и щелевая.</p>
+                      <p>У пылесоса продуманная конструкция. Большие резиновые колеса для высокой маневренности и защиты пола. Вертикальная насадка экономит пространство. Крепление для насадок облегчает хранение. На корпусе есть индикаторы теущего мощности, степени заполненности контейнера и необходимости замены фильтра — ситуация всегда под контролем.</p>
+                    </div>
+                  </div>
+                  <div class="tabs__body">
+                    <div class="benefits">
+                      <h4 class="benefits__caption">Преимущества ARNICA Tesla Plus</h4>
+
+                      <div class="benefits__items">
+                        <div class="benefits__item benefits-item">
+                          <div class="benefits-item__wrapper">
+                            <div class="benefits-item__icon">
+                              <img src="@img/widget-products/benefits-item1.svg" alt="" loading="lazy">
+                            </div>
+
+                            <div class="benefits-item__caption">Гарантия</div>
+                          </div>
+                        </div>
+
+                        <div class="benefits__item benefits-item">
+                          <div class="benefits-item__wrapper">
+                            <div class="benefits-item__icon">
+                              <img src="@img/widget-products/benefits-item2.svg" alt="" loading="lazy">
+                            </div>
+
+                            <div class="benefits-item__caption">Объём пылесборника</div>
+                          </div>
+                        </div>
+
+                        <div class="benefits__item benefits-item">
+                          <div class="benefits-item__wrapper">
+                            <div class="benefits-item__icon">
+                              <img src="@img/widget-products/benefits-item3.svg" alt="" loading="lazy">
+                            </div>
+
+                            <div class="benefits-item__caption">Turbo Brush щетка для ковров</div>
+                          </div>
+                        </div>
+
+                        <div class="benefits__item benefits-item">
+                          <div class="benefits-item__wrapper">
+                            <div class="benefits-item__icon">
+                              <img src="@img/widget-products/benefits-item4.svg" alt="" loading="lazy">
+                            </div>
+
+                            <div class="benefits-item__caption">Фильтр НЕРА 13</div>
+                          </div>
+                        </div>
+
+                        <div class="benefits__item benefits-item">
+                          <div class="benefits-item__wrapper">
+                            <div class="benefits-item__icon">
+                              <img src="@img/widget-products/benefits-item5.svg" alt="" loading="lazy">
+                            </div>
+
+                            <div class="benefits-item__caption">Щетка 2 in 1 Ergo Active Nozzle</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__body">
+                    <div class="products-review__list">
+                      <article class="products-review__card news-card news-card_video">
+                        <div class="news-card__wrapper">
+                          <a href="" data-popup="#video" data-popup-youtube="nBWznETVrOs" class="news-card__preview">
+                            <img src="img/news/news8-card-preview1440.png" alt="" loading="lazy">
+                          </a>
+                        </div>
+                      </article>
+                      <article class="products-review__card news-card news-card_video">
+                        <div class="news-card__wrapper">
+                          <a href="" data-popup="#video" data-popup-youtube="-c6In9ScBzE" class="news-card__preview">
+                            <img src="img/news/news4-card-preview1440.png" alt="" loading="lazy">
+                          </a>
+                        </div>
+                      </article>
+                      <article class="products-review__card news-card news-card_video">
+                        <div class="news-card__wrapper">
+                          <a href="" data-popup="#video" data-popup-youtube="xd82BTbOBKk" class="news-card__preview">
+                            <img src="img/news/news2-card-preview1440.png" alt="" loading="lazy">
+                          </a>
+                        </div>
+                      </article>
+                    </div>
+                  </div>
+                  <div class="tabs__body">
+                    <div class="_content">
+                      <h4>Характеристики</h4>
+
+                      <div class="single-product__table table">
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td>Гарантия:</td>
+                              <td><strong>36 месяцев</strong></td>
+                            </tr>
+
+                            <tr>
+                              <td>Длина сетевого кабеля:</td>
+                              <td><strong>6 метров</strong></td>
+                            </tr>
+
+                            <tr>
+                              <td>Режимы:</td>
+                              <td><strong>сухая уборка</strong></td>
+                            </tr>
+
+                            <tr>
+                              <td>Вес прибора с упаковкой и принадлежностями:</td>
+                              <td><strong>11,7 кг</strong></td>
+                            </tr>
+
+                            <tr>
+                              <td>Вес прибора:</td>
+                              <td><strong>6,7 кг</strong></td>
+                            </tr>
+
+                            <tr>
+                              <td>Напряжение питания:</td>
+                              <td><strong>220 В</strong></td>
+                            </tr>
+
+                            <tr>
+                              <td>Емкость контейнера для сбора пыли:</td>
+                              <td><strong>3 л</strong></td>
+                            </tr>
+
+                            <tr>
+                              <td>Потребляемая мощность двигателя:</td>
+                              <td><strong>750 Вт</strong></td>
+                            </tr>
+
+                            <tr>
+                              <td>Показывать сообщение о задержке в поставках:</td>
+                              <td><strong>1</strong></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tabs__body">
+                    <div class="_content">
+                      <h4>Возможности</h4>
+
+                      <ul>
+                        <li>Сухая уборка через аквафильтр</li>
+                        <li>Уничтожение до 99,99% частиц пыли и грязи с помощью запатентованной системой фильтрации DWS</li>
+                        <li>Функция очистки и ароматизации воздуха через аквафильтр</li>
+                        <li>Простая и легкая очистка аквафильтра после уборки</li>
+                        <li>Возможность всасывания небольшого количества жидкости (только без использования аксессуаров с металлическими частями!)</li>
+                        <li>Глубокая очистка ковровых покрытий при помощи турбощетки</li>
+                        <li>Очистка мягкой мебели и текстиля мини-турбощеткой</li>
+                        <li>Очистка штор и гардин благодаря регулятору мощности</li>
+                        <li>Очистка труднодоступных мест с помощью щелевой насадки</li>
+                        <li>Очистка мебели при помощи насадки с мягким ворсом</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tabs__body">
+                    <div class="_content">
+                      <h4>Комплектация</h4>
+
+                      <ul>
+                        <li>Телескопическая труба 52-82 см</li>
+                        <li>Шланг для сухой уборки стандартный с эргономичной ручкой, с защелками </li>
+                        <li>Универсальная щётка пол/ковёр с высокоэффективной мощностью всасывания 2 in 1 Ergo Active Nozzle </li>
+                        <li>Простая и легкая очистка аквафильтра после уборки</li>
+                        <li>Турбо-щётка для глубокой очистки ковровых покрытий</li>
+                        <li>Удлиненная щелевая насадка</li>
+                        <li>Насадка для чистки текстиля, тканевых обивок мебели (прямоугольная)</li>
+                        <li>Насадка с мягким ворсом для мебели</li>
+                        <li>Крепление для аксессуаров</li>
+                        <li>Моющийся HEPA-13 фильтр</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="tabs__body">
+                    <div class="_content">
+                      <h4>Примечание</h4>
+
+                      <p>Производитель оставляет за собой право вносить изменения в конструкцию и принципиальную схему изделия, не ухудшающие его качество, характеристики и потребительские свойства без обязательного извещения. Обращаем Ваше внимание на то, что данные характеристики носят исключительно информационный характер и ни при каких условиях не являются публичной офертой.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="single-product__sidebar" data-da=".single-product__content, 991.98, 1">
+              <div class="product-sidebar-card product-card-actions">
+                <div class="product-sidebar-card__wrapper">
+                  <ul class="product-card__available">
+                    <li class="_color-green">Есть в наличии</li>
+                  </ul>
+
+                  <div class="product-card-actions__price price">
+                    <div class="price price_new">19&nbsp;990 ₽</div>
+                    <div class="price price_old">20&nbsp;990 ₽</div>
+                    <div class="price price_discount">-20%</div>
+                  </div>
+
+                  <div class="product-card-actions__installments cart-total__installments">
+                    <button type="button" class="installments-button">
+                      <svg class="icon icon-installments">
+                        <use xlink:href="img/sprite.svg#svg-installments"></use>
+                      </svg>
+
+                      <span>Доступно в рассрочку <strong>от 13&nbsp;583&nbsp;₽/мес.</strong></span>
+
+                      <svg class="icon icon-select">
+                        <use xlink:href="img/sprite.svg#svg-select"></use>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="product-card-actions__button">
+                    <button type="button" data-ripple="" class="btn btn_bg-green">В корзину</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-sidebar-card product-card-info">
+                <div class="product-card-info__wrapper product-sidebar-card__wrapper">
+                  <div class="product-card-info__icon">
+                    <img src="@img/icons/cube.svg" alt="" loading="lazy">
+                  </div>
+
+                  <div class="product-card-info__body">
+                    <div class="product-card-info__caption">
+                      Доставка <span style="color: #0AB3A3;">По всей России</span>
+                    </div>
+                    <div class="product-card-info__details">Доставим 30.05 от 500 ₽ </div>
+                  </div>
+
+                  <div class="product-card-info__right">
+                    <button type="button" class="info-button" data-tippy-content="Подсказка">
+                      <svg class="icon">
+                        <use xlink:href="img/sprite.svg#svg-info"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-sidebar-card product-card-info">
+                <div class="product-card-info__wrapper product-sidebar-card__wrapper" data-popup="#partner-questionnaire" style="background-color: #EAFEFC;">
+                  <div class="product-card-info__icon">
+                    <img src="@img/icons/call-in.svg" alt="" loading="lazy">
+                  </div>
+
+                  <div class="product-card-info__body">
+                    <div class="product-card-info__caption"> Остались вопросы? </div>
+                    <div class="product-card-info__details">Закажите обратный звонок</div>
+                  </div>
+
+                  <div class="product-card-info__right">
+                    <div class="product-card-info__request">
+                      <svg class="icon icon_select">
+                        <use xlink:href="img/sprite.svg#svg-select"></use>
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-sidebar-card product-card-info">
+                <div class="product-card-info__wrapper product-sidebar-card__wrapper" style="background-color: #EAFEFC;">
+                  <div class="product-card-info__icon">
+                    <img src="@img/icons/phone.svg" alt="" loading="lazy">
+                  </div>
+
+                  <div class="product-card-info__body">
+                    <div class="product-card-info__caption"> Позвоните нам по телефону</div>
+                    <div class="product-card-info__details">
+                      <a href="tel:88005555261" class="link-underline">8 800 555 52 61</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      @@include('html/widget-products.htm',{})
+
+      <section id="reviews" class="product-reviews reviews">
+        <div class="reviews__container">
+          @@include('html/reviews-gallery.htm',{})
+
+          <div class="reviews__main">
+            <div class="reviews__content">
+              <div class="reviews__actions">
+                <div class="reviews__label">Сортировать:</div>
+
+                <button type="button" class="reviews__sorting reviews__sorting_active">По дате</button>
+
+                <button type="button" class="reviews__sorting">По оценке</button>
+              </div>
+
+              <div class="reviews__items">
+                <ul class="reviews__list">
+                  <li class="reviews__item review-item">
+                    <div class="review-item__heading">
+                      <div class="review-item__person item-person">
+                        <div class="item-person__icon">
+                          <img src="@img/icons/avatar.svg" alt="" loading="lazy">
+                        </div>
+
+                        <div class="item-person__body">
+                          <div class="item-person__name">Елена</div>
+                          <div class="review-item__rating">
+                            <div class="review-item__star review-item__star_yellow">
+                              <svg class="icon">
+                                <use xlink:href="img/sprite.svg#svg-star"></use>
+                              </svg>
+                            </div>
+                            <div class="review-item__star review-item__star_yellow">
+                              <svg class="icon">
+                                <use xlink:href="img/sprite.svg#svg-star"></use>
+                              </svg>
+                            </div>
+                            <div class="review-item__star review-item__star_yellow">
+                              <svg class="icon">
+                                <use xlink:href="img/sprite.svg#svg-star"></use>
+                              </svg>
+                            </div>
+                            <div class="review-item__star review-item__star_yellow">
+                              <svg class="icon">
+                                <use xlink:href="img/sprite.svg#svg-star"></use>
+                              </svg>
+                            </div>
+                            <div class="review-item__star review-item__star_yellow">
+                              <svg class="icon">
+                                <use xlink:href="img/sprite.svg#svg-star"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="review-item__date">30 мая 2024</div>
+                    </div>
+
+                    <div class="review-item__body">
+                      <div class="review-item__category review-item__advantages">
+                        <div class="review-item__caption">Достоинства</div>
+
+                        <div class="review-item__text _content">
+                          <p>Богатая комплектация, отлично тянет, всасывает все подряд. После уборки чистый воздух. Есть ножной переключатель, автоматическое сматывание шнура.</p>
+                        </div>
+                      </div>
+
+                      <div class="review-item__category review-item__disadvantages">
+                        <div class="review-item__caption">Недостатки</div>
+
+                        <div class="review-item__text _content">
+                          <p>Нет</p>
+                        </div>
+                      </div>
+
+                      <div class="review-item__category review-item__impressions">
+                        <div class="review-item__caption">Общие впечатления</div>
+
+                        <div class="review-item__text _content">
+                          <p>Когда в доме появился маленький ребенок, понадобился мощный пылесос, который эффективно справился бы пылью. Смотрели разнее модели, читали отзывы. Информация о том, что этот пылесос обладает новой системой фильтрации воздуха, стала решающей. Есть еще дополнительный НЕРА-фильтр, который задерживает до 99,99% мелкой пыли, аллергенов. Теперь в доме всегда чистый и свежий воздух.</p>
+                        </div>
+                      </div>
+
+                      <div class="review-item__reply review-reply">
+                        <div class="review-reply__wrapper">
+                          <div class="review-item__person item-person">
+                            <div class="item-person__icon">
+                              <img src="@img/icons/avatar-author.svg" alt="" loading="lazy">
+                            </div>
+
+                            <div class="item-person__body">
+                              <div class="item-person__name">Ответ магазина Arnica</div>
+                            </div>
+                          </div>
+
+                          <div class="review-reply__text _content">
+                            <p>Елена, спасибо за ваш отзыв и доверие к нашей марке. Мы очень рады, что вы остались довольны покупкой.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+                  <li class="reviews__item review-item">
+                    <div class="review-item__heading">
+                      <div class="review-item__person item-person">
+                        <div class="item-person__icon">
+                          <img src="@img/icons/avatar.svg" alt="" loading="lazy">
+                        </div>
+
+                        <div class="item-person__body">
+                          <div class="item-person__name">Ирина</div>
+                          <div class="review-item__rating">
+                            <div class="review-item__star review-item__star_yellow">
+                              <svg class="icon">
+                                <use xlink:href="img/sprite.svg#svg-star"></use>
+                              </svg>
+                            </div>
+                            <div class="review-item__star review-item__star_yellow">
+                              <svg class="icon">
+                                <use xlink:href="img/sprite.svg#svg-star"></use>
+                              </svg>
+                            </div>
+                            <div class="review-item__star review-item__star_yellow">
+                              <svg class="icon">
+                                <use xlink:href="img/sprite.svg#svg-star"></use>
+                              </svg>
+                            </div>
+                            <div class="review-item__star review-item__star_yellow">
+                              <svg class="icon">
+                                <use xlink:href="img/sprite.svg#svg-star"></use>
+                              </svg>
+                            </div>
+                            <div class="review-item__star review-item__star_yellow">
+                              <svg class="icon">
+                                <use xlink:href="img/sprite.svg#svg-star"></use>
+                              </svg>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="review-item__date">30 мая 2024</div>
+                    </div>
+
+                    <div class="review-item__body">
+                      <div class="review-item__category review-item__advantages">
+                        <div class="review-item__caption">Достоинства</div>
+
+                        <div class="review-item__text _content">
+                          <p>Большая сила всасывания при небольшом энергопотреблении, регулировка мощности на ручке, держатель для насадок.</p>
+                        </div>
+                      </div>
+
+                      <div class="review-item__category review-item__disadvantages">
+                        <div class="review-item__caption">Недостатки</div>
+
+                        <div class="review-item__text _content">
+                          <p>Пока особых недостатков не обнаружили, было бы неплохо длину шнура побольше, но это не так страшно.</p>
+                        </div>
+                      </div>
+
+                      <div class="review-item__category review-item__impressions">
+                        <div class="review-item__caption">Общие впечатления</div>
+
+                        <div class="review-item__text _content">
+                          <p>За время пользования пылесос показал себя с лучшей стороны. Он мощный, производительный, мало потребляет электричества, удобный в управлении. Есть регулировка мощности. А главное, он прекрасно очищает ковры от кошачьей и собачьей шерсти, так как у нас в доме живут два наших питомца. Мы довольны пылесосом и рекомендуем к покупке.</p>
+                        </div>
+                      </div>
+
+                      <div class="review-item__reply review-reply">
+                        <div class="review-reply__wrapper">
+                          <div class="review-item__person item-person">
+                            <div class="item-person__icon">
+                              <img src="@img/icons/avatar-author.svg" alt="" loading="lazy">
+                            </div>
+
+                            <div class="item-person__body">
+                              <div class="item-person__name">Ответ магазина Arnica</div>
+                            </div>
+                          </div>
+
+                          <div class="review-reply__text _content">
+                            <p>Елена, спасибо за ваш отзыв и доверие к нашей марке. Мы очень рады, что вы остались довольны покупкой.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <aside class="reviews__sidebar reviews-sidebar">
+              <div class="reviews-sidebar__wrapper">
+                <div class="reviews-widget">
+                  <div class="reviews-widget__total">
+                    <div class="reviews-widget__row">
+                      <div class="reviews-widget__value">4.9 / 5</div>
+
+                      <div class="reviews-widget__rating">
+                        <div class="review-item__star review-item__star_yellow">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-star"></use>
+                          </svg>
+                        </div>
+                        <div class="review-item__star review-item__star_yellow">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-star"></use>
+                          </svg>
+                        </div>
+                        <div class="review-item__star review-item__star_yellow">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-star"></use>
+                          </svg>
+                        </div>
+                        <div class="review-item__star review-item__star_yellow">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-star"></use>
+                          </svg>
+                        </div>
+                        <div class="review-item__star review-item__star_yellow">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-star"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="reviews-widget__text">На основе 6 оценок</div>
+                  </div>
+
+                  <div class="reviews-widget__marks">
+                    <div class="reviews-widget__mark reviews-mark">
+                      <div class="reviews-mark__icon">
+                        <img src="@img/icons/like.svg" alt="" loading="lazy">
+                      </div>
+
+                      <div class="reviews-mark__caption">Качество (5)</div>
+                    </div>
+
+                    <div class="reviews-widget__mark reviews-mark">
+                      <div class="reviews-mark__icon">
+                        <img src="@img/icons/wallet.svg" alt="" loading="lazy">
+                      </div>
+
+                      <div class="reviews-mark__caption">Цена (5)</div>
+                    </div>
+
+                    <div class="reviews-widget__mark reviews-mark">
+                      <div class="reviews-mark__icon">
+                        <img src="@img/icons/reward.svg" alt="" loading="lazy">
+                      </div>
+
+                      <div class="reviews-mark__caption">Достоинства (5)</div>
+                    </div>
+                  </div>
+
+                  <div class="reviews-widget__body">
+                    <div class="reviews-widget__text _content">
+                      <p>Оставьте отзыв о магазине с вашей фотографией и фотографиями вашей покупки и получите на e-mail промокод со скидкой на любую покупку на сайте Arnica-Home.ru</p>
+                    </div>
+
+                    <div class="reviews-widget__button">
+                      <button type="button" data-popup="#leave-feedback" class="btn btn_border-main">Оставить отзыв</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <div class="product-small">
+        <div class="product-small__container">
+          <div class="product-small__grid">
+            <div class="product-small__left">
+              <div class="product-small__main">
+                <div class="small-product">
+                  <div class="small-product__image">
+                    <img src="@img/widget-products/product1-preview.png" alt="" loading="lazy">
+                  </div>
+
+                  <div class="small-product__body">
+                    <div class="small-product__title">E-Max Arnica, пылесос вертикальный аккумуляторный, синий</div>
+
+                    <div class="product-info__reviews">
+                      <div class="product-info__rating review-item__rating">
+                        <div class="review-item__star review-item__star_yellow">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-star"></use>
+                          </svg>
+                        </div>
+                        <div class="review-item__star review-item__star_yellow">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-star"></use>
+                          </svg>
+                        </div>
+                        <div class="review-item__star review-item__star_yellow">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-star"></use>
+                          </svg>
+                        </div>
+                        <div class="review-item__star review-item__star_yellow">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-star"></use>
+                          </svg>
+                        </div>
+                        <div class="review-item__star review-item__star_yellow">
+                          <svg class="icon">
+                            <use xlink:href="img/sprite.svg#svg-star"></use>
+                          </svg>
+                        </div>
+                      </div>
+
+                      <a href="#reviews" class="link-underline">6 отзывов</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-small__right">
+              <div class="product-small__price price">
+                <div class="price price_new">19&nbsp;990 ₽</div>
+                <div class="price price_old">20&nbsp;990 ₽</div>
+                <div class="price price_discount">-20%</div>
+              </div>
+
+              <div class="product-card-actions__button">
+                <button type="button" data-ripple="" class="btn btn_bg-green">В корзину</button>
+              </div>
+
+              <div class="product-info__actions product-card__actions">
+                <div class="product-card__compare">
+                  <button type="button" class="shake-animation">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#svg-compare"></use>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="product-card__wishlist">
+                  <button type="button" class="shake-animation">
+                    <svg class="icon">
+                      <use xlink:href="img/sprite.svg#svg-wishlist"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_popup.htm',{})
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

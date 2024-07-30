@@ -459,6 +459,62 @@ function initSliders() {
       }
     });
   }
+
+  if (document.querySelector('.product-gallery__thumb')) {
+    const productThumbsSwiper = new Swiper('.product-gallery__thumb', {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 4,
+      spaceBetween: 8,
+      direction: 'horizontal',
+      speed: 400,
+      mousewheel: true,
+
+      // Пагинация
+      navigation: {
+        prevEl: '.product-gallery__thumb-wrapper .swiper-arrows__arrow_prev',
+        nextEl: '.product-gallery__thumb-wrapper .swiper-arrows__arrow_next',
+      },
+
+      // Брейкпоинты
+      breakpoints: {
+        767.98: {
+          slidesPerView: 6,
+        },
+        991.98: {
+          slidesPerView: 3,
+        },
+        1279.98: {
+          direction: 'vertical',
+          slidesPerView: 4,
+        },
+        1439.98: {
+          direction: 'vertical',
+          slidesPerView: 5,
+        },
+        1639.98: {
+          direction: 'vertical',
+          slidesPerView: 6,
+        },
+      },
+
+      // События
+      on: {
+      }
+    });
+
+    new Swiper('.product-gallery__main', {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      speed: 800,
+
+      thumbs: {
+        swiper: productThumbsSwiper
+      },
+    });
+  }
 }
 
 // Работа с noUiSlider
@@ -506,7 +562,6 @@ function noUiSliderInit() {
     });
   }
 }
-
 
 document.addEventListener('click', function (e) {
   const targetElement = e.target;
@@ -657,8 +712,6 @@ liElements.forEach(li => {
   });
 });
 
-
-
 // Скрываем строки с одинаковыми значениями
 const compareSwitch = document.querySelector('.compare__switch .switch__input');
 if (compareSwitch) {
@@ -724,6 +777,21 @@ if (templateInstructions) {
   })
 }
 
+const mainProduct = document.querySelector('.single-product__main');
+const smallProduct = document.querySelector('.product-small');
+
+if (mainProduct && smallProduct && window.innerWidth >= 768) {
+  window.addEventListener('scroll', function () {
+    const rect = mainProduct.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    if (rect.top < windowHeight && rect.bottom >= 0) {
+      smallProduct.classList.remove('_active');
+    } else {
+      smallProduct.classList.add('_active');
+    }
+  });
+}
 
 window.addEventListener("load", function (e) {
   // Запуск инициализации слайдеров

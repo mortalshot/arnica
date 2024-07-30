@@ -8934,6 +8934,52 @@ PERFORMANCE OF THIS SOFTWARE.
                     on: {}
                 });
             }
+            if (document.querySelector(".product-gallery__thumb")) {
+                const productThumbsSwiper = new Swiper(".product-gallery__thumb", {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 4,
+                    spaceBetween: 8,
+                    direction: "horizontal",
+                    speed: 400,
+                    mousewheel: true,
+                    navigation: {
+                        prevEl: ".product-gallery__thumb-wrapper .swiper-arrows__arrow_prev",
+                        nextEl: ".product-gallery__thumb-wrapper .swiper-arrows__arrow_next"
+                    },
+                    breakpoints: {
+                        767.98: {
+                            slidesPerView: 6
+                        },
+                        991.98: {
+                            slidesPerView: 3
+                        },
+                        1279.98: {
+                            direction: "vertical",
+                            slidesPerView: 4
+                        },
+                        1439.98: {
+                            direction: "vertical",
+                            slidesPerView: 5
+                        },
+                        1639.98: {
+                            direction: "vertical",
+                            slidesPerView: 6
+                        }
+                    },
+                    on: {}
+                });
+                new Swiper(".product-gallery__main", {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    speed: 800,
+                    thumbs: {
+                        swiper: productThumbsSwiper
+                    }
+                });
+            }
         }
         function noUiSliderInit() {
             var sliders = document.querySelectorAll(".range-slider__range");
@@ -9103,6 +9149,13 @@ PERFORMANCE OF THIS SOFTWARE.
                 }));
             }));
         }
+        const mainProduct = document.querySelector(".single-product__main");
+        const smallProduct = document.querySelector(".product-small");
+        if (mainProduct && smallProduct && window.innerWidth >= 768) window.addEventListener("scroll", (function() {
+            const rect = mainProduct.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+            if (rect.top < windowHeight && rect.bottom >= 0) smallProduct.classList.remove("_active"); else smallProduct.classList.add("_active");
+        }));
         window.addEventListener("load", (function(e) {
             initSliders();
             noUiSliderInit();
