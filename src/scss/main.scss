@@ -639,7 +639,7 @@
 .product-preview__slider {
   &:not(.swiper-initialized) {
     .product-preview__slide {
-      &:not(:last-child) {
+      &:not(:first-child) {
         display: none;
       }
 
@@ -2326,6 +2326,14 @@ a.partner-card {
   }
 }
 
+#partner-questionnaire {
+  .form__spacer {
+    @media (max-width:$mobileM){
+       display: none; 
+    }
+  }
+}
+
 // !Страница блога
 //.blog-section     ====================================================================================================
 .blog-section {
@@ -2691,7 +2699,7 @@ a.partner-card {
     }
   }
 
-  .tabs__body {
+  .tabs__content {
     @include adaptiveValue("margin-top", 56, 36, 768, 360, 1);
   }
 }
@@ -5926,6 +5934,7 @@ a.partner-card {
       aspect-ratio: 82/442;
     }
     @media (min-width: em(1639.98)) {
+      aspect-ratio: 82/532;
     }
     @media (max-width: em(1279.98)) {
       margin-left: rem(40);
@@ -5939,7 +5948,7 @@ a.partner-card {
       cursor: pointer;
 
       @media (any-hover: hover) {
-        transition: $transition ease all 0s;
+        transition: $transition ease opacity 0s;
         &:hover {
           opacity: 0.8;
         }

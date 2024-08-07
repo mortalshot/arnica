@@ -433,7 +433,6 @@ function initSliders() {
 
 
       // Брейкпоинты
-
       breakpoints: {
         768: {
           slidesPerView: 3.2,
@@ -458,6 +457,16 @@ function initSliders() {
 
       }
     });
+
+    const slider = document.querySelector('.reviews__gallery');
+    if (slider.classList.contains('reviews-gallery_big') && window.innerWidth >= 1280) {
+      reviewsGallerySlider.params.slidesPerView = 5;
+      reviewsGallerySlider.update();
+    }
+    if (slider.classList.contains('reviews-gallery_big') && window.innerWidth >= 1640) {
+      reviewsGallerySlider.params.slidesPerView = 8;
+      reviewsGallerySlider.update();
+    }
   }
 
   if (document.querySelector('.product-gallery__thumb')) {
@@ -577,11 +586,14 @@ document.addEventListener('click', function (e) {
   }
 
   if (window.innerWidth < 991.98) {
-    if (targetElement.classList.contains('menu__arrow')) {
+    if (targetElement.closest('.menu__button')) {
+      e.preventDefault();
       const arrowParent = targetElement.closest('.menu__item');
-      const list = arrowParent.querySelector('ul');
-      _slideToggle(list);
-      arrowParent.classList.toggle('_hover');
+      arrowParent.classList.add('_hover');
+    }
+    if (targetElement.closest('.menu__close')) {
+      const arrowParent = targetElement.closest('.menu__item');
+      arrowParent.classList.remove('_hover');
     }
   }
 

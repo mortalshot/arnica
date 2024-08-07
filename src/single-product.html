@@ -55,10 +55,10 @@
 
                     <div class="product-gallery__thumb swiper">
                       <div class="product-gallery__wrapper swiper-wrapper">
-                        <div class="product-gallery__slide swiper-slide">
+                        <a href="partners.html" class="product-gallery__slide swiper-slide">
                           <img src="@img/icons/product-3d.svg" alt="" loading="lazy">
                           <div class="swiper-lazy-preloader"></div>
-                        </div>
+                        </a>
                         <div class="product-gallery__slide swiper-slide">
                           <img src="@img/widget-products/product2-image1.png" alt="" loading="lazy">
                           <div class="swiper-lazy-preloader"></div>
@@ -563,7 +563,7 @@
                   </div>
 
                   <div class="product-card-info__right">
-                    <button type="button" class="info-button" data-tippy-content="Подсказка">
+                    <button type="button" class="info-button" data-tippy-content="Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Имени власти взгляд живет что текста буквенных реторический по всей даль меня семантика дорогу силуэт залетают вопрос взобравшись о, злых жаренные! Рекламных пустился единственное коварный своих заманивший семь повстречался то мир рыбного агентство вопроса маленький коварных домах наш по всей букв инициал возвращайся, гор которой решила великий, своего власти. Меня щеке вершину он переписывается! За но переулка своих то своего? Мир курсивных алфавит текстов дороге пустился. Строчка переписывается это свой lorem выйти живет грустный города коварный переписали семь ручеек образ рукописи диких, себя прямо своего дал его дороге имени встретил своих пунктуация свое что вопрос? Взгляд lorem диких агентство сих послушавшись повстречался раз деревни вопроса последний напоивший всеми, рыбного языком мир жизни, предупредила маленький, собрал правилами решила встретил. Первую раз текстов великий семь запятой своего родного маленький они вопрос безопасную жизни его, предложения правилами буквенных о ручеек ipsum составитель продолжил встретил заглавных.">
                       <svg class="icon">
                         <use xlink:href="img/sprite.svg#svg-info"></use>
                       </svg>
@@ -616,7 +616,9 @@
 
       <section id="reviews" class="product-reviews reviews">
         <div class="reviews__container">
-          @@include('html/reviews-gallery.htm',{})
+          @@include('html/reviews-gallery.htm',{
+            "class":"reviews-gallery_big"
+          })
 
           <div class="reviews__main">
             <div class="reviews__content">

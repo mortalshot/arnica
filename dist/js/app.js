@@ -3739,6 +3739,13 @@
                 return isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows();
             }
         };
+        function addLoadedClass() {
+            window.addEventListener("load", (function() {
+                setTimeout((function() {
+                    document.documentElement.classList.add("loaded");
+                }), 0);
+            }));
+        }
         function functions_getHash() {
             if (location.hash) return location.hash.replace("#", "");
         }
@@ -9105,7 +9112,7 @@ PERFORMANCE OF THIS SOFTWARE.
                 }
             }
             if (document.querySelector(".reviews-gallery__slider")) {
-                new Swiper(".reviews-gallery__slider", {
+                const reviewsGallerySlider = new Swiper(".reviews-gallery__slider", {
                     observer: true,
                     observeParents: true,
                     slidesPerView: 3.5,
@@ -9136,6 +9143,15 @@ PERFORMANCE OF THIS SOFTWARE.
                     },
                     on: {}
                 });
+                const slider = document.querySelector(".reviews__gallery");
+                if (slider.classList.contains("reviews-gallery_big") && window.innerWidth >= 1280) {
+                    reviewsGallerySlider.params.slidesPerView = 5;
+                    reviewsGallerySlider.update();
+                }
+                if (slider.classList.contains("reviews-gallery_big") && window.innerWidth >= 1640) {
+                    reviewsGallerySlider.params.slidesPerView = 8;
+                    reviewsGallerySlider.update();
+                }
             }
             if (document.querySelector(".product-gallery__thumb")) {
                 const productThumbsSwiper = new Swiper(".product-gallery__thumb", {
@@ -9222,11 +9238,16 @@ PERFORMANCE OF THIS SOFTWARE.
                 if (targetElement.classList.contains("menu__arrow") || targetElement.closest(".menu__arrow")) targetElement.closest(".menu__item").classList.toggle("_hover");
                 if (!targetElement.closest(".menu__item") && document.querySelectorAll(".menu__item._hover").length > 0) removeClasses(document.querySelectorAll(".menu__item._hover"), "_hover");
             }
-            if (window.innerWidth < 991.98) if (targetElement.classList.contains("menu__arrow")) {
-                const arrowParent = targetElement.closest(".menu__item");
-                const list = arrowParent.querySelector("ul");
-                _slideToggle(list);
-                arrowParent.classList.toggle("_hover");
+            if (window.innerWidth < 991.98) {
+                if (targetElement.closest(".menu__button")) {
+                    e.preventDefault();
+                    const arrowParent = targetElement.closest(".menu__item");
+                    arrowParent.classList.add("_hover");
+                }
+                if (targetElement.closest(".menu__close")) {
+                    const arrowParent = targetElement.closest(".menu__item");
+                    arrowParent.classList.remove("_hover");
+                }
             }
             if (targetElement.classList.contains("header-catalog__button .btn") || targetElement.closest(".header-catalog__button")) {
                 targetElement.closest(".header-catalog").classList.toggle("_active");
@@ -9365,6 +9386,7 @@ PERFORMANCE OF THIS SOFTWARE.
         }));
         window["FLS"] = false;
         isWebp();
+        addLoadedClass();
         menuInit();
         spollers();
         tabs();

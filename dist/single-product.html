@@ -5,10 +5,14 @@
 	<title>Карточка товара</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
-	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240730221028" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240730221028">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240730221028">
+	<style>
+		body {
+			opacity: 0;
+		}
+	</style>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240807230257" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240807230257">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240807230257">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -290,7 +294,7 @@
 									<li class="menu__item"><a href="promotions.html" class="link-hover">Акции</a></li>
 									<li class="menu__item"><a href="delivery.html" class="link-hover">Доставка и оплата</a></li>
 									<li class="menu__item menu__item_has-children">
-										<a href="about.html" class="link-hover">О компании</a>
+										<a href="" class="menu__button link-hover">О компании</a>
 
 										<button type="button" class="menu__arrow" tabindex="-1">
 											<svg class="icon icon_select">
@@ -299,6 +303,15 @@
 										</button>
 
 										<ul class="menu__sub-list">
+											<button type="button" class="menu__close" tabindex="-1">
+												<svg class="icon icon_select">
+													<use xlink:href="img/sprite.svg#svg-select"></use>
+												</svg>
+
+												<span>Назад</span>
+											</button>
+
+											<li><a href="about.html">О компании</a></li>
 											<li><a href="">Доставка и оплата</a></li>
 											<li><a href="">История компании</a></li>
 											<li><a href="">Сертификаты</a></li>
@@ -555,10 +568,10 @@
 
 										<div class="product-gallery__thumb swiper">
 											<div class="product-gallery__wrapper swiper-wrapper">
-												<div class="product-gallery__slide swiper-slide">
+												<a href="partners.html" class="product-gallery__slide swiper-slide">
 													<img src="img/icons/product-3d.svg" alt="" loading="lazy">
 													<div class="swiper-lazy-preloader"></div>
-												</div>
+												</a>
 												<div class="product-gallery__slide swiper-slide">
 													<picture><source srcset="img/widget-products/product2-image1.webp"type="image/webp"><img src="img/widget-products/product2-image1.png" alt="" loading="lazy"></picture>
 													<div class="swiper-lazy-preloader"></div>
@@ -1063,7 +1076,7 @@
 									</div>
 
 									<div class="product-card-info__right">
-										<button type="button" class="info-button" data-tippy-content="Подсказка">
+										<button type="button" class="info-button" data-tippy-content="Далеко-далеко за словесными горами в стране гласных, и согласных живут рыбные тексты. Имени власти взгляд живет что текста буквенных реторический по всей даль меня семантика дорогу силуэт залетают вопрос взобравшись о, злых жаренные! Рекламных пустился единственное коварный своих заманивший семь повстречался то мир рыбного агентство вопроса маленький коварных домах наш по всей букв инициал возвращайся, гор которой решила великий, своего власти. Меня щеке вершину он переписывается! За но переулка своих то своего? Мир курсивных алфавит текстов дороге пустился. Строчка переписывается это свой lorem выйти живет грустный города коварный переписали семь ручеек образ рукописи диких, себя прямо своего дал его дороге имени встретил своих пунктуация свое что вопрос? Взгляд lorem диких агентство сих послушавшись повстречался раз деревни вопроса последний напоивший всеми, рыбного языком мир жизни, предупредила маленький, собрал правилами решила встретил. Первую раз текстов великий семь запятой своего родного маленький они вопрос безопасную жизни его, предложения правилами буквенных о ручеек ipsum составитель продолжил встретил заглавных.">
 											<svg class="icon">
 												<use xlink:href="img/sprite.svg#svg-info"></use>
 											</svg>
@@ -1551,7 +1564,7 @@
 
 			<section id="reviews" class="product-reviews reviews">
 				<div class="reviews__container">
-					<div class="reviews__gallery reviews-gallery">
+					<div class="reviews__gallery reviews-gallery reviews-gallery_big">
 						<div class="reviews-gallery__heading _heading">
 							<h3 class="reviews-gallery__title">
 								<span>Отзывы</span>
@@ -1613,6 +1626,27 @@
 								<div data-src="img/widget-products/product1-review6.png" class="reviews-gallery__slide swiper-slide">
 									<div class="reviews-gallery__image">
 										<picture><source srcset="img/widget-products/product1-review6.webp"type="image/webp"><img src="img/widget-products/product1-review6.png" alt="" loading="lazy"></picture>
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+								</div>
+
+								<div data-src="img/widget-products/product1-review1.png" class="reviews-gallery__slide swiper-slide">
+									<div class="reviews-gallery__image">
+										<picture><source srcset="img/widget-products/product1-review1.webp"type="image/webp"><img src="img/widget-products/product1-review1.png" alt="" loading="lazy"></picture>
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+								</div>
+
+								<div data-src="img/widget-products/product1-review2.png" class="reviews-gallery__slide swiper-slide">
+									<div class="reviews-gallery__image">
+										<picture><source srcset="img/widget-products/product1-review2.webp"type="image/webp"><img src="img/widget-products/product1-review2.png" alt="" loading="lazy"></picture>
+										<div class="swiper-lazy-preloader"></div>
+									</div>
+								</div>
+
+								<div data-src="img/widget-products/product1-review3.png" class="reviews-gallery__slide swiper-slide">
+									<div class="reviews-gallery__image">
+										<picture><source srcset="img/widget-products/product1-review3.webp"type="image/webp"><img src="img/widget-products/product1-review3.png" alt="" loading="lazy"></picture>
 										<div class="swiper-lazy-preloader"></div>
 									</div>
 								</div>
@@ -3409,9 +3443,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240730221028"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240730221028"></script>
-	<script src="js/app.min.js?_v=20240730221028"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240807230257"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240807230257"></script>
+	<script src="js/app.min.js?_v=20240807230257"></script>
 </body>
 
 </html>
