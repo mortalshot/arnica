@@ -10295,6 +10295,66 @@ main > .breadcrumbs {
   display: none;
 }
 
+.lg-custom-thumbnails .lg-outer {
+  width: auto;
+  left: 125px;
+  right: 10px;
+}
+
+.lg-custom-thumbnails .lg-outer .lg-thumb-outer {
+  top: 0;
+  width: 125px;
+  bottom: 0;
+  position: fixed;
+  left: 0;
+  max-height: none;
+  padding-left: 20px;
+  padding-right: 25px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ff3030 #f1f3f5;
+  background-color: #fff;
+}
+
+.lg-custom-thumbnails .lg-outer .lg-thumb-outer::-webkit-scrollbar {
+  width: 0.3125rem;
+}
+
+.lg-custom-thumbnails .lg-outer .lg-thumb-outer::-webkit-scrollbar-track {
+  background-color: #ff3030;
+  border-radius: 22px;
+}
+
+.lg-custom-thumbnails .lg-outer .lg-thumb-outer::-webkit-scrollbar-thumb {
+  border-radius: 22px;
+  background-color: #f1f3f5;
+}
+
+.lg-custom-thumbnails .lg-outer .lg-thumb-item {
+  width: 80px !important;
+  aspect-ratio: 1/1;
+  margin-right: 0 !important;
+  margin-bottom: 0.75rem;
+  border: 1px solid #E3E3E3;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.lg-custom-thumbnails .lg-outer .lg-thumb-item:hover,
+.lg-custom-thumbnails .lg-outer .lg-thumb-item.active {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+  border-color: #0AB3A3;
+}
+
+.lg-custom-thumbnails .lg-outer .lg-thumb {
+  padding: 5px 0;
+}
+
+.lg-custom-thumbnails .lg-media-overlap .lg-toolbar {
+  background: none;
+}
+
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0;
 }

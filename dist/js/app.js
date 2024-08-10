@@ -6948,7 +6948,9 @@
             render
         });
         const tippy_esm = tippy;
-        modules_flsModules.tippy = tippy_esm("[data-tippy-content]", {});
+        modules_flsModules.tippy = tippy_esm("[data-tippy-content]", {
+            placement: "auto-start"
+        });
         class ScrollWatcher {
             constructor(props) {
                 let defaultConfig = {
@@ -8702,7 +8704,11 @@ PERFORMANCE OF THIS SOFTWARE.
                     galleryClass: lightgallery_es5(gallery, {
                         plugins: [ lg_thumbnail_min ],
                         licenseKey: "7EC452A9-0CFD441C-BD984C7C-17C8456E",
-                        speed: 500
+                        speed: 500,
+                        addClass: "lg-custom-thumbnails",
+                        appendThumbnailsTo: ".lg-outer",
+                        animateThumb: false,
+                        allowMediaOverlap: true
                     })
                 });
             }));
@@ -8821,8 +8827,10 @@ PERFORMANCE OF THIS SOFTWARE.
                     on: {}
                 });
             }
-            if (document.querySelector(".widget-products__slider")) {
-                new Swiper(".widget-products__slider", {
+            const productsWidgets = document.querySelectorAll(".widget-products");
+            if (productsWidgets.length > 0) productsWidgets.forEach((widget => {
+                const slider = widget.querySelector(".widget-products__slider");
+                new Swiper(slider, {
                     observer: true,
                     observeParents: true,
                     slidesPerView: 1.4,
@@ -8830,15 +8838,17 @@ PERFORMANCE OF THIS SOFTWARE.
                     autoHeight: false,
                     speed: 800,
                     navigation: {
-                        prevEl: ".widget-products .swiper-arrows__arrow_prev",
-                        nextEl: ".widget-products .swiper-arrows__arrow_next"
+                        prevEl: widget.querySelector(".swiper-arrows__arrow_prev"),
+                        nextEl: widget.querySelector(".swiper-arrows__arrow_next")
                     },
                     breakpoints: {
                         480: {
-                            slidesPerView: 2
+                            slidesPerView: 2,
+                            spaceBetween: 28
                         },
                         768: {
-                            slidesPerView: 3
+                            slidesPerView: 3,
+                            spaceBetween: 30
                         },
                         1240: {
                             slidesPerView: 4,
@@ -8851,7 +8861,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     },
                     on: {}
                 });
-            }
+            }));
             if (document.querySelector(".product-preview__slider")) if (!isMobile.any()) {
                 const productPreviewSlider = new Swiper(".product-preview__slider", {
                     observer: true,
@@ -9153,8 +9163,11 @@ PERFORMANCE OF THIS SOFTWARE.
                     reviewsGallerySlider.update();
                 }
             }
-            if (document.querySelector(".product-gallery__thumb")) {
-                const productThumbsSwiper = new Swiper(".product-gallery__thumb", {
+            const thumb = document.querySelector(".product-gallery__thumb");
+            if (thumb) {
+                let initialSlide = 0;
+                const productThumbsSwiper = new Swiper(thumb, {
+                    initialSlide,
                     observer: true,
                     observeParents: true,
                     slidesPerView: 4,
@@ -9189,13 +9202,44 @@ PERFORMANCE OF THIS SOFTWARE.
                     on: {}
                 });
                 new Swiper(".product-gallery__main", {
+                    initialSlide,
                     observer: true,
                     observeParents: true,
                     slidesPerView: 1,
                     spaceBetween: 20,
                     speed: 800,
+                    simulateTouch: false,
                     thumbs: {
                         swiper: productThumbsSwiper
+                    }
+                });
+            }
+            const view360thumb = document.querySelector(".view360__thumb");
+            if (view360thumb) {
+                const view360thumbSwiper = new Swiper(view360thumb, {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 4,
+                    spaceBetween: 8,
+                    direction: "horizontal",
+                    speed: 400,
+                    mousewheel: true,
+                    freemode: true,
+                    on: {}
+                });
+                new Swiper(".view360__main", {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                    speed: 800,
+                    simulateTouch: false,
+                    navigation: {
+                        prevEl: ".swiper-arrows__arrow_prev",
+                        nextEl: ".swiper-arrows__arrow_next"
+                    },
+                    thumbs: {
+                        swiper: view360thumbSwiper
                     }
                 });
             }
@@ -9316,8 +9360,10 @@ PERFORMANCE OF THIS SOFTWARE.
         }));
         function updateDistanceСatalogToTop() {
             var headerBottom = document.querySelector(".header-bottom");
-            var distanceFromBottomToTop = headerBottom.getBoundingClientRect().top + headerBottom.offsetHeight;
-            document.body.style.setProperty("--distance-catalog-to-top", distanceFromBottomToTop + "px");
+            if (headerBottom) {
+                var distanceFromBottomToTop = headerBottom.getBoundingClientRect().top + headerBottom.offsetHeight;
+                document.body.style.setProperty("--distance-catalog-to-top", distanceFromBottomToTop + "px");
+            }
         }
         window.addEventListener("DOMContentLoaded", (function() {
             setTimeout((() => {
@@ -9329,13 +9375,15 @@ PERFORMANCE OF THIS SOFTWARE.
             updateDistanceСatalogToTop();
         }));
         const headerCatalogMenu = document.querySelector(".header-catalog__menu");
-        const liElements = Array.from(headerCatalogMenu.children);
-        liElements.forEach((li => {
-            li.addEventListener("mouseover", (() => {
-                li.classList.add("_active");
-                liElements.filter((item => item !== li)).forEach((item => item.classList.remove("_active")));
+        if (headerCatalogMenu) {
+            const liElements = Array.from(headerCatalogMenu.children);
+            liElements.forEach((li => {
+                li.addEventListener("mouseover", (() => {
+                    li.classList.add("_active");
+                    liElements.filter((item => item !== li)).forEach((item => item.classList.remove("_active")));
+                }));
             }));
-        }));
+        }
         const compareSwitch = document.querySelector(".compare__switch .switch__input");
         if (compareSwitch) compareSwitch.addEventListener("change", (function() {
             const isChecked = this.checked;

@@ -2328,8 +2328,8 @@ a.partner-card {
 
 #partner-questionnaire {
   .form__spacer {
-    @media (max-width:$mobileM){
-       display: none; 
+    @media (max-width: $mobileM) {
+      display: none;
     }
   }
 }
@@ -6508,6 +6508,68 @@ a.partner-card {
       line-height: math.div(18, 12);
       color: $Blue;
     }
+  }
+}
+
+.lg-custom-thumbnails {
+  .lg-outer {
+    width: auto;
+    // Set space for the container to occupy thumbnails
+    left: 125px;
+    right: 10px;
+
+    .lg-thumb-outer {
+      // Set the position of the thumbnails
+      top: 0;
+      width: 125px;
+      bottom: 0;
+      position: fixed;
+      left: 0;
+      max-height: none;
+      padding-left: 20px;
+      padding-right: 25px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: $Red $Line;
+      background-color: $White;
+
+      &::-webkit-scrollbar {
+        width: rem(5);
+      }
+      &::-webkit-scrollbar-track {
+        background-color: $Red;
+        border-radius: 22px;
+      }
+      &::-webkit-scrollbar-thumb {
+        border-radius: 22px;
+        background-color: $Line;
+      }
+    }
+
+    // Add hove effect (Optional)
+    .lg-thumb-item {
+      width: 80px !important;
+      aspect-ratio: 1 / 1;
+      margin-right: 0 !important;
+      margin-bottom: rem(12);
+      border: 1px solid #E3E3E3;
+      border-radius: 16px;
+      overflow: hidden;
+      
+      &:hover,
+      &.active {
+        filter: grayscale(0);
+        border-color: #0AB3A3;
+      }
+    }
+
+    .lg-thumb {
+      padding: 5px 0;
+    }
+  }
+
+  .lg-media-overlap .lg-toolbar  {
+    background: none;
   }
 }
 

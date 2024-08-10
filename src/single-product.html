@@ -53,9 +53,9 @@
                       </svg>
                     </div>
 
-                    <div class="product-gallery__thumb swiper">
+                    <div class="product-gallery__thumb swiper swiper_3d">
                       <div class="product-gallery__wrapper swiper-wrapper">
-                        <a href="partners.html" class="product-gallery__slide swiper-slide">
+                        <a href="view360.html" target="_blank" class="product-gallery__slide swiper-slide">
                           <img src="@img/icons/product-3d.svg" alt="" loading="lazy">
                           <div class="swiper-lazy-preloader"></div>
                         </a>
@@ -612,8 +612,77 @@
         </div>
       </section>
 
-      @@include('html/widget-products.htm',{})
+      <section class="widget-products">
+        <div class="widget-products__container">
+          <div class="widget-products__heading _heading">
+            <h2 class="widget-products__title">Аксессуары к пылесосу Tesla Plus</h2>
+      
+            <div class="widget-products__actions">
+              <div class="widget-products__link">
+                <a href="" class="link-underline">Все товары</a>
+              </div>
+      
+              <div class="swiper-arrows">
+                <button type="button" class="swiper-arrows__arrow swiper-arrows__arrow_prev">
+                  <svg class="icon">
+                    <use xlink:href="@img/sprite.svg#svg-select"></use>
+                  </svg>
+                </button>
+      
+                <button type="button" class="swiper-arrows__arrow swiper-arrows__arrow_next">
+                  <svg class="icon">
+                    <use xlink:href="@img/sprite.svg#svg-select"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+      
+          <div class="widget-products__slider swiper">
+            <div class="widget-products__wrapper swiper-wrapper">
+              <div class="widget-products__slide swiper-slide">
+                @@include('html/product-card.htm',{})
+              </div>
+      
+              <div class="widget-products__slide swiper-slide">
+                @@include('html/product-card.htm',{})
+              </div>
+      
+              <div class="widget-products__slide swiper-slide">
+                @@include('html/product-card.htm',{})
+              </div>
+      
+              <div class="widget-products__slide swiper-slide">
+                @@include('html/product-card.htm',{})
+              </div>
+      
+              <div class="widget-products__slide swiper-slide">
+                @@include('html/product-card.htm',{})
+              </div>
 
+              <div class="widget-products__slide swiper-slide">
+                @@include('html/product-card.htm',{})
+              </div>
+      
+              <div class="widget-products__slide swiper-slide">
+                @@include('html/product-card.htm',{})
+              </div>
+      
+              <div class="widget-products__slide swiper-slide">
+                @@include('html/product-card.htm',{})
+              </div>
+      
+              <div class="widget-products__slide swiper-slide">
+                @@include('html/product-card.htm',{})
+              </div>
+      
+              <div class="widget-products__slide swiper-slide">
+                @@include('html/product-card.htm',{})
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="reviews" class="product-reviews reviews">
         <div class="reviews__container">
           @@include('html/reviews-gallery.htm',{
@@ -971,6 +1040,8 @@
           </div>
         </div>
       </div>
+
+      @@include('html/widget-products.htm',{})
     </main>
     @@include('html/_footer.htm',{})
   </div>

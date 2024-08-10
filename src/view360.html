@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"360"
+})
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<section class="view360">
+				<div class="view360__thumb swiper">
+					<div class="view360__wrapper swiper-wrapper">
+						<div class="view360__slide swiper-slide">
+							<img src="@img/icons/product-3d.svg" alt="" loading="lazy">
+							<div class="swiper-lazy-preloader"></div>
+						</div>
+						<div class="view360__slide swiper-slide">
+							<img src="@img/widget-products/product2-image1.png" alt="" loading="lazy">
+							<div class="swiper-lazy-preloader"></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="view360__main swiper">
+					<div class="swiper-arrows__arrow swiper-arrows__arrow_prev">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#svg-select"></use>
+						</svg>
+					</div>
+
+					<div class="view360__wrapper swiper-wrapper">
+						<div class="view360__slide swiper-slide">
+							<img src="@img/widget-products/product2-preview.png" alt="" loading="lazy">
+							<div class="swiper-lazy-preloader"></div>
+						</div>
+						<div class="view360__slide swiper-slide">
+							<img src="@img/widget-products/product2-image1.png" alt="" loading="lazy">
+							<div class="swiper-lazy-preloader"></div>
+						</div>
+					</div>
+
+					<div class="swiper-arrows__arrow swiper-arrows__arrow_next">
+						<svg class="icon">
+							<use xlink:href="img/sprite.svg#svg-select"></use>
+						</svg>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
