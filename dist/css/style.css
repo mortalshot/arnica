@@ -617,6 +617,19 @@ textarea:focus::placeholder {
   transition: 0.3s ease all 0s;
 }
 
+._form-error .form__input,
+._form-error .bx-soa-customer-input,
+._form-error .bx-soa-customer-textarea {
+  border-color: #ff3030;
+  color: #ff3030;
+}
+
+._form-veified .form__input,
+._form-veified .bx-soa-customer-input,
+._form-veified .bx-soa-customer-textarea {
+  border-color: #0ab3a3;
+}
+
 .form__input_gray,
 .bx-soa-customer-input_gray,
 .bx-soa-customer-textarea_gray {
@@ -626,6 +639,17 @@ textarea:focus::placeholder {
 textarea.form__input,
 .bx-soa-customer-textarea {
   resize: none;
+}
+
+.form__error {
+  font-size: 0.75rem;
+  line-height: 1.3333333333;
+  color: #ff3030;
+}
+
+._form-disabled {
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .checkbox {
@@ -3370,6 +3394,14 @@ ol li > ul li::before {
       -ms-flex-pack: center;
           justify-content: center;
   gap: 0.25rem;
+}
+
+.swiper-scrollbar {
+  background: #e9e9e9;
+}
+
+.swiper-scrollbar-drag {
+  background: #ff3030;
 }
 
 body .lg-backdrop {
@@ -10308,6 +10340,8 @@ main > .breadcrumbs {
   position: fixed;
   left: 0;
   max-height: none;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
   padding-left: 20px;
   padding-right: 25px;
   overflow-y: auto;
@@ -10335,7 +10369,7 @@ main > .breadcrumbs {
   aspect-ratio: 1/1;
   margin-right: 0 !important;
   margin-bottom: 0.75rem;
-  border: 1px solid #E3E3E3;
+  border: 1px solid #e3e3e3;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -10344,7 +10378,7 @@ main > .breadcrumbs {
 .lg-custom-thumbnails .lg-outer .lg-thumb-item.active {
   -webkit-filter: grayscale(0);
           filter: grayscale(0);
-  border-color: #0AB3A3;
+  border-color: #0ab3a3;
 }
 
 .lg-custom-thumbnails .lg-outer .lg-thumb {
@@ -10353,6 +10387,104 @@ main > .breadcrumbs {
 
 .lg-custom-thumbnails .lg-media-overlap .lg-toolbar {
   background: none;
+}
+
+.view360 {
+  margin: 0 !important;
+  height: 100vh;
+  min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.view360__thumb {
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  height: calc(100vh - 2rem);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 7.5rem;
+          flex: 0 0 7.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}
+
+.view360__thumb .view360__slide {
+  height: 5rem;
+  aspect-ratio: 1/1;
+  border: 1px solid #e3e3e3;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease border-color 0s;
+  -o-transition: 0.3s ease border-color 0s;
+  transition: 0.3s ease border-color 0s;
+}
+
+.view360__thumb .view360__slide:not(:last-child) {
+  margin-bottom: 0.75rem;
+}
+
+.view360__thumb .view360__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.view360__thumb .view360__slide.swiper-slide-thumb-active {
+  border-color: #0ab3a3;
+}
+
+.view360__thumb .swiper-scrollbar {
+  top: 0 !important;
+  height: 100% !important;
+}
+
+.view360__main .swiper-arrows__arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 10;
+}
+
+.view360__main .swiper-arrows__arrow_prev {
+  left: 2rem;
+}
+
+.view360__main .swiper-arrows__arrow_next {
+  right: 2rem;
+}
+
+.view360__main .view360__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.threesixty__slider .threesixty__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.threesixty__slider .threesixty__slide img {
+  pointer-events: none;
 }
 
 .tippy-box[data-animation=fade][data-state=hidden] {
@@ -16258,6 +16390,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .installment-card__button .btn {
     width: initial;
   }
+
+  .view360__main .swiper-arrows__arrow {
+    display: none;
+  }
 }
 
 @media (min-width: 47.99875em) and (max-width: 61.99875em) {
@@ -16933,6 +17069,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .product-card-info__wrapper[data-popup]:hover {
     border-color: rgba(34, 34, 34, 0.1);
+  }
+
+  .view360__thumb .view360__slide:hover {
+    border-color: #0ab3a3;
   }
 }
 

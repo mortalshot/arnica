@@ -59,15 +59,15 @@
 					<div class="form__row">
 						<div class="col-12 col-sm-6 form__item">
 							<label for="questionnaire-email" class="form__label">E-mail</label>
-							<input id="questionnaire-email" type="email" name="questionnaire-email" placeholder="Эл. почта" class="form__input form__input_gray" />
+							<input data-required="email" data-error="Введен не верный E-mail" data-validate id="questionnaire-email" type="email" name="questionnaire-email" placeholder="Эл. почта" class="form__input form__input_gray" />
 						</div>
 
-						<div class="col-12 col-sm-6 form__item">
+						<div class="col-12 col-sm-6 form__item _form-veified">
 							<label for="questionnaire-org" class="form__label">Название организации</label>
 							<input id="questionnaire-org" type="text" name="questionnaire-org" placeholder="Введите название" class="form__input form__input_gray" />
 						</div>
 
-						<div class="col-12 form__item">
+						<div class="col-12 form__item _form-disabled">
 							<label for="questionnaire-text" class="form__label">Ваше сообщение</label>
 							<textarea id="questionnaire-text" name="questionnaire-text" placeholder="Сообщение..." class="form__input form__input_gray" rows="4"></textarea>
 						</div>

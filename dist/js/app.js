@@ -4342,6 +4342,64 @@
             }
         }
         modules_flsModules.popup = new Popup({});
+        function formFieldsInit(options = {
+            viewPass: false,
+            autoHeight: false
+        }) {
+            const formFields = document.querySelectorAll("input[placeholder],textarea[placeholder]");
+            if (formFields.length) formFields.forEach((formField => {
+                if (!formField.hasAttribute("data-placeholder-nohide")) formField.dataset.placeholder = formField.placeholder;
+            }));
+            document.body.addEventListener("focusin", (function(e) {
+                const targetElement = e.target;
+                if ("INPUT" === targetElement.tagName || "TEXTAREA" === targetElement.tagName) {
+                    if (targetElement.dataset.placeholder) targetElement.placeholder = "";
+                    if (!targetElement.hasAttribute("data-no-focus-classes")) {
+                        targetElement.classList.add("_form-focus");
+                        targetElement.parentElement.classList.add("_form-focus");
+                    }
+                    formValidate.removeError(targetElement);
+                }
+            }));
+            document.body.addEventListener("focusout", (function(e) {
+                const targetElement = e.target;
+                if ("INPUT" === targetElement.tagName || "TEXTAREA" === targetElement.tagName) {
+                    if (targetElement.dataset.placeholder) targetElement.placeholder = targetElement.dataset.placeholder;
+                    if (!targetElement.hasAttribute("data-no-focus-classes")) {
+                        targetElement.classList.remove("_form-focus");
+                        targetElement.parentElement.classList.remove("_form-focus");
+                    }
+                    if (targetElement.hasAttribute("data-validate")) formValidate.validateInput(targetElement);
+                }
+            }));
+            if (options.viewPass) document.addEventListener("click", (function(e) {
+                let targetElement = e.target;
+                if (targetElement.closest('[class*="__viewpass"]')) {
+                    let inputType = targetElement.classList.contains("_viewpass-active") ? "password" : "text";
+                    targetElement.parentElement.querySelector("input").setAttribute("type", inputType);
+                    targetElement.classList.toggle("_viewpass-active");
+                }
+            }));
+            if (options.autoHeight) {
+                const textareas = document.querySelectorAll("textarea[data-autoheight]");
+                if (textareas.length) {
+                    textareas.forEach((textarea => {
+                        const startHeight = textarea.hasAttribute("data-autoheight-min") ? Number(textarea.dataset.autoheightMin) : Number(textarea.offsetHeight);
+                        const maxHeight = textarea.hasAttribute("data-autoheight-max") ? Number(textarea.dataset.autoheightMax) : 1 / 0;
+                        setHeight(textarea, Math.min(startHeight, maxHeight));
+                        textarea.addEventListener("input", (() => {
+                            if (textarea.scrollHeight > startHeight) {
+                                textarea.style.height = `auto`;
+                                setHeight(textarea, Math.min(Math.max(textarea.scrollHeight, startHeight), maxHeight));
+                            }
+                        }));
+                    }));
+                    function setHeight(textarea, height) {
+                        textarea.style.height = `${height}px`;
+                    }
+                }
+            }
+        }
         let formValidate = {
             getErrors(form) {
                 let error = 0;
@@ -8871,7 +8929,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     autoHeight: false,
                     speed: 800,
                     effect: "fade",
-                    crossFade: true,
+                    crossFade: false,
                     lazy: true,
                     pagination: {
                         el: ".swiper-pagination",
@@ -9219,12 +9277,19 @@ PERFORMANCE OF THIS SOFTWARE.
                 const view360thumbSwiper = new Swiper(view360thumb, {
                     observer: true,
                     observeParents: true,
-                    slidesPerView: 4,
-                    spaceBetween: 8,
-                    direction: "horizontal",
-                    speed: 400,
-                    mousewheel: true,
+                    slidesPerView: "auto",
+                    spaceBetween: 0,
+                    direction: "vertical",
                     freemode: true,
+                    watchOverflow: false,
+                    speed: 200,
+                    mousewheel: {
+                        sensitivity: 100
+                    },
+                    scrollbar: {
+                        el: ".view360__thumb .swiper-scrollbar",
+                        draggable: true
+                    },
                     on: {}
                 });
                 new Swiper(".view360__main", {
@@ -9233,6 +9298,7 @@ PERFORMANCE OF THIS SOFTWARE.
                     slidesPerView: 1,
                     spaceBetween: 20,
                     speed: 800,
+                    loop: true,
                     simulateTouch: false,
                     navigation: {
                         prevEl: ".swiper-arrows__arrow_prev",
@@ -9241,6 +9307,35 @@ PERFORMANCE OF THIS SOFTWARE.
                     thumbs: {
                         swiper: view360thumbSwiper
                     }
+                });
+            }
+            const threesixty = document.querySelector(".threesixty__slider");
+            if (threesixty) {
+                new Swiper(".threesixty__slider", {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                    autoHeight: false,
+                    speed: 40,
+                    lazy: true,
+                    loop: false,
+                    freemode: true,
+                    mousewheel: true,
+                    effect: "fade",
+                    touchRatio: 20,
+                    grabCursor: true,
+                    autoplay: {
+                        enabled: true,
+                        delay: 40,
+                        stopOnLastSlide: true,
+                        disableOnInteraction: true
+                    },
+                    scrollbar: {
+                        el: ".threesixty__slider .swiper-scrollbar",
+                        draggable: true
+                    },
+                    on: {}
                 });
             }
         }
@@ -9438,6 +9533,10 @@ PERFORMANCE OF THIS SOFTWARE.
         menuInit();
         spollers();
         tabs();
+        formFieldsInit({
+            viewPass: false,
+            autoHeight: false
+        });
         formQuantity();
         formRating();
     })();

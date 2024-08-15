@@ -10,9 +10,9 @@
 			opacity: 0;
 		}
 	</style>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240814112038" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240814112038">
-	<link rel="stylesheet" href="css/style.min.css?_v=20240814112038">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css?_v=20240815122720" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css?_v=20240815122720">
+	<link rel="stylesheet" href="css/style.min.css?_v=20240815122720">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -893,15 +893,15 @@
 						<div class="form__row">
 							<div class="col-12 col-sm-6 form__item">
 								<label for="questionnaire-email" class="form__label">E-mail</label>
-								<input id="questionnaire-email" type="email" name="questionnaire-email" placeholder="Эл. почта" class="form__input form__input_gray" />
+								<input data-required="email" data-error="Введен не верный E-mail" data-validate id="questionnaire-email" type="email" name="questionnaire-email" placeholder="Эл. почта" class="form__input form__input_gray" />
 							</div>
 
-							<div class="col-12 col-sm-6 form__item">
+							<div class="col-12 col-sm-6 form__item _form-veified">
 								<label for="questionnaire-org" class="form__label">Название организации</label>
 								<input id="questionnaire-org" type="text" name="questionnaire-org" placeholder="Введите название" class="form__input form__input_gray" />
 							</div>
 
-							<div class="col-12 form__item">
+							<div class="col-12 form__item _form-disabled">
 								<label for="questionnaire-text" class="form__label">Ваше сообщение</label>
 								<textarea id="questionnaire-text" name="questionnaire-text" placeholder="Сообщение..." class="form__input form__input_gray" rows="4"></textarea>
 							</div>
@@ -2140,9 +2140,9 @@
 			</div>
 		</div>
 	</div>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240814112038"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240814112038"></script>
-	<script src="js/app.min.js?_v=20240814112038"></script>
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js?_v=20240815122720"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js?_v=20240815122720"></script>
+	<script src="js/app.min.js?_v=20240815122720"></script>
 </body>
 
 </html>

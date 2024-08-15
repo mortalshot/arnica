@@ -96,7 +96,7 @@ function initSliders() {
         autoHeight: false,
         speed: 800,
         effect: 'fade',
-        crossFade: true,
+        crossFade: false,
         lazy: true,
 
         // Пагинация
@@ -545,12 +545,20 @@ function initSliders() {
     const view360thumbSwiper = new Swiper(view360thumb, {
       observer: true,
       observeParents: true,
-      slidesPerView: 4,
-      spaceBetween: 8,
-      direction: 'horizontal',
-      speed: 400,
-      mousewheel: true,
+      slidesPerView: 'auto',
+      spaceBetween: 0,
+      direction: 'vertical',
       freemode: true,
+      watchOverflow: false,
+      speed: 200,
+      mousewheel: {
+        sensitivity: 100,
+      },
+
+      scrollbar: {
+        el: '.view360__thumb .swiper-scrollbar',
+        draggable: true,
+      },
 
       // Брейкпоинты
       /* breakpoints: {
@@ -570,6 +578,7 @@ function initSliders() {
       slidesPerView: 1,
       spaceBetween: 20,
       speed: 800,
+      loop: true,
       simulateTouch: false,
 
       navigation: {
@@ -580,6 +589,43 @@ function initSliders() {
       thumbs: {
         swiper: view360thumbSwiper
       },
+    });
+  }
+
+  const threesixty = document.querySelector('.threesixty__slider');
+  if (threesixty) {
+    const threesixtySlider = new Swiper('.threesixty__slider', {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1,
+      spaceBetween: 10,
+      autoHeight: false,
+      speed: 40,
+      lazy: true,
+      loop: false,
+      freemode: true,
+      mousewheel: true,
+      // simulateTouch: false,
+      effect: 'fade',
+      touchRatio: 20,
+      grabCursor: true,
+
+      autoplay: {
+        enabled: true,
+        delay: 40,
+        stopOnLastSlide: true,
+        disableOnInteraction: true,
+      },
+
+      scrollbar: {
+        el: '.threesixty__slider .swiper-scrollbar',
+        draggable: true,
+      },
+
+      // События
+      on: {
+
+      }
     });
   }
 }

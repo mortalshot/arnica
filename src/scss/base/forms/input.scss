@@ -50,6 +50,15 @@ textarea {
 	box-sizing: border-box;
 	transition: $transition ease all 0s;
 
+	._form-error & {
+		border-color: $Red;
+		color: $Red;
+	}
+
+	._form-veified & {
+		border-color: $Green;
+	}
+
 	// .form__input_gray
 	&_gray {
 		background-color: $LGray2;
@@ -58,4 +67,15 @@ textarea {
 textarea.form__input,
 .bx-soa-customer-textarea {
 	resize: none;
+}
+
+.form__error {
+	font-size: rem(12);
+	line-height: math.div(16, 12);
+	color: $Red;
+}
+
+._form-disabled {
+	opacity: 0.6;
+	pointer-events: none;
 }
