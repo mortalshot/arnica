@@ -94,9 +94,11 @@ function initSliders() {
         slidesPerView: 1,
         spaceBetween: 20,
         autoHeight: false,
-        speed: 800,
+        speed: 400,
         effect: 'fade',
-        crossFade: false,
+        effectFade: {
+          crossFade: false,
+        },
         lazy: true,
 
         // Пагинация

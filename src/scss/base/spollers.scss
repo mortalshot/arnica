@@ -15,22 +15,6 @@
 		position: relative;
 		padding-right: rem(24);
 
-		&[data-tippy-content] {
-			padding-right: rem(60);
-			
-			&::after {
-				content: "";
-				display: block;
-				width: rem(20);
-				height: rem(20);
-				position: absolute;
-				right: rem(32);
-				top: 50%;
-				transform: translateY(-50%);
-				background: url(../img/icons/info.svg) no-repeat center/contain;
-			}
-		}
-
 		._spoller-init & {
 			cursor: pointer;
 
