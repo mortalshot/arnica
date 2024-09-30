@@ -30,7 +30,7 @@
     overflow: hidden;
     position: relative;
 
-    @media (min-width: $mobile) {
+    @media (min-width: $mobileM) {
       border-radius: rem(40);
     }
   }
@@ -41,11 +41,9 @@
   &__bg {
     img {
       position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
       height: 100%;
-      object-fit: cover;
+      object-fit: contain;
+      right: 0;
     }
   }
 
@@ -63,9 +61,6 @@
 
     @media (min-width: $mobileSmall) {
       @include adaptiveValue("min-height", 561, 380, 1442, 768, 1);
-    }
-    @media (min-width: em(1442)) {
-      @include adaptiveValue("min-height", 755, 561, 1921, 1442, 1);
     }
 
     @media (max-width: $mobile) {
