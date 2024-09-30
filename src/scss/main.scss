@@ -27,18 +27,18 @@
 
   // .main-banner__slide
   &__slide {
+    overflow: hidden;
     position: relative;
-    padding-bottom: percent(233, 360);
 
-    @media (min-width: $mobileM) {
-      padding-bottom: percent(380, 728);
-      @include adaptiveValue("border-radius", 40, 28, 1440, 768, 1);
-      overflow: hidden;
+    @media (min-width: $mobile) {
+      border-radius: rem(40);
     }
-    @media (min-width: $tablet) {
-      padding-bottom: percent(560, 1374);
-    }
+  }
+}
 
+.banner-slide {
+  // .banner-slide__bg
+  &__bg {
     img {
       position: absolute;
       top: 0;
@@ -47,6 +47,141 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  // .banner-slide__body
+  &__body {
+    position: relative;
+    z-index: 1;
+    padding: rem(40) rem(70);
+    @include adaptiveValue("padding-top", 44, 32, 1442, 768, 1);
+    @include adaptiveValue("padding-bottom", 44, 32, 1442, 768, 1);
+    @include adaptiveValue("padding-left", 70, 20, 1442, 768, 1);
+    @include adaptiveValue("padding-right", 70, 20, 1442, 768, 1);
+    @include adaptiveValue("min-height", 561, 380, 1442, 768, 1);
+
+    @media (min-width: em(1442)) {
+      @include adaptiveValue("min-height", 755, 561, 1921, 1442, 1);
+    }
+
+    @media (max-width: $mobile) {
+      min-height: toRem(233);
+    }
+
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  // .banner-slide__top
+  &__top {
+    flex: 1;
+  }
+
+  // .banner-slide__discount
+  &__discount {
+    font-weight: 700;
+    @include adaptiveValue("font-size", 26, 14);
+    line-height: 130%;
+    text-transform: uppercase;
+    color: $Red;
+
+    @media (min-width: $mobile) {
+      &:not(:last-child) {
+        margin-bottom: rem(16);
+      }
+    }
+  }
+
+  // .banner-slide__title
+  &__title {
+    font-family: "Mulish";
+    max-width: rem(700);
+    font-weight: 800;
+    @include adaptiveValue("font-size", 50, 16);
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-bottom: rem(18);
+    }
+  }
+
+  // .banner-slide__text
+  &__text {
+    max-width: rem(431);
+    font-size: rem(12);
+    line-height: math.div(16, 12);
+
+    @media (max-width: $mobileSmall) {
+      max-width: rem(185);
+    }
+  }
+
+  // .banner-slide__features
+  &__features {
+    @media (min-width: $mobile) {
+      max-width: rem(440);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: rem(16);
+
+      &:not(:first-child) {
+        margin-top: rem(50);
+        @include adaptiveValue("margin-top", 52, 24, 1442, 768, 1);
+        @include adaptiveValue("margin-bottom", 52, 40, 1442, 768, 1);
+      }
+    }
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  // .banner-slide__button
+  &__button {
+    &:not(:first-child) {
+      @include adaptiveValue("margin-top", 52, 40, 1442, 768, 1);
+    }
+
+    .btn {
+      min-width: rem(208);
+      font-size: rem(14);
+      line-height: math.div(16, 14);
+      text-transform: uppercase;
+
+      @media (min-width: $mobile) {
+        min-height: rem(52);
+      }
+      @media (max-width: $mobileSmall) {
+        width: initial;
+      }
+    }
+  }
+}
+
+.feature-item {
+  display: grid;
+  align-content: flex-start;
+  justify-items: center;
+  row-gap: rem(8);
+
+  // .feature-item__icon
+  &__icon {
+    flex: 0 0 rem(59);
+    width: rem(59);
+    height: rem(59);
+    border-radius: 50%;
+    background-color: $White;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .feature-item__caption
+  &__caption {
+    font-size: rem(12);
+    line-height: math.div(16, 12);
+    text-align: center;
   }
 }
 
