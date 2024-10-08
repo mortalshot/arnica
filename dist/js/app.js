@@ -9038,6 +9038,10 @@ PERFORMANCE OF THIS SOFTWARE.
                     spaceBetween: 10,
                     autoHeight: false,
                     speed: 800,
+                    navigation: {
+                        prevEl: ".compare__main-slider .swiper-arrows__arrow_prev",
+                        nextEl: ".compare__main-slider .swiper-arrows__arrow_next"
+                    },
                     pagination: {
                         el: ".compare__main-slider .swiper-pagination",
                         clickable: true

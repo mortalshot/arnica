@@ -243,6 +243,12 @@ function initSliders() {
       speed: 800,
 
       // Пагинация
+      navigation: {
+        prevEl: '.compare__main-slider .swiper-arrows__arrow_prev',
+        nextEl: '.compare__main-slider .swiper-arrows__arrow_next',
+      },
+
+      // Пагинация
       pagination: {
         el: '.compare__main-slider .swiper-pagination',
         clickable: true,

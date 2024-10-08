@@ -2,6 +2,13 @@
 .header {
 	// .header__menu
 	&__menu {
+		.menu__body {
+			@media (min-width: $tablet) {
+				@include adaptiveValue("gap", 36, 24, 1440, 992, 1);
+				display: flex;
+				align-items: center;
+			}
+		}
 	}
 
 	// .header__bottom

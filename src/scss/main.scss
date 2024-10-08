@@ -2231,9 +2231,31 @@ a.partner-card {
       position: sticky;
       z-index: 2;
       top: rem(70);
+      box-shadow: 0 0 20px 0 rgba(136, 136, 136, 0.1);
+      border-radius: rem(16);
+      overflow: hidden;
     }
     @media (min-width: $tablet) {
       @include adaptiveValue("top", 88, 83, 1440, 992, 1);
+    }
+
+    .swiper-arrows__arrow {
+      position: absolute;
+      z-index: 3;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &_prev {
+        left: rem(6);
+      }
+
+      &_next {
+        right: rem(6);
+      }
+
+      &.swiper-button-disabled {
+        opacity: 0;
+      }
     }
   }
 
