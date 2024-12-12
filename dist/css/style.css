@@ -16730,6 +16730,45 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .widget-reviews .swiper-arrows {
     display: none;
   }
+
+  .widget-reviews__slider {
+    padding-left: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (padding-left: $propertyValue) {
+    		padding-left: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (padding-left: $propertyValue) {
+    		padding-left: calc(1.25rem + 0.625 * (100vw - 22.5rem) / 25.5);
+    	} */
+    padding-right: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (padding-right: $propertyValue) {
+    		padding-right: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (padding-right: $propertyValue) {
+    		padding-right: calc(1.25rem + 0.625 * (100vw - 22.5rem) / 25.5);
+    	} */
+    margin-left: clamp( -1.875rem , -0.6985294118rem  +  -2.4509803922vw , -1.25rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (margin-left: $propertyValue) {
+    		margin-left: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (margin-left: $propertyValue) {
+    		margin-left: calc(-1.25rem + -0.625 * (100vw - 22.5rem) / 25.5);
+    	} */
+    margin-right: clamp( -1.875rem , -0.6985294118rem  +  -2.4509803922vw , -1.25rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (margin-right: $propertyValue) {
+    		margin-right: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (margin-right: $propertyValue) {
+    		margin-right: calc(-1.25rem + -0.625 * (100vw - 22.5rem) / 25.5);
+    	} */
+  }
 }
 
 @media (max-width: 29.99875em) {
@@ -17608,11 +17647,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     border-color: #0ab3a3;
   }
 
-  .widget-reviews__slider {
-    padding: 2rem;
-    margin: -2rem;
-  }
-
   .widget-review a.widget-review__caption {
     -webkit-transition: 0.3s ease opacity 0s;
     -o-transition: 0.3s ease opacity 0s;
@@ -17675,45 +17709,6 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .widget-sales__slider {
-    padding-left: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
-    /* 	// Если поддерживается clamp();
-    	@supports (padding-left: $propertyValue) {
-    		padding-left: $propertyValue;
-    	}
-    	// Если не поддерживается clamp();
-    	@supports not (padding-left: $propertyValue) {
-    		padding-left: calc(1.25rem + 0.625 * (100vw - 22.5rem) / 25.5);
-    	} */
-    padding-right: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
-    /* 	// Если поддерживается clamp();
-    	@supports (padding-right: $propertyValue) {
-    		padding-right: $propertyValue;
-    	}
-    	// Если не поддерживается clamp();
-    	@supports not (padding-right: $propertyValue) {
-    		padding-right: calc(1.25rem + 0.625 * (100vw - 22.5rem) / 25.5);
-    	} */
-    margin-left: clamp( -1.875rem , -0.6985294118rem  +  -2.4509803922vw , -1.25rem );
-    /* 	// Если поддерживается clamp();
-    	@supports (margin-left: $propertyValue) {
-    		margin-left: $propertyValue;
-    	}
-    	// Если не поддерживается clamp();
-    	@supports not (margin-left: $propertyValue) {
-    		margin-left: calc(-1.25rem + -0.625 * (100vw - 22.5rem) / 25.5);
-    	} */
-    margin-right: clamp( -1.875rem , -0.6985294118rem  +  -2.4509803922vw , -1.25rem );
-    /* 	// Если поддерживается clamp();
-    	@supports (margin-right: $propertyValue) {
-    		margin-right: $propertyValue;
-    	}
-    	// Если не поддерживается clamp();
-    	@supports not (margin-right: $propertyValue) {
-    		margin-right: calc(-1.25rem + -0.625 * (100vw - 22.5rem) / 25.5);
-    	} */
-  }
-
-  .widget-reviews__slider {
     padding-left: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
     /* 	// Если поддерживается clamp();
     	@supports (padding-left: $propertyValue) {

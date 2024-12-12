@@ -6888,11 +6888,7 @@ a.partner-card {
 
   // .widget-reviews__slider
   &__slider {
-    @media (any-hover: hover) {
-      padding: rem(32);
-      margin: rem(-32);
-    }
-    @media (any-hover: none) {
+    @media (max-width: $mobileM) {
       @include adaptiveValue("padding-left", 30, 20, 768, 360, 1);
       @include adaptiveValue("padding-right", 30, 20, 768, 360, 1);
       @include adaptiveValue("margin-left", -30, -20, 768, 360, 1);
