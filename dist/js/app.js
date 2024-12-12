@@ -9344,6 +9344,40 @@ PERFORMANCE OF THIS SOFTWARE.
                     on: {}
                 });
             }
+            if (document.querySelector(".widget-reviews__slider")) {
+                new Swiper(".widget-reviews__slider", {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: 1.2,
+                    spaceBetween: 20,
+                    autoHeight: false,
+                    speed: 800,
+                    loop: false,
+                    pagination: {
+                        el: ".widget-reviews__slider .swiper-pagination",
+                        clickable: true
+                    },
+                    navigation: {
+                        prevEl: ".widget-reviews .swiper-arrows__arrow_prev",
+                        nextEl: ".widget-reviews .swiper-arrows__arrow_next"
+                    },
+                    breakpoints: {
+                        575: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        },
+                        992: {
+                            slidesPerView: 3,
+                            spaceBetween: 20
+                        },
+                        1640: {
+                            slidesPerView: 4,
+                            spaceBetween: 20
+                        }
+                    },
+                    on: {}
+                });
+            }
         }
         function noUiSliderInit() {
             var sliders = document.querySelectorAll(".range-slider__range");

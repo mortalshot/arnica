@@ -6853,4 +6853,219 @@ a.partner-card {
     }
   }
 }
+
+//.widget-reviews     ====================================================================================================
+.widget-reviews {
+  // .widget-reviews__container
+  &__container {
+  }
+
+  // .widget-reviews__heading
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: $mobileM) {
+      display: grid;
+      gap: rem(8);
+    }
+
+    .widget-products__link a {
+      opacity: 0.6;
+    }
+  }
+
+  // .widget-reviews__title
+  &__title {
+  }
+
+  .swiper-arrows {
+    @media (max-width: $mobileM) {
+      display: none;
+    }
+  }
+
+  // .widget-reviews__slider
+  &__slider {
+    @media (any-hover: hover) {
+      padding: rem(32);
+      margin: rem(-32);
+    }
+    @media (any-hover: none) {
+      @include adaptiveValue("padding-left", 30, 20, 768, 360, 1);
+      @include adaptiveValue("padding-right", 30, 20, 768, 360, 1);
+      @include adaptiveValue("margin-left", -30, -20, 768, 360, 1);
+      @include adaptiveValue("margin-right", -30, -20, 768, 360, 1);
+    }
+
+    .swiper-pagination {
+      @media (min-width: $mobile) {
+        display: none;
+      }
+      @media (max-width: $mobile) {
+        position: initial;
+
+        &:not(:first-child) {
+          margin-top: rem(20);
+        }
+      }
+    }
+  }
+
+  // .widget-reviews__wrapper
+  &__wrapper {
+  }
+
+  // .widget-reviews__slide
+  &__slide {
+    height: auto;
+  }
+}
+
+.widget-review {
+  height: 100%;
+  background-color: #f8f8f8;
+  border-radius: rem(30);
+  overflow: hidden;
+  padding: rem(16);
+  display: flex;
+  flex-direction: column;
+  row-gap: rem(14);
+  font-size: rem(14);
+  line-height: math.div(18, 14);
+
+  // .widget-review__heading
+  &__heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: rem(20);
+  }
+
+  // .widget-review__left
+  &__left {
+    display: grid;
+    align-content: flex-start;
+    row-gap: rem(10);
+  }
+
+  // .widget-review__caption
+  &__caption {
+  }
+  a.widget-review__caption {
+    @media (any-hover: hover) {
+      transition: $transition ease opacity 0s;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  .product-info__reviews {
+    @media (min-width: $tablet) and (max-width: em(1280)) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    @media (max-width: $mobile) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .review-item__star svg {
+      @include adaptiveValue("width", 20, 12);
+      @include adaptiveValue("height", 20, 12);
+      @include adaptiveValue("flex-basis", 20, 12);
+    }
+  }
+
+  // .widget-review__image
+  &__image {
+    position: relative;
+    flex: 0 0 rem(106);
+    @include adaptiveValue("flex-basis", 106, 66);
+    @include adaptiveValue("padding-bottom", 96, 60);
+
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  a.widget-review__image {
+    @media (any-hover: hover) {
+      transition: $transition ease opacity 0s;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  // .widget-review__body
+  &__body {
+    flex: 1;
+    background-color: $White;
+    border-radius: rem(16);
+    padding: rem(16);
+    display: grid;
+    align-content: flex-start;
+    grid-template-areas:
+      "person date"
+      "text text";
+    gap: rem(16) rem(12);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: rem(30);
+      top: 0;
+      transform: translateY(-100%);
+      border: rem(7) solid transparent;
+      border-bottom: rem(7) solid $White;
+    }
+  }
+
+  // .widget-review__person
+  &__person {
+    grid-area: person;
+    display: flex;
+    align-items: center;
+    gap: rem(10);
+    @include adaptiveValue("font-size", 14, 12);
+    @include adaptiveValue("gap", 10, 8);
+  }
+
+  // .widget-review__icon
+  &__icon {
+    max-width: rem(24);
+  }
+
+  // .widget-review__name
+  &__name {
+  }
+
+  // .widget-review__date
+  &__date {
+    display: grid;
+    align-items: center;
+    grid-area: date;
+    text-align: right;
+    color: #acacac;
+    @include adaptiveValue("font-size", 14, 12);
+  }
+
+  // .widget-review__text
+  &__text {
+    font-weight: 300;
+    line-height: math.div(20, 14);
+    grid-area: text;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
 //====================================================================================================

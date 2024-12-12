@@ -10672,6 +10672,228 @@ main > .breadcrumbs {
   pointer-events: none;
 }
 
+.widget-reviews__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.widget-reviews__heading .widget-products__link a {
+  opacity: 0.6;
+}
+
+.widget-reviews__slide {
+  height: auto;
+}
+
+.widget-review {
+  height: 100%;
+  background-color: #f8f8f8;
+  border-radius: 1.875rem;
+  overflow: hidden;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 0.875rem;
+  font-size: 0.875rem;
+  line-height: 1.2857142857;
+}
+
+.widget-review__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.widget-review__left {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  row-gap: 0.625rem;
+}
+
+.widget-review .product-info__reviews .review-item__star svg {
+  width: clamp( 0.75rem , 0.6315789474rem  +  0.5263157895vw , 1.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (width: $propertyValue) {
+  		width: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (width: $propertyValue) {
+  		width: calc(0.75rem + 0.5 * (100vw - 22.5rem) / 95);
+  	} */
+  height: clamp( 0.75rem , 0.6315789474rem  +  0.5263157895vw , 1.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (height: $propertyValue) {
+  		height: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (height: $propertyValue) {
+  		height: calc(0.75rem + 0.5 * (100vw - 22.5rem) / 95);
+  	} */
+  -ms-flex-preferred-size: clamp( 0.75rem , 0.6315789474rem  +  0.5263157895vw , 1.25rem );
+      flex-basis: clamp( 0.75rem , 0.6315789474rem  +  0.5263157895vw , 1.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (flex-basis: $propertyValue) {
+  		flex-basis: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (flex-basis: $propertyValue) {
+  		flex-basis: calc(0.75rem + 0.5 * (100vw - 22.5rem) / 95);
+  	} */
+}
+
+.widget-review__image {
+  position: relative;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 6.625rem;
+          flex: 0 0 6.625rem;
+  -ms-flex-preferred-size: clamp( 4.125rem , 3.5328947368rem  +  2.6315789474vw , 6.625rem );
+      flex-basis: clamp( 4.125rem , 3.5328947368rem  +  2.6315789474vw , 6.625rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (flex-basis: $propertyValue) {
+  		flex-basis: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (flex-basis: $propertyValue) {
+  		flex-basis: calc(4.125rem + 2.5 * (100vw - 22.5rem) / 95);
+  	} */
+  padding-bottom: clamp( 3.75rem , 3.2171052632rem  +  2.3684210526vw , 6rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (padding-bottom: $propertyValue) {
+  		padding-bottom: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (padding-bottom: $propertyValue) {
+  		padding-bottom: calc(3.75rem + 2.25 * (100vw - 22.5rem) / 95);
+  	} */
+}
+
+.widget-review__image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.widget-review__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+      grid-template-areas: "person date" "text text";
+  gap: 1rem 0.75rem;
+  position: relative;
+}
+
+.widget-review__body::before {
+  content: "";
+  position: absolute;
+  right: 1.875rem;
+  top: 0;
+  -webkit-transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
+  border: 0.4375rem solid transparent;
+  border-bottom: 0.4375rem solid #fff;
+}
+
+.widget-review__person {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: person;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  font-size: clamp( 0.75rem , 0.7203947368rem  +  0.1315789474vw , 0.875rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(0.75rem + 0.125 * (100vw - 22.5rem) / 95);
+  	} */
+  gap: clamp( 0.5rem , 0.4703947368rem  +  0.1315789474vw , 0.625rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (gap: $propertyValue) {
+  		gap: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (gap: $propertyValue) {
+  		gap: calc(0.5rem + 0.125 * (100vw - 22.5rem) / 95);
+  	} */
+}
+
+.widget-review__icon {
+  max-width: 1.5rem;
+}
+
+.widget-review__date {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-area: date;
+  text-align: right;
+  color: #acacac;
+  font-size: clamp( 0.75rem , 0.7203947368rem  +  0.1315789474vw , 0.875rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (font-size: $propertyValue) {
+  		font-size: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (font-size: $propertyValue) {
+  		font-size: calc(0.75rem + 0.125 * (100vw - 22.5rem) / 95);
+  	} */
+}
+
+.widget-review__text {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  font-weight: 300;
+  line-height: 1.4285714286;
+  grid-area: text;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .tippy-box[data-animation=fade][data-state=hidden] {
   opacity: 0;
 }
@@ -12650,6 +12872,10 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     font-size: 0.75rem;
     line-height: 1.5;
     color: #3b8de8;
+  }
+
+  .widget-reviews__slider .swiper-pagination {
+    display: none;
   }
 }
 
@@ -16298,6 +16524,24 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .single-product__breadcrumbs {
     display: none;
   }
+
+  .widget-reviews__slider .swiper-pagination {
+    position: initial;
+  }
+
+  .widget-reviews__slider .swiper-pagination:not(:first-child) {
+    margin-top: 1.25rem;
+  }
+
+  .widget-review .product-info__reviews {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @media (max-width: 35.93625em) {
@@ -16475,6 +16719,16 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
 
   .help-banner__top {
     max-width: 100% !important;
+  }
+
+  .widget-reviews__heading {
+    display: -ms-grid;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .widget-reviews .swiper-arrows {
+    display: none;
   }
 }
 
@@ -16769,6 +17023,18 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
     	@supports not (font-size: $propertyValue) {
     		font-size: calc(0.9375rem + 0.0625 * (100vw - 62rem) / 18);
     	} */
+  }
+}
+
+@media (min-width: 61.99875em) and (max-width: 80em) {
+  .widget-review .product-info__reviews {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
@@ -17341,6 +17607,31 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   .view360__thumb .view360__slide:hover {
     border-color: #0ab3a3;
   }
+
+  .widget-reviews__slider {
+    padding: 2rem;
+    margin: -2rem;
+  }
+
+  .widget-review a.widget-review__caption {
+    -webkit-transition: 0.3s ease opacity 0s;
+    -o-transition: 0.3s ease opacity 0s;
+    transition: 0.3s ease opacity 0s;
+  }
+
+  .widget-review a.widget-review__caption:hover {
+    opacity: 0.6;
+  }
+
+  .widget-review a.widget-review__image {
+    -webkit-transition: 0.3s ease opacity 0s;
+    -o-transition: 0.3s ease opacity 0s;
+    transition: 0.3s ease opacity 0s;
+  }
+
+  .widget-review a.widget-review__image:hover {
+    opacity: 0.8;
+  }
 }
 
 @media (any-hover: none) {
@@ -17384,6 +17675,45 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   }
 
   .widget-sales__slider {
+    padding-left: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (padding-left: $propertyValue) {
+    		padding-left: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (padding-left: $propertyValue) {
+    		padding-left: calc(1.25rem + 0.625 * (100vw - 22.5rem) / 25.5);
+    	} */
+    padding-right: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (padding-right: $propertyValue) {
+    		padding-right: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (padding-right: $propertyValue) {
+    		padding-right: calc(1.25rem + 0.625 * (100vw - 22.5rem) / 25.5);
+    	} */
+    margin-left: clamp( -1.875rem , -0.6985294118rem  +  -2.4509803922vw , -1.25rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (margin-left: $propertyValue) {
+    		margin-left: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (margin-left: $propertyValue) {
+    		margin-left: calc(-1.25rem + -0.625 * (100vw - 22.5rem) / 25.5);
+    	} */
+    margin-right: clamp( -1.875rem , -0.6985294118rem  +  -2.4509803922vw , -1.25rem );
+    /* 	// Если поддерживается clamp();
+    	@supports (margin-right: $propertyValue) {
+    		margin-right: $propertyValue;
+    	}
+    	// Если не поддерживается clamp();
+    	@supports not (margin-right: $propertyValue) {
+    		margin-right: calc(-1.25rem + -0.625 * (100vw - 22.5rem) / 25.5);
+    	} */
+  }
+
+  .widget-reviews__slider {
     padding-left: clamp( 1.25rem , 0.6985294118rem  +  2.4509803922vw , 1.875rem );
     /* 	// Если поддерживается clamp();
     	@supports (padding-left: $propertyValue) {
