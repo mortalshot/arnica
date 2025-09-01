@@ -2590,6 +2590,7 @@ a.partner-card {
 
   // .single-article__main
   &__main {
+    min-width: 0;
   }
 
   // .single-article__breadcrumbs
@@ -2768,6 +2769,198 @@ a.partner-card {
   }
 }
 
+.insights {
+  background-color: $Blue3;
+  border-radius: rem(20);
+  overflow: hidden;
+  color: #000;
+  @include adaptiveValue("padding-block", 24, 16, 768, 360, 1);
+  @include adaptiveValue("padding-inline", 24, 18, 768, 360, 1);
+
+  ._content & {
+    * {
+      padding: 0 !important;
+    }
+  }
+
+  // .insights__caption
+  &__caption {
+    font-weight: 700;
+
+    &:not(:last-child) {
+      margin-bottom: rem(24);
+    }
+  }
+
+  // .insights__main
+  &__main {
+    display: grid;
+    align-content: flex-start;
+    gap: rem(12);
+
+    @media (min-width: $mobileM) {
+      grid-template-columns: rem(185) 1fr;
+    }
+  }
+
+  // .insights__preview
+  &__preview {
+    border-radius: rem(24);
+    overflow: hidden;
+
+    img {
+      aspect-ratio: 185 / 121;
+      object-fit: cover;
+      transition: 1s ease transform 0s;
+
+      @media (max-width: $mobileM) {
+        width: 100%;
+      }
+    }
+  }
+  a.insights__preview {
+    @media (any-hover: hover) {
+      &:hover {
+        img {
+          transform: scale(1.03);
+        }
+      }
+    }
+  }
+
+  // .insights__body
+  &__body {
+    display: grid;
+    align-content: flex-start;
+    justify-items: flex-start;
+    row-gap: rem(8);
+  }
+
+  // .insights__title
+  &__title {
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: math.div(24, 20);
+  }
+  a.insights__title {
+    display: inline-block;
+    color: #000;
+    text-decoration: underline transparent from-font;
+    text-underline-offset: 3px;
+    transition: $transition ease text-decoration 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        text-decoration: underline from-font;
+      }
+    }
+  }
+
+  // .insights__excerpt
+  &__excerpt {
+    font-size: rem(13);
+    line-height: math.div(18, 13);
+  }
+
+  // .insights__date
+  &__date {
+    font-size: rem(14);
+    line-height: math.div(18, 14);
+    color: rgba($color: #000000, $alpha: 0.4);
+  }
+}
+
+.related {
+  min-width: 0;
+  background-color: $Blue3;
+  @include adaptiveValue("padding-block", 24, 16, 768, 360, 1);
+  @include adaptiveValue("padding-inline", 24, 18, 768, 360, 1);
+
+  @media (min-width: $mobileM) {
+    border-radius: rem(20);
+  }
+  @media (max-width: $mobileM) {
+    @include adaptiveValue("margin-left", -30, -20, 768, 360, 1);
+    @include adaptiveValue("margin-right", -30, -20, 768, 360, 1);
+  }
+
+  &:not(:first-child) {
+    @include adaptiveValue("margin-top", 36, 16, 768, 360, 1);
+  }
+
+  // .related__heading
+  &__heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: rem(20);
+
+    .swiper-arrows {
+      @media (max-width: $mobileM) {
+        display: none;
+      }
+    }
+  }
+
+  // .related__title
+  &__title {
+  }
+
+  // .related__slider
+  &__slider {
+    @media (max-width: $mobileM) {
+      @include adaptiveValue("margin-left", -30, -20, 768, 360, 1);
+      @include adaptiveValue("margin-right", -30, -20, 768, 360, 1);
+      @include adaptiveValue("padding-left", 30, 20, 768, 360, 1);
+      @include adaptiveValue("padding-right", 30, 20, 768, 360, 1);
+    }
+  }
+
+  // .related__wrapper
+  &__wrapper {
+  }
+
+  // .related__slide
+  &__slide {
+    .insights {
+      padding: 0;
+      border-radius: 0;
+
+      // .insights__main
+      &__main {
+        grid-template-columns: 1fr;
+      }
+
+      // .insights__preview
+      &__preview {
+        img {
+          aspect-ratio: 312 / 204;
+          width: 100%;
+        }
+      }
+
+      // .insights__body
+      &__body {
+      }
+
+      // .insights__title
+      &__title {
+      }
+
+      // .insights__excerpt
+      &__excerpt {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      // .insights__date
+      &__date {
+      }
+    }
+  }
+}
 // !Страница контактов
 //.section-contacts     ====================================================================================================
 .section-contacts {

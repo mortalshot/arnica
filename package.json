@@ -72,6 +72,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"hc-sticky": "^2.2.7",
 		"simplebar": "latest"
 	}
 }

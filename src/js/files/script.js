@@ -660,7 +660,7 @@ function initSliders() {
 
 
       // Брейкпоинты
-      
+
       breakpoints: {
         575: {
           slidesPerView: 2,
@@ -675,7 +675,56 @@ function initSliders() {
           spaceBetween: 20,
         },
       },
-     
+
+      // События
+      on: {
+
+      }
+    });
+  }
+
+  if (document.querySelector('.related__slider')) {
+    const relatedSlider = new Swiper('.related__slider', {
+      observer: true,
+      observeParents: true,
+      slidesPerView: 1.4,
+      spaceBetween: 24,
+      autoHeight: false,
+      speed: 800,
+      loop: false,
+      watchOverflow: true,
+
+      navigation: {
+        prevEl: '.related .swiper-arrows__arrow_prev',
+        nextEl: '.related .swiper-arrows__arrow_next',
+      },
+
+
+      // Брейкпоинты
+
+      breakpoints: {
+        575: {
+          slidesPerView: 2,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 12,
+        },
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1280: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      },
+
       // События
       on: {
 
@@ -854,9 +903,13 @@ document.addEventListener('click', function (e) {
 // Определяем расстояние от низа header-bottom до верха экрана при скролле:
 function updateDistanceСatalogToTop() {
   var headerBottom = document.querySelector('.header-bottom');
+
   if (headerBottom) {
     var distanceFromBottomToTop = headerBottom.getBoundingClientRect().top + headerBottom.offsetHeight;
+    const headerHeight = headerBottom.offsetHeight;
+
     document.body.style.setProperty('--distance-catalog-to-top', distanceFromBottomToTop + 'px');
+    document.body.style.setProperty('--header-bottom-height', headerHeight + 'px');
   }
 }
 
@@ -975,4 +1028,43 @@ window.addEventListener("load", function (e) {
 
   // Запуск инициализации noUiSlider
   noUiSliderInit();
+});
+
+
+// /src/scripts/sticky.js
+import HC_Sticky from 'hc-sticky';
+
+function initSidebarSticky() {
+  if (window.innerWidth <= 991.98) return;
+
+  const el = document.querySelector('.article-sidebar__wrapper');
+  if (!el) return;
+
+  updateDistanceСatalogToTop();
+
+  const getTop = () =>
+    parseInt(
+      getComputedStyle(document.body).getPropertyValue('--header-bottom-height')
+    ) + 16;
+
+  const sticky = new HC_Sticky(el, {
+    stickTo: '.single-article',
+    top: getTop(),
+    bottom: 20,
+  });
+
+  const updateTop = () => {
+    updateDistanceСatalogToTop();
+    sticky.options.top = getTop();
+    sticky.update();
+  };
+
+  window.addEventListener('load', updateTop);
+  window.addEventListener('resize', updateTop);
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  setTimeout(() => {
+    initSidebarSticky();
+  }, 300);
 });
