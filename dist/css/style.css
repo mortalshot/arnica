@@ -6796,6 +6796,18 @@ main > .breadcrumbs {
   min-width: 0;
 }
 
+.single-article__main .widget-products:not(:first-child) {
+  margin-top: clamp( 1rem , -0.1029411765rem  +  4.9019607843vw , 2.25rem );
+  /* 	// Если поддерживается clamp();
+  	@supports (margin-top: $propertyValue) {
+  		margin-top: $propertyValue;
+  	}
+  	// Если не поддерживается clamp();
+  	@supports not (margin-top: $propertyValue) {
+  		margin-top: calc(1rem + 1.25 * (100vw - 22.5rem) / 25.5);
+  	} */
+}
+
 .single-article__breadcrumbs {
   margin-bottom: 1.875rem;
 }

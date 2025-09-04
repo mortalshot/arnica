@@ -9182,6 +9182,43 @@ PERFORMANCE OF THIS SOFTWARE.
             const productsWidgets = document.querySelectorAll(".widget-products");
             if (productsWidgets.length > 0) productsWidgets.forEach((widget => {
                 const slider = widget.querySelector(".widget-products__slider");
+                const isInsideArticle = !!slider.closest(".single-article__main");
+                const defaultBreakpoints = {
+                    480: {
+                        slidesPerView: 2,
+                        spaceBetween: 28
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 30
+                    },
+                    1240: {
+                        slidesPerView: 4,
+                        spaceBetween: 18
+                    },
+                    1800: {
+                        slidesPerView: 5,
+                        spaceBetween: 18
+                    }
+                };
+                const narrowOverrides = {
+                    992: {
+                        slidesPerView: 2,
+                        spaceBetween: 18
+                    },
+                    1240: {
+                        slidesPerView: 3,
+                        spaceBetween: 18
+                    },
+                    1800: {
+                        slidesPerView: 4,
+                        spaceBetween: 18
+                    }
+                };
+                const breakpoints = isInsideArticle ? {
+                    ...defaultBreakpoints,
+                    ...narrowOverrides
+                } : defaultBreakpoints;
                 new Swiper(slider, {
                     observer: true,
                     observeParents: true,
@@ -9193,24 +9230,7 @@ PERFORMANCE OF THIS SOFTWARE.
                         prevEl: widget.querySelector(".swiper-arrows__arrow_prev"),
                         nextEl: widget.querySelector(".swiper-arrows__arrow_next")
                     },
-                    breakpoints: {
-                        480: {
-                            slidesPerView: 2,
-                            spaceBetween: 28
-                        },
-                        768: {
-                            slidesPerView: 3,
-                            spaceBetween: 30
-                        },
-                        1240: {
-                            slidesPerView: 4,
-                            spaceBetween: 18
-                        },
-                        1800: {
-                            slidesPerView: 5,
-                            spaceBetween: 18
-                        }
-                    },
+                    breakpoints,
                     on: {}
                 });
             }));

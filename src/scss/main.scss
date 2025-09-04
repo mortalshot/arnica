@@ -2591,6 +2591,12 @@ a.partner-card {
   // .single-article__main
   &__main {
     min-width: 0;
+
+    .widget-products {
+      &:not(:first-child) {
+        @include adaptiveValue("margin-top", 36, 16, 768, 360, 1);
+      }
+    }
   }
 
   // .single-article__breadcrumbs
